@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minpaku Resort | 沖縄北部の民泊 運営代行・清掃代行</title>
-    <meta name="description"
-        content="沖縄北部を中心に、民泊の収益化に悩むオーナー様へ。Minpaku Resortは、リゾート・クオリティの清掃代行と、収益最大化を実現する運営代行を提供するプロフェッショナル集団です。">
+    <title>Minpaku Resort | 民泊 運営代行・清掃代行</title>
+    <meta name="description" content="エリアに精通したチームによる民泊 運営代行・清掃代行。リゾート・クオリティの清掃と収益最大化を実現するプロフェッショナル集団です。">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
@@ -73,8 +72,8 @@
 
 <body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
 
-    <!-- SEO対策用非表示H1 -->
-    <h1 class="sr-only">沖縄北部の民泊 運営代行・清掃代行ならMinpaku Resort（民泊リゾート）</h1>
+    <!-- SEO対策用非表示H1 (regional.js が都道府県名を注入) -->
+    <h1 id="seo-h1" class="sr-only">民泊 運営代行・清掃代行ならMinpaku Resort（民泊リゾート）</h1>
 
     <!-- Header -->
     <header class="fixed w-full top-0 z-40 bg-white/95 backdrop-blur shadow-sm transition-all border-b border-gray-100">
@@ -118,15 +117,18 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-bg h-screen min-h-[600px] flex items-center justify-center pt-20 relative">
+    <!-- Hero Section (背景・テキストは regional.js が都道府県データで動的に切り替え) -->
+    <section id="hero-section" class="hero-bg h-screen min-h-[600px] flex items-center justify-center pt-20 relative">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary/90 hidden sm:block"></div>
         <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-accent font-medium tracking-widest mb-4 text-sm sm:text-base">沖縄北部を中心とした民泊運営・清掃</p>
-            <h2 class="text-4xl sm:text-5xl md:text-6xl font-serif text-white font-bold leading-tight mb-6">
-                民泊を、<br class="sm:hidden" />リゾート・クオリティへ。
+            <p id="hero-tagline" class="text-accent font-medium tracking-widest mb-4 text-sm sm:text-base">
+                沖縄北部を中心とした民泊運営・清掃</p>
+            <h2 id="hero-copy"
+                class="text-4xl sm:text-5xl md:text-6xl font-serif text-white font-bold leading-tight mb-6">
+                民泊にも、安心と高品質を。
             </h2>
-            <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+            <p id="hero-subcopy"
+                class="text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
                 収益最大化を実現する運営代行と、ゲストを感動させるプロの清掃。<br class="hidden sm:block" />
                 個人レベルの代行ではなく、専門的なプロ集団があなたの物件をサポートします。
             </p>
@@ -194,9 +196,9 @@
             </div>
 
             <div class="mt-12 text-center">
-                <p class="text-xl font-medium text-primary leading-relaxed">
+                <p id="problems-conclusion" class="text-xl font-medium text-primary leading-relaxed">
                     そのお悩み、<span class="text-accent font-bold">Minpaku Resort</span>にお任せください。<br>
-                    沖縄北部エリアの地域特性を熟知した私たちが、すべて解決いたします。
+                    エリアに合わせたきめ細やかな運用で、オーナー様の負担を最小限に抑えます。
                 </p>
             </div>
         </div>
@@ -285,6 +287,29 @@
                         多言語対応のゲストコミュニケーション、予約管理、清掃手配、さらには現地での急なトラブル駆けつけまで、すべて一貫してお任せいただけます。オーナー様は「何もしない」運用が可能です。
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ② 地域特有の運営・清掃ルール (regional.js が都道府県データで注入) -->
+    <section id="local-rules" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-accent font-bold tracking-widest text-sm">AREA TIPS & RULES</span>
+                <h3 id="local-rules-title"
+                    class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">
+                    [都道府県名]の民泊で気をつけたいこと</h3>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    現場に精通した適切な運用が、トラブルを未然に防ぎ、安定した収益へと繋がります。
+                </p>
+            </div>
+            <!-- regional.js が動的生成 -->
+            <div id="local-rules-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Loading placeholder -->
+                <div class="bg-gray-100 rounded-sm animate-pulse h-48"></div>
+                <div class="bg-gray-100 rounded-sm animate-pulse h-48"></div>
+                <div class="bg-gray-100 rounded-sm animate-pulse h-48"></div>
+                <div class="bg-gray-100 rounded-sm animate-pulse h-48"></div>
             </div>
         </div>
     </section>
@@ -561,6 +586,60 @@
         </div>
     </section>
 
+    <!-- ⑤ 清掃ビフォーアフタースライダー (regional.js が画像・タブを注入) -->
+    <section id="before-after-section" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-accent font-bold tracking-widest text-sm">BEFORE / AFTER</span>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">清掃ビフォーアフター</h3>
+                <p class="mt-6 text-gray-600">中央のハンドルを左右にドラッグして、清掃前後の違いをご確認ください。</p>
+            </div>
+
+            <!-- タブ (2事例以上の場合 regional.js が生成) -->
+            <div id="ba-tabs" class="flex border-b border-gray-200 mb-8 justify-center gap-2"></div>
+
+            <!-- スライダー本体 -->
+            <div class="relative select-none shadow-2xl rounded-sm overflow-hidden" style="aspect-ratio: 16/9;">
+                <!-- コンテナ -->
+                <div id="ba-container" class="relative w-full h-full bg-gray-200">
+                    <!-- AFTER画像（背景） -->
+                    <img id="ba-after-img" src="" alt="清掃後" class="absolute inset-0 w-full h-full object-cover">
+
+                    <!-- BEFORE画像（クリップ） -->
+                    <div id="ba-before-clip" class="absolute inset-0 overflow-hidden" style="width:50%">
+                        <img id="ba-before-img" src="" alt="清掃前" class="absolute top-0 left-0 h-full object-cover"
+                            style="max-width:none;">
+                    </div>
+
+                    <!-- ハンドル -->
+                    <div id="ba-handle" class="absolute top-0 bottom-0 z-10 cursor-col-resize"
+                        style="left:50%; transform:translateX(-50%); width:4px; background:rgba(255,255,255,0.9);">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                                    w-10 h-10 bg-white rounded-full shadow-xl
+                                    flex items-center justify-center text-gray-600 font-bold text-xs
+                                    border-2 border-accent select-none pointer-events-none">
+                            ◀▶
+                        </div>
+                    </div>
+
+                    <!-- ラベル -->
+                    <div
+                        class="absolute top-4 left-4 z-20 bg-black/60 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded font-bold tracking-wider pointer-events-none">
+                        BEFORE</div>
+                    <div
+                        class="absolute top-4 right-4 z-20 bg-accent text-white text-xs px-3 py-1.5 rounded font-bold tracking-wider pointer-events-none">
+                        AFTER</div>
+                </div>
+
+                <!-- range input (透明・アクセシビリティ用) -->
+                <input type="range" id="ba-range" min="0" max="100" value="50"
+                    class="absolute inset-0 w-full h-full opacity-0 cursor-col-resize z-20">
+            </div>
+
+            <p class="text-center text-xs text-gray-400 mt-4">※ 画像はイメージです。実際の清掃事例写真に差し替えてご使用ください。</p>
+        </div>
+    </section>
+
     <!-- Social Proof (実績・ケーススタディ) -->
     <section id="proofs" class="py-20 bg-primary text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -704,6 +783,42 @@
         </div>
     </section>
 
+    <!-- ④ スタッフ紹介 (regional.js が都道府県スタッフデータを注入) -->
+    <section id="staff-team" class="py-20 bg-primary text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold tracking-widest text-sm">OUR TEAM</span>
+                <h3 id="staff-title" class="text-3xl md:text-4xl font-serif font-bold mt-2 section-title">現場を支えるチーム</h3>
+                <p class="mt-6 text-gray-300 max-w-2xl mx-auto">
+                    各分野のプロフェッショナルが、日々の運用と品質維持を担います。
+                </p>
+            </div>
+            <!-- regional.js が動的生成 -->
+            <div id="staff-grid" class="grid grid-cols-2 md:grid-cols-4 gap-10">
+                <div class="text-center animate-pulse">
+                    <div class="w-28 h-28 mx-auto mb-4 rounded-full bg-white/20"></div>
+                    <div class="h-4 bg-white/20 rounded w-16 mx-auto mb-2"></div>
+                    <div class="h-3 bg-white/10 rounded w-24 mx-auto"></div>
+                </div>
+                <div class="text-center animate-pulse">
+                    <div class="w-28 h-28 mx-auto mb-4 rounded-full bg-white/20"></div>
+                    <div class="h-4 bg-white/20 rounded w-16 mx-auto mb-2"></div>
+                    <div class="h-3 bg-white/10 rounded w-24 mx-auto"></div>
+                </div>
+                <div class="text-center animate-pulse">
+                    <div class="w-28 h-28 mx-auto mb-4 rounded-full bg-white/20"></div>
+                    <div class="h-4 bg-white/20 rounded w-16 mx-auto mb-2"></div>
+                    <div class="h-3 bg-white/10 rounded w-24 mx-auto"></div>
+                </div>
+                <div class="text-center animate-pulse">
+                    <div class="w-28 h-28 mx-auto mb-4 rounded-full bg-white/20"></div>
+                    <div class="h-4 bg-white/20 rounded w-16 mx-auto mb-2"></div>
+                    <div class="h-3 bg-white/10 rounded w-24 mx-auto"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Space Production Teaser -->
     <section id="produce-teaser" class="py-24 bg-dark text-white relative overflow-hidden">
         <div class="absolute inset-0"
@@ -805,167 +920,62 @@
         </div>
     </section>
 
-    <!-- Simulation (お見積りシミュレーション) -->
+    <!-- ⑥ AIシミュレーター (regional.js が価格データを注入・計算・LINE誘導) -->
     <section id="simulation" class="py-20 bg-primary bg-opacity-5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
                 <span class="text-accent font-bold tracking-widest text-sm">SIMULATION</span>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">お見積りシミュレーション</h3>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">AI見積もりシミュレーター</h3>
                 <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-                    運営代行をお任せいただいた場合の月間の収益モデルの目安です。<br>
-                    ※あくまで目安であり、エリアや物件のスペック、シーズンにより変動します。
+                    間取りと宿泊人数・日数を選ぶだけで清掃費用の概算を即時算出。<br>
+                    シミュレーションIDを発行し、LINEで詳細レポートをお届けします。
                 </p>
             </div>
 
-            <div class="grid lg:grid-cols-3 gap-6">
-                <!-- パターンA: 50m2, 2LDK, Max4名 -->
-                <div class="bg-white rounded-sm border border-gray-200 overflow-hidden shadow">
-                    <div class="text-center py-6 pb-2">
-                        <p class="text-xs text-gray-500 mb-1">例01</p>
-                        <h4 class="text-xl font-bold text-primary tracking-wide">50m², 2LDK, Max4名</h4>
-                        <p class="text-sm text-gray-600 mt-1">の場合</p>
-                    </div>
-
-                    <div class="h-48 w-full overflow-hidden mb-6 relative">
-                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                            alt="1LDK" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
-
-                    <div class="p-6 pt-0">
-                        <div class="space-y-4 mb-8">
-                            <div class="text-sm">
-                                <span class="font-bold text-primary border-l-2 border-accent pl-2">清掃</span><br>
-                                <span class="text-gray-600">基本代金 6,000円</span>
-                            </div>
-                            <div class="text-sm">
-                                <span class="font-bold text-primary border-l-2 border-accent pl-2">リネン代</span><br>
-                                <span class="text-gray-600">宿泊人数 x 800円</span>
-                            </div>
-                            <div class="text-sm">
-                                <span class="font-bold text-primary border-l-2 border-accent pl-2">消耗品費</span><br>
-                                <span class="text-gray-600">宿泊人数 x 宿泊日数 x 200円</span>
-                            </div>
-                            <div class="text-sm">
-                                <span class="font-bold text-primary border-l-2 border-accent pl-2">ゴミ回収</span><br>
-                                <span class="text-gray-600">1,000円</span>
-                            </div>
+            <div class="bg-white rounded-sm shadow-lg overflow-hidden">
+                <form id="sim-form" class="p-8 sm:p-12">
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fas fa-home text-accent mr-1"></i>間取り
+                            </label>
+                            <select id="sim-room"
+                                class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary outline-none transition bg-white text-sm">
+                                <!-- regional.js が都道府県の価格テーブルで生成 -->
+                            </select>
                         </div>
-
-                        <div class="text-center relative">
-                            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                                <i class="fas fa-arrow-down text-2xl text-primary"></i>
-                            </div>
-                            <div class="text-sm font-bold text-primary mb-1 mt-6">お見積り　4名1泊</div>
-                            <div class="text-gray-600 mb-1 flex items-baseline justify-center">
-                                <span class="text-lg mr-1">¥</span>
-                                <span class="text-5xl font-bold text-primary">11,000</span>
-                            </div>
-                            <div class="text-sm text-gray-500 font-medium">¥ 2,750 / 人</div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fas fa-users text-accent mr-1"></i>宿泊人数
+                            </label>
+                            <select id="sim-guests"
+                                class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary outline-none transition bg-white text-sm">
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fas fa-moon text-accent mr-1"></i>宿泊日数
+                            </label>
+                            <select id="sim-nights"
+                                class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary outline-none transition bg-white text-sm">
+                            </select>
                         </div>
                     </div>
-                </div>
 
-                <!-- パターンB: 100m2, 3LDK, Max10名 -->
-                <div class="bg-white rounded-sm border border-gray-200 overflow-hidden shadow">
-                    <div class="text-center py-6 pb-2">
-                        <p class="text-xs text-gray-500 mb-1">例02</p>
-                        <h4 class="text-xl font-bold text-primary tracking-wide">100m², 3LDK, Max10名</h4>
-                        <p class="text-sm text-gray-600 mt-1">の場合</p>
+                    <div class="text-center">
+                        <button type="submit"
+                            class="bg-accent hover:bg-accentHover text-white px-12 py-4 rounded-sm font-bold text-lg transition duration-300 shadow-lg">
+                            <i class="fas fa-calculator mr-2"></i>概算を算出する
+                        </button>
                     </div>
+                </form>
 
-                    <div class="h-48 w-full overflow-hidden mb-6 relative">
-                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                            alt="3LDK" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
-
-                    <div class="p-6 pt-0">
-                        <div class="space-y-4 mb-8">
-                            <div class="text-sm">
-                                <span class="font-bold text-primary border-l-2 border-accent pl-2">清掃</span><br>
-                                <span class="text-gray-600">基本代金 8,500円</span>
-                            </div>
-                            <div class="text-sm">
-                                <span class="font-bold text-primary border-l-2 border-accent pl-2">リネン代</span><br>
-                                <span class="text-gray-600">宿泊人数 x 800円</span>
-                            </div>
-                            <div class="text-sm">
-                                <span class="font-bold text-primary border-l-2 border-accent pl-2">消耗品費</span><br>
-                                <span class="text-gray-600">宿泊人数 x 宿泊日数 x 200円</span>
-                            </div>
-                            <div class="text-sm">
-                                <span class="font-bold text-primary border-l-2 border-accent pl-2">ゴミ回収</span><br>
-                                <span class="text-gray-600">1,500円</span>
-                            </div>
-                        </div>
-
-                        <div class="text-center relative">
-                            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                                <i class="fas fa-arrow-down text-2xl text-primary"></i>
-                            </div>
-                            <div class="text-sm font-bold text-primary mb-1 mt-6">お見積り　10名1泊</div>
-                            <div class="text-gray-600 mb-1 flex items-baseline justify-center">
-                                <span class="text-lg mr-1">¥</span>
-                                <span class="text-5xl font-bold text-primary">19,500</span>
-                            </div>
-                            <div class="text-sm text-gray-500 font-medium">¥ 1,950 / 人</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- パターンC: 200m2, 5LDK, Max20名 -->
-                <div class="bg-white rounded-sm border border-gray-200 overflow-hidden shadow">
-                    <div class="text-center py-6 pb-2">
-                        <p class="text-xs text-gray-500 mb-1">例03</p>
-                        <h4 class="text-xl font-bold text-primary tracking-wide">200m², 5LDK, Max20名</h4>
-                        <p class="text-sm text-gray-600 mt-1">の場合</p>
-                    </div>
-
-                    <div class="h-48 w-full overflow-hidden mb-6 relative">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                            alt="5LDK" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
-
-                    <div class="p-6 pt-0">
-                        <div class="space-y-4 mb-8">
-                            <div class="text-sm">
-                                <span class="font-bold text-primary border-l-2 border-accent pl-2">清掃</span><br>
-                                <span class="text-gray-600">基本代金 15,000円</span>
-                            </div>
-                            <div class="text-sm">
-                                <span class="font-bold text-primary border-l-2 border-accent pl-2">リネン代</span><br>
-                                <span class="text-gray-600">宿泊人数 x 800円</span>
-                            </div>
-                            <div class="text-sm">
-                                <span class="font-bold text-primary border-l-2 border-accent pl-2">消耗品費</span><br>
-                                <span class="text-gray-600">宿泊人数 x 宿泊日数 x 200円</span>
-                            </div>
-                            <div class="text-sm">
-                                <span class="font-bold text-primary border-l-2 border-accent pl-2">ゴミ回収</span><br>
-                                <span class="text-gray-600">2,000円</span>
-                            </div>
-                        </div>
-
-                        <div class="text-center relative">
-                            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                                <i class="fas fa-arrow-down text-2xl text-primary"></i>
-                            </div>
-                            <div class="text-sm font-bold text-primary mb-1 mt-6">お見積り　20名1泊</div>
-                            <div class="text-gray-600 mb-1 flex items-baseline justify-center">
-                                <span class="text-lg mr-1">¥</span>
-                                <span class="text-5xl font-bold text-primary">30,500</span>
-                            </div>
-                            <div class="text-sm text-gray-500 font-medium">¥ 1,525 / 人</div>
-                        </div>
-                    </div>
-                </div>
+                <!-- 結果エリア (JS が算出後に表示) -->
+                <div id="sim-result" class="hidden px-8 pb-10 sm:px-12"></div>
             </div>
-            <p
-                class="text-center text-xs text-gray-500 mt-6 md:mt-10 bg-white inline-block px-6 py-2 rounded-full shadow-sm">
-                ※水光熱費や通信費等のオーナー様負担のランニングコストは上記から差し引かれます。<br class="hidden sm:block">
-                実際の物件詳細をお伺いした上で、より正確なシミュレーションを作成可能です。
+
+            <p class="text-center text-xs text-gray-500 mt-6 bg-white inline-block px-6 py-2 rounded-full shadow-sm">
+                ※水光熱費・消耗品補充費など別途オーナー様負担のコストがあります。詳細はお問い合わせください。
             </p>
         </div>
     </section>
@@ -975,47 +985,35 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-accent font-bold tracking-widest text-sm">TARGET AREAS</span>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">対応可能エリア</h3>
-                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-                    現在、沖縄本島北部〜中部を中心にサービスを提供しております。<br>
-                    ※掲載のない地域でも、運営代行やスポット清掃のご相談は可能です。お気軽にお問い合わせください。
+                <h3 id="areas-title" class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">
+                    対応可能エリア</h3>
+                <p id="areas-description" class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    都道府県内の主要エリアを中心にサービスを提供しております。掲載のない地域もお気軽にご相談ください。
                 </p>
             </div>
 
             <div class="bg-white rounded-sm shadow-lg overflow-hidden flex flex-col md:flex-row">
-                <!-- エリアリスト -->
+                <!-- エリアリスト (regional.js が市区町村リストを注入) -->
                 <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-white z-10">
-                    <div class="mb-8">
-                        <h4
-                            class="text-xl font-bold text-primary mb-3 flex items-center border-b-2 border-accent pb-2 inline-block">
-                            <i class="fas fa-map-marker-alt text-accent mr-2"></i>北部エリア (メイン)
+                    <div class="mb-4">
+                        <h4 class="text-lg font-bold text-primary mb-4 flex items-center border-b-2 border-accent pb-2">
+                            <i class="fas fa-map-marker-alt text-accent mr-2"></i>対応市区町村
                         </h4>
-                        <ul class="grid grid-cols-2 gap-y-3 mt-4 text-gray-600 font-medium ml-2">
-                            <li><i class="fas fa-check text-accent text-xs mr-2"></i>古宇利島（今帰仁村）</li>
-                            <li><i class="fas fa-check text-accent text-xs mr-2"></i>名護市</li>
-                            <li><i class="fas fa-check text-accent text-xs mr-2"></i>本部町</li>
-                            <li><i class="fas fa-check text-accent text-xs mr-2"></i>恩納村（北部周辺）</li>
+                        <ul id="municipalities-list" class="grid grid-cols-2 gap-y-2 mt-4 text-gray-600 font-medium">
+                            <!-- regional.js が動的生成 -->
+                            <li class="text-sm text-gray-400 animate-pulse">読み込み中...</li>
                         </ul>
                     </div>
-
-                    <div>
-                        <h4
-                            class="text-xl font-bold text-primary mb-3 flex items-center border-b-2 border-gray-300 pb-2 inline-block">
-                            <i class="fas fa-map-location-dot text-gray-400 mr-2"></i>中部・南部エリア
-                        </h4>
-                        <p class="text-sm text-gray-500 mt-2 ml-2">読谷村、沖縄市、那覇市周辺など<br>
-                            <span class="text-accent font-medium">※現在、順次対応エリア拡大中！</span>
-                        </p>
-                    </div>
+                    <p class="text-xs text-accent font-medium mt-4">
+                        <i class="fas fa-info-circle mr-1"></i>上記以外のエリアもご相談ください。順次対応エリア拡大中。
+                    </p>
                 </div>
 
                 <!-- マップ（Google Map） -->
                 <div class="w-full md:w-1/2 h-64 md:h-auto bg-gray-200 relative">
-                    <!-- TODO: 実際のGoogle MapsのIframeに差し替えることを推奨します -->
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d203673.80544521406!2d127.94060599999999!3d26.592540000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade" class="absolute inset-0"></iframe>
+                    <iframe id="area-map" src="about:blank" width="100%" height="100%" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        class="absolute inset-0"></iframe>
                     <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
                 </div>
             </div>
@@ -1230,6 +1228,29 @@
         </div>
     </section>
 
+    <!-- ⑦ Note記事フィード (regional.js がプレースホルダー記事を注入) -->
+    <section id="note-feed" class="py-16 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-accent font-bold tracking-widest text-sm">KNOWLEDGE</span>
+                <h3 class="text-3xl font-serif font-bold text-primary mt-2 section-title">民泊運営ノウハウ</h3>
+                <p class="mt-4 text-gray-600 text-sm">プロが語る、民泊運営の最新知識と実践テクニック</p>
+            </div>
+            <!-- regional.js が動的生成 -->
+            <div id="note-feed-grid" class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gray-200 rounded-sm animate-pulse h-72"></div>
+                <div class="bg-gray-200 rounded-sm animate-pulse h-72"></div>
+                <div class="bg-gray-200 rounded-sm animate-pulse h-72"></div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="https://note.com/" target="_blank" rel="noopener"
+                    class="text-accent hover:text-accentHover font-medium underline underline-offset-4">
+                    すべての記事を見る <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-secondary text-white py-12 border-t border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1238,8 +1259,8 @@
                     <a href="#" class="font-serif text-3xl font-bold tracking-wide text-white">
                         Minpaku <span class="text-accent">Resort</span>
                     </a>
-                    <p class="mt-4 text-gray-400 text-sm">
-                        沖縄北部の民泊を、リゾート・クオリティへ。
+                    <p id="footer-tagline" class="mt-4 text-gray-400 text-sm">
+                        民泊を、リゾート・クオリティへ。
                     </p>
                 </div>
 
@@ -1264,6 +1285,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- regional.js: サブドメイン検知→都道府県データ注入・シミュレーター・スライダー初期化 -->
+    <script src="js/regional.js"></script>
 
     <!-- Floating LINE Button -->
     <a href="#contact"

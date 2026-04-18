@@ -1,0 +1,381 @@
+{
+  "okinawa": {
+    "prefKey": "okinawa",
+    "prefName": "沖縄県",
+    "prefShort": "沖縄",
+    "heroImage": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "沖縄北部を中心とした民泊運営・清掃",
+    "heroCopy": "沖縄の民泊に、地域に根ざした安心と高品質を。",
+    "heroSubcopy": "安定した収益化を実現する運営代行と、ゲストを感動させるプロの清掃。エリアの特性に合わせた運用で、物件の価値を守ります。",
+    "localRules": [
+      {
+        "icon": "fas fa-yen-sign",
+        "title": "沖縄県 宿泊税",
+        "body": "2026年度より沖縄県宿泊税の導入が検討されています。施設タイプや宿泊料金に応じた税額の把握と適切な申告が必要です。弊社が最新情報を随時反映し、オーナー様の申告手続きをサポートします。",
+        "highlight": "税務対応"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しルール",
+        "body": "沖縄北部では各市町村のゴミ分別ルールが異なります。名護市・本部町の収集日・分別方法を徹底管理し、ゲストへのご案内から排出作業まで代行し近隣トラブルを未然に防止します。",
+        "highlight": "分別管理"
+      },
+      {
+        "icon": "fas fa-wind",
+        "title": "台風対策",
+        "body": "毎年夏〜秋に多数の台風が直撃する沖縄北部。屋外設備・家具の撤去・復旧対応を迅速に実施。台風通過後は清掃・点検レポートを発行し、物件の状態を確実にご報告します。",
+        "highlight": "台風シーズン対応"
+      },
+      {
+        "icon": "fas fa-bug",
+        "title": "亜熱帯特有の害虫対策",
+        "body": "亜熱帯気候特有の害虫（ゴキブリ・ムカデ・ヤモリ等）への対策として、専用の防虫プロセスを清掃フローに組み込んでいます。リゾートヴィラや戸建てに特化した対策を提供します。",
+        "highlight": "通年対応"
+      }
+    ],
+    "municipalities": [
+      "名護市", "本部町", "今帰仁村", "大宜味村", "国頭村",
+      "東村", "恩納村", "宜野座村", "金武町", "うるま市",
+      "沖縄市", "読谷村", "北谷町", "嘉手納町", "北中城村",
+      "中城村", "西原町", "那覇市", "浦添市", "宜野湾市",
+      "豊見城市", "糸満市", "南城市", "南風原町", "八重瀬町",
+      "与那原町", "石垣市", "宮古島市"
+    ],
+    "staff": [
+      {
+        "name": "山城",
+        "role": "清掃チームリーダー",
+        "message": "北部エリアの物件を隅々まで熟知。細部まで丁寧な清掃をお届けします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "仲間",
+        "role": "ゲスト対応担当",
+        "message": "英語・中国語対応も可能。ゲストの滞在を最高の思い出にします。",
+        "avatar": "images/staff_2.png"
+      },
+      {
+        "name": "比嘉",
+        "role": "運営マネージャー",
+        "message": "OTA掲載から価格調整まで、収益最大化を徹底サポートします。",
+        "avatar": "images/staff_3.png"
+      },
+      {
+        "name": "新垣",
+        "role": "現地サポート",
+        "message": "トラブル発生時も即対応。オーナー様が安心して任せられる体制です。",
+        "avatar": "images/staff_4.png"
+      }
+    ],
+    "beforeAfter": [
+      {
+        "label": "リビング・ダイニング",
+        "before": "images/before_cleaning.png",
+        "after": "images/after_cleaning.png"
+      },
+      {
+        "label": "バスルーム",
+        "before": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=60",
+        "after": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"
+      },
+      {
+        "label": "ベッドルーム",
+        "before": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=60",
+        "after": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6000,
+      "2LDK": 8500,
+      "3LDK": 11000,
+      "4LDK以上": 15000,
+      "ヴィラ・戸建て(150m²以上)": 20000
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d203673.80544521406!2d127.94060599999999!3d26.592540000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+    "lineAccountUrl": "https://line.me/R/ti/p/@your-line-id",
+    "seoTitle": "沖縄県の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "沖縄北部を中心に、民泊の収益化をサポート。リゾート・クオリティの清掃代行と収益最大化を実現する運営代行を提供するプロフェッショナル集団です。エリアの特性に即した体制で対応します。"
+  },
+
+  "tokyo": {
+    "prefKey": "tokyo",
+    "prefName": "東京都",
+    "prefShort": "東京",
+    "heroImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "東京都内の民泊運営・清掃をエリアに精通したチームが",
+    "heroCopy": "東京の民泊に、地域に根ざした安心と高品質を。",
+    "heroSubcopy": "都市型民泊の収益最大化を実現する運営代行と、ゲストを感動させるプロの清掃。都心の多種多様なニーズに応える管理体制を構築します。",
+    "localRules": [
+      {
+        "icon": "fas fa-yen-sign",
+        "title": "東京都 宿泊税",
+        "body": "東京都では宿泊料金に応じた宿泊税が課税されます（1万円未満：非課税、1〜1.5万円：100円、1.5万円以上：200円）。オーナー様に代わり、正確な税額計算と申告手続きを代行します。",
+        "highlight": "税務対応必須"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しルール",
+        "body": "東京23区内は区ごとにゴミ分別・収集日が細かく異なります。ゲストへの多言語案内と、清掃時のゴミ適正排出を徹底し、マンション管理組合とのトラブルを防止します。",
+        "highlight": "区ごとに異なるルール"
+      },
+      {
+        "icon": "fas fa-building",
+        "title": "マンション管理規約",
+        "body": "都内の民泊物件の多くがマンション。管理規約の民泊禁止条項や、フロント設置義務の確認まで、物件ごとの適法運営体制の構築をサポートします。",
+        "highlight": "コンプライアンス"
+      },
+      {
+        "icon": "fas fa-volume-down",
+        "title": "騒音・近隣対策",
+        "body": "高密度な都市部では騒音トラブルが発生しやすい環境です。ゲストへの事前ルール周知、深夜対応窓口の設置、近隣住民への丁寧なフォローアップを徹底します。",
+        "highlight": "24時間対応"
+      }
+    ],
+    "municipalities": [
+      "千代田区", "中央区", "港区", "新宿区", "文京区",
+      "台東区", "墨田区", "江東区", "品川区", "目黒区",
+      "大田区", "世田谷区", "渋谷区", "中野区", "杉並区",
+      "豊島区", "北区", "荒川区", "板橋区", "練馬区",
+      "足立区", "葛飾区", "江戸川区", "八王子市", "立川市",
+      "武蔵野市", "三鷹市", "府中市", "調布市", "町田市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "清掃チームリーダー",
+        "message": "都内マンションの清掃に特化。搬入・搬出のルールも熟知しています。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲスト対応担当",
+        "message": "英語・韓国語対応可能。インバウンドゲストへの対応が得意です。",
+        "avatar": "images/staff_2.png"
+      },
+      {
+        "name": "鈴木",
+        "role": "運営マネージャー",
+        "message": "都心の需要データを熟知。ダイナミックプライシングで収益を最大化します。",
+        "avatar": "images/staff_3.png"
+      },
+      {
+        "name": "山田",
+        "role": "コンプライアンス担当",
+        "message": "東京都の民泊法規制を熟知。適法運営のサポートを担当します。",
+        "avatar": "images/staff_4.png"
+      }
+    ],
+    "beforeAfter": [
+      {
+        "label": "都市型マンション",
+        "before": "images/before_cleaning.png",
+        "after": "images/after_cleaning.png"
+      },
+      {
+        "label": "水回り",
+        "before": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=60",
+        "after": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5500,
+      "1LDK": 7000,
+      "2LDK": 10000,
+      "3LDK": 14000,
+      "4LDK以上": 18000,
+      "ペントハウス・高級物件": 25000
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d103031.24497697682!2d139.6917!3d35.6895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+    "lineAccountUrl": "https://line.me/R/ti/p/@your-line-id",
+    "seoTitle": "東京都の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "東京都内の民泊オーナー様へ。実務的な運営代行・清掃代行をワンストップで提供。宿泊税対応からマンション規約確認まで、都市部特有の課題に完全対応します。"
+  },
+
+  "osaka": {
+    "prefKey": "osaka",
+    "prefName": "大阪府",
+    "prefShort": "大阪",
+    "heroImage": "https://images.unsplash.com/photo-1590559899731-a382839e5549?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "大阪府内の民泊運営・清掃をエリアに精通したチームが",
+    "heroCopy": "大阪の民泊に、地域に根ざした安心と高品質を。",
+    "heroSubcopy": "訪日外国人が集まる大阪で、収益最大化を実現する運営代行と、ゲストを感動させるプロの清掃。インバウンド需要の変動に合わせ、戦略的な運営を行います。",
+    "localRules": [
+      {
+        "icon": "fas fa-yen-sign",
+        "title": "大阪府・大阪市 宿泊税",
+        "body": "大阪市では2017年より宿泊税が施行されています（1泊1万円未満：非課税、1〜2万円：130円、2万円以上：430円）。大阪府税との二重課税に注意が必要です。弊社が正確な申告をサポートします。",
+        "highlight": "府・市の二重課税注意"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しルール",
+        "body": "大阪市内はゴミ収集が市直営のため区ごとに曜日が異なります。外国人ゲストに多言語でルールを案内し、清掃時の適正排出を徹底。近隣のゴミステーションでのトラブルを防ぎます。",
+        "highlight": "外国人対応必須"
+      },
+      {
+        "icon": "fas fa-globe-asia",
+        "title": "インバウンド対策",
+        "body": "大阪はインバウンド需要が非常に高く、中国語・英語・韓国語対応が不可欠です。民泊の看板表示から緊急時対応まで多言語化し、外国人ゲストの満足度を最大化します。",
+        "highlight": "多言語対応"
+      },
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "週末・連休の稼働率管理",
+        "body": "USJや道頓堀周辺の需要変動は激しく、GWや三連休前後で宿泊単価が大幅に変動します。AIによるダイナミックプライシングで、ハイシーズンの収益を最大化します。",
+        "highlight": "季節変動対応"
+      }
+    ],
+    "municipalities": [
+      "大阪市（北区・中央区・西区・浪速区・天王寺区・福島区・淀川区・東淀川区・西淀川区・東成区・生野区・旭区・城東区・鶴見区・阿倍野区・住之江区・住吉区・東住吉区・平野区・西成区）",
+      "堺市", "豊中市", "吹田市", "高槻市", "東大阪市",
+      "枚方市", "茨木市", "八尾市", "寝屋川市", "岸和田市",
+      "和泉市", "摂津市", "箕面市", "池田市", "守口市",
+      "門真市", "松原市", "大東市", "柏原市", "羽曳野市",
+      "藤井寺市", "泉佐野市", "富田林市"
+    ],
+    "staff": [
+      {
+        "name": "西村",
+        "role": "清掃チームリーダー",
+        "message": "ミナミ・キタ周辺の物件を中心に担当。インバウンド対応も得意です。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "中村",
+        "role": "多言語ゲスト対応",
+        "message": "中国語・英語・韓国語対応可能。外国人ゲストの満足度向上に取り組みます。",
+        "avatar": "images/staff_2.png"
+      },
+      {
+        "name": "松本",
+        "role": "運営マネージャー",
+        "message": "道頓堀・USJ周辺の需要を徹底分析。稼働率85%超を実現します。",
+        "avatar": "images/staff_3.png"
+      },
+      {
+        "name": "木村",
+        "role": "現地サポート",
+        "message": "大阪の街を知り尽くしたサポート担当。何かあれば即対応します。",
+        "avatar": "images/staff_4.png"
+      }
+    ],
+    "beforeAfter": [
+      {
+        "label": "都市型マンション",
+        "before": "images/before_cleaning.png",
+        "after": "images/after_cleaning.png"
+      },
+      {
+        "label": "水回り",
+        "before": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=60",
+        "after": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d207357.9577!2d135.5022!3d34.6937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+    "lineAccountUrl": "https://line.me/R/ti/p/@your-line-id",
+    "seoTitle": "大阪府の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "大阪府内の民泊オーナー様へ。インバウンド需要が高い大阪で、専門的な運営代行・清掃代行をワンストップで提供。多言語対応・宿泊税申告まで対応します。"
+  },
+
+  "hokkaido": {
+    "prefKey": "hokkaido",
+    "prefName": "北海道",
+    "prefShort": "北海道",
+    "heroImage": "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "北海道内の民泊運営・清掃をエリアに精通したチームが",
+    "heroCopy": "北海道の民泊に、地域に根ざした安心と高品質を。",
+    "heroSubcopy": "四季折々の魅力を持つ北海道で、収益最大化を実現する運営代行と、ゲストを感動させるプロの清掃。冬期の凍結管理や暖房設備の維持など、現地の環境に必要な運用を徹底します。",
+    "localRules": [
+      {
+        "icon": "fas fa-snowflake",
+        "title": "冬季の凍結・積雪対策",
+        "body": "冬期間（11〜4月）は凍結・積雪への対応が必須です。水道管の凍結防止作業、玄関・駐車場の除雪・融雪剤散布を定期巡回で実施し、ゲストが安全に利用できる環境を維持します。",
+        "highlight": "冬期必須対応"
+      },
+      {
+        "icon": "fas fa-fire",
+        "title": "暖房設備の管理",
+        "body": "灯油ストーブや床暖房など北海道特有の暖房設備の点検・燃料補充を代行。シーズン前のボイラー点検から、灯油タンクの定期補充まで、オーナー様の手間を完全に省きます。",
+        "highlight": "暖房設備専門対応"
+      },
+      {
+        "icon": "fas fa-ski",
+        "title": "スキーリゾート需要対応",
+        "body": "ニセコ・富良野・キロロなどスキーリゾート周辺では、冬季の需要が爆発的に高まります。スキー器具保管スペースの清掃・整理、滑走後のウェア乾燥設備管理も対応します。",
+        "highlight": "スキーシーズン特化"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しルール",
+        "body": "北海道内の各市町村でゴミ分別・収集日が異なります。特に農村エリアや観光地周辺では独自ルールが存在します。外国人ゲストへの多言語案内と適正排出を徹底します。",
+        "highlight": "多言語対応"
+      }
+    ],
+    "municipalities": [
+      "札幌市", "函館市", "旭川市", "釧路市", "帯広市",
+      "北見市", "小樽市", "苫小牧市", "室蘭市", "江別市",
+      "千歳市", "恵庭市", "北広島市", "石狩市", "ニセコ町",
+      "倶知安町", "富良野市", "美瑛町", "白老町", "洞爺湖町",
+      "登別市", "伊達市", "余市町", "岩内町", "積丹町"
+    ],
+    "staff": [
+      {
+        "name": "高橋",
+        "role": "清掃チームリーダー",
+        "message": "北海道の厳冬期対応に特化。凍結・積雪トラブルも迅速に対応します。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "伊藤",
+        "role": "ゲスト対応担当",
+        "message": "英語・中国語対応可能。スキーリゾートを訪れる外国人ゲストのサポートが得意。",
+        "avatar": "images/staff_2.png"
+      },
+      {
+        "name": "渡辺",
+        "role": "運営マネージャー",
+        "message": "ニセコ・富良野の需要サイクルを熟知。冬季の収益を最大化します。",
+        "avatar": "images/staff_3.png"
+      },
+      {
+        "name": "小林",
+        "role": "設備・現地サポート",
+        "message": "暖房設備・融雪機器のメンテナンス担当。冬の北海道をトラブルなく運営します。",
+        "avatar": "images/staff_4.png"
+      }
+    ],
+    "beforeAfter": [
+      {
+        "label": "ログハウス・コテージ",
+        "before": "images/before_cleaning.png",
+        "after": "images/after_cleaning.png"
+      },
+      {
+        "label": "スキーロッジ",
+        "before": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=60",
+        "after": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK・コテージ": 16000,
+      "ログハウス・大型物件": 22000
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2872011.4!2d142.3!3d43.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+    "lineAccountUrl": "https://line.me/R/ti/p/@your-line-id",
+    "seoTitle": "北海道の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "北海道内の民泊オーナー様へ。冬季凍結対応・暖房設備管理・スキーリゾート需要への対応など、北海道の環境維持に必要な実務全般をワンストップで提供します。"
+  }
+}
