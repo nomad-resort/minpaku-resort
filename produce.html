@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Production | Minpaku Resort</title>
+    <meta name="description"
+        content="Minpaku Resort の空間プロデュースは、オーナー様が届けたい顧客体験を起点に、五感から逆算し空間全体を設計・演出します。コンセプト設計、五感デザイン、滞在導線設計、ナイト体験設計。">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    colors: {
+                        primary: '#1e293b',
+                        secondary: '#334155',
+                        accent: '#c5a059',
+                        accentHover: '#a38343',
+                        light: '#f8fafc',
+                        dark: '#0f172a'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .produce-hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.6)),
+                url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #c5a059;
+            margin: 1rem auto 0;
+        }
+
+        .section-title-left::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #c5a059;
+            margin: 1rem 0 0;
+        }
+
+        .line-button-floating {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .line-button-floating:hover {
+            transform: translateY(-5px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeInUp 0.9s ease forwards;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-40 bg-white/95 backdrop-blur shadow-sm transition-all border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-serif text-2xl font-bold text-primary tracking-wide">
+                        Minpaku <span class="text-accent">Resort</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-4 lg:space-x-8 items-center">
+                    <a href="#produce"
+                        class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition">プロデュース内容</a>
+                    <a href="#pricing"
+                        class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition">料金</a>
+                    <a href="#creators"
+                        class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition">チーム</a>
+                    <a href="index.html"
+                        class="text-xs lg:text-sm font-medium text-gray-400 hover:text-gray-600 transition border-l border-gray-200 pl-4 lg:pl-8">←
+                        運営管理サービス</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a href="#contact"
+                        class="bg-primary text-white px-6 py-2.5 rounded-sm font-medium hover:bg-secondary transition duration-300">
+                        無料空間診断
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="produce-hero-bg h-screen min-h-[600px] flex items-center justify-center pt-20 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-dark/75 hidden sm:block"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center hero-content">
+            <p class="text-accent font-medium tracking-widest mb-5 text-xs sm:text-sm">SPACE PRODUCTION</p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif text-white font-bold leading-tight mb-5">
+                Unused spaces<br>into emotional stages.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light tracking-widest mb-8">遊休資産を、感動の舞台へ。</p>
+            <div class="w-16 h-px bg-accent mx-auto mb-8"></div>
+            <p class="text-base sm:text-lg text-gray-300 max-w-xl mx-auto font-light leading-relaxed">
+                これは管理だけではなく、<br class="sm:hidden">価値をつくるプロデュースです。
+            </p>
+            <div class="mt-14">
+                <a href="#produce"
+                    class="inline-flex items-center text-white/50 hover:text-white/80 transition text-xs tracking-widest">
+                    <span>SCROLL</span>
+                    <i class="fas fa-arrow-down ml-3 animate-bounce"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Space Production -->
+    <section id="produce" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Heading -->
+            <div class="text-center mb-6">
+                <span class="text-accent font-bold tracking-widest text-xs">SPACE PRODUCTION</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-3 leading-tight section-title">
+                    Unused spaces<br class="sm:hidden"> into emotional stages.
+                </h2>
+                <p class="text-gray-400 text-base md:text-lg mt-3 mb-6 tracking-wider font-light">遊休資産を、感動の舞台へ。</p>
+            </div>
+
+            <!-- Lead text -->
+            <div class="max-w-2xl mx-auto mb-16 text-center">
+                <p class="text-gray-600 leading-loose text-sm sm:text-base">
+                    Minpaku Resort の空間プロデュースは、<br class="hidden sm:block">
+                    単なるインテリア提案ではありません。<br><br>
+                    オーナー様が届けたい「顧客体験」を起点に、<br class="hidden sm:block">
+                    その体験を五感から逆算し、<br class="hidden sm:block">
+                    空間全体を設計・演出します。
+                </p>
+            </div>
+
+            <!-- 4 Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+
+                <!-- Card 1: コンセプト設計 -->
+                <div
+                    class="bg-gray-50 p-8 border-t-2 border-primary hover:border-accent hover:bg-white transition duration-300 group shadow-sm hover:shadow-md">
+                    <div class="mb-5">
+                        <span class="text-accent text-xs tracking-widest font-bold">01</span>
+                    </div>
+                    <div class="text-3xl text-primary mb-4 group-hover:text-accent transition duration-300">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-primary mb-3 leading-snug">コンセプト設計</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5">
+                        誰に、どんな体験を届けるのか。<br>
+                        空間の"意味"を設計します。
+                    </p>
+                    <div class="pt-4 border-t border-gray-200">
+                        <p class="text-xs text-gray-400 leading-relaxed">▸ ターゲット / 世界観 / ポジショニング</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: 五感デザイン -->
+                <div
+                    class="bg-gray-50 p-8 border-t-2 border-primary hover:border-accent hover:bg-white transition duration-300 group shadow-sm hover:shadow-md">
+                    <div class="mb-5">
+                        <span class="text-accent text-xs tracking-widest font-bold">02</span>
+                    </div>
+                    <div class="text-3xl text-primary mb-4 group-hover:text-accent transition duration-300">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-primary mb-3 leading-snug">五感デザイン</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5">
+                        光・音・香り。<br>
+                        記憶に残る空間は、五感でつくられます。
+                    </p>
+                    <div class="pt-4 border-t border-gray-200">
+                        <p class="text-xs text-gray-400 leading-relaxed">▸ 照明 / 香り / 音環境</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: 滞在導線設計 -->
+                <div
+                    class="bg-gray-50 p-8 border-t-2 border-primary hover:border-accent hover:bg-white transition duration-300 group shadow-sm hover:shadow-md">
+                    <div class="mb-5">
+                        <span class="text-accent text-xs tracking-widest font-bold">03</span>
+                    </div>
+                    <div class="text-3xl text-primary mb-4 group-hover:text-accent transition duration-300">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-primary mb-3 leading-snug">滞在導線設計</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5">
+                        "過ごし方"まで含めて設計する。<br>
+                        働く・休む・つながる、その流れを整えます。
+                    </p>
+                    <div class="pt-4 border-t border-gray-200">
+                        <p class="text-xs text-gray-400 leading-relaxed">▸ 動線 / ワークスペース / ゾーニング</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: ナイト体験設計 -->
+                <div
+                    class="bg-gray-50 p-8 border-t-2 border-primary hover:border-accent hover:bg-white transition duration-300 group shadow-sm hover:shadow-md">
+                    <div class="mb-5">
+                        <span class="text-accent text-xs tracking-widest font-bold">04</span>
+                    </div>
+                    <div class="text-3xl text-primary mb-4 group-hover:text-accent transition duration-300">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-primary mb-3 leading-snug">ナイト体験設計</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-5">
+                        夜の質で、宿の印象は変わる。<br>
+                        記憶に残る時間をつくります。
+                    </p>
+                    <div class="pt-4 border-t border-gray-200">
+                        <p class="text-xs text-gray-400 leading-relaxed">▸ 照明 / テラス活用 / 過ごし方</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Closing statement -->
+            <div class="text-center max-w-xl mx-auto">
+                <div class="w-12 h-px bg-accent mx-auto mb-8"></div>
+                <p class="text-gray-700 text-lg leading-loose font-light">
+                    これは管理だけではなく、<br>
+                    <span class="font-semibold text-primary">価値をつくるプロデュースです。</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 6: Pricing -->
+    <section id="pricing" class="py-24 bg-light border-y border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold tracking-widest text-xs">PRICING</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-3 section-title">
+                    Space Production
+                </h2>
+                <p class="text-gray-400 mt-2 mb-8 tracking-wider text-sm">プロデュース料金</p>
+                <p class="text-gray-600 max-w-lg mx-auto text-sm leading-relaxed">
+                    物件やご要望に応じて、最適な形でご提案します。<br>
+                    まずは現状を拝見し、ポテンシャルに合わせて設計します。
+                </p>
+            </div>
+
+            <!-- 3 Pricing Cards -->
+            <div class="grid md:grid-cols-3 gap-0 md:items-start">
+
+                <!-- Clarity -->
+                <div class="bg-white border border-gray-200 p-8 md:p-10 flex flex-col">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-serif font-bold text-primary mb-1">Clarity</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">空間の方向性を整えたい方へ</p>
+                    </div>
+                    <div class="mb-6 pb-6 border-b border-gray-100">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm text-gray-400">¥</span>
+                            <span class="text-5xl font-bold text-primary font-serif">50,000</span>
+                            <span class="text-sm text-gray-400">〜</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        コンセプト設計を中心に、<br>
+                        空間の"軸"をつくります。
+                    </p>
+                    <ul class="space-y-3 flex-grow">
+                        <li class="flex items-start text-sm text-gray-600">
+                            <span class="text-accent mr-2 mt-0.5 flex-shrink-0">▸</span>
+                            コンセプト設計
+                        </li>
+                        <li class="flex items-start text-sm text-gray-600">
+                            <span class="text-accent mr-2 mt-0.5 flex-shrink-0">▸</span>
+                            簡易レイアウト提案
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Compose (Most Popular) -->
+                <div class="bg-primary text-white p-8 md:p-10 flex flex-col relative md:-mt-4 md:-mb-4 shadow-2xl z-10">
+                    <div
+                        class="absolute top-0 right-0 bg-accent text-white text-[10px] font-bold px-3 py-1.5 tracking-widest uppercase">
+                        Most Popular
+                    </div>
+                    <div class="mb-6 mt-5">
+                        <h3 class="text-xl font-serif font-bold text-white mb-1">Compose</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">空間をしっかりアップデートしたい方へ</p>
+                    </div>
+                    <div class="mb-6 pb-6 border-b border-white/10">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm text-gray-400">¥</span>
+                            <span class="text-5xl font-bold text-white font-serif">150,000</span>
+                            <span class="text-sm text-gray-400">〜</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        五感と導線まで含めて、<br>
+                        "選ばれる空間"へ再設計します。
+                    </p>
+                    <ul class="space-y-3 flex-grow">
+                        <li class="flex items-start text-sm text-gray-300">
+                            <span class="text-accent mr-2 mt-0.5 flex-shrink-0">▸</span>
+                            コンセプト設計
+                        </li>
+                        <li class="flex items-start text-sm text-gray-300">
+                            <span class="text-accent mr-2 mt-0.5 flex-shrink-0">▸</span>
+                            家具 / 照明 / 香りの選定
+                        </li>
+                        <li class="flex items-start text-sm text-gray-300">
+                            <span class="text-accent mr-2 mt-0.5 flex-shrink-0">▸</span>
+                            導線設計
+                        </li>
+                        <li class="flex items-start text-sm text-gray-300">
+                            <span class="text-accent mr-2 mt-0.5 flex-shrink-0">▸</span>
+                            クリエイターディレクション
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Orchestrate -->
+                <div class="bg-white border border-gray-200 p-8 md:p-10 flex flex-col">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-serif font-bold text-primary mb-1">Orchestrate</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">体験まで含めて設計したい方へ</p>
+                    </div>
+                    <div class="mb-6 pb-6 border-b border-gray-100">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm text-gray-400">¥</span>
+                            <span class="text-5xl font-bold text-primary font-serif">300,000</span>
+                            <span class="text-sm text-gray-400">〜</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        空間だけでなく、滞在そのものを設計し、<br>
+                        記憶に残る体験へと昇華させます。
+                    </p>
+                    <ul class="space-y-3 flex-grow">
+                        <li class="flex items-start text-sm text-gray-600">
+                            <span class="text-accent mr-2 mt-0.5 flex-shrink-0">▸</span>
+                            コンセプト設計
+                        </li>
+                        <li class="flex items-start text-sm text-gray-600">
+                            <span class="text-accent mr-2 mt-0.5 flex-shrink-0">▸</span>
+                            空間演出ディレクション
+                        </li>
+                        <li class="flex items-start text-sm text-gray-600">
+                            <span class="text-accent mr-2 mt-0.5 flex-shrink-0">▸</span>
+                            滞在体験設計
+                        </li>
+                        <li class="flex items-start text-sm text-gray-600">
+                            <span class="text-accent mr-2 mt-0.5 flex-shrink-0">▸</span>
+                            チーム連携
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Notes -->
+            <div class="mt-14 text-center space-y-2">
+                <p class="text-sm text-gray-500">※ 物件規模・施工有無により変動します</p>
+                <p class="text-sm text-gray-500">※ 運用代行との併用も可能です</p>
+                <p class="text-sm text-gray-600 font-medium pt-1">
+                    ※ まずは <span class="text-accent">無料の空間診断（約60分）</span> からご相談ください
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 7: Creators -->
+    <section id="creators" class="py-24 bg-dark text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Heading -->
+            <div class="text-center mb-6">
+                <span class="text-accent font-bold tracking-widest text-xs">CREATORS</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mt-3 section-title">
+                    Sensory Architects
+                </h2>
+                <p class="text-gray-500 mt-3 mb-8 tracking-wider text-sm">プロデュースチーム</p>
+            </div>
+
+            <div class="max-w-2xl mx-auto text-center mb-16">
+                <p class="text-gray-400 text-sm sm:text-base leading-loose">
+                    空間をつくるのは、モノではなく人です。<br><br>
+                    Minpaku Resortでは、領域の違うクリエイターがチームを組み、<br class="hidden sm:block">
+                    ひとつの体験として空間をつくります。
+                </p>
+            </div>
+
+            <!-- Tomoya — featured row -->
+            <div class="border-t border-white/10 pt-12 pb-12">
+                <div class="flex flex-col sm:flex-row gap-8 sm:gap-14 items-start">
+                    <div class="flex-shrink-0">
+                        <img src="images/Tomoya Matsumoto.jpg"
+                            class="w-32 h-32 rounded-full object-cover border border-accent/30" alt="Tomoya Matsumoto">
+                    </div>
+                    <div class="flex-grow">
+                        <p class="text-accent text-xs tracking-widest mb-2 uppercase">Producer</p>
+                        <h3 class="text-2xl md:text-3xl font-serif font-bold text-white mb-1">Tomoya Matsumoto</h3>
+                        <p class="text-gray-500 text-sm mb-5">松本 知也 — NomadResort 代表</p>
+                        <p class="text-gray-400 text-sm leading-loose max-w-xl">
+                            宿泊・イベント・コミュニティを横断しながら、<br class="hidden sm:block">
+                            「また来たくなる理由」を設計してきた。<br><br>
+                            Minpaku Resortでは、空間を"事業として成立させる設計"を担う。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Discipline Creators -->
+            <div
+                class="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/10 border-t border-white/10">
+
+                <!-- Sound -->
+                <div class="py-10 sm:pr-10">
+                    <p class="text-accent text-[10px] tracking-widest mb-1 uppercase font-bold">Sound</p>
+                    <p class="text-gray-600 text-xs mb-5">音</p>
+                    <div class="mb-5">
+                        <img src="images/Poropiore.jpg"
+                            class="w-20 h-20 rounded-full object-cover border border-white/10" alt="Poropiore">
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-white mb-4">Poropiore</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-7">
+                        空間の空気感や時間の流れを、音で整える。<br>
+                        その場所に合った音の設計で、滞在の質を引き上げる。
+                    </p>
+                    <a href="https://www.instagram.com/poropiore" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center text-gray-500 hover:text-accent transition text-xs group">
+                        <i class="fab fa-instagram mr-2 text-sm group-hover:scale-110 transition"></i>
+                        @poropiore
+                    </a>
+                </div>
+
+                <!-- Space -->
+                <div class="py-10 sm:px-10">
+                    <p class="text-accent text-[10px] tracking-widest mb-1 uppercase font-bold">Space</p>
+                    <p class="text-gray-600 text-xs mb-5">空間</p>
+                    <div class="flex items-center gap-3 mb-5">
+                        <img src="images/YU.jpg" class="w-20 h-20 rounded-full object-cover border border-white/10"
+                            alt="YU">
+                        <img src="images/Koichi.jpg" class="w-20 h-20 rounded-full object-cover border border-white/10"
+                            alt="Koichi">
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-white mb-4">Yu & Koichi</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-7">
+                        見え方と使われ方を同時に設計する。<br>
+                        家具・素材・動線まで含めて、体験として成立させる。
+                    </p>
+                    <div class="space-y-3">
+                        <a href="https://www.instagram.com/389f_yu" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center text-gray-500 hover:text-accent transition text-xs group">
+                            <i class="fab fa-instagram mr-2 text-sm group-hover:scale-110 transition"></i>
+                            @389f_yu
+                        </a>
+                        <a href="https://www.instagram.com/koichihashiguch1" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center text-gray-500 hover:text-accent transition text-xs group">
+                            <i class="fab fa-instagram mr-2 text-sm group-hover:scale-110 transition"></i>
+                            @koichihashiguch1
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Light -->
+                <div class="py-10 sm:pl-10">
+                    <p class="text-accent text-[10px] tracking-widest mb-1 uppercase font-bold">Light</p>
+                    <p class="text-gray-600 text-xs mb-5">光</p>
+                    <div class="mb-5">
+                        <img src="images/Ryuichiro Nagahashi.jpg"
+                            class="w-20 h-20 rounded-full object-cover border border-white/10"
+                            alt="Ryuichiro Nagahashi">
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-white mb-1">Ryuichiro Nagahashi</h3>
+                    <p class="text-gray-500 text-xs mb-4">長橋 隆一郎</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-7">
+                        光と影のバランスを整え、空間の印象を仕上げる。<br>
+                        特に夜の時間の質を大きく変える照明設計を行う。
+                    </p>
+                    <a href="https://www.instagram.com/ryunghs" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center text-gray-500 hover:text-accent transition text-xs group">
+                        <i class="fab fa-instagram mr-2 text-sm group-hover:scale-110 transition"></i>
+                        @ryunghs
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Closing poem -->
+            <div class="mt-16 pt-16 border-t border-white/10 text-center">
+                <div class="w-10 h-px bg-accent/40 mx-auto mb-10"></div>
+                <p class="text-gray-400 text-base leading-loose font-light">
+                    構造をつくる人がいて、<br>
+                    空間をつくる人がいて、<br>
+                    音を整える人がいて、<br>
+                    光で仕上げる人がいる。<br><br>
+                    その重なりが、<br>
+                    <span class="text-white font-medium">「また来たくなる場所」をつくります。</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-accent font-bold tracking-widest text-xs">FREE CONSULTATION</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-3 mb-4">無料の空間診断</h2>
+            <div class="w-12 h-px bg-accent mx-auto mb-8"></div>
+            <p class="text-gray-600 text-sm sm:text-base leading-loose mb-12">
+                まずは約60分。現状の空間を拝見し、<br class="hidden sm:block">
+                ポテンシャルと方向性をお伝えします。<br>
+                費用は一切かかりません。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact"
+                    class="inline-flex items-center justify-center bg-primary hover:bg-secondary text-white px-8 py-4 rounded-sm font-bold transition duration-300 shadow-lg">
+                    <i class="fas fa-calendar-alt mr-3"></i>無料診断を申し込む
+                </a>
+                <a href="index.html#contact"
+                    class="inline-flex items-center justify-center bg-[#06C755] hover:bg-[#05b04b] text-white px-8 py-4 rounded-sm font-bold transition duration-300 shadow-lg">
+                    <i class="fab fa-line text-xl mr-3"></i>LINEで相談する
+                </a>
+            </div>
+            <p class="mt-14 text-gray-400 text-sm">
+                運営代行との併用も可能です。<br class="sm:hidden">
+                <a href="index.html" class="text-accent hover:text-accentHover transition underline underline-offset-4">
+                    民泊運営サービスについてはこちら →
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12 border-t border-gray-700 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                <div class="text-center md:text-left">
+                    <a href="index.html" class="font-serif text-3xl font-bold tracking-wide text-white">
+                        Minpaku <span class="text-accent">Resort</span>
+                    </a>
+                    <p class="mt-4 text-gray-400 text-sm">
+                        遊休資産を、感動の舞台へ。
+                    </p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-instagram text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-twitter text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-facebook text-2xl"></i></a>
+                </div>
+            </div>
+            <div
+                class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white transition">運営会社</a>
+                    <a href="#" class="hover:text-white transition">プライバシーポリシー</a>
+                    <a href="#" class="hover:text-white transition">利用規約</a>
+                </div>
+                <p>&copy; 2026 Minpaku Resort. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating LINE Button -->
+    <a href="index.html#contact"
+        class="line-button-floating hidden sm:flex items-center justify-center bg-[#06C755] hover:bg-[#05b04b] text-white p-4 rounded-full shadow-2xl transition group w-16 h-16 hover:w-auto hover:px-6">
+        <i class="fab fa-line text-3xl group-hover:mr-3 transition-all duration-300"></i>
+        <span
+            class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out font-bold">
+            LINEで無料相談
+        </span>
+    </a>
+
+</body>
+
+</html>
