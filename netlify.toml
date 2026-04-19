@@ -1,0 +1,53 @@
+# ─────────────────────────────────────────────────────────────────
+# Minpaku Resort — Netlify 設定
+#
+# 【サブドメイン展開の仕組み】
+#   1. ワイルドカード DNS:  *.minpaku-resort.com → Netlify
+#   2. Netlify: すべてのサブドメインを同一サイトにルーティング
+#   3. js/regional.js が hostname を解析してデータを注入
+#
+# 【設定手順】
+#   1. Netlify サイト設定 → Domain management → Add domain alias:
+#      *.minpaku-resort.com を追加
+#   2. DNS プロバイダで *.minpaku-resort.com の CNAME を
+#      <your-site>.netlify.app に設定
+#   3. Netlify の wildcard HTTPS 証明書が自動発行される
+# ─────────────────────────────────────────────────────────────────
+
+[build]
+  publish = "."
+  command = ""
+
+# すべてのパスを index.html にフォールバック (SPA的なルーティング)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+# ─── セキュリティヘッダー ───────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# JSONデータは適切なContent-Typeで配信
+[[headers]]
+  for = "/data/*.json"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
+# 画像・CSS・JSのキャッシュ最適化
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

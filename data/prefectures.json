@@ -1,298 +1,11 @@
 {
-  "okinawa": {
-    "prefKey": "okinawa",
-    "prefName": "沖縄県",
-    "prefShort": "沖縄",
-    "heroImage": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-    "heroTagline": "沖縄北部を中心とした民泊運営・清掃",
-    "heroCopy": "沖縄の民泊に、地域に根ざした安心と高品質を。",
-    "heroSubcopy": "安定した収益化を実現する運営代行と、ゲストを感動させるプロの清掃。エリアの特性に合わせた運用で、物件の価値を守ります。",
-    "localRules": [
-      {
-        "icon": "fas fa-yen-sign",
-        "title": "沖縄県 宿泊税",
-        "body": "2026年度より沖縄県宿泊税の導入が検討されています。施設タイプや宿泊料金に応じた税額の把握と適切な申告が必要です。弊社が最新情報を随時反映し、オーナー様の申告手続きをサポートします。",
-        "highlight": "税務対応"
-      },
-      {
-        "icon": "fas fa-trash-alt",
-        "title": "ゴミ出しルール",
-        "body": "沖縄北部では各市町村のゴミ分別ルールが異なります。名護市・本部町の収集日・分別方法を徹底管理し、ゲストへのご案内から排出作業まで代行し近隣トラブルを未然に防止します。",
-        "highlight": "分別管理"
-      },
-      {
-        "icon": "fas fa-wind",
-        "title": "台風対策",
-        "body": "毎年夏〜秋に多数の台風が直撃する沖縄北部。屋外設備・家具の撤去・復旧対応を迅速に実施。台風通過後は清掃・点検レポートを発行し、物件の状態を確実にご報告します。",
-        "highlight": "台風シーズン対応"
-      },
-      {
-        "icon": "fas fa-bug",
-        "title": "亜熱帯特有の害虫対策",
-        "body": "亜熱帯気候特有の害虫（ゴキブリ・ムカデ・ヤモリ等）への対策として、専用の防虫プロセスを清掃フローに組み込んでいます。リゾートヴィラや戸建てに特化した対策を提供します。",
-        "highlight": "通年対応"
-      }
-    ],
-    "municipalities": [
-      "名護市", "本部町", "今帰仁村", "大宜味村", "国頭村",
-      "東村", "恩納村", "宜野座村", "金武町", "うるま市",
-      "沖縄市", "読谷村", "北谷町", "嘉手納町", "北中城村",
-      "中城村", "西原町", "那覇市", "浦添市", "宜野湾市",
-      "豊見城市", "糸満市", "南城市", "南風原町", "八重瀬町",
-      "与那原町", "石垣市", "宮古島市"
-    ],
-    "staff": [
-      {
-        "name": "山城",
-        "role": "清掃チームリーダー",
-        "message": "北部エリアの物件を隅々まで熟知。細部まで丁寧な清掃をお届けします。",
-        "avatar": "images/staff_1.png"
-      },
-      {
-        "name": "仲間",
-        "role": "ゲスト対応担当",
-        "message": "英語・中国語対応も可能。ゲストの滞在を最高の思い出にします。",
-        "avatar": "images/staff_2.png"
-      },
-      {
-        "name": "比嘉",
-        "role": "運営マネージャー",
-        "message": "OTA掲載から価格調整まで、収益最大化を徹底サポートします。",
-        "avatar": "images/staff_3.png"
-      },
-      {
-        "name": "新垣",
-        "role": "現地サポート",
-        "message": "トラブル発生時も即対応。オーナー様が安心して任せられる体制です。",
-        "avatar": "images/staff_4.png"
-      }
-    ],
-    "beforeAfter": [
-      {
-        "label": "リビング・ダイニング",
-        "before": "images/before_cleaning.png",
-        "after": "images/after_cleaning.png"
-      },
-      {
-        "label": "バスルーム",
-        "before": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=60",
-        "after": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"
-      },
-      {
-        "label": "ベッドルーム",
-        "before": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=60",
-        "after": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80"
-      }
-    ],
-    "cleaningPrices": {
-      "1R・1K": 5000,
-      "1LDK": 6000,
-      "2LDK": 8500,
-      "3LDK": 11000,
-      "4LDK以上": 15000,
-      "ヴィラ・戸建て(150m²以上)": 20000
-    },
-    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d203673.80544521406!2d127.94060599999999!3d26.592540000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
-    "lineAccountUrl": "https://line.me/R/ti/p/@your-line-id",
-    "seoTitle": "沖縄県の民泊 運営代行・清掃代行 | Minpaku Resort",
-    "seoDescription": "沖縄北部を中心に、民泊の収益化をサポート。リゾート・クオリティの清掃代行と収益最大化を実現する運営代行を提供するプロフェッショナル集団です。エリアの特性に即した体制で対応します。"
-  },
-
-  "tokyo": {
-    "prefKey": "tokyo",
-    "prefName": "東京都",
-    "prefShort": "東京",
-    "heroImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-    "heroTagline": "東京都内の民泊運営・清掃をエリアに精通したチームが",
-    "heroCopy": "東京の民泊に、地域に根ざした安心と高品質を。",
-    "heroSubcopy": "都市型民泊の収益最大化を実現する運営代行と、ゲストを感動させるプロの清掃。都心の多種多様なニーズに応える管理体制を構築します。",
-    "localRules": [
-      {
-        "icon": "fas fa-yen-sign",
-        "title": "東京都 宿泊税",
-        "body": "東京都では宿泊料金に応じた宿泊税が課税されます（1万円未満：非課税、1〜1.5万円：100円、1.5万円以上：200円）。オーナー様に代わり、正確な税額計算と申告手続きを代行します。",
-        "highlight": "税務対応必須"
-      },
-      {
-        "icon": "fas fa-trash-alt",
-        "title": "ゴミ出しルール",
-        "body": "東京23区内は区ごとにゴミ分別・収集日が細かく異なります。ゲストへの多言語案内と、清掃時のゴミ適正排出を徹底し、マンション管理組合とのトラブルを防止します。",
-        "highlight": "区ごとに異なるルール"
-      },
-      {
-        "icon": "fas fa-building",
-        "title": "マンション管理規約",
-        "body": "都内の民泊物件の多くがマンション。管理規約の民泊禁止条項や、フロント設置義務の確認まで、物件ごとの適法運営体制の構築をサポートします。",
-        "highlight": "コンプライアンス"
-      },
-      {
-        "icon": "fas fa-volume-down",
-        "title": "騒音・近隣対策",
-        "body": "高密度な都市部では騒音トラブルが発生しやすい環境です。ゲストへの事前ルール周知、深夜対応窓口の設置、近隣住民への丁寧なフォローアップを徹底します。",
-        "highlight": "24時間対応"
-      }
-    ],
-    "municipalities": [
-      "千代田区", "中央区", "港区", "新宿区", "文京区",
-      "台東区", "墨田区", "江東区", "品川区", "目黒区",
-      "大田区", "世田谷区", "渋谷区", "中野区", "杉並区",
-      "豊島区", "北区", "荒川区", "板橋区", "練馬区",
-      "足立区", "葛飾区", "江戸川区", "八王子市", "立川市",
-      "武蔵野市", "三鷹市", "府中市", "調布市", "町田市"
-    ],
-    "staff": [
-      {
-        "name": "田中",
-        "role": "清掃チームリーダー",
-        "message": "都内マンションの清掃に特化。搬入・搬出のルールも熟知しています。",
-        "avatar": "images/staff_1.png"
-      },
-      {
-        "name": "佐藤",
-        "role": "ゲスト対応担当",
-        "message": "英語・韓国語対応可能。インバウンドゲストへの対応が得意です。",
-        "avatar": "images/staff_2.png"
-      },
-      {
-        "name": "鈴木",
-        "role": "運営マネージャー",
-        "message": "都心の需要データを熟知。ダイナミックプライシングで収益を最大化します。",
-        "avatar": "images/staff_3.png"
-      },
-      {
-        "name": "山田",
-        "role": "コンプライアンス担当",
-        "message": "東京都の民泊法規制を熟知。適法運営のサポートを担当します。",
-        "avatar": "images/staff_4.png"
-      }
-    ],
-    "beforeAfter": [
-      {
-        "label": "都市型マンション",
-        "before": "images/before_cleaning.png",
-        "after": "images/after_cleaning.png"
-      },
-      {
-        "label": "水回り",
-        "before": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=60",
-        "after": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"
-      }
-    ],
-    "cleaningPrices": {
-      "1R・1K": 5500,
-      "1LDK": 7000,
-      "2LDK": 10000,
-      "3LDK": 14000,
-      "4LDK以上": 18000,
-      "ペントハウス・高級物件": 25000
-    },
-    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d103031.24497697682!2d139.6917!3d35.6895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
-    "lineAccountUrl": "https://line.me/R/ti/p/@your-line-id",
-    "seoTitle": "東京都の民泊 運営代行・清掃代行 | Minpaku Resort",
-    "seoDescription": "東京都内の民泊オーナー様へ。実務的な運営代行・清掃代行をワンストップで提供。宿泊税対応からマンション規約確認まで、都市部特有の課題に完全対応します。"
-  },
-
-  "osaka": {
-    "prefKey": "osaka",
-    "prefName": "大阪府",
-    "prefShort": "大阪",
-    "heroImage": "https://images.unsplash.com/photo-1590559899731-a382839e5549?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-    "heroTagline": "大阪府内の民泊運営・清掃をエリアに精通したチームが",
-    "heroCopy": "大阪の民泊に、地域に根ざした安心と高品質を。",
-    "heroSubcopy": "訪日外国人が集まる大阪で、収益最大化を実現する運営代行と、ゲストを感動させるプロの清掃。インバウンド需要の変動に合わせ、戦略的な運営を行います。",
-    "localRules": [
-      {
-        "icon": "fas fa-yen-sign",
-        "title": "大阪府・大阪市 宿泊税",
-        "body": "大阪市では2017年より宿泊税が施行されています（1泊1万円未満：非課税、1〜2万円：130円、2万円以上：430円）。大阪府税との二重課税に注意が必要です。弊社が正確な申告をサポートします。",
-        "highlight": "府・市の二重課税注意"
-      },
-      {
-        "icon": "fas fa-trash-alt",
-        "title": "ゴミ出しルール",
-        "body": "大阪市内はゴミ収集が市直営のため区ごとに曜日が異なります。外国人ゲストに多言語でルールを案内し、清掃時の適正排出を徹底。近隣のゴミステーションでのトラブルを防ぎます。",
-        "highlight": "外国人対応必須"
-      },
-      {
-        "icon": "fas fa-globe-asia",
-        "title": "インバウンド対策",
-        "body": "大阪はインバウンド需要が非常に高く、中国語・英語・韓国語対応が不可欠です。民泊の看板表示から緊急時対応まで多言語化し、外国人ゲストの満足度を最大化します。",
-        "highlight": "多言語対応"
-      },
-      {
-        "icon": "fas fa-calendar-check",
-        "title": "週末・連休の稼働率管理",
-        "body": "USJや道頓堀周辺の需要変動は激しく、GWや三連休前後で宿泊単価が大幅に変動します。AIによるダイナミックプライシングで、ハイシーズンの収益を最大化します。",
-        "highlight": "季節変動対応"
-      }
-    ],
-    "municipalities": [
-      "大阪市（北区・中央区・西区・浪速区・天王寺区・福島区・淀川区・東淀川区・西淀川区・東成区・生野区・旭区・城東区・鶴見区・阿倍野区・住之江区・住吉区・東住吉区・平野区・西成区）",
-      "堺市", "豊中市", "吹田市", "高槻市", "東大阪市",
-      "枚方市", "茨木市", "八尾市", "寝屋川市", "岸和田市",
-      "和泉市", "摂津市", "箕面市", "池田市", "守口市",
-      "門真市", "松原市", "大東市", "柏原市", "羽曳野市",
-      "藤井寺市", "泉佐野市", "富田林市"
-    ],
-    "staff": [
-      {
-        "name": "西村",
-        "role": "清掃チームリーダー",
-        "message": "ミナミ・キタ周辺の物件を中心に担当。インバウンド対応も得意です。",
-        "avatar": "images/staff_1.png"
-      },
-      {
-        "name": "中村",
-        "role": "多言語ゲスト対応",
-        "message": "中国語・英語・韓国語対応可能。外国人ゲストの満足度向上に取り組みます。",
-        "avatar": "images/staff_2.png"
-      },
-      {
-        "name": "松本",
-        "role": "運営マネージャー",
-        "message": "道頓堀・USJ周辺の需要を徹底分析。稼働率85%超を実現します。",
-        "avatar": "images/staff_3.png"
-      },
-      {
-        "name": "木村",
-        "role": "現地サポート",
-        "message": "大阪の街を知り尽くしたサポート担当。何かあれば即対応します。",
-        "avatar": "images/staff_4.png"
-      }
-    ],
-    "beforeAfter": [
-      {
-        "label": "都市型マンション",
-        "before": "images/before_cleaning.png",
-        "after": "images/after_cleaning.png"
-      },
-      {
-        "label": "水回り",
-        "before": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=60",
-        "after": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"
-      }
-    ],
-    "cleaningPrices": {
-      "1R・1K": 5000,
-      "1LDK": 6500,
-      "2LDK": 9000,
-      "3LDK": 12000,
-      "4LDK以上": 16000,
-      "ペントハウス・高級物件": 22000
-    },
-    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d207357.9577!2d135.5022!3d34.6937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
-    "lineAccountUrl": "https://line.me/R/ti/p/@your-line-id",
-    "seoTitle": "大阪府の民泊 運営代行・清掃代行 | Minpaku Resort",
-    "seoDescription": "大阪府内の民泊オーナー様へ。インバウンド需要が高い大阪で、専門的な運営代行・清掃代行をワンストップで提供。多言語対応・宿泊税申告まで対応します。"
-  },
-
   "hokkaido": {
     "prefKey": "hokkaido",
     "prefName": "北海道",
     "prefShort": "北海道",
     "heroImage": "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
     "heroTagline": "北海道内の民泊運営・清掃をエリアに精通したチームが",
-    "heroCopy": "北海道の民泊に、地域に根ざした安心と高品質を。",
+    "heroCopy": "北海道の民泊に、安心と高品質を。",
     "heroSubcopy": "四季折々の魅力を持つ北海道で、収益最大化を実現する運営代行と、ゲストを感動させるプロの清掃。冬期の凍結管理や暖房設備の維持など、現地の環境に必要な運用を徹底します。",
     "localRules": [
       {
@@ -321,17 +34,37 @@
       }
     ],
     "municipalities": [
-      "札幌市", "函館市", "旭川市", "釧路市", "帯広市",
-      "北見市", "小樽市", "苫小牧市", "室蘭市", "江別市",
-      "千歳市", "恵庭市", "北広島市", "石狩市", "ニセコ町",
-      "倶知安町", "富良野市", "美瑛町", "白老町", "洞爺湖町",
-      "登別市", "伊達市", "余市町", "岩内町", "積丹町"
+      "札幌市",
+      "函館市",
+      "旭川市",
+      "釧路市",
+      "帯広市",
+      "北見市",
+      "小樽市",
+      "苫小牧市",
+      "室蘭市",
+      "江別市",
+      "千歳市",
+      "恵庭市",
+      "北広島市",
+      "石狩市",
+      "ニセコ町",
+      "倶知安町",
+      "富良野市",
+      "美瑛町",
+      "白老町",
+      "洞爺湖町",
+      "登別市",
+      "伊達市",
+      "余市町",
+      "岩内町",
+      "積丹町"
     ],
     "staff": [
       {
         "name": "高橋",
         "role": "清掃チームリーダー",
-        "message": "北海道の厳冬期対応に特化。凍結・積雪トラブルも迅速に対応します。",
+        "message": "北海道の厳冬期対応に特化. 凍結・積雪トラブルも迅速に対応します。",
         "avatar": "images/staff_1.png"
       },
       {
@@ -353,18 +86,6 @@
         "avatar": "images/staff_4.png"
       }
     ],
-    "beforeAfter": [
-      {
-        "label": "ログハウス・コテージ",
-        "before": "images/before_cleaning.png",
-        "after": "images/after_cleaning.png"
-      },
-      {
-        "label": "スキーロッジ",
-        "before": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=60",
-        "after": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80"
-      }
-    ],
     "cleaningPrices": {
       "1R・1K": 5000,
       "1LDK": 6500,
@@ -373,9 +94,2971 @@
       "4LDK・コテージ": 16000,
       "ログハウス・大型物件": 22000
     },
-    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2872011.4!2d142.3!3d43.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+    "cleaningFeature": {
+      "title": "北海道の厳冬期環境にも完全対応",
+      "body": "冬季のマイナス気温下での水回り凍結防止や、積雪時の除雪・融雪剤散布まで、北海道特有の過酷な冬の環境を熟知したチームが、物件をトラブルなく維持・清掃いたします。"
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000000!2d141.34694!3d43.06417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s北海道!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp",
     "lineAccountUrl": "https://line.me/R/ti/p/@your-line-id",
     "seoTitle": "北海道の民泊 運営代行・清掃代行 | Minpaku Resort",
     "seoDescription": "北海道内の民泊オーナー様へ。冬季凍結対応・暖房設備管理・スキーリゾート需要への対応など、北海道の環境維持に必要な実務全般をワンストップで提供します。"
+  },
+  "aomori": {
+    "prefKey": "aomori",
+    "prefName": "青森県",
+    "prefShort": "青森",
+    "heroImage": "https://images.unsplash.com/photo-1545569119-a479bd78243c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "青森の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "青森の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "青森市",
+      "弘前市",
+      "八戸市",
+      "十和田市",
+      "むつ市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "青森の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "青森内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500000!2d140.74!3d40.82444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s青森県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "iwate": {
+    "prefKey": "iwate",
+    "prefName": "岩手県",
+    "prefShort": "岩手",
+    "heroImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "岩手の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "岩手の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "盛岡市",
+      "花巻市",
+      "北上市",
+      "一関市",
+      "釜石市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "岩手の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "岩手内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500000!2d141.1525!3d39.70361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s岩手県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "miyagi": {
+    "prefKey": "miyagi",
+    "prefName": "宮城県",
+    "prefShort": "宮城",
+    "heroImage": "https://images.unsplash.com/photo-1594584285098-90050bc69f98?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "宮城の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "宮城の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "仙台市",
+      "石巻市",
+      "塩竈市",
+      "気仙沼市",
+      "名取市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "宮城の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "宮城内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500000!2d140.87194!3d38.26889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s宮城県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "akita": {
+    "prefKey": "akita",
+    "prefName": "秋田県",
+    "prefShort": "秋田",
+    "heroImage": "https://images.unsplash.com/photo-1582650841097-90c7936a287a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "秋田の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "秋田の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "秋田市",
+      "能代市",
+      "横手市",
+      "大館市",
+      "男鹿市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "秋田の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "秋田内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500000!2d140.1025!3d39.71861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s秋田県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "yamagata": {
+    "prefKey": "yamagata",
+    "prefName": "山形県",
+    "prefShort": "山形",
+    "heroImage": "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "山形の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "山形の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "山形市",
+      "米沢市",
+      "鶴岡市",
+      "酒田市",
+      "新庄市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "山形の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "山形内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500000!2d140.33972!3d38.25556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s山形県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "fukushima": {
+    "prefKey": "fukushima",
+    "prefName": "福島県",
+    "prefShort": "福島",
+    "heroImage": "https://images.unsplash.com/photo-1542384557-0824d90731ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "福島の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "福島の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "福島市",
+      "会津若松市",
+      "郡山市",
+      "いわき市",
+      "白河市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "福島の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "福島内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500000!2d140.46778!3d37.75028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s福島県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "ibaraki": {
+    "prefKey": "ibaraki",
+    "prefName": "茨城県",
+    "prefShort": "茨城",
+    "heroImage": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "茨城の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "茨城の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "水戸市",
+      "日立市",
+      "土浦市",
+      "つくば市",
+      "ひたちなか市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "茨城の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "茨城内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d140.44667!3d36.34139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s茨城県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "tochigi": {
+    "prefKey": "tochigi",
+    "prefName": "栃木県",
+    "prefShort": "栃木",
+    "heroImage": "https://images.unsplash.com/photo-1571151630138-0c641886eb02?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "栃木の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "栃木の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "宇都宮市",
+      "足利市",
+      "栃木市",
+      "佐野市",
+      "日光市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "栃木の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "栃木内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d139.88361!3d36.56583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s栃木県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "gunma": {
+    "prefKey": "gunma",
+    "prefName": "群馬県",
+    "prefShort": "群馬",
+    "heroImage": "https://images.unsplash.com/photo-1540956485617-299f0f959c9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "群馬の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "群馬の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "前橋市",
+      "高崎市",
+      "桐生市",
+      "伊勢崎市",
+      "草津町"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "群馬の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "群馬内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d139.06083!3d36.39111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s群馬県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "saitama": {
+    "prefKey": "saitama",
+    "prefName": "埼玉県",
+    "prefShort": "埼玉",
+    "heroImage": "https://images.unsplash.com/photo-1555510547-02058e7275d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "埼玉の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "埼玉の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "さいたま市",
+      "川越市",
+      "熊谷市",
+      "川口市",
+      "秩父市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "埼玉の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "埼玉内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200000!2d139.64889!3d35.85694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s埼玉県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "chiba": {
+    "prefKey": "chiba",
+    "prefName": "千葉県",
+    "prefShort": "千葉",
+    "heroImage": "https://images.unsplash.com/photo-1549410972-24606771d1b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "千葉の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "千葉の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "千葉市",
+      "市川市",
+      "船橋市",
+      "木更津市",
+      "成田市",
+      "浦安市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "千葉の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "千葉内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d140.12333!3d35.60472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s千葉県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "tokyo": {
+    "prefKey": "tokyo",
+    "prefName": "東京都",
+    "prefShort": "東京",
+    "heroImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "東京内の民泊運営・清掃をエリアに精通したチームが",
+    "heroCopy": "東京の民泊に、安心と高品質を。",
+    "heroSubcopy": "都市型民泊の収益最大化を実現する運営代行と、ゲストを感動させるプロの清掃. 都心の多種多様なニーズに応える管理体制を構築します。",
+    "localRules": [
+      {
+        "icon": "fas fa-yen-sign",
+        "title": "東京都 宿泊税",
+        "body": "東京都では宿泊料金に応じた宿泊税が課税されます（1万円未満：非課税、1〜1.5万円：100円、1.5万円以上：200円）。オーナー様に代わり、正確な税額計算と申告手続きを代行します。",
+        "highlight": "税務対応必須"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しルール",
+        "body": "東京23区内は区ごとにゴミ分別・収集日が細かく異なります。ゲストへの多言語案内と、清掃時のゴミ適正排出を徹底し、マンション管理組合とのトラブルを防止します。",
+        "highlight": "区ごとに異なるルール"
+      },
+      {
+        "icon": "fas fa-building",
+        "title": "マンション管理規約",
+        "body": "都内の民泊物件の多くがマンション. 管理規約の民泊禁止条項や、フロント設置義務の確認まで、物件ごとの適法運営体制の構築をサポートします。",
+        "highlight": "コンプライアンス"
+      },
+      {
+        "icon": "fas fa-volume-down",
+        "title": "騒音・近隣対策",
+        "body": "高密度な都市部では騒音トラブルが発生しやすい環境です。ゲストへの事前ルール周知、深夜対応窓口の設置、近隣住民への丁寧なフォローアップを徹底します。",
+        "highlight": "24時間対応"
+      }
+    ],
+    "municipalities": [
+      "千代田区",
+      "中央区",
+      "港区",
+      "新宿区",
+      "文京区",
+      "台東区",
+      "墨田区",
+      "江東区",
+      "品川区",
+      "目黒区",
+      "大田区",
+      "世田谷区",
+      "渋谷区",
+      "中野区",
+      "杉並区",
+      "豊島区",
+      "北区",
+      "荒川区",
+      "板橋区",
+      "練馬区",
+      "足立区",
+      "葛飾区",
+      "江戸川区",
+      "八王子市",
+      "立川市",
+      "武蔵野市",
+      "三鷹市",
+      "府中市",
+      "調布市",
+      "町田市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "清掃チームリーダー",
+        "message": "都内マンションの清掃に特化。搬入・搬出のルールも熟知しています。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲスト対応担当",
+        "message": "英語・韓国語対応可能。インバウンドゲストへの対応が得意です。",
+        "avatar": "images/staff_2.png"
+      },
+      {
+        "name": "鈴木",
+        "role": "運営マネージャー",
+        "message": "都心の需要データを熟知。ダイナミックプライシングで収益を最大化します。",
+        "avatar": "images/staff_3.png"
+      },
+      {
+        "name": "山田",
+        "role": "コンプライアンス担当",
+        "message": "東京都の民泊法規制を熟知。適法運営のサポートを担当します。",
+        "avatar": "images/staff_4.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5500,
+      "1LDK": 7000,
+      "2LDK": 10000,
+      "3LDK": 14000,
+      "4LDK以上": 18000,
+      "ペントハウス・高級物件": 25000
+    },
+    "cleaningFeature": {
+      "title": "都心マンションの多種多様なルールに対応",
+      "body": "オートロック物件やごみ捨てルールが厳しい都心のマンション民泊において、居住者への配慮と徹底したマニュアル遵守でトラブルを防止。限られた時間内での高品質清掃を実現します。"
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100000!2d139.69167!3d35.68944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s東京都!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp",
+    "lineAccountUrl": "https://line.me/R/ti/p/@your-line-id",
+    "seoTitle": "東京の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "東京内の民泊オーナー様へ。実務的な運営代行・清掃代行をワンストップで提供. 宿泊税対応からマンション規約確認まで、都市部特有の課題に完全対応します。"
+  },
+  "kanagawa": {
+    "prefKey": "kanagawa",
+    "prefName": "神奈川県",
+    "prefShort": "神奈川",
+    "heroImage": "https://images.unsplash.com/photo-1590481075329-a42f40ad96d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "神奈川の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "神奈川の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "横浜市",
+      "川崎市",
+      "相模原市",
+      "鎌倉市",
+      "箱根町",
+      "藤沢市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "神奈川の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "神奈川内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200000!2d139.6425!3d35.44778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s神奈川県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "niigata": {
+    "prefKey": "niigata",
+    "prefName": "新潟県",
+    "prefShort": "新潟",
+    "heroImage": "https://images.unsplash.com/photo-1533421115853-294b46571597?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "新潟の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "新潟の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "新潟市",
+      "長岡市",
+      "上越市",
+      "湯沢町",
+      "妙高市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "新潟の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "新潟内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500000!2d139.02361!3d37.90222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s新潟県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "toyama": {
+    "prefKey": "toyama",
+    "prefName": "富山県",
+    "prefShort": "富山",
+    "heroImage": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "富山の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "富山の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "富山市",
+      "高岡市",
+      "魚津市",
+      "氷見市",
+      "砺波市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "富山の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "富山内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d137.21139!3d36.69528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s富山県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "ishikawa": {
+    "prefKey": "ishikawa",
+    "prefName": "石川県",
+    "prefShort": "石川",
+    "heroImage": "https://images.unsplash.com/photo-1596276122653-651a3898309f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "石川の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "石川の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "金沢市",
+      "七尾市",
+      "小松市",
+      "輪島市",
+      "加賀市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "石川の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "石川内の民泊オーナー様へ。地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d136.62556!3d36.59444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s石川県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "fukui": {
+    "prefKey": "fukui",
+    "prefName": "福井県",
+    "prefShort": "福井",
+    "heroImage": "https://images.unsplash.com/photo-15420518418c7-a276a1f3301d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "福井の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "福井の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "福井市",
+      "敦賀市",
+      "小浜市",
+      "大野市",
+      "あわら市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "福井の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "福井内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d136.22194!3d36.06528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s福井県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "yamanashi": {
+    "prefKey": "yamanashi",
+    "prefName": "山梨県",
+    "prefShort": "山梨",
+    "heroImage": "https://images.unsplash.com/photo-1490806678282-44670054790a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "山梨の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "山梨の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "甲府市",
+      "富士吉田市",
+      "都留市",
+      "山梨市",
+      "河口湖町"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "山梨の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "山梨内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d138.56833!3d35.66389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s山梨県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "nagano": {
+    "prefKey": "nagano",
+    "prefName": "長野県",
+    "prefShort": "長野",
+    "heroImage": "https://images.unsplash.com/photo-1542640244-7e672d6cef21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "長野の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "長野の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "長野市",
+      "松本市",
+      "上田市",
+      "軽井沢町",
+      "白馬村"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "長野の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "長野内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500000!2d138.18111!3d36.65139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s長野県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "gifu": {
+    "prefKey": "gifu",
+    "prefName": "岐阜県",
+    "prefShort": "岐阜",
+    "heroImage": "https://images.unsplash.com/photo-1528360983277-13d401cd187c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "岐阜の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "岐阜の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "岐阜市",
+      "大垣市",
+      "高山市",
+      "多治見市",
+      "白川村"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "岐阜の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "岐阜内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d136.72222!3d35.39111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s岐阜県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "shizuoka": {
+    "prefKey": "shizuoka",
+    "prefName": "静岡県",
+    "prefShort": "静岡",
+    "heroImage": "https://images.unsplash.com/photo-1542640244-7e672d6cef21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "静岡の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "静岡の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "静岡市",
+      "浜松市",
+      "熱海市",
+      "三島市",
+      "伊東市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "静岡の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "静岡内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d138.38306!3d34.97694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s静岡県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "aichi": {
+    "prefKey": "aichi",
+    "prefName": "愛知県",
+    "prefShort": "愛知",
+    "heroImage": "https://images.unsplash.com/photo-1596434458316-09e74d101239?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "愛知の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "愛知の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "名古屋市",
+      "豊橋市",
+      "岡崎市",
+      "一宮市",
+      "豊田市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "愛知の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "愛知内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d136.90667!3d35.18028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s愛知県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "mie": {
+    "prefKey": "mie",
+    "prefName": "三重県",
+    "prefShort": "三重",
+    "heroImage": "https://images.unsplash.com/photo-1571597435133-c91350a2569e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "三重の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "三重の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "津市",
+      "四日市市",
+      "伊勢市",
+      "松阪市",
+      "鳥羽市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "三重の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "三重内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d136.50861!3d34.73028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s三重県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "shiga": {
+    "prefKey": "shiga",
+    "prefName": "滋賀県",
+    "prefShort": "滋賀",
+    "heroImage": "https://images.unsplash.com/photo-1590403160456-11f32a74ba10?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "滋賀の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "滋賀の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "大津市",
+      "彦根市",
+      "長浜市",
+      "近江八幡市",
+      "草津市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "滋賀の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "滋賀内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200000!2d135.86833!3d35.00444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s滋賀県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "kyoto": {
+    "prefKey": "kyoto",
+    "prefName": "京都府",
+    "prefShort": "京都",
+    "heroImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "京都の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "京都の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "京都市",
+      "宇治市",
+      "舞鶴市",
+      "福知山市",
+      "宮津市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "京都の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "京都内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "cleaningFeature": {
+      "title": "歴史性・伝統を重んじる清掃管理",
+      "body": "京町家や古民家再生民泊など、繊細な手入れが必要な物件にも対応。伝統的な素材を傷めない清掃技術と、京都独自の地域ルールへの深い配慮で、物件の価値と風情を末永く守ります。"
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d135.75556!3d35.02139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s京都府!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "osaka": {
+    "prefKey": "osaka",
+    "prefName": "大阪府",
+    "prefShort": "大阪",
+    "heroImage": "https://images.unsplash.com/photo-1590559899731-a382839e5549?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "大阪内の民泊運営・清掃をエリアに精通したチームが",
+    "heroCopy": "大阪の民泊に、安心と高品質を。",
+    "heroSubcopy": "訪日外国人が集まる大阪で、収益最大化を実現する運営代行と、ゲストを感動させるプロの清掃. インバウンド需要の変動に合わせ、戦略的な運営を行います。",
+    "localRules": [
+      {
+        "icon": "fas fa-yen-sign",
+        "title": "大阪府・大阪市 宿泊税",
+        "body": "大阪市では2017年より宿泊税が施行されています（1泊1万円未満：非課税、1〜2万円：130円、2万円以上：430円）。大阪府税との二重課税に注意が必要です。弊社が正確な申告をサポートします。",
+        "highlight": "府・市の二重課税注意"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しルール",
+        "body": "大阪市内はゴミ収集が市直営のため区ごとに曜日が異なります。外国人ゲストに多言語でルールを案内し、清掃時の適正排出を徹底. 近隣のゴミステーションでのトラブルを防ぎます。",
+        "highlight": "外国人対応必須"
+      },
+      {
+        "icon": "fas fa-globe-asia",
+        "title": "インバウンド対策",
+        "body": "大阪はインバウンド需要が非常に高く、中国語・英語・韓国語対応が不可欠です。民泊の看板表示から緊急時対応まで多言語化し、外国人ゲストの満足度を最大化します。",
+        "highlight": "多言語対応"
+      },
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "週末・連休の稼働率管理",
+        "body": "USJや道頓堀周辺の需要変動は激しく、GWや三連休前後で宿泊単価が大幅に変動します。AIによるダイナミックプライシングで、ハイシーズンの収益を最大化します。",
+        "highlight": "季節変動対応"
+      }
+    ],
+    "municipalities": [
+      "大阪市（北区・中央区・西区・浪速区・天王寺区・福島区・淀川区・東淀川区・西淀川区・東成区・生野区・旭区・城東区・鶴見区・阿倍野区・住之江区・住吉区・東住吉区・平野区・西成区）",
+      "堺市",
+      "豊中市",
+      "吹田市",
+      "高槻市",
+      "東大阪市",
+      "枚方市",
+      "茨木市",
+      "八尾市",
+      "寝屋川市",
+      "岸和田市",
+      "和泉市",
+      "摂津市",
+      "箕面市",
+      "池田市",
+      "守口市",
+      "門真市",
+      "松原市",
+      "大東市",
+      "柏原市",
+      "羽曳野市",
+      "藤井寺市",
+      "泉佐野市",
+      "富田林市"
+    ],
+    "staff": [
+      {
+        "name": "西村",
+        "role": "清掃チームリーダー",
+        "message": "ミナミ・キタ周辺の物件を中心に担当. インバウンド対応も得意です。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "中村",
+        "role": "多言語ゲスト対応",
+        "message": "中国語・英語・韓国語対応可能。外国人ゲストの満足度向上に取り組みます。",
+        "avatar": "images/staff_2.png"
+      },
+      {
+        "name": "松本",
+        "role": "運営マネージャー",
+        "message": "道頓堀・USJ周辺の需要を徹底分析. 稼働率85%超を実現します。",
+        "avatar": "images/staff_3.png"
+      },
+      {
+        "name": "木村",
+        "role": "現地サポート",
+        "message": "大阪の街を知り尽くしたサポート担当. 何かあれば即対応します。",
+        "avatar": "images/staff_4.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "cleaningFeature": {
+      "title": "インバウンド需要に即した清掃体制",
+      "body": "連泊の多くインバウンドゲストの特性に合わせ、徹底した除菌清掃と多言語でのご案内掲示を徹底。ゲストが安心して滞在できるリゾート・クオリティの清潔感を安定的に提供します。"
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200000!2d135.52!3d34.68639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s大阪府!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp",
+    "lineAccountUrl": "https://line.me/R/ti/p/@your-line-id",
+    "seoTitle": "大阪の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "大阪内の民泊オーナー様へ. インバウンド需要が高い大阪で、専門的な運営代行・清掃代行をワンストップで提供. 多言語対応・宿泊税申告まで対応します。"
+  },
+  "hyogo": {
+    "prefKey": "hyogo",
+    "prefName": "兵庫県",
+    "prefShort": "兵庫",
+    "heroImage": "https://images.unsplash.com/photo-1590218758831-70e28580a525?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "兵庫の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "兵庫の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "神戸市",
+      "姫路市",
+      "尼崎市",
+      "西宮市",
+      "芦屋市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "兵庫の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "兵庫内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d135.18306!3d34.69139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s兵庫県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "nara": {
+    "prefKey": "nara",
+    "prefName": "奈良県",
+    "prefShort": "奈良",
+    "heroImage": "https://images.unsplash.com/photo-1571400267448-6c8430f8074d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "奈良の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "奈良の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "奈良市",
+      "大和高田市",
+      "大和郡山市",
+      "天理市",
+      "橿原市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "奈良の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "奈良内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200000!2d135.83278!3d34.68528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s奈良県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "wakayama": {
+    "prefKey": "wakayama",
+    "prefName": "和歌山県",
+    "prefShort": "和歌山",
+    "heroImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "和歌山の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "和歌山の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "和歌山市",
+      "海南市",
+      "橋本市",
+      "田辺市",
+      "白浜町"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "和歌山の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "和歌山内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d135.1675!3d34.22611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s和歌山県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "tottori": {
+    "prefKey": "tottori",
+    "prefName": "鳥取県",
+    "prefShort": "鳥取",
+    "heroImage": "https://images.unsplash.com/photo-1544865101-37d4d4203649?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "鳥取の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "鳥取の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "鳥取市",
+      "米子市",
+      "倉吉市",
+      "境港市",
+      "岩美町"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "鳥取の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "鳥取内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d134.23833!3d35.50361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s鳥取県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "shimane": {
+    "prefKey": "shimane",
+    "prefName": "島根県",
+    "prefShort": "島根",
+    "heroImage": "https://images.unsplash.com/photo-1520668384175-108a3818e62d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "島根の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "島根の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "松江市",
+      "浜田市",
+      "出雲市",
+      "益田市",
+      "大田市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "島根の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "島根内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d133.05056!3d35.47222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s島根県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "okayama": {
+    "prefKey": "okayama",
+    "prefName": "岡山県",
+    "prefShort": "岡山",
+    "heroImage": "https://images.unsplash.com/photo-1542384557-0824d90731ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "岡山の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "岡山の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "岡山市",
+      "倉敷市",
+      "津山市",
+      "玉野市",
+      "笠岡市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "岡山の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "岡山内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d133.935!3d34.66167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s岡山県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "hiroshima": {
+    "prefKey": "hiroshima",
+    "prefName": "広島県",
+    "prefShort": "広島",
+    "heroImage": "https://images.unsplash.com/photo-1549410972-24606771d1b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "広島の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "広島の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "広島市",
+      "呉市",
+      "竹原市",
+      "三原市",
+      "尾道市",
+      "福山市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "広島の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "広島内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d132.45944!3d34.39639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s広島県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "yamaguchi": {
+    "prefKey": "yamaguchi",
+    "prefName": "山口県",
+    "prefShort": "山口",
+    "heroImage": "https://images.unsplash.com/photo-1596434458316-09e74d101239?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "山口の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "山口の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "下関市",
+      "宇部市",
+      "山口市",
+      "萩市",
+      "防府市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "山口の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "山口内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d131.47139!3d34.18583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s山口県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "tokushima": {
+    "prefKey": "tokushima",
+    "prefName": "徳島県",
+    "prefShort": "徳島",
+    "heroImage": "https://images.unsplash.com/photo-1549410972-24606771d1b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "徳島の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "徳島の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "徳島市",
+      "鳴門市",
+      "小松島市",
+      "阿南市",
+      "三好市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "徳島の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "徳島内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d134.55944!3d34.06583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s徳島県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "kagawa": {
+    "prefKey": "kagawa",
+    "prefName": "香川県",
+    "prefShort": "香川",
+    "heroImage": "https://images.unsplash.com/photo-1542384557-0824d90731ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "香川の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "香川の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "高松市",
+      "丸亀市",
+      "坂出市",
+      "善通寺市",
+      "観音寺市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "香川の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "香川内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200000!2d134.04639!3d34.34278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s香川県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "ehime": {
+    "prefKey": "ehime",
+    "prefName": "愛媛県",
+    "prefShort": "愛媛",
+    "heroImage": "https://images.unsplash.com/photo-1596276122653-651a3898309f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "愛媛の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "愛媛の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "松山市",
+      "今治市",
+      "宇和島市",
+      "八幡浜市",
+      "新居浜市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "愛媛の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "愛媛内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d132.76611!3d33.84167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s愛媛県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "kochi": {
+    "prefKey": "kochi",
+    "prefName": "高知県",
+    "prefShort": "高知",
+    "heroImage": "https://images.unsplash.com/photo-15420518418c7-a276a1f3301d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "高知の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "高知の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "高知市",
+      "室戸市",
+      "安芸市",
+      "南国市",
+      "土佐市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "高知の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "高知内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d133.53111!3d33.55972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s高知県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "fukuoka": {
+    "prefKey": "fukuoka",
+    "prefName": "福岡県",
+    "prefShort": "福岡",
+    "heroImage": "https://images.unsplash.com/photo-1590218758831-70e28580a525?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "福岡の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "福岡の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "福岡市",
+      "北九州市",
+      "久留米市",
+      "大牟田市",
+      "飯塚市",
+      "太宰府市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "福岡の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "福岡内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "cleaningFeature": {
+      "title": "アジアの玄関口としての国際基準",
+      "body": "アジア諸国からのゲストが多い福岡エリアでは、多様な文化・習慣に配慮した清掃・セッティングを徹底。スピーディーな回転率と高い衛生基準を両立し、福岡の民泊収益を力強く支えます。"
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d130.41806!3d33.60639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s福岡県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "saga": {
+    "prefKey": "saga",
+    "prefName": "佐賀県",
+    "prefShort": "佐賀",
+    "heroImage": "https://images.unsplash.com/photo-1549410972-24606771d1b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "佐賀の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "佐賀の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "佐賀市",
+      "唐津市",
+      "鳥栖市",
+      "多久市",
+      "伊万里市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "佐賀の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "佐賀内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200000!2d130.30083!3d33.26333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s佐賀県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "nagasaki": {
+    "prefKey": "nagasaki",
+    "prefName": "長崎県",
+    "prefShort": "長崎",
+    "heroImage": "https://images.unsplash.com/photo-1542384557-0824d90731ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "長崎の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "長崎の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "長崎市",
+      "佐世保市",
+      "島原市",
+      "諫早市",
+      "大村市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "長崎の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "長崎内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d129.87361!3d32.74472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s長崎県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "kumamoto": {
+    "prefKey": "kumamoto",
+    "prefName": "熊本県",
+    "prefShort": "熊本",
+    "heroImage": "https://images.unsplash.com/photo-1596276122653-651a3898309f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "熊本の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "熊本の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "熊本市",
+      "八代市",
+      "人吉市",
+      "荒尾市",
+      "水俣市",
+      "阿蘇市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "熊本の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "熊本内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d130.74167!3d32.78972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s熊本県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "oita": {
+    "prefKey": "oita",
+    "prefName": "大分県",
+    "prefShort": "大分",
+    "heroImage": "https://images.unsplash.com/photo-15420518418c7-a276a1f3301d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "大分の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "大分の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "大分市",
+      "別府市",
+      "中津市",
+      "日田市",
+      "由布市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "大分の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "大分内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d131.6125!3d33.23806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s大分県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "miyazaki": {
+    "prefKey": "miyazaki",
+    "prefName": "宮崎県",
+    "prefShort": "宮崎",
+    "heroImage": "https://images.unsplash.com/photo-1590218758831-70e28580a525?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "宮崎の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "宮崎の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "宮崎市",
+      "都城市",
+      "延岡市",
+      "日南市",
+      "小林市",
+      "高千穂町"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "宮崎の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "宮崎内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d131.42389!3d31.91111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s宮崎県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "kagoshima": {
+    "prefKey": "kagoshima",
+    "prefName": "鹿児島県",
+    "prefShort": "鹿児島",
+    "heroImage": "https://images.unsplash.com/photo-1549410972-24606771d1b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "鹿児島の民泊運営・清掃をプロフェッショナルがサポート",
+    "heroCopy": "鹿児島の民泊に、安心と高品質を。",
+    "heroSubcopy": "運営代行と高品質な清掃で、オーナー様の収益最大化をサポートします。",
+    "localRules": [
+      {
+        "icon": "fas fa-calendar-check",
+        "title": "180日ルール",
+        "body": "民泊新法に基づく180日の営業上限を適切に管理し、効率的な運用プランをご提案します。",
+        "highlight": "法規制遵守"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しマナー",
+        "body": "地域のルールに合わせたゴミ分別と排出を徹底し、清潔な環境を維持します。",
+        "highlight": "マナー徹底"
+      },
+      {
+        "icon": "fas fa-bullhorn",
+        "title": "近隣対策",
+        "body": "騒音トラブル等を未然に防ぐためのゲストへの注意喚起と、迅速な対応体制を構築しています。",
+        "highlight": "近隣配慮"
+      }
+    ],
+    "municipalities": [
+      "鹿児島市",
+      "鹿屋市",
+      "枕崎市",
+      "阿久根市",
+      "指宿市",
+      "霧島市",
+      "奄美市"
+    ],
+    "staff": [
+      {
+        "name": "田中",
+        "role": "チームリーダー",
+        "message": "地域の特性を熟知したリーダーとして、安定した運営をサポートします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "佐藤",
+        "role": "ゲストサポート",
+        "message": "ゲストの皆様に快適にお過ごしいただけるよう、丁寧な対応を心がけています。",
+        "avatar": "images/staff_2.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6500,
+      "2LDK": 9000,
+      "3LDK": 12000,
+      "4LDK以上": 16000,
+      "ペントハウス・高級物件": 22000
+    },
+    "seoTitle": "鹿児島の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "鹿児島内の民泊オーナー様へ. 地域に密着した運営代行と清掃サービスを提供します。",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300000!2d130.55806!3d31.56028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s鹿児島県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp"
+  },
+  "okinawa": {
+    "prefKey": "okinawa",
+    "prefName": "沖縄県",
+    "prefShort": "沖縄",
+    "heroImage": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+    "heroTagline": "沖縄北部を中心とした民泊運営・清掃",
+    "heroCopy": "沖縄の民泊に、安心と高品質を。",
+    "heroSubcopy": "安定した収益化を実現する運営代行と、ゲストを感動させるプロの清掃. エリアの特性に合わせた運用で、物件の価値を守ります。",
+    "localRules": [
+      {
+        "icon": "fas fa-yen-sign",
+        "title": "沖縄県 宿泊税",
+        "body": "2026年度より沖縄県宿泊税の導入が検討されています。施設タイプや宿泊料金に応じた税額の把握と適切な申告が必要です。弊社が最新情報を随時反映し、オーナー様の申告手続きをサポートします。",
+        "highlight": "税務対応"
+      },
+      {
+        "icon": "fas fa-trash-alt",
+        "title": "ゴミ出しルール",
+        "body": "沖縄北部では各市町村のゴミ分別ルールが異なります。名護市・本部町の収集日・分別方法を徹底管理し、ゲストへのご案内から排出作業まで代行し近隣トラブルを未然に防止します。",
+        "highlight": "分別管理"
+      },
+      {
+        "icon": "fas fa-wind",
+        "title": "台風対策",
+        "body": "毎年夏〜秋に多数の台風が直撃する沖縄北部. 屋外設備・家具の撤去・復旧対応を迅速に実施. 台風通過後は清掃・点検レポートを発行し、物件の状態を確実にご報告します。",
+        "highlight": "台風シーズン対応"
+      },
+      {
+        "icon": "fas fa-bug",
+        "title": "亜熱帯特有の害虫対策",
+        "body": "亜熱帯気候特有の害虫（ゴキブリ・ムカデ・ヤモリ等）への対策として、専用の防虫プロセスを清掃フローに組み込んでいます。リゾートヴィラや戸建てに特化した対策を提供します。",
+        "highlight": "通年対応"
+      }
+    ],
+    "municipalities": [
+      "名護市",
+      "本部町",
+      "今帰仁村",
+      "大宜味村",
+      "国頭村",
+      "東村",
+      "恩納村",
+      "宜野座村",
+      "金武町",
+      "うるま市",
+      "沖縄市",
+      "読谷村",
+      "北谷町",
+      "嘉手納町",
+      "北中城村",
+      "中城村",
+      "西原町",
+      "那覇市",
+      "浦添市",
+      "宜野湾市",
+      "豊見城市",
+      "糸満市",
+      "南城市",
+      "南風原町",
+      "八重瀬町",
+      "与那原町",
+      "石垣市",
+      "宮古島市"
+    ],
+    "staff": [
+      {
+        "name": "山城",
+        "role": "清掃チームリーダー",
+        "message": "北部エリアの物件を隅々まで熟知. 細部まで丁寧な清掃をお届けします。",
+        "avatar": "images/staff_1.png"
+      },
+      {
+        "name": "仲間",
+        "role": "ゲスト対応担当",
+        "message": "英語・中国語対応も可能. ゲストの滞在を最高の思い出にします。",
+        "avatar": "images/staff_2.png"
+      },
+      {
+        "name": "比嘉",
+        "role": "運営マネージャー",
+        "message": "OTA掲載から価格調整まで、収益最大化を徹底サポートします。",
+        "avatar": "images/staff_3.png"
+      },
+      {
+        "name": "新垣",
+        "role": "現地サポート",
+        "message": "トラブル発生時も即対応. オーナー様が安心して任せられる体制です。",
+        "avatar": "images/staff_4.png"
+      }
+    ],
+    "cleaningPrices": {
+      "1R・1K": 5000,
+      "1LDK": 6000,
+      "2LDK": 8500,
+      "3LDK": 11000,
+      "4LDK以上": 15000,
+      "ヴィラ・戸建て(150m²以上)": 20000
+    },
+    "cleaningFeature": {
+      "title": "沖縄特有の自然トラブルにも完全対応",
+      "body": "ヴィラや戸建て特有の「虫の発生」に対する独自防虫プロセスや、台風前後の屋外家具などの撤去・復旧対応まで、現地の過酷な自然環境を知り尽くしたチームが迅速にケアいたします。"
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500000!2d127.68111!3d26.2125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s沖縄県!5e0!3m2!1sja!2sjp!4v1713456000000!5m2!1sja!2sjp",
+    "lineAccountUrl": "https://line.me/R/ti/p/@your-line-id",
+    "seoTitle": "沖縄の民泊 運営代行・清掃代行 | Minpaku Resort",
+    "seoDescription": "沖縄北部を中心に、民泊の収益化をサポート. リゾート・クオリティの清掃代行と収益最大化を実現する運営代行を提供するプロフェッショナル集団です。エリアの特性に即した体制で対応します。"
   }
 }

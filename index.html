@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minpaku Resort | 民泊 運営代行・清掃代行</title>
     <meta name="description" content="エリアに精通したチームによる民泊 運営代行・清掃代行。リゾート・クオリティの清掃と収益最大化を実現するプロフェッショナル集団です。">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/minpaku_resort_logo_favicon.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
@@ -469,8 +471,9 @@
                                 <i class="fas fa-leaf text-xl"></i>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-lg font-bold text-primary">沖縄特有の自然トラブルにも完全対応</h4>
-                                <p class="text-sm text-gray-600 mt-1">
+                                <h4 id="regional-cleaning-title" class="text-lg font-bold text-primary">
+                                    沖縄特有の自然トラブルにも完全対応</h4>
+                                <p id="regional-cleaning-body" class="text-sm text-gray-600 mt-1">
                                     ヴィラや戸建て特有の「虫の発生」に対する独自防虫プロセスや、台風前後の屋外家具などの撤去・復旧対応まで、現地の過酷な自然環境を知り尽くしたチームが迅速にケアいたします。
                                 </p>
                             </div>
@@ -586,59 +589,7 @@
         </div>
     </section>
 
-    <!-- ⑤ 清掃ビフォーアフタースライダー (regional.js が画像・タブを注入) -->
-    <section id="before-after-section" class="py-20 bg-white border-t border-gray-100">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-accent font-bold tracking-widest text-sm">BEFORE / AFTER</span>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">清掃ビフォーアフター</h3>
-                <p class="mt-6 text-gray-600">中央のハンドルを左右にドラッグして、清掃前後の違いをご確認ください。</p>
-            </div>
 
-            <!-- タブ (2事例以上の場合 regional.js が生成) -->
-            <div id="ba-tabs" class="flex border-b border-gray-200 mb-8 justify-center gap-2"></div>
-
-            <!-- スライダー本体 -->
-            <div class="relative select-none shadow-2xl rounded-sm overflow-hidden" style="aspect-ratio: 16/9;">
-                <!-- コンテナ -->
-                <div id="ba-container" class="relative w-full h-full bg-gray-200">
-                    <!-- AFTER画像（背景） -->
-                    <img id="ba-after-img" src="" alt="清掃後" class="absolute inset-0 w-full h-full object-cover">
-
-                    <!-- BEFORE画像（クリップ） -->
-                    <div id="ba-before-clip" class="absolute inset-0 overflow-hidden" style="width:50%">
-                        <img id="ba-before-img" src="" alt="清掃前" class="absolute top-0 left-0 h-full object-cover"
-                            style="max-width:none;">
-                    </div>
-
-                    <!-- ハンドル -->
-                    <div id="ba-handle" class="absolute top-0 bottom-0 z-10 cursor-col-resize"
-                        style="left:50%; transform:translateX(-50%); width:4px; background:rgba(255,255,255,0.9);">
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                                    w-10 h-10 bg-white rounded-full shadow-xl
-                                    flex items-center justify-center text-gray-600 font-bold text-xs
-                                    border-2 border-accent select-none pointer-events-none">
-                            ◀▶
-                        </div>
-                    </div>
-
-                    <!-- ラベル -->
-                    <div
-                        class="absolute top-4 left-4 z-20 bg-black/60 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded font-bold tracking-wider pointer-events-none">
-                        BEFORE</div>
-                    <div
-                        class="absolute top-4 right-4 z-20 bg-accent text-white text-xs px-3 py-1.5 rounded font-bold tracking-wider pointer-events-none">
-                        AFTER</div>
-                </div>
-
-                <!-- range input (透明・アクセシビリティ用) -->
-                <input type="range" id="ba-range" min="0" max="100" value="50"
-                    class="absolute inset-0 w-full h-full opacity-0 cursor-col-resize z-20">
-            </div>
-
-            <p class="text-center text-xs text-gray-400 mt-4">※ 画像はイメージです。実際の清掃事例写真に差し替えてご使用ください。</p>
-        </div>
-    </section>
 
     <!-- Social Proof (実績・ケーススタディ) -->
     <section id="proofs" class="py-20 bg-primary text-white">

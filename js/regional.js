@@ -14,15 +14,31 @@
   var DEFAULT_PREF = 'okinawa';
 
   /* ─────────────────────────────────────────
-     1. サブドメイン検出
+     1. サブドメイン / クエリパラメータ検出
   ───────────────────────────────────────── */
   function getSubdomain() {
+    // 1. URLパラメータ '?pref=xxx' を優先 (デバッグ用)
+    var params = new URLSearchParams(window.location.search);
+    var prefParam = params.get('pref');
+    if (prefParam) {
+      console.log('[regional.js] Using prefecture from URL parameter:', prefParam);
+      return prefParam;
+    }
+
+    // 2. ホスト名からサブドメインを抽出
     var hostname = window.location.hostname; // e.g. tokyo.minpaku-resort.com
     var parts = hostname.split('.');
-    // localhost / 単一ホスト → デフォルト
-    if (parts.length < 3) return DEFAULT_PREF;
+
+    // localhost / 単一ホスト / IPアドレスなどの場合はデフォルト
+    if (parts.length < 3 || /^\d+\.\d+\.\d+\.\d+$/.test(hostname)) {
+      console.log('[regional.js] Local/Direct access detected. Using default:', DEFAULT_PREF);
+      return DEFAULT_PREF;
+    }
+
     var sub = parts[0];
     if (sub === 'www') return DEFAULT_PREF;
+
+    console.log('[regional.js] Subdomain detected:', sub);
     return sub;
   }
 
@@ -83,7 +99,7 @@
     setText('hero-tagline', d.heroTagline);
     setText('hero-copy', d.heroCopy);
     setText('hero-subcopy', d.heroSubcopy);
-    setText('seo-h1', d.prefName + 'の民泊 運営代行・清掃代行ならMinpaku Resort（民泊リゾート）');
+    setText('seo-h1', d.prefShort + 'の民泊 運営代行・清掃代行ならMinpaku Resort（民泊リゾート）');
   }
 
   function applyProblems(d) {
@@ -98,7 +114,7 @@
   function applyLocalRules(d) {
     var container = document.getElementById('local-rules-grid');
     if (!container) return;
-    setText('local-rules-title', d.prefName + 'だからこそ、気をつけたいこと');
+    setText('local-rules-title', d.prefShort + 'だからこそ、気をつけたいこと');
 
     container.innerHTML = d.localRules.map(function (r) {
       return (
@@ -118,12 +134,31 @@
     }).join('');
   }
 
+  var FIXED_STAFF = [
+    {
+      name: '運営ディレクター',
+      role: 'OPERATION DIRECTOR',
+      message: '全国の運営ノウハウを蓄積し、最適な運用フローを構築。収益性と品質のバランスを統括します。',
+      avatar: 'images/operation_director.png'
+    },
+    {
+      name: '品質管理マネージャー',
+      role: 'QUALITY MANAGER',
+      message: 'ゲストの満足度を左右する清掃・設備品質を徹底管理。独自のチェック体制で高いクオリティを維持します。',
+      avatar: 'images/quality_manager.png'
+    }
+  ];
+
   function applyStaff(d) {
     var container = document.getElementById('staff-grid');
     if (!container) return;
     setText('staff-title', '現場を支えるチーム');
 
-    container.innerHTML = d.staff.map(function (s) {
+    // 固定2名 + 地域データから最初の2名を抽出
+    var localStaff = (d.staff || []).slice(0, 2);
+    var combinedStaff = FIXED_STAFF.concat(localStaff);
+
+    container.innerHTML = combinedStaff.map(function (s) {
       var fallback = 'https://ui-avatars.com/api/?name=' +
         encodeURIComponent(s.name) + '&background=1e293b&color=c5a059&size=112&bold=true';
       return (
@@ -142,7 +177,7 @@
   }
 
   function applyAreas(d) {
-    setText('areas-title', d.prefName + '内 対応可能エリア');
+    setText('areas-title', d.prefShort + ' 対応可能エリア');
 
     var listEl = document.getElementById('municipalities-list');
     if (listEl) {
@@ -168,125 +203,21 @@
     }
   }
 
-  /* ─────────────────────────────────────────
-     5. ビフォーアフタースライダー
-  ───────────────────────────────────────── */
 
-  function applyBeforeAfter(d) {
-    if (!d.beforeAfter || !d.beforeAfter.length) return;
 
-    // グローバルにアイテムを保持（タブ切替用）
-    window._baItems = d.beforeAfter;
+  function applyCleaningFocus(d) {
+    var titleEl = document.getElementById('regional-cleaning-title');
+    var bodyEl = document.getElementById('regional-cleaning-body');
+    if (!titleEl || !bodyEl) return;
 
-    // タブ生成（2枚以上の場合）
-    var tabsEl = document.getElementById('ba-tabs');
-    if (tabsEl && d.beforeAfter.length > 1) {
-      tabsEl.innerHTML = d.beforeAfter.map(function (item, i) {
-        var active = i === 0
-          ? 'border-accent text-accent font-bold'
-          : 'border-transparent text-gray-500 hover:text-gray-700';
-        return (
-          '<button onclick="window.setBAItem(' + i + ')" data-ba-idx="' + i + '" ' +
-            'class="ba-tab px-5 py-2 text-sm border-b-2 transition ' + active + '">' +
-            item.label +
-          '</button>'
-        );
-      }).join('');
+    if (d.cleaningFeature) {
+      titleEl.textContent = d.cleaningFeature.title;
+      bodyEl.textContent = d.cleaningFeature.body;
+    } else {
+      // データの無い都道府県用の汎用フォールバック
+      titleEl.textContent = d.prefShort + 'の地域特性に合わせた最適清掃';
+      bodyEl.textContent = d.prefShort + 'の環境、気候、メインとなるゲスト層（観光・ビジネス等）に合わせた最適な清掃フローを構築。地域の清掃プロフェッショナルと連携し、高いクオリティを安定的に提供いたします。';
     }
-
-    // 最初のアイテムをセット
-    setBAImages(d.beforeAfter[0].before, d.beforeAfter[0].after);
-    initSlider();
-  }
-
-  function setBAImages(beforeUrl, afterUrl) {
-    var beforeImg = document.getElementById('ba-before-img');
-    var afterImg = document.getElementById('ba-after-img');
-    if (beforeImg) beforeImg.src = beforeUrl;
-    if (afterImg) afterImg.src = afterUrl;
-    // スライダーをリセット
-    syncSlider(50);
-  }
-
-  // タブ切替（グローバル公開）
-  window.setBAItem = function (idx) {
-    var items = window._baItems || [];
-    if (!items[idx]) return;
-    setBAImages(items[idx].before, items[idx].after);
-    document.querySelectorAll('.ba-tab').forEach(function (btn, i) {
-      var isActive = i === idx;
-      btn.classList.toggle('border-accent', isActive);
-      btn.classList.toggle('text-accent', isActive);
-      btn.classList.toggle('font-bold', isActive);
-      btn.classList.toggle('border-transparent', !isActive);
-      btn.classList.toggle('text-gray-500', !isActive);
-    });
-  };
-
-  function syncSlider(pct) {
-    var clip = document.getElementById('ba-before-clip');
-    var handle = document.getElementById('ba-handle');
-    var rangeEl = document.getElementById('ba-range');
-    var container = document.getElementById('ba-container');
-    var beforeImg = document.getElementById('ba-before-img');
-
-    if (clip) clip.style.width = pct + '%';
-    if (handle) handle.style.left = pct + '%';
-    if (rangeEl) rangeEl.value = pct;
-
-    // before画像はコンテナ幅に固定しないと歪む
-    if (beforeImg && container) {
-      beforeImg.style.width = container.offsetWidth + 'px';
-      beforeImg.style.maxWidth = 'none';
-    }
-  }
-
-  function initSlider() {
-    var rangeEl = document.getElementById('ba-range');
-    var handle = document.getElementById('ba-handle');
-    var container = document.getElementById('ba-container');
-    if (!rangeEl || !container) return;
-
-    rangeEl.addEventListener('input', function () {
-      syncSlider(parseFloat(rangeEl.value));
-    });
-
-    // ドラッグ操作（マウス / タッチ）
-    function startDrag(e) {
-      if (e.cancelable) e.preventDefault();
-
-      function onMove(ev) {
-        var rect = container.getBoundingClientRect();
-        var clientX = ev.touches ? ev.touches[0].clientX : ev.clientX;
-        var pct = Math.min(100, Math.max(0, (clientX - rect.left) / rect.width * 100));
-        syncSlider(pct);
-      }
-
-      function onUp() {
-        document.removeEventListener('mousemove', onMove);
-        document.removeEventListener('mouseup', onUp);
-        document.removeEventListener('touchmove', onMove);
-        document.removeEventListener('touchend', onUp);
-      }
-
-      document.addEventListener('mousemove', onMove);
-      document.addEventListener('mouseup', onUp);
-      document.addEventListener('touchmove', onMove, { passive: true });
-      document.addEventListener('touchend', onUp);
-    }
-
-    if (handle) {
-      handle.addEventListener('mousedown', startDrag);
-      handle.addEventListener('touchstart', startDrag, { passive: false });
-    }
-
-    // 初期描画
-    syncSlider(50);
-
-    // リサイズ時に幅を再計算
-    window.addEventListener('resize', function () {
-      syncSlider(parseFloat(rangeEl.value));
-    });
   }
 
   /* ─────────────────────────────────────────
@@ -437,7 +368,7 @@
   }
 
   function applyFooter(d) {
-    setText('footer-tagline', d.prefName + 'の民泊を、リゾート・クオリティへ。');
+    setText('footer-tagline', d.prefShort + 'の民泊を、リゾート・クオリティへ。');
   }
 
   /* ─────────────────────────────────────────
@@ -451,7 +382,8 @@
     applyLocalRules(d);
     applyStaff(d);
     applyAreas(d);
-    applyBeforeAfter(d);
+    applyCleaningFocus(d);
+
     initSimulator(d);
     renderNoteFeed();
     applyFooter(d);
@@ -463,7 +395,7 @@
 
   var subdomain = getSubdomain();
 
-  fetch('/data/prefectures.json')
+  fetch('data/prefectures.json')
     .then(function (res) {
       if (!res.ok) throw new Error('HTTP ' + res.status);
       return res.json();
