@@ -50,11 +50,9 @@
   }
 
   function buildLineUrl(lineBase, simId, prefShort) {
-    var msg = encodeURIComponent(
-      '【診断結果：' + simId + '】' + prefShort + 'エリアの詳細レポート希望'
-    );
-    // line.me/R/ti/p/@xxxx → トークに自動入力
-    return lineBase + '?text=' + msg;
+    // 診断結果や入力テキストを利用する場合は、公式LINE側でWebhookを利用した自動応答等で拾う形になります。
+    // lin.eeの短縮URLでは "?text=" の自動入力が対応していないため、固定のリンクを返します。
+    return 'https://lin.ee/RtLPqmQ';
   }
 
   /* ─────────────────────────────────────────
