@@ -124,7 +124,7 @@
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary/90 hidden sm:block"></div>
         <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p id="hero-tagline" class="text-accent font-medium tracking-widest mb-4 text-sm sm:text-base">
-                沖縄北部を中心とした民泊運営・清掃</p>
+                沖縄を中心とした民泊運営・清掃</p>
             <h2 id="hero-copy"
                 class="text-4xl sm:text-5xl md:text-6xl font-serif text-white font-bold leading-tight mb-6">
                 民泊にも、安心と高品質を。
@@ -866,65 +866,146 @@
         </div>
     </section>
 
-    <!-- ⑥ AIシミュレーター (regional.js が価格データを注入・計算・LINE誘導) -->
+    <!-- ⑥ AIシミュレーター -->
     <section id="simulation" class="py-20 bg-primary bg-opacity-5">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-accent font-bold tracking-widest text-sm">SIMULATION</span>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">AI見積もりシミュレーター</h3>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">
+                    清掃費用シミュレーター</h3>
                 <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-                    間取りと宿泊人数・日数を選ぶだけで清掃費用の概算を即時算出。<br>
-                    シミュレーションIDを発行し、LINEで詳細レポートをお届けします。
+                    4項目を入力して「結果を見る」を押すだけ。<br>
+                    詳細な見積もりはLINEまたはフォームからご依頼いただけます。
                 </p>
             </div>
 
             <div class="bg-white rounded-sm shadow-lg overflow-hidden">
-                <form id="sim-form" class="p-8 sm:p-12">
-                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <form id="sim-form" class="p-8 sm:p-10" novalidate>
+
+                    <!-- 入力グリッド -->
+                    <div class="grid md:grid-cols-2 gap-5 mb-8">
+
+                        <!-- 面積 -->
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">
-                                <i class="fas fa-home text-accent mr-1"></i>間取り
+                                <i class="fas fa-vector-square text-accent mr-1"></i>物件の面積
                             </label>
-                            <select id="sim-room"
+                            <select id="sim-area"
                                 class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary outline-none transition bg-white text-sm">
-                                <!-- regional.js が都道府県の価格テーブルで生成 -->
+                                <option value="6000" data-label="〜50㎡">〜 50㎡（例：1K・1LDK）</option>
+                                <option value="8000" data-label="51〜100㎡" selected>51 〜 100㎡（例：2LDK）</option>
+                                <option value="10000" data-label="101〜150㎡">101 〜 150㎡（例：3LDK）</option>
+                                <option value="12000" data-label="151〜200㎡">151 〜 200㎡（例：4LDK）</option>
+                                <option value="14000" data-label="201〜250㎡">201 〜 250㎡（例：大型）</option>
+                                <option value="16000" data-label="251〜300㎡">251 〜 300㎡（例：ヴィラ）</option>
+                                <option value="18000" data-label="301〜350㎡">301 〜 350㎡（例：大型ヴィラ）</option>
+                                <option value="20000" data-label="351〜400㎡">351 〜 400㎡</option>
+                                <option value="22000" data-label="401㎡以上">401㎡以上（目安）</option>
                             </select>
                         </div>
+
+                        <!-- 宿泊人数 -->
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">
-                                <i class="fas fa-users text-accent mr-1"></i>宿泊人数
+                                <i class="fas fa-users text-accent mr-1"></i>宿泊可能人数
+                                <span class="text-xs text-gray-400 font-normal ml-1">（収容人数）</span>
                             </label>
                             <select id="sim-guests"
                                 class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary outline-none transition bg-white text-sm">
+                                <option value="1">1名</option>
+                                <option value="2">2名</option>
+                                <option value="3">3名</option>
+                                <option value="4" selected>4名</option>
+                                <option value="5">5名</option>
+                                <option value="6">6名</option>
+                                <option value="7">7名</option>
+                                <option value="8">8名</option>
+                                <option value="9">9名</option>
+                                <option value="10">10名</option>
+                                <option value="12">12名</option>
+                                <option value="15">15名</option>
+                                <option value="20">20名</option>
                             </select>
                         </div>
+
+                        <!-- 郵便番号 -->
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">
-                                <i class="fas fa-moon text-accent mr-1"></i>宿泊日数
+                                <i class="fas fa-map-marker-alt text-accent mr-1"></i>管理物件の郵便番号
+                                <span class="text-xs text-gray-400 font-normal ml-1">（ハイフンなしでもOK）</span>
                             </label>
-                            <select id="sim-nights"
+                            <div class="relative">
+                                <input id="sim-zipcode" type="text" inputmode="numeric" maxlength="8"
+                                    placeholder="例：123-4567"
+                                    class="w-full px-4 py-3 pr-10 border border-gray-300 rounded focus:ring-2 focus:ring-primary outline-none transition bg-white text-sm">
+                                <span id="sim-zipcode-icon"
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></span>
+                            </div>
+                            <p id="sim-zipcode-status" class="text-xs mt-1.5 text-gray-400 min-h-[1.25rem]">
+                                郵便番号を入力すると交通費が自動で計算されます
+                            </p>
+                        </div>
+
+                        <!-- プラン -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fas fa-star text-accent mr-1"></i>清掃プラン
+                            </label>
+                            <select id="sim-plan"
                                 class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary outline-none transition bg-white text-sm">
+                                <option value="1.3">クオリティ重視 — 高品質リネン・アメニティ充実</option>
+                                <option value="1.0" selected>スタンダード — 標準清掃・リネン一式</option>
+                                <option value="0.7">バジェット重視 — 効率重視・コスト最小化</option>
                             </select>
                         </div>
                     </div>
 
+                    <!-- ボタン -->
                     <div class="text-center">
                         <button type="submit"
-                            class="bg-accent hover:bg-accentHover text-white px-12 py-4 rounded-sm font-bold text-lg transition duration-300 shadow-lg">
-                            <i class="fas fa-calculator mr-2"></i>概算を算出する
+                            class="bg-accent hover:bg-accentHover text-white px-12 py-4 rounded-sm font-bold text-lg transition duration-300 shadow-lg w-full sm:w-auto">
+                            <i class="fas fa-file-alt mr-2"></i>結果を見る
                         </button>
                     </div>
-                </form>
 
-                <!-- 結果エリア (JS が算出後に表示) -->
-                <div id="sim-result" class="hidden px-8 pb-10 sm:px-12"></div>
+                </form>
             </div>
 
-            <p class="text-center text-xs text-gray-500 mt-6 bg-white inline-block px-6 py-2 rounded-full shadow-sm">
-                ※水光熱費・消耗品補充費など別途オーナー様負担のコストがあります。詳細はお問い合わせください。
+            <p class="text-center text-xs text-gray-500 mt-6">
+                ※ 税率10%。水光熱費・消耗品などオーナー様負担のコストは含みません。詳細はお問い合わせください。
             </p>
         </div>
     </section>
+
+    <!-- シミュレーター結果モーダル -->
+    <div id="sim-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden" role="dialog"
+        aria-modal="true" aria-labelledby="sim-modal-title">
+
+        <!-- オーバーレイ -->
+        <div id="sim-modal-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            onclick="window.closeSimModal()"></div>
+
+        <!-- モーダル本体 -->
+        <div class="relative bg-white rounded-sm shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
+
+            <!-- ヘッダー -->
+            <div class="bg-primary text-white px-7 py-5 flex items-center justify-between">
+                <div>
+                    <p class="text-[10px] text-accent tracking-widest font-bold mb-0.5">SIMULATION RESULT</p>
+                    <h4 id="sim-modal-title" class="text-lg font-serif font-bold">30秒でわかる！清掃費用シミュレーション</h4>
+                </div>
+                <button onclick="window.closeSimModal()"
+                    class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-white/10 transition"
+                    aria-label="閉じる">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+
+            <!-- コンテンツ（JS が注入） -->
+            <div id="sim-modal-body" class="p-7"></div>
+
+        </div>
+    </div>
 
     <!-- Target Areas (対応エリア) -->
     <section id="areas" class="py-20 bg-gray-50 border-t border-gray-200">
@@ -1027,7 +1108,7 @@
                         <div
                             class="text-gray-600 mt-0 border-t border-gray-100 p-5 bg-gray-50 text-sm leading-relaxed flex">
                             <span class="text-primary text-2xl font-serif font-bold mr-3">A.</span>
-                            <p class="mt-1">可能です。「リゾート・クオリティ」のプロ清掃スタッフを派遣いたします。※対応可能エリア内（主に沖縄北部周辺）かどうかは、まずはお問い合わせください。
+                            <p class="mt-1">可能です。「リゾート・クオリティ」のプロ清掃スタッフを派遣いたします。※対応可能エリア内かどうかは、まずはお問い合わせください。
                             </p>
                         </div>
                     </details>
@@ -1135,22 +1216,26 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-2">
                             <label
                                 class="flex items-center space-x-2 p-3 border border-gray-200 rounded cursor-pointer hover:bg-gray-50 transition">
-                                <input type="checkbox" name="inquiry_type" value="運営代行について" class="text-primary focus:ring-primary rounded">
+                                <input type="checkbox" name="inquiry_type" value="運営代行について"
+                                    class="text-primary focus:ring-primary rounded">
                                 <span class="text-sm">運営代行について</span>
                             </label>
                             <label
                                 class="flex items-center space-x-2 p-3 border border-gray-200 rounded cursor-pointer hover:bg-gray-50 transition">
-                                <input type="checkbox" name="inquiry_type" value="清掃代行について" class="text-primary focus:ring-primary rounded">
+                                <input type="checkbox" name="inquiry_type" value="清掃代行について"
+                                    class="text-primary focus:ring-primary rounded">
                                 <span class="text-sm">清掃代行について</span>
                             </label>
                             <label
                                 class="flex items-center space-x-2 p-3 border border-gray-200 rounded cursor-pointer hover:bg-gray-50 transition">
-                                <input type="checkbox" name="inquiry_type" value="収益シミュレーション希望" class="text-primary focus:ring-primary rounded">
+                                <input type="checkbox" name="inquiry_type" value="収益シミュレーション希望"
+                                    class="text-primary focus:ring-primary rounded">
                                 <span class="text-sm">収益シミュレーション希望</span>
                             </label>
                             <label
                                 class="flex items-center space-x-2 p-3 border border-gray-200 rounded cursor-pointer hover:bg-gray-50 transition">
-                                <input type="checkbox" name="inquiry_type" value="空間プロデュースについて" class="text-primary focus:ring-primary rounded">
+                                <input type="checkbox" name="inquiry_type" value="空間プロデュースについて"
+                                    class="text-primary focus:ring-primary rounded">
                                 <span class="text-sm">空間プロデュースについて</span>
                             </label>
                         </div>

@@ -43,6 +43,57 @@
     },
   ];
 
+  // 都道府県別 県庁所在地の中心座標（現在は未使用 — 距離計算は municipalities の1丁目1番地で行う）
+  // 将来的なフォールバック用として保持
+  const BASE_COORDS = {
+    hokkaido: { lat: 43.0642, lng: 141.3469 },
+    aomori: { lat: 40.8244, lng: 140.7400 },
+    iwate: { lat: 39.7036, lng: 141.1527 },
+    miyagi: { lat: 38.2688, lng: 140.8721 },
+    akita: { lat: 39.7186, lng: 140.1023 },
+    yamagata: { lat: 38.2404, lng: 140.3633 },
+    fukushima: { lat: 37.7500, lng: 140.4677 },
+    ibaraki: { lat: 36.3418, lng: 140.4468 },
+    tochigi: { lat: 36.5658, lng: 139.8836 },
+    gunma: { lat: 36.3912, lng: 139.0607 },
+    saitama: { lat: 35.8616, lng: 139.6455 },
+    chiba: { lat: 35.6073, lng: 140.1063 },
+    tokyo: { lat: 35.6895, lng: 139.6917 },
+    kanagawa: { lat: 35.4478, lng: 139.6425 },
+    niigata: { lat: 37.9026, lng: 139.0235 },
+    toyama: { lat: 36.6953, lng: 137.2113 },
+    ishikawa: { lat: 36.5944, lng: 136.6256 },
+    fukui: { lat: 36.0652, lng: 136.2216 },
+    yamanashi: { lat: 35.6642, lng: 138.5681 },
+    nagano: { lat: 36.6513, lng: 138.1810 },
+    shizuoka: { lat: 34.9769, lng: 138.3831 },
+    aichi: { lat: 35.1802, lng: 136.9066 },
+    mie: { lat: 34.7303, lng: 136.5086 },
+    shiga: { lat: 35.0045, lng: 135.8686 },
+    kyoto: { lat: 35.0116, lng: 135.7681 },
+    osaka: { lat: 34.6937, lng: 135.5023 },
+    hyogo: { lat: 34.6913, lng: 135.1830 },
+    nara: { lat: 34.6851, lng: 135.8050 },
+    wakayama: { lat: 34.2261, lng: 135.1675 },
+    tottori: { lat: 35.5011, lng: 134.2351 },
+    shimane: { lat: 35.4722, lng: 133.0505 },
+    okayama: { lat: 34.6617, lng: 133.9349 },
+    hiroshima: { lat: 34.3853, lng: 132.4553 },
+    yamaguchi: { lat: 34.1860, lng: 131.4705 },
+    tokushima: { lat: 34.0658, lng: 134.5593 },
+    kagawa: { lat: 34.3401, lng: 134.0434 },
+    ehime: { lat: 33.8416, lng: 132.7657 },
+    kochi: { lat: 33.5597, lng: 133.5311 },
+    fukuoka: { lat: 33.5904, lng: 130.4017 },
+    saga: { lat: 33.2494, lng: 130.2988 },
+    nagasaki: { lat: 32.7448, lng: 129.8737 },
+    kumamoto: { lat: 32.7898, lng: 130.7417 },
+    oita: { lat: 33.2382, lng: 131.6126 },
+    miyazaki: { lat: 31.9111, lng: 131.4239 },
+    kagoshima: { lat: 31.5602, lng: 130.5581 },
+    okinawa: { lat: 26.2124, lng: 127.6809 },
+  };
+
   // note 記事フィード（静的プレースホルダー）
   // ※ 本番運用では Netlify Functions 経由で note.com の RSS を取得してください
   const NOTE_ARTICLES = [
@@ -238,111 +289,333 @@
   }
 
   /* ─────────────────────────────────────────
-     5. AIシミュレーター
+     5. 距離計算ユーティリティ
+  ───────────────────────────────────────── */
+
+  // ハーバーサイン公式（2点間の距離 km）
+  function haversineKm(lat1, lng1, lat2, lng2) {
+    const R = 6371;
+    const toRad = (v) => (v * Math.PI) / 180;
+    const dLat = toRad(lat2 - lat1);
+    const dLng = toRad(lng2 - lng1);
+    const a =
+      Math.sin(dLat / 2) ** 2 +
+      Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng / 2) ** 2;
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  }
+
+  // 距離 → 交通費ティア
+  function kmToTransportFee(km) {
+    if (km < 3) return 0;
+    if (km <= 6) return 1000;
+    if (km <= 12) return 2000;
+    if (km <= 18) return 3000;
+    if (km <= 25) return 4000;
+    return 5000;
+  }
+
+  // 国土地理院 AddressSearch → {lat, lng} | null
+  // GeoJSON 座標は [経度, 緯度] の順
+  async function geocodeAddress(text) {
+    try {
+      const res = await fetch(
+        `https://msearch.gsi.go.jp/address-search/AddressSearch?q=${encodeURIComponent(text)}`
+      );
+      const json = await res.json();
+      if (Array.isArray(json) && json.length > 0) {
+        const [lng, lat] = json[0].geometry.coordinates;
+        return { lat, lng };
+      }
+    } catch (e) {
+      console.warn('[regional.js] geocodeAddress failed:', text, e);
+    }
+    return null;
+  }
+
+  // 市区町村座標キャッシュ（ページ内で使い回す）
+  const _municipalityCache = {};
+
+  /* ─────────────────────────────────────────
+     6. AIシミュレーター
   ───────────────────────────────────────── */
 
   function initSimulator(d) {
     const form = document.getElementById('sim-form');
     if (!form) return;
 
-    const roomSelect = document.getElementById('sim-room');
+    const areaSelect = document.getElementById('sim-area');
     const guestSelect = document.getElementById('sim-guests');
-    const nightsSelect = document.getElementById('sim-nights');
+    const zipcodeInput = document.getElementById('sim-zipcode');
+    const planSelect = document.getElementById('sim-plan');
+    const zipcodeStatus = document.getElementById('sim-zipcode-status');
+    const zipcodeIcon = document.getElementById('sim-zipcode-icon');
 
-    if (roomSelect) {
-      roomSelect.innerHTML = Object.entries(d.cleaningPrices).map(([label, price]) =>
-        `<option value="${price}" data-label="${label}">${label}（清掃 ¥${price.toLocaleString()}〜）</option>`
-      ).join('');
-    }
+    if (!areaSelect || !guestSelect || !zipcodeInput || !planSelect) return;
 
-    if (guestSelect) {
-      guestSelect.innerHTML = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20].map((n) =>
-        `<option value="${n}"${n === 4 ? ' selected' : ''}>${n}名</option>`
-      ).join('');
-    }
+    // 郵便番号ルックアップで確定した交通費（状態変数）
+    let transportFee = 0;
+    let transportLabel = '';
+    let resolvedAddress = '';
+    let zipcodeTimer = null;
 
-    if (nightsSelect) {
-      nightsSelect.innerHTML = [1, 2, 3, 4, 5, 6, 7].map((n) =>
-        `<option value="${n}">${n}泊</option>`
-      ).join('');
-    }
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const basePrice = parseInt(roomSelect.value, 10);
+    // ── 計算ヘルパー ──────────────────────────────────────────
+    function calcBreakdown() {
+      const basePrice = parseInt(areaSelect.value, 10);
       const guests = parseInt(guestSelect.value, 10);
-      const nights = parseInt(nightsSelect.value, 10);
-      const roomLabel = roomSelect.options[roomSelect.selectedIndex].dataset.label;
+      const qualityCoeff = parseFloat(planSelect.value);
+      const guestSurcharge = Math.max(0, guests - 2) * 500;
+      const totalExTax = Math.round((basePrice + guestSurcharge + transportFee) * qualityCoeff);
+      const totalInTax = Math.round(totalExTax * 1.1);
 
-      const linen = guests * 800;
-      const consumables = guests * nights * 200;
-      const garbage = guests <= 4 ? 1000 : guests <= 10 ? 1500 : 2000;
-      const total = basePrice + linen + consumables + garbage;
-      const perPerson = Math.round(total / guests);
+      return {
+        basePrice, guests, qualityCoeff,
+        guestSurcharge, transportFee, transportLabel, resolvedAddress,
+        totalExTax, totalInTax,
+        areaLabel: areaSelect.options[areaSelect.selectedIndex].dataset.label,
+        planLabel: planSelect.options[planSelect.selectedIndex].text.split('—')[0].trim(),
+      };
+    }
 
+    // ── 市区町村座標を取得（キャッシュ付き） ──────────────────────
+    // 「都道府県名 + 市区町村名 + 1丁目1番地」で GSI ジオコーディング
+    async function getMunicipalityCoords(municipality) {
+      const key = `${d.prefName}${municipality}`;
+      if (_municipalityCache[key]) return _municipalityCache[key];
+
+      // まず「1丁目1番地」で試み、取れなければ市区町村名だけにフォールバック
+      const coords =
+        (await geocodeAddress(`${d.prefName}${municipality}1丁目1番地`)) ||
+        (await geocodeAddress(`${d.prefName}${municipality}`));
+
+      if (coords) _municipalityCache[key] = coords;
+      return coords;
+    }
+
+    // ページ読み込み時に全市区町村の座標をバックグラウンドで先取りしておく
+    // → ユーザーが郵便番号を入力し終える頃にはキャッシュ済みになる
+    Promise.all(d.municipalities.map(getMunicipalityCoords)).catch(() => { });
+
+    // ── 郵便番号 → 物件座標取得 → 最近傍市区町村を算出 ──────────
+    async function lookupZipcode(digits7) {
+      if (zipcodeStatus) {
+        zipcodeStatus.textContent = '住所を検索中...';
+        zipcodeStatus.className = 'text-xs mt-1.5 text-gray-400 min-h-[1.25rem]';
+      }
+      if (zipcodeIcon) zipcodeIcon.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+      try {
+        // ① zipcloud → 日本語住所テキスト
+        const zcRes = await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${digits7}`);
+        const zcJson = await zcRes.json();
+
+        if (!zcJson.results || zcJson.results.length === 0) {
+          if (zipcodeStatus) {
+            zipcodeStatus.textContent = '該当する住所が見つかりませんでした。郵便番号をご確認ください。';
+            zipcodeStatus.className = 'text-xs mt-1.5 text-red-500 min-h-[1.25rem]';
+          }
+          if (zipcodeIcon) zipcodeIcon.innerHTML = '<i class="fas fa-times-circle text-red-400"></i>';
+          return;
+        }
+
+        const r = zcJson.results[0];
+        resolvedAddress = r.address1 + r.address2 + r.address3;
+
+        // ② 対応エリア判定
+        // 都道府県が一致し、かつ市区町村が対応リストに含まれているか
+        const isPrefMatch = r.address1 === d.prefName;
+        const isMunMatch = d.municipalities.some((m) => r.address2.includes(m) || m.includes(r.address2));
+        const isCovered = isPrefMatch && isMunMatch;
+
+        if (!isCovered) {
+          transportFee = 0;
+          const reason = !isPrefMatch ? `${r.address1}は対象外です` : `${r.address2}は現在エリア外です`;
+          if (zipcodeStatus) {
+            zipcodeStatus.innerHTML = `<i class="fas fa-exclamation-triangle text-orange-500 mr-1"></i>住所：${resolvedAddress}<br><span class="text-orange-600 font-bold">【エリア外】</span> ${reason}`;
+            zipcodeStatus.className = 'text-xs mt-1.5 min-h-[1.25rem] leading-relaxed';
+          }
+          if (zipcodeIcon) zipcodeIcon.innerHTML = '<i class="fas fa-exclamation-triangle text-orange-400"></i>';
+          return;
+        }
+
+        // ③ GSI で物件の座標を取得
+        if (zipcodeStatus) {
+          zipcodeStatus.textContent = '最寄り拠点を計算中...';
+        }
+        const propCoords = await geocodeAddress(resolvedAddress);
+
+        if (!propCoords) {
+          transportFee = 0;
+          transportLabel = '（担当者が交通費を確認します）';
+          if (zipcodeStatus) {
+            zipcodeStatus.innerHTML = `<i class="fas fa-check-circle text-green-500 mr-1"></i>住所：${resolvedAddress}<br><span class="text-green-600 font-bold">【エリア内】</span> 交通費は担当者が確認します`;
+            zipcodeStatus.className = 'text-xs mt-1.5 min-h-[1.25rem] leading-relaxed';
+          }
+          if (zipcodeIcon) zipcodeIcon.innerHTML = '<i class="fas fa-check-circle text-green-500"></i>';
+          return;
+        }
+
+        // ③ 全市区町村の「1丁目1番地」座標を取得（キャッシュ済みなら即返却）
+        const munCoords = await Promise.all(d.municipalities.map(getMunicipalityCoords));
+
+        // ④ 最も近い市区町村を特定
+        let minKm = Infinity;
+        let nearestMun = null;
+
+        d.municipalities.forEach((mun, i) => {
+          if (!munCoords[i]) return;
+          const km = haversineKm(munCoords[i].lat, munCoords[i].lng, propCoords.lat, propCoords.lng);
+          if (km < minKm) { minKm = km; nearestMun = mun; }
+        });
+
+        if (nearestMun === null) {
+          // 市区町村の座標が全滅した場合のフォールバック
+          transportFee = 0;
+          transportLabel = '（担当者が交通費を確認します）';
+          if (zipcodeStatus) {
+            zipcodeStatus.innerHTML = `<i class="fas fa-check-circle text-green-500 mr-1"></i>住所：${resolvedAddress}<br><span class="text-green-600 font-bold">【エリア内】</span> 交通費は担当者が確認します`;
+            zipcodeStatus.className = 'text-xs mt-1.5 min-h-[1.25rem] leading-relaxed';
+          }
+          if (zipcodeIcon) zipcodeIcon.innerHTML = '<i class="fas fa-check-circle text-green-500"></i>';
+          return;
+        }
+
+        // ⑤ 距離 → 交通費
+        transportFee = kmToTransportFee(minKm);
+        transportLabel = transportFee === 0
+          ? `${nearestMun}拠点（交通費なし）`
+          : `${nearestMun}拠点から約${Math.round(minKm)}km（交通費 ¥${transportFee.toLocaleString()}）`;
+
+        if (zipcodeStatus) {
+          zipcodeStatus.innerHTML = `<i class="fas fa-check-circle text-green-500 mr-1"></i>住所：${resolvedAddress}<br><span class="text-green-600 font-bold">【エリア内】</span> ${transportLabel}`;
+          zipcodeStatus.className = 'text-xs mt-1.5 min-h-[1.25rem] leading-relaxed';
+        }
+        if (zipcodeIcon) zipcodeIcon.innerHTML = '<i class="fas fa-check-circle text-green-500"></i>';
+
+      } catch (err) {
+        console.error('[regional.js] Zipcode lookup failed:', err);
+        if (zipcodeStatus) {
+          zipcodeStatus.textContent = '住所の取得に失敗しました。再度お試しください。';
+          zipcodeStatus.className = 'text-xs mt-1.5 text-red-500 min-h-[1.25rem]';
+        }
+        if (zipcodeIcon) zipcodeIcon.innerHTML = '<i class="fas fa-exclamation-circle text-red-400"></i>';
+      }
+    }
+
+    // ── 郵便番号 input ハンドラ（自動フォーマット＋デバウンス） ──
+    zipcodeInput.addEventListener('input', (e) => {
+      let digits = e.target.value.replace(/[^0-9]/g, '').slice(0, 7);
+      e.target.value = digits.length > 3 ? `${digits.slice(0, 3)}-${digits.slice(3)}` : digits;
+
+      // 交通費をリセット
+      transportFee = 0;
+      transportLabel = '';
+      resolvedAddress = '';
+      if (zipcodeIcon) zipcodeIcon.innerHTML = '';
+      if (zipcodeStatus) {
+        zipcodeStatus.textContent = '郵便番号を入力すると交通費が自動で計算されます';
+        zipcodeStatus.className = 'text-xs mt-1.5 text-gray-400 min-h-[1.25rem]';
+      }
+
+      clearTimeout(zipcodeTimer);
+      if (digits.length === 7) {
+        zipcodeTimer = setTimeout(() => lookupZipcode(digits), 400);
+      }
+    });
+
+    // ── モーダルを開く ────────────────────────────────────────
+    function openSimModal() {
+      const b = calcBreakdown();
       const simId = generateSimId();
+      const modal = document.getElementById('sim-modal');
+      const body = document.getElementById('sim-modal-body');
+      if (!modal || !body) return;
 
-      const resultEl = document.getElementById('sim-result');
-      if (!resultEl) return;
-
-      resultEl.innerHTML = `
-        <div class="bg-gray-50 rounded-sm border border-gray-100 p-8 sm:p-10">
-          <div class="text-center mb-6">
-            <p class="text-xs text-gray-400 mb-1">シミュレーションID</p>
-            <p class="font-mono font-bold text-primary text-lg tracking-widest">${simId}</p>
-          </div>
-          <p class="text-center text-sm text-gray-500 mb-6">
-            ${d.prefShort}エリア / ${roomLabel} / ${guests}名 / ${nights}泊
-          </p>
-
-          <div class="flex items-baseline justify-center mb-2">
-            <span class="text-xl text-gray-400 mr-1">¥</span>
-            <span class="text-6xl font-bold text-primary font-serif">${total.toLocaleString()}</span>
-          </div>
-          <p class="text-center text-sm text-gray-500 mb-8">¥${perPerson.toLocaleString()} / 人</p>
-
-          <div class="bg-white border border-gray-100 rounded p-5 text-xs text-gray-500 mb-8 space-y-2">
-            <div class="flex justify-between">
-              <span>清掃基本代金（${roomLabel}）</span>
-              <span class="font-medium text-gray-700">¥${basePrice.toLocaleString()}</span>
-            </div>
-            <div class="flex justify-between">
-              <span>リネン代（${guests}名 × ¥800）</span>
-              <span class="font-medium text-gray-700">¥${linen.toLocaleString()}</span>
-            </div>
-            <div class="flex justify-between">
-              <span>消耗品費（${guests}名 × ${nights}泊 × ¥200）</span>
-              <span class="font-medium text-gray-700">¥${consumables.toLocaleString()}</span>
-            </div>
-            <div class="flex justify-between">
-              <span>ゴミ回収</span>
-              <span class="font-medium text-gray-700">¥${garbage.toLocaleString()}</span>
-            </div>
-            <div class="flex justify-between border-t border-gray-100 pt-2 font-bold text-gray-800">
-              <span>合計</span>
-              <span>¥${total.toLocaleString()}</span>
-            </div>
-          </div>
-
-          <a href="${LINE_URL}" target="_blank" rel="noopener"
-            class="flex items-center justify-center w-full px-8 py-4 bg-[#06C755] hover:bg-[#05b04b] text-white font-bold rounded shadow-lg transition duration-300 text-base">
-            <i class="fab fa-line text-2xl mr-3"></i>
-            【${simId}】の詳細レポートをLINEで受け取る
-          </a>
-          <p class="text-center text-xs text-gray-400 mt-3">
-            ※ 上記はあくまで目安です。物件規模や状態により変動します。
-          </p>
+      body.innerHTML = `
+        <!-- シミュレーションID -->
+        <div class="text-center mb-5 pb-5 border-b border-gray-100">
+          <p class="text-[10px] text-gray-400 tracking-widest mb-1">SIMULATION ID</p>
+          <p class="font-mono font-bold text-primary text-xl tracking-widest">${simId}</p>
         </div>
+
+        <!-- 選択条件サマリー -->
+        <div class="text-xs text-gray-500 text-center mb-6 space-y-0.5">
+          <p>${d.prefShort}エリア ／ ${b.areaLabel} ／ 宿泊${b.guests}名 ／ ${b.planLabel}</p>
+          ${b.resolvedAddress ? `<p class="text-gray-400">${b.resolvedAddress}</p>` : ''}
+        </div>
+
+        <!-- 概算金額（大きく表示） -->
+        <div class="bg-primary/5 border border-primary/10 rounded-sm p-6 text-center mb-6">
+          <p class="text-xs text-gray-400 tracking-widest mb-2">概算お見積もり</p>
+          <p class="text-5xl font-bold text-primary font-serif leading-none mb-2">¥${b.totalExTax.toLocaleString()}</p>
+          <p class="text-sm text-gray-400">税込 ¥${b.totalInTax.toLocaleString()}</p>
+        </div>
+
+        <!-- 簡易内訳（計算式は非表示） -->
+        <div class="text-sm text-gray-500 mb-6 space-y-2 px-1">
+          <div class="flex justify-between">
+            <span>基本清掃料</span>
+            <span class="text-gray-700">¥${b.basePrice.toLocaleString()}</span>
+          </div>
+          ${b.guestSurcharge > 0 ? `
+          <div class="flex justify-between">
+            <span>人数オプション（${b.guests}名）</span>
+            <span class="text-gray-700">+¥${b.guestSurcharge.toLocaleString()}</span>
+          </div>` : ''}
+          ${b.transportFee > 0 ? `
+          <div class="flex justify-between">
+            <span>交通費</span>
+            <span class="text-gray-700">+¥${b.transportFee.toLocaleString()}</span>
+          </div>` : ''}
+          <div class="flex justify-between font-bold text-primary border-t border-gray-200 pt-2">
+            <span>合計（税抜）</span>
+            <span>¥${b.totalExTax.toLocaleString()}</span>
+          </div>
+        </div>
+
+        <p class="text-[10px] text-gray-400 text-center mb-6">
+          ※ 上記は目安です。物件の状態・オプション追加等により変動します。
+        </p>
+
+        <!-- LINE CTA -->
+        <a href="${LINE_URL}" target="_blank" rel="noopener"
+          class="flex items-center justify-center w-full px-6 py-4 bg-[#06C755] hover:bg-[#05b04b] text-white font-bold rounded shadow-md transition duration-300 text-sm mb-3">
+          <i class="fab fa-line text-xl mr-2.5"></i>
+          LINEで詳細見積もりをする（無料）
+        </a>
+
+        <!-- フォーム CTA -->
+        <a href="#contact" onclick="window.closeSimModal()"
+          class="flex items-center justify-center w-full px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white font-bold rounded transition duration-300 text-sm">
+          <i class="fas fa-envelope mr-2"></i>
+          お問い合わせフォームで相談する
+        </a>
       `;
 
-      resultEl.classList.remove('hidden');
-      resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // ── モーダルを閉じる（グローバル公開） ──────────────────────
+    window.closeSimModal = function () {
+      const modal = document.getElementById('sim-modal');
+      if (modal) modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    };
+
+    // ESC キーでモーダルを閉じる
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') window.closeSimModal();
+    });
+
+    // ── フォーム送信 ──────────────────────────────────────────
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      openSimModal();
     });
   }
 
   /* ─────────────────────────────────────────
-     6. note 記事フィード
+     8. note 記事フィード
   ───────────────────────────────────────── */
 
   function renderNoteFeed() {
@@ -373,7 +646,7 @@
   }
 
   /* ─────────────────────────────────────────
-     7. 全データ一括適用
+     9. 全データ一括適用
   ───────────────────────────────────────── */
 
   function applyData(d) {
@@ -390,7 +663,7 @@
   }
 
   /* ─────────────────────────────────────────
-     8. エントリーポイント
+     10. エントリーポイント
   ───────────────────────────────────────── */
 
   const subdomain = getSubdomain();
