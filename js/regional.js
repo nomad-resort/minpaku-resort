@@ -288,6 +288,69 @@
     }
   }
 
+  function applyCaseStudies(d) {
+    const container = document.getElementById('case-studies-grid');
+    if (!container || !d.caseStudies) return;
+
+    container.innerHTML = d.caseStudies.map((c, i) => {
+      const isPrimary = i % 2 === 0;
+      const accentClass = isPrimary ? 'accent' : 'primary';
+      const borderClass = isPrimary ? 'border-accent' : 'border-primary';
+
+      const statsHtml = c.stats.map(s => `
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0">
+          <span class="text-gray-600 font-medium">${s.label}</span>
+          <span class="text-3xl font-bold text-primary">${s.value}<span class="text-lg ${s.unit.includes('%') ? '' : 'text-gray-500'}">${s.unit}</span></span>
+        </div>
+      `).join('');
+
+      return `
+        <div class="bg-white rounded-sm overflow-hidden shadow-2xl flex flex-col">
+          <div class="h-64 overflow-hidden relative">
+            <img src="${c.image}" alt="${c.name}" class="w-full h-full object-cover">
+            <div class="absolute top-4 right-4 bg-${accentClass} text-white px-3 py-1 font-bold rounded-sm text-sm">
+              ${c.type}
+            </div>
+          </div>
+          <div class="p-8 flex-grow">
+            <h4 class="text-2xl font-serif font-bold text-primary mb-2">${c.name}</h4>
+            <p class="text-gray-500 text-sm mb-6 pb-4 border-b border-gray-100">${c.location}</p>
+            <div class="space-y-4">
+              ${statsHtml}
+            </div>
+            <p class="mt-6 text-sm text-gray-600 bg-gray-50 p-4 rounded border-l-2 ${borderClass}">
+              ${c.review}
+            </p>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function applyVoices(d) {
+    const container = document.getElementById('voices-grid');
+    if (!container || !d.voices) return;
+
+    container.innerHTML = d.voices.map(v => `
+      <div class="bg-white p-8 rounded-sm shadow relative">
+        <i class="fas fa-quote-left text-4xl text-gray-200 absolute top-6 left-6"></i>
+        <div class="relative z-10 pl-6 pt-4">
+          <div class="flex items-center mb-6">
+            <img src="${v.image}" alt="${v.name}" class="w-16 h-16 rounded-full object-cover border-2 border-accent">
+            <div class="ml-4">
+              <h4 class="font-bold text-primary text-lg">${v.name} / ${v.title}</h4>
+              <div class="text-accent text-sm">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <h5 class="text-xl font-bold text-primary mb-3">${v.quote}</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">${v.body}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+
   /* ─────────────────────────────────────────
      5. 距離計算ユーティリティ
   ───────────────────────────────────────── */
@@ -657,6 +720,8 @@
     applyStaff();
     applyAreas(d);
     applyCleaningFocus(d);
+    applyCaseStudies(d);
+    applyVoices(d);
     initSimulator(d);
     renderNoteFeed();
     applyFooter(d);
