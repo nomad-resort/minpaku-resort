@@ -21,10 +21,17 @@
 [functions]
   directory = "netlify/functions"
 
-# すべてのパスを index.html にフォールバック (SPA的なルーティング)
+# 静的ファイルが存在しないパスのみ index.html にフォールバック
+# ※ Netlify Forms の送信処理と競合しないよう、既存ファイルは除外
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/thanks.html"
+  to = "/thanks.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/produce.html"
+  to = "/produce.html"
   status = 200
   force = false
 
