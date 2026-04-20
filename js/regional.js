@@ -94,28 +94,28 @@
     okinawa: { lat: 26.2124, lng: 127.6809 },
   };
 
-  // note 記事フィード（静的プレースホルダー）
-  // ※ 本番運用では Netlify Functions 経由で note.com の RSS を取得してください
-  const NOTE_ARTICLES = [
+  // note 記事フィード — フォールバック用静的プレースホルダー
+  // 実際の記事が公開されると Netlify Function 経由の RSS が優先される
+  const NOTE_ARTICLES_FALLBACK = [
     {
       title: '民泊清掃のプロが教える！ゲスト評価4.8以上を維持する5つのコツ',
-      date: '2026年4月10日',
+      date: '近日公開',
       tag: '清掃・品質管理',
-      url: 'https://note.com/',
+      url: 'https://note.com/minpaku_resort',
       img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
     },
     {
       title: 'ダイナミックプライシング入門｜稼働率85%超えを実現した価格戦略',
-      date: '2026年3月25日',
+      date: '近日公開',
       tag: '収益最大化',
-      url: 'https://note.com/',
+      url: 'https://note.com/minpaku_resort',
       img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80',
     },
     {
       title: '2026年版｜民泊新法・旅館業法 最新改正ポイントまとめ',
-      date: '2026年3月12日',
+      date: '近日公開',
       tag: '法務・許認可',
-      url: 'https://note.com/',
+      url: 'https://note.com/minpaku_resort',
       img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80',
     },
   ];
@@ -681,27 +681,60 @@
      8. note 記事フィード
   ───────────────────────────────────────── */
 
-  function renderNoteFeed() {
+  function renderArticleCards(container, articles) {
+    container.innerHTML = articles.map((a) => {
+      const imgHtml = a.img
+        ? `<img src="${a.img}" alt="${a.title}"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">`
+        : `<div class="w-full h-full bg-gray-200 flex items-center justify-center">
+              <i class="fas fa-pen-nib text-4xl text-gray-400"></i>
+           </div>`;
+      return `
+        <a href="${a.url}" target="_blank" rel="noopener"
+          class="bg-white rounded-sm shadow hover:shadow-md transition overflow-hidden group flex flex-col">
+          <div class="h-44 overflow-hidden">
+            ${imgHtml}
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <span class="text-xs font-bold text-accent tracking-wider mb-2">${a.tag}</span>
+            <h4 class="font-bold text-primary text-sm leading-snug flex-grow mb-4">${a.title}</h4>
+            <div class="flex justify-between items-center text-xs text-gray-400">
+              <span>${a.date}</span>
+              <span class="text-accent font-medium">続きを読む →</span>
+            </div>
+          </div>
+        </a>
+      `;
+    }).join('');
+  }
+
+  async function renderNoteFeed() {
     const container = document.getElementById('note-feed-grid');
     if (!container) return;
 
-    container.innerHTML = NOTE_ARTICLES.map((a) => `
-      <a href="${a.url}" target="_blank" rel="noopener"
-        class="bg-white rounded-sm shadow hover:shadow-md transition overflow-hidden group flex flex-col">
-        <div class="h-44 overflow-hidden">
-          <img src="${a.img}" alt="${a.title}"
-            class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+    // ローディングスケルトンを表示
+    container.innerHTML = [1, 2, 3].map(() => `
+      <div class="bg-white rounded-sm shadow overflow-hidden flex flex-col animate-pulse">
+        <div class="h-44 bg-gray-200"></div>
+        <div class="p-6 flex flex-col gap-3">
+          <div class="h-3 bg-gray-200 rounded w-1/3"></div>
+          <div class="h-4 bg-gray-200 rounded w-full"></div>
+          <div class="h-4 bg-gray-200 rounded w-4/5"></div>
         </div>
-        <div class="p-6 flex flex-col flex-grow">
-          <span class="text-xs font-bold text-accent tracking-wider mb-2">${a.tag}</span>
-          <h4 class="font-bold text-primary text-sm leading-snug flex-grow mb-4">${a.title}</h4>
-          <div class="flex justify-between items-center text-xs text-gray-400">
-            <span>${a.date}</span>
-            <span class="text-accent font-medium">続きを読む →</span>
-          </div>
-        </div>
-      </a>
+      </div>
     `).join('');
+
+    try {
+      const res = await fetch('/.netlify/functions/note-feed');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const articles = await res.json();
+
+      // 記事が取得できた場合はそれを表示、空なら静的フォールバック
+      renderArticleCards(container, articles.length > 0 ? articles : NOTE_ARTICLES_FALLBACK);
+    } catch (_) {
+      // ネットワークエラー or ローカル開発環境 → フォールバック
+      renderArticleCards(container, NOTE_ARTICLES_FALLBACK);
+    }
   }
 
   function applyFooter(d) {

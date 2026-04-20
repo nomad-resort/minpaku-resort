@@ -18,6 +18,9 @@
   publish = "."
   command = ""
 
+[functions]
+  directory = "netlify/functions"
+
 # すべてのパスを index.html にフォールバック (SPA的なルーティング)
 [[redirects]]
   from = "/*"
