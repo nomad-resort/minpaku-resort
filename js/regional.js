@@ -785,6 +785,18 @@
     }
   }
 
+  // ヒーロー画像をプリロードする。成功・失敗・タイムアウトのいずれでも resolve する。
+  function preloadHeroImage(url) {
+    return new Promise((resolve) => {
+      if (!url) { resolve(); return; }
+      const img = new Image();
+      // 安全タイムアウト: 画像が遅くてもローダーを最大 3s 以上待たせない
+      const t = setTimeout(resolve, 3000);
+      img.onload = img.onerror = () => { clearTimeout(t); resolve(); };
+      img.src = url;
+    });
+  }
+
   const loaderTimeout = setTimeout(hideLoader, 5000);
 
   /* ─────────────────────────────────────────
@@ -801,9 +813,15 @@
     .then((allData) => {
       const data = allData[subdomain] || allData[DEFAULT_PREF];
       const run = () => {
+        // ① ヒーロー画像のプリロードを開始（DOM 適用と並行して実行）
+        const heroReady = preloadHeroImage(data.heroImage);
+        // ② データを DOM に適用（backgroundImage のセットも含む）
         applyData(data);
-        clearTimeout(loaderTimeout);
-        hideLoader();
+        // ③ ヒーロー画像の読み込みが完了してからローダーを非表示にする
+        heroReady.then(() => {
+          clearTimeout(loaderTimeout);
+          hideLoader();
+        });
       };
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', run);

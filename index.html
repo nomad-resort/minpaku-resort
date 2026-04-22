@@ -208,6 +208,20 @@
         </div>
     </div>
 
+    <!-- モバイルメニュー -->
+    <div id="mobile-menu" class="fixed top-20 left-0 w-full bg-white/95 backdrop-blur shadow-lg z-30 border-b border-gray-100 hidden md:hidden">
+        <nav class="max-w-7xl mx-auto px-4 py-6 flex flex-col space-y-1">
+            <a href="#problems" class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100">お悩みの方へ</a>
+            <a href="#services" class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100">サービス内容</a>
+            <a href="#cleaning" class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100">清掃・強み</a>
+            <a href="#voices" class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100">お客様の声</a>
+            <a href="#simulation" class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100">シミュレーション</a>
+            <a href="#faq" class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100">FAQ</a>
+            <a href="produce.html" class="text-sm font-medium text-accent transition py-3 border-b border-gray-100">Space Production ↗</a>
+            <a href="#contact" class="mt-3 bg-primary text-white px-6 py-3 rounded-sm font-medium hover:bg-secondary transition duration-300 text-center">無料相談はこちら</a>
+        </nav>
+    </div>
+
     <!-- SEO対策用非表示H1 (regional.js が都道府県名を注入) -->
     <h1 id="seo-h1" class="sr-only">民泊 運営代行・清掃代行ならMinpaku Resort（民泊リゾート）</h1>
 
@@ -245,8 +259,8 @@
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button class="text-gray-600 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
+                        <i id="mobile-menu-icon" class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
@@ -649,20 +663,17 @@
         </div>
     </section>
 
-    <!-- Operations / Our Team (運営体制・現場) -->
+    <!-- Operations / 運営体制 -->
     <section id="operations" class="py-24 bg-gray-50 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-accent font-bold tracking-widest text-sm">PROFESSION <div id="case-studies-grid"
-                        class="grid md:grid-cols-2 gap-12 text-gray-900">
-                        <!-- Data will be injected by regional.js -->
-                        <div class="bg-gray-100 rounded-sm animate-pulse h-96"></div>
-                        <div class="bg-gray-100 rounded-sm animate-pulse h-96"></div>
-                    </div>�合わせに365日迅速かつ丁寧に対応します。
-                    </p>
+            <div class="text-center">
+                <span class="text-accent font-bold tracking-widest text-sm">PROFESSIONAL TEAM</span>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">プロフェッショナルな運営体制</h3>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    専任担当者が物件管理から清掃・ゲスト対応まで一貫して担当し、<br class="hidden sm:block">
+                    お問い合わせに365日迅速かつ丁寧に対応します。
+                </p>
             </div>
-        </div>
-        </div>
         </div>
     </section>
 
@@ -1313,7 +1324,7 @@
                 <div class="bg-gray-200 rounded-sm animate-pulse h-72"></div>
             </div>
             <div class="text-center mt-8">
-                <a href="https://note.com/" target="_blank" rel="noopener"
+                <a href="https://note.com/minpaku_resort" target="_blank" rel="noopener"
                     class="text-accent hover:text-accentHover font-medium underline underline-offset-4">
                     すべての記事を見る <i class="fas fa-arrow-right ml-1"></i>
                 </a>
@@ -1358,6 +1369,44 @@
 
     <!-- regional.js: サブドメイン検知→都道府県データ注入・シミュレーター・スライダー初期化 -->
     <script src="js/regional.js"></script>
+
+    <!-- モバイルメニュー トグル -->
+    <script>
+        (function () {
+            var btn = document.getElementById('mobile-menu-btn');
+            var menu = document.getElementById('mobile-menu');
+            var icon = document.getElementById('mobile-menu-icon');
+            if (!btn || !menu || !icon) return;
+
+            function closeMobileMenu() {
+                menu.classList.add('hidden');
+                icon.className = 'fas fa-bars text-2xl';
+                btn.setAttribute('aria-expanded', 'false');
+            }
+
+            btn.addEventListener('click', function () {
+                var isOpen = !menu.classList.contains('hidden');
+                if (isOpen) {
+                    closeMobileMenu();
+                } else {
+                    menu.classList.remove('hidden');
+                    icon.className = 'fas fa-times text-2xl';
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            // リンククリックでメニューを閉じる
+            menu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // md以上のビューポートになったら自動的に閉じる
+            var mq = window.matchMedia('(min-width: 768px)');
+            mq.addEventListener('change', function (e) {
+                if (e.matches) closeMobileMenu();
+            });
+        })();
+    </script>
 
     <!-- Contact Form: Netlify Forms via fetch API -->
     <script>
