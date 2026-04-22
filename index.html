@@ -42,8 +42,8 @@
     <style>
         /* ─── ブランドカラー変数（Tailwind テーマと同期） ─── */
         :root {
-            --color-dark:         #0f172a;
-            --color-accent:       #c5a059;
+            --color-dark: #0f172a;
+            --color-accent: #c5a059;
             --color-accent-hover: #a38343;
             --color-accent-light: #e2c47a;
         }
@@ -73,12 +73,22 @@
             width: 88px;
             height: auto;
             animation: loaderFloat 2.2s ease-in-out infinite;
-            filter: drop-shadow(0 0 18px rgba(197, 160, 89, 0.35)); /* var(--color-accent) @ 35% */
+            filter: drop-shadow(0 0 18px rgba(197, 160, 89, 0.35));
+            /* var(--color-accent) @ 35% */
         }
 
         @keyframes loaderFloat {
-            0%, 100% { transform: translateY(0px); opacity: 1; }
-            50%       { transform: translateY(-9px); opacity: 0.8; }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(-9px);
+                opacity: 0.8;
+            }
         }
 
         .loader-brand {
@@ -97,7 +107,7 @@
         .loader-tagline {
             font-size: 0.7rem;
             letter-spacing: 0.25em;
-            color: rgba(255,255,255,0.4);
+            color: rgba(255, 255, 255, 0.4);
             margin-top: 0.4rem;
             text-transform: uppercase;
         }
@@ -120,17 +130,38 @@
         }
 
         @keyframes loaderBar {
-            0%   { width: 0%; }
-            40%  { width: 55%; }
-            80%  { width: 82%; }
-            100% { width: 95%; }
+            0% {
+                width: 0%;
+            }
+
+            40% {
+                width: 55%;
+            }
+
+            80% {
+                width: 82%;
+            }
+
+            100% {
+                width: 95%;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            #page-loader { transition: none; }
-            .loader-logo { animation: none; }
-            .loader-bar  { animation: none; width: 95%; }
+            #page-loader {
+                transition: none;
+            }
+
+            .loader-logo {
+                animation: none;
+            }
+
+            .loader-bar {
+                animation: none;
+                width: 95%;
+            }
         }
+
         /* ─────────────────────────────────────────────────── */
 
         .hero-bg {
@@ -171,7 +202,7 @@
     <div id="page-loader" aria-hidden="true">
         <img src="images/minpaku_resort_logo.png" alt="Minpaku Resort" class="loader-logo">
         <p class="loader-brand">Minpaku <span>Resort</span></p>
-        <p class="loader-tagline">Loading regional data&thinsp;…</p>
+        <p class="loader-tagline">Loading data&thinsp;…</p>
         <div class="loader-bar-track">
             <div class="loader-bar"></div>
         </div>
@@ -622,15 +653,16 @@
     <section id="operations" class="py-24 bg-gray-50 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <span class="text-accent font-bold tracking-widest text-sm">PROFESSION            <div id="case-studies-grid" class="grid md:grid-cols-2 gap-12 text-gray-900">
-                <!-- Data will be injected by regional.js -->
-                <div class="bg-gray-100 rounded-sm animate-pulse h-96"></div>
-                <div class="bg-gray-100 rounded-sm animate-pulse h-96"></div>
-            </div>�合わせに365日迅速かつ丁寧に対応します。
-                        </p>
-                    </div>
-                </div>
+                <span class="text-accent font-bold tracking-widest text-sm">PROFESSION <div id="case-studies-grid"
+                        class="grid md:grid-cols-2 gap-12 text-gray-900">
+                        <!-- Data will be injected by regional.js -->
+                        <div class="bg-gray-100 rounded-sm animate-pulse h-96"></div>
+                        <div class="bg-gray-100 rounded-sm animate-pulse h-96"></div>
+                    </div>�合わせに365日迅速かつ丁寧に対応します。
+                    </p>
             </div>
+        </div>
+        </div>
         </div>
     </section>
 
@@ -1197,7 +1229,8 @@
                     <div class="flex-grow bg-gray-200 h-px"></div>
                 </div>
 
-                <form id="contact-form" name="contact" action="/thanks.html" method="POST" data-netlify="true" class="space-y-6">
+                <form id="contact-form" name="contact" action="/thanks.html" method="POST" data-netlify="true"
+                    class="space-y-6">
                     <input type="hidden" name="form-name" value="contact">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
@@ -1328,43 +1361,43 @@
 
     <!-- Contact Form: Netlify Forms via fetch API -->
     <script>
-        (function () {
-            var form = document.getElementById('contact-form');
-            if (!form) return;
+            (function () {
+                var form = document.getElementById('contact-form');
+                if (!form) return;
 
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
 
-                var btn = form.querySelector('button[type="submit"]');
-                if (btn) {
-                    btn.disabled = true;
-                    btn.textContent = '送信中...';
-                }
-
-                var body = new URLSearchParams(new FormData(form)).toString();
-
-                fetch('/', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: body
-                })
-                .then(function (res) {
-                    if (res.ok) {
-                        window.location.href = '/thanks.html';
-                    } else {
-                        throw new Error('送信に失敗しました (status: ' + res.status + ')');
-                    }
-                })
-                .catch(function (err) {
-                    console.error(err);
-                    alert('送信中にエラーが発生しました。お手数ですが、LINEまたはメールにてお問い合わせください。');
+                    var btn = form.querySelector('button[type="submit"]');
                     if (btn) {
-                        btn.disabled = false;
-                        btn.textContent = '送信する';
+                        btn.disabled = true;
+                        btn.textContent = '送信中...';
                     }
+
+                    var body = new URLSearchParams(new FormData(form)).toString();
+
+                    fetch('/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: body
+                    })
+                        .then(function (res) {
+                            if (res.ok) {
+                                window.location.href = '/thanks.html';
+                            } else {
+                                throw new Error('送信に失敗しました (status: ' + res.status + ')');
+                            }
+                        })
+                        .catch(function (err) {
+                            console.error(err);
+                            alert('送信中にエラーが発生しました。お手数ですが、LINEまたはメールにてお問い合わせください。');
+                            if (btn) {
+                                btn.disabled = false;
+                                btn.textContent = '送信する';
+                            }
+                        });
                 });
-            });
-        })();
+            })();
     </script>
 
     <!-- Floating LINE Button -->
