@@ -761,7 +761,34 @@
   }
 
   /* ─────────────────────────────────────────
-     10. エントリーポイント
+     10. ローダー制御
+  ───────────────────────────────────────── */
+
+  let loaderHidden = false;
+
+  function hideLoader() {
+    // タイムアウト・fetch成功・エラーの各パスから呼ばれるため冪等にする
+    if (loaderHidden) return;
+    loaderHidden = true;
+
+    const loader = document.getElementById('page-loader');
+    if (!loader) return;
+    loader.classList.add('is-hidden');
+
+    // prefers-reduced-motion 時はブラウザが transition をスキップするため
+    // transitionend が発火しない → 計算済み duration を確認して即時削除にフォールバック
+    const duration = parseFloat(getComputedStyle(loader).transitionDuration) * 1000 || 0;
+    if (duration > 0) {
+      loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+    } else {
+      loader.remove();
+    }
+  }
+
+  const loaderTimeout = setTimeout(hideLoader, 5000);
+
+  /* ─────────────────────────────────────────
+     11. エントリーポイント
   ───────────────────────────────────────── */
 
   const subdomain = getSubdomain();
@@ -773,14 +800,21 @@
     })
     .then((allData) => {
       const data = allData[subdomain] || allData[DEFAULT_PREF];
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => applyData(data));
-      } else {
+      const run = () => {
         applyData(data);
+        clearTimeout(loaderTimeout);
+        hideLoader();
+      };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', run);
+      } else {
+        run();
       }
     })
     .catch((err) => {
       console.error('[regional.js] Failed to load prefecture data:', err);
+      clearTimeout(loaderTimeout);
+      hideLoader();
     });
 
 })();

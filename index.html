@@ -40,6 +40,99 @@
         }
     </script>
     <style>
+        /* ─── ブランドカラー変数（Tailwind テーマと同期） ─── */
+        :root {
+            --color-dark:         #0f172a;
+            --color-accent:       #c5a059;
+            --color-accent-hover: #a38343;
+            --color-accent-light: #e2c47a;
+        }
+
+        /* ─── ページローダー ────────────────────────────────
+           display:none では CSS transition できないため、
+           Tailwind の .hidden ではなく独自の .is-hidden を使用している */
+        #page-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background-color: var(--color-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        #page-loader.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loader-logo {
+            width: 88px;
+            height: auto;
+            animation: loaderFloat 2.2s ease-in-out infinite;
+            filter: drop-shadow(0 0 18px rgba(197, 160, 89, 0.35)); /* var(--color-accent) @ 35% */
+        }
+
+        @keyframes loaderFloat {
+            0%, 100% { transform: translateY(0px); opacity: 1; }
+            50%       { transform: translateY(-9px); opacity: 0.8; }
+        }
+
+        .loader-brand {
+            font-family: 'Noto Serif JP', serif;
+            color: #ffffff;
+            font-size: 1.375rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            margin-top: 1.25rem;
+        }
+
+        .loader-brand span {
+            color: var(--color-accent);
+        }
+
+        .loader-tagline {
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            color: rgba(255,255,255,0.4);
+            margin-top: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        .loader-bar-track {
+            width: 110px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 2px;
+            margin-top: 2rem;
+            overflow: hidden;
+        }
+
+        .loader-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--color-accent-hover), var(--color-accent), var(--color-accent-light));
+            border-radius: 2px;
+            animation: loaderBar 2s ease-out forwards;
+        }
+
+        @keyframes loaderBar {
+            0%   { width: 0%; }
+            40%  { width: 55%; }
+            80%  { width: 82%; }
+            100% { width: 95%; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #page-loader { transition: none; }
+            .loader-logo { animation: none; }
+            .loader-bar  { animation: none; width: 95%; }
+        }
+        /* ─────────────────────────────────────────────────── */
+
         .hero-bg {
             /* <!-- TODO: 以下は仮の画像(Placeholder)です。後で「ホテルのように美しくメイキングされたベッドのアップ」等の画像に差し替えてください。 --> */
             background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.4)), url('https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
@@ -73,6 +166,16 @@
 </head>
 
 <body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- ページローダー: regional.js がデータ注入完了後に is-hidden クラスを付与して非表示にする -->
+    <div id="page-loader" aria-hidden="true">
+        <img src="images/minpaku_resort_logo.png" alt="Minpaku Resort" class="loader-logo">
+        <p class="loader-brand">Minpaku <span>Resort</span></p>
+        <p class="loader-tagline">Loading regional data&thinsp;…</p>
+        <div class="loader-bar-track">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
 
     <!-- SEO対策用非表示H1 (regional.js が都道府県名を注入) -->
     <h1 id="seo-h1" class="sr-only">民泊 運営代行・清掃代行ならMinpaku Resort（民泊リゾート）</h1>
