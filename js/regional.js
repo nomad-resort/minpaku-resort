@@ -149,15 +149,7 @@
   }
 
   /* ─────────────────────────────────────────
-     2. シミュレーションID生成
-  ───────────────────────────────────────── */
-
-  function generateSimId() {
-    return 'SIM' + Date.now().toString(36).toUpperCase().slice(-6);
-  }
-
-  /* ─────────────────────────────────────────
-     3. ユーティリティ
+     2. ユーティリティ
   ───────────────────────────────────────── */
 
   function setText(id, text) {
@@ -588,18 +580,11 @@
     // ── モーダルを開く ────────────────────────────────────────
     function openSimModal() {
       const b = calcBreakdown();
-      const simId = generateSimId();
       const modal = document.getElementById('sim-modal');
       const body = document.getElementById('sim-modal-body');
       if (!modal || !body) return;
 
       body.innerHTML = `
-        <!-- シミュレーションID -->
-        <div class="text-center mb-5 pb-5 border-b border-gray-100">
-          <p class="text-[10px] text-gray-400 tracking-widest mb-1">SIMULATION ID</p>
-          <p class="font-mono font-bold text-primary text-xl tracking-widest">${simId}</p>
-        </div>
-
         <!-- 選択条件サマリー -->
         <div class="text-xs text-gray-500 text-center mb-6 space-y-0.5">
           <p>${d.prefShort}エリア ／ ${b.areaLabel} ／ 宿泊${b.guests}名 ／ ${b.planLabel}</p>

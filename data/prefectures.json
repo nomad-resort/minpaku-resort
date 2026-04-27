@@ -98,7 +98,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "北海道の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -132,7 +132,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、北海道エリア屈指の売上を達成。"
       }
     ]
@@ -205,7 +205,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "青森県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -239,7 +239,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、青森エリア屈指の売上を達成。"
       }
     ]
@@ -311,7 +311,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "岩手県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -345,7 +345,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、岩手エリア屈指の売上を達成。"
       }
     ]
@@ -417,7 +417,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "宮城県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -451,7 +451,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、宮城エリア屈指の売上を達成。"
       }
     ]
@@ -523,7 +523,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "秋田県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -557,7 +557,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、秋田エリア屈指の売上を達成。"
       }
     ]
@@ -630,7 +630,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "山形県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -664,7 +664,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、山形エリア屈指の売上を達成。"
       }
     ]
@@ -737,7 +737,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "福島県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -771,7 +771,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、福島エリア屈指の売上を達成。"
       }
     ]
@@ -844,7 +844,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "茨城県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -878,7 +878,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、茨城エリア屈指の売上を達成。"
       }
     ]
@@ -951,7 +951,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "栃木県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -985,7 +985,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、栃木エリア屈指の売上を達成。"
       }
     ]
@@ -1059,7 +1059,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "群馬県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -1093,7 +1093,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、群馬エリア屈指の売上を達成。"
       }
     ]
@@ -1166,7 +1166,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "埼玉県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -1200,7 +1200,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、埼玉エリア屈指の売上を達成。"
       }
     ]
@@ -1275,7 +1275,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "千葉県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -1309,7 +1309,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、千葉エリア屈指の売上を達成。"
       }
     ]
@@ -1413,7 +1413,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "東京都の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -1447,7 +1447,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、東京エリア屈指の売上を達成。"
       }
     ]
@@ -1522,7 +1522,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "神奈川県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -1556,7 +1556,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、神奈川エリア屈指の売上を達成。"
       }
     ]
@@ -1630,7 +1630,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "新潟県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -1664,7 +1664,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、新潟エリア屈指の売上を達成。"
       }
     ]
@@ -1737,7 +1737,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "富山県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -1771,7 +1771,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、富山エリア屈指の売上を達成。"
       }
     ]
@@ -1844,7 +1844,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "石川県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -1878,7 +1878,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、石川エリア屈指の売上を達成。"
       }
     ]
@@ -1951,7 +1951,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "福井県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -1985,7 +1985,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、福井エリア屈指の売上を達成。"
       }
     ]
@@ -2059,7 +2059,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "山梨県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -2093,7 +2093,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、山梨エリア屈指の売上を達成。"
       }
     ]
@@ -2168,7 +2168,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "長野県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -2202,7 +2202,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、長野エリア屈指の売上を達成。"
       }
     ]
@@ -2276,7 +2276,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "岐阜県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -2310,7 +2310,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、岐阜エリア屈指の売上を達成。"
       }
     ]
@@ -2386,7 +2386,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "静岡県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -2420,7 +2420,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、静岡エリア屈指の売上を達成。"
       }
     ]
@@ -2493,7 +2493,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "愛知県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -2527,7 +2527,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、愛知エリア屈指の売上を達成。"
       }
     ]
@@ -2601,7 +2601,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "三重県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -2635,7 +2635,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、三重エリア屈指の売上を達成。"
       }
     ]
@@ -2708,7 +2708,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "滋賀県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -2742,7 +2742,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、滋賀エリア屈指の売上を達成。"
       }
     ]
@@ -2827,7 +2827,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "京都府の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -2861,7 +2861,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、京都エリア屈指の売上を達成。"
       }
     ]
@@ -2960,7 +2960,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "大阪府の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -2994,7 +2994,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、大阪エリア屈指の売上を達成。"
       }
     ]
@@ -3069,7 +3069,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "兵庫県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -3103,7 +3103,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、兵庫エリア屈指の売上を達成。"
       }
     ]
@@ -3176,7 +3176,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "奈良県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -3210,7 +3210,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、奈良エリア屈指の売上を達成。"
       }
     ]
@@ -3283,7 +3283,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "和歌山県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -3317,7 +3317,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、和歌山エリア屈指の売上を達成。"
       }
     ]
@@ -3390,7 +3390,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "鳥取県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -3424,7 +3424,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、鳥取エリア屈指の売上を達成。"
       }
     ]
@@ -3496,7 +3496,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "島根県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -3530,7 +3530,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、島根エリア屈指の売上を達成。"
       }
     ]
@@ -3602,7 +3602,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "岡山県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -3636,7 +3636,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、岡山エリア屈指の売上を達成。"
       }
     ]
@@ -3710,7 +3710,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "広島県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -3744,7 +3744,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、広島エリア屈指の売上を達成。"
       }
     ]
@@ -3817,7 +3817,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "山口県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -3851,7 +3851,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、山口エリア屈指の売上を達成。"
       }
     ]
@@ -3924,7 +3924,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "徳島県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -3958,7 +3958,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、徳島エリア屈指の売上を達成。"
       }
     ]
@@ -4031,7 +4031,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "香川県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -4065,7 +4065,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、香川エリア屈指の売上を達成。"
       }
     ]
@@ -4137,7 +4137,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "愛媛県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -4171,7 +4171,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、愛媛エリア屈指の売上を達成。"
       }
     ]
@@ -4243,7 +4243,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "高知県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -4277,7 +4277,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、高知エリア屈指の売上を達成。"
       }
     ]
@@ -4363,7 +4363,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "福岡県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -4397,7 +4397,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、福岡エリア屈指の売上を達成。"
       }
     ]
@@ -4470,7 +4470,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "佐賀県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -4504,7 +4504,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、佐賀エリア屈指の売上を達成。"
       }
     ]
@@ -4577,7 +4577,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "長崎県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -4611,7 +4611,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、長崎エリア屈指の売上を達成。"
       }
     ]
@@ -4684,7 +4684,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "熊本県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -4718,7 +4718,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、熊本エリア屈指の売上を達成。"
       }
     ]
@@ -4791,7 +4791,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "大分県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -4825,7 +4825,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、大分エリア屈指の売上を達成。"
       }
     ]
@@ -4897,7 +4897,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "宮崎県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -4931,7 +4931,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、宮崎エリア屈指の売上を達成。"
       }
     ]
@@ -5005,7 +5005,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "鹿児島県の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -5039,7 +5039,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、鹿児島エリア屈指の売上を達成。"
       }
     ]
@@ -5143,7 +5143,7 @@
     ],
     "caseStudies": [
       {
-        "name": "BIZ-HANARE",
+        "name": "某一棟貸ヴィラ",
         "location": "沖縄県北部の高級貸別荘",
         "type": "プレミアムヴィラ",
         "stats": [
@@ -5177,7 +5177,7 @@
             "unit": "件"
           }
         ],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         "review": "競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、沖縄エリア屈指の売上を達成。"
       }
     ]
