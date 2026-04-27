@@ -1,0 +1,145 @@
+# ============================================================
+# Minpaku Resort — Netlify リダイレクト設定
+# 旧・都道府県サブドメイン → 各都道府県の代表都市 (301)
+# ============================================================
+
+# 北海道
+https://hokkaido.minpaku-resort.com/*  https://sapporo.minpaku-resort.com/:splat  301!
+
+# 青森
+https://aomori.minpaku-resort.com/*    https://aomori.minpaku-resort.com/:splat   200
+
+# 岩手
+https://iwate.minpaku-resort.com/*     https://morioka.minpaku-resort.com/:splat  301!
+
+# 宮城
+https://miyagi.minpaku-resort.com/*    https://sendai.minpaku-resort.com/:splat   301!
+
+# 秋田
+https://akita.minpaku-resort.com/*     https://akita.minpaku-resort.com/:splat    200
+
+# 山形
+https://yamagata.minpaku-resort.com/*  https://yamagata.minpaku-resort.com/:splat 200
+
+# 福島
+https://fukushima.minpaku-resort.com/* https://fukushima.minpaku-resort.com/:splat 200
+
+# 茨城
+https://ibaraki.minpaku-resort.com/*   https://mito.minpaku-resort.com/:splat     301!
+
+# 栃木
+https://tochigi.minpaku-resort.com/*   https://utsunomiya.minpaku-resort.com/:splat 301!
+
+# 群馬
+https://gunma.minpaku-resort.com/*     https://maebashi.minpaku-resort.com/:splat 301!
+
+# 埼玉
+https://saitama.minpaku-resort.com/*   https://saitama.minpaku-resort.com/:splat  200
+
+# 千葉
+https://chiba.minpaku-resort.com/*     https://chiba.minpaku-resort.com/:splat    200
+
+# 東京
+https://tokyo.minpaku-resort.com/*     https://shinjuku.minpaku-resort.com/:splat 301!
+
+# 神奈川
+https://kanagawa.minpaku-resort.com/*  https://yokohama.minpaku-resort.com/:splat 301!
+
+# 新潟
+https://niigata.minpaku-resort.com/*   https://niigata.minpaku-resort.com/:splat  200
+
+# 富山
+https://toyama.minpaku-resort.com/*    https://toyama.minpaku-resort.com/:splat   200
+
+# 石川
+https://ishikawa.minpaku-resort.com/*  https://kanazawa.minpaku-resort.com/:splat 301!
+
+# 福井
+https://fukui.minpaku-resort.com/*     https://fukui.minpaku-resort.com/:splat    200
+
+# 山梨
+https://yamanashi.minpaku-resort.com/* https://kofu.minpaku-resort.com/:splat     301!
+
+# 長野
+https://nagano.minpaku-resort.com/*    https://nagano.minpaku-resort.com/:splat   200
+
+# 岐阜
+https://gifu.minpaku-resort.com/*      https://gifu.minpaku-resort.com/:splat     200
+
+# 静岡
+https://shizuoka.minpaku-resort.com/*  https://shizuoka.minpaku-resort.com/:splat 200
+
+# 愛知
+https://aichi.minpaku-resort.com/*     https://nagoya.minpaku-resort.com/:splat   301!
+
+# 三重
+https://mie.minpaku-resort.com/*       https://ise.minpaku-resort.com/:splat      301!
+
+# 滋賀
+https://shiga.minpaku-resort.com/*     https://otsu.minpaku-resort.com/:splat     301!
+
+# 京都
+https://kyoto.minpaku-resort.com/*     https://kyoto.minpaku-resort.com/:splat    200
+
+# 大阪
+https://osaka.minpaku-resort.com/*     https://osaka.minpaku-resort.com/:splat    200
+
+# 兵庫
+https://hyogo.minpaku-resort.com/*     https://kobe.minpaku-resort.com/:splat     301!
+
+# 奈良
+https://nara.minpaku-resort.com/*      https://nara.minpaku-resort.com/:splat     200
+
+# 和歌山
+https://wakayama.minpaku-resort.com/*  https://wakayama.minpaku-resort.com/:splat 200
+
+# 鳥取
+https://tottori.minpaku-resort.com/*   https://tottori.minpaku-resort.com/:splat  200
+
+# 島根
+https://shimane.minpaku-resort.com/*   https://matsue.minpaku-resort.com/:splat   301!
+
+# 岡山
+https://okayama.minpaku-resort.com/*   https://okayama.minpaku-resort.com/:splat  200
+
+# 広島
+https://hiroshima.minpaku-resort.com/* https://hiroshima.minpaku-resort.com/:splat 200
+
+# 山口
+https://yamaguchi.minpaku-resort.com/* https://yamaguchi.minpaku-resort.com/:splat 200
+
+# 徳島
+https://tokushima.minpaku-resort.com/* https://tokushima.minpaku-resort.com/:splat 200
+
+# 香川
+https://kagawa.minpaku-resort.com/*    https://takamatsu.minpaku-resort.com/:splat 301!
+
+# 愛媛
+https://ehime.minpaku-resort.com/*     https://matsuyama.minpaku-resort.com/:splat 301!
+
+# 高知
+https://kochi.minpaku-resort.com/*     https://kochi.minpaku-resort.com/:splat    200
+
+# 福岡
+https://fukuoka.minpaku-resort.com/*   https://fukuoka.minpaku-resort.com/:splat  200
+
+# 佐賀
+https://saga.minpaku-resort.com/*      https://saga.minpaku-resort.com/:splat     200
+
+# 長崎
+https://nagasaki.minpaku-resort.com/*  https://nagasaki.minpaku-resort.com/:splat 200
+
+# 熊本
+https://kumamoto.minpaku-resort.com/*  https://kumamoto.minpaku-resort.com/:splat 200
+
+# 大分
+https://oita.minpaku-resort.com/*      https://oita.minpaku-resort.com/:splat     200
+
+# 宮崎
+https://miyazaki.minpaku-resort.com/*  https://miyazaki.minpaku-resort.com/:splat 200
+
+# 鹿児島
+https://kagoshima.minpaku-resort.com/* https://kagoshima.minpaku-resort.com/:splat 200
+
+# 沖縄（旧デフォルト）
+https://okinawa.minpaku-resort.com/*   https://naha.minpaku-resort.com/:splat     301!

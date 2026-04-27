@@ -3,9 +3,10 @@
  *
  * 動作概要:
  *   1. window.location.hostname からサブドメインを検出
- *   2. /data/prefectures.json を fetch
- *   3. 該当都道府県のデータを DOM に注入
+ *   2. /data/cities.json を fetch
+ *   3. 該当都市のデータを DOM に注入
  *   4. AIシミュレーター を初期化
+ *   5. canonical URL・LocalBusiness JSON-LD を動的生成
  */
 
 (function () {
@@ -15,7 +16,7 @@
      定数
   ───────────────────────────────────────── */
 
-  const DEFAULT_PREF = 'okinawa';
+  const DEFAULT_CITY = 'naha';
 
   const LINE_URL = 'https://lin.ee/RtLPqmQ';
 
@@ -137,12 +138,12 @@
 
     // localhost / IP アドレス / 単一ホスト → デフォルト
     if (parts.length < 3 || /^\d+\.\d+\.\d+\.\d+$/.test(hostname)) {
-      console.log('[regional.js] Local/Direct access detected. Using default:', DEFAULT_PREF);
-      return DEFAULT_PREF;
+      console.log('[regional.js] Local/Direct access detected. Using default:', DEFAULT_CITY);
+      return DEFAULT_CITY;
     }
 
     const sub = parts[0];
-    if (sub === 'www') return DEFAULT_PREF;
+    if (sub === 'www') return DEFAULT_CITY;
 
     console.log('[regional.js] Subdomain detected:', sub);
     return sub;
@@ -182,7 +183,7 @@
       heroSection.style.backgroundSize = 'cover';
       heroSection.style.backgroundPosition = 'center';
     }
-    setText('seo-h1', `${d.prefShort}の民泊 運営代行・清掃代行ならMinpaku Resort（民泊リゾート）`);
+    setText('seo-h1', `${d.cityShort}の民泊 運営代行・清掃代行ならMinpaku Resort（民泊リゾート）`);
     setText('hero-tagline', d.heroTagline);
     setText('hero-copy', d.heroCopy);
     setText('hero-subcopy', d.heroSubcopy);
@@ -193,7 +194,7 @@
     if (el) {
       el.innerHTML =
         `そのお悩み、<span class="text-accent font-bold">Minpaku Resort</span>にお任せください。<br>` +
-        `${d.prefShort}エリアの地域特性を熟知した私たちが、すべて解決いたします。`;
+        `${d.cityShort}エリアの地域特性を熟知した私たちが、すべて解決いたします。`;
     }
   }
 
@@ -201,7 +202,7 @@
     const container = document.getElementById('local-rules-grid');
     if (!container) return;
 
-    setText('local-rules-title', `${d.prefShort}だからこそ、気をつけたいこと`);
+    setText('local-rules-title', `${d.cityShort}だからこそ、気をつけたいこと`);
 
     container.innerHTML = d.localRules.map((r) => `
       <div class="bg-white rounded-sm shadow-sm border border-gray-100 p-7 hover:shadow-md transition duration-300">
@@ -247,7 +248,7 @@
   function applyAreas(d) {
     setText('areas-title', `${d.prefShort} 対応可能エリア`);
     setText('areas-description',
-      `${d.prefName}内の主要エリアを中心にサービスを提供しております。掲載のない地域もお気軽にご相談ください。`
+      `${d.cityShort}を含む${d.prefName}内の主要エリアを中心にサービスを提供しております。掲載のない地域もお気軽にご相談ください。`
     );
 
     const listEl = document.getElementById('municipalities-list');
@@ -272,10 +273,10 @@
       titleEl.textContent = d.cleaningFeature.title;
       bodyEl.textContent = d.cleaningFeature.body;
     } else {
-      // cleaningFeature が未定義の都道府県向けフォールバック
-      titleEl.textContent = `${d.prefShort}の地域特性に合わせた最適清掃`;
+      // cleaningFeature が未定義の都市向けフォールバック
+      titleEl.textContent = `${d.cityShort}の地域特性に合わせた最適清掃`;
       bodyEl.textContent =
-        `${d.prefShort}の環境・気候・ゲスト層に合わせた清掃フローを構築。` +
+        `${d.cityShort}の環境・気候・ゲスト層に合わせた清掃フローを構築。` +
         `地域の清掃プロフェッショナルと連携し、高いクオリティを安定的に提供いたします。`;
     }
   }
@@ -587,7 +588,7 @@
       body.innerHTML = `
         <!-- 選択条件サマリー -->
         <div class="text-xs text-gray-500 text-center mb-6 space-y-0.5">
-          <p>${d.prefShort}エリア ／ ${b.areaLabel} ／ 宿泊${b.guests}名 ／ ${b.planLabel}</p>
+          <p>${d.cityShort}エリア ／ ${b.areaLabel} ／ 宿泊${b.guests}名 ／ ${b.planLabel}</p>
           ${b.resolvedAddress ? `<p class="text-gray-400">${b.resolvedAddress}</p>` : ''}
         </div>
 
@@ -723,14 +724,65 @@
   }
 
   function applyFooter(d) {
-    setText('footer-tagline', `${d.prefShort}の民泊を、リゾート・クオリティへ。`);
+    setText('footer-tagline', `${d.cityShort}の民泊を、リゾート・クオリティへ。`);
   }
 
   /* ─────────────────────────────────────────
-     9. 全データ一括適用
+     9. SEO: canonical URL + LocalBusiness JSON-LD
   ───────────────────────────────────────── */
 
-  function applyData(d) {
+  function applySeoTags(d, cityKey) {
+    const origin = window.location.origin;
+
+    // ── canonical URL ──────────────────────────────────────────────
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = `${origin}/`;
+
+    // ── OGP image（都市ヒーロー画像を流用） ─────────────────────────
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    if (ogImage) ogImage.setAttribute('content', `${origin}/${d.heroImage}`);
+
+    // ── LocalBusiness JSON-LD ──────────────────────────────────────
+    const existingLd = document.getElementById('ld-local-business');
+    if (existingLd) existingLd.remove();
+
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      'name': `Minpaku Resort（民泊リゾート）${d.cityShort}`,
+      'description': d.seoDescription,
+      'url': `${origin}/`,
+      'image': `${origin}/${d.heroImage}`,
+      'areaServed': {
+        '@type': 'City',
+        'name': d.cityName,
+        'containedInPlace': {
+          '@type': 'AdministrativeArea',
+          'name': d.prefName
+        }
+      },
+      'serviceType': ['民泊運営代行', '民泊清掃代行', '民泊コンサルティング'],
+      'telephone': '',
+      'sameAs': ['https://lin.ee/RtLPqmQ']
+    };
+
+    const script = document.createElement('script');
+    script.id = 'ld-local-business';
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(ld);
+    document.head.appendChild(script);
+  }
+
+  /* ─────────────────────────────────────────
+     10. 全データ一括適用
+  ───────────────────────────────────────── */
+
+  function applyData(d, cityKey) {
     applyMeta(d);
     applyHero(d);
     applyProblems(d);
@@ -743,6 +795,7 @@
     initSimulator(d);
     renderNoteFeed();
     applyFooter(d);
+    applySeoTags(d, cityKey);
   }
 
   /* ─────────────────────────────────────────
@@ -790,18 +843,19 @@
 
   const subdomain = getSubdomain();
 
-  fetch('data/prefectures.json')
+  fetch('data/cities.json')
     .then((res) => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return res.json();
     })
     .then((allData) => {
-      const data = allData[subdomain] || allData[DEFAULT_PREF];
+      const cityKey = allData[subdomain] ? subdomain : DEFAULT_CITY;
+      const data = allData[cityKey];
       const run = () => {
         // ① ヒーロー画像のプリロードを開始（DOM 適用と並行して実行）
         const heroReady = preloadHeroImage(data.heroImage);
         // ② データを DOM に適用（backgroundImage のセットも含む）
-        applyData(data);
+        applyData(data, cityKey);
         // ③ ヒーロー画像の読み込みが完了してからローダーを非表示にする
         heroReady.then(() => {
           clearTimeout(loaderTimeout);

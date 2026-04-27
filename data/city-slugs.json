@@ -1,0 +1,267 @@
+{
+  "hokkaido": {
+    "札幌市":   "sapporo",
+    "函館市":   "hakodate",
+    "小樽市":   "otaru",
+    "ニセコ町": "niseko",
+    "倶知安町": "kutchan",
+    "富良野市": "furano",
+    "美瑛町":   "biei",
+    "洞爺湖町": "toya",
+    "登別市":   "noboribetsu"
+  },
+  "aomori": {
+    "青森市":   "aomori",
+    "弘前市":   "hirosaki",
+    "十和田市": "towada"
+  },
+  "iwate": {
+    "盛岡市": "morioka",
+    "平泉町": "hiraizumi"
+  },
+  "miyagi": {
+    "仙台市": "sendai",
+    "松島町": "matsushima"
+  },
+  "akita": {
+    "秋田市":       "akita",
+    "仙北市（角館）": "kakunodate"
+  },
+  "yamagata": {
+    "山形市":           "yamagata",
+    "尾花沢市（銀山温泉）": "ginzan",
+    "米沢市":           "yonezawa"
+  },
+  "fukushima": {
+    "福島市":    "fukushima",
+    "郡山市":    "koriyama",
+    "会津若松市": "aizu"
+  },
+  "ibaraki": {
+    "水戸市":     "mito",
+    "つくば市":   "tsukuba",
+    "ひたちなか市": "hitachinaka"
+  },
+  "tochigi": {
+    "宇都宮市": "utsunomiya",
+    "日光市":   "nikko",
+    "那須町":   "nasu"
+  },
+  "gunma": {
+    "前橋市":       "maebashi",
+    "高崎市":       "takasaki",
+    "草津町":       "kusatsu",
+    "渋川市（伊香保）": "ikaho"
+  },
+  "saitama": {
+    "さいたま市": "saitama",
+    "川越市":    "kawagoe",
+    "秩父市":    "chichibu"
+  },
+  "chiba": {
+    "千葉市": "chiba",
+    "浦安市": "urayasu",
+    "成田市": "narita",
+    "木更津市": "kisarazu",
+    "勝浦市": "katsuura"
+  },
+  "tokyo": {
+    "新宿区": "shinjuku",
+    "渋谷区": "shibuya",
+    "港区":   "minato",
+    "台東区": "taito",
+    "墨田区": "sumida",
+    "中央区": "chuo",
+    "豊島区": "toshima",
+    "千代田区": "chiyoda",
+    "江東区": "koto"
+  },
+  "kanagawa": {
+    "横浜市":        "yokohama",
+    "鎌倉市":        "kamakura",
+    "箱根町":        "hakone",
+    "藤沢市（江の島）": "enoshima",
+    "川崎市":        "kawasaki"
+  },
+  "niigata": {
+    "新潟市": "niigata",
+    "湯沢町": "yuzawa",
+    "妙高市": "myoko",
+    "長岡市": "nagaoka"
+  },
+  "toyama": {
+    "富山市": "toyama",
+    "高岡市": "takaoka",
+    "立山町": "tateyama"
+  },
+  "ishikawa": {
+    "金沢市":          "kanazawa",
+    "七尾市（和倉温泉）": "wakura",
+    "加賀市":          "kaga"
+  },
+  "fukui": {
+    "福井市": "fukui",
+    "敦賀市": "tsuruga",
+    "勝山市": "katsuyama"
+  },
+  "yamanashi": {
+    "甲府市":   "kofu",
+    "富士吉田市": "fujiyoshida",
+    "河口湖町": "kawaguchiko",
+    "山中湖村": "yamanakako"
+  },
+  "nagano": {
+    "長野市":   "nagano",
+    "松本市":   "matsumoto",
+    "軽井沢町": "karuizawa",
+    "白馬村":   "hakuba",
+    "野沢温泉村": "nozawa"
+  },
+  "gifu": {
+    "岐阜市": "gifu",
+    "高山市": "takayama",
+    "白川村": "shirakawa",
+    "下呂市": "gero"
+  },
+  "shizuoka": {
+    "静岡市":  "shizuoka",
+    "浜松市":  "hamamatsu",
+    "熱海市":  "atami",
+    "伊東市":  "ito",
+    "下田市":  "shimoda",
+    "富士宮市": "fujinomiya"
+  },
+  "aichi": {
+    "名古屋市": "nagoya",
+    "豊田市":  "toyota",
+    "常滑市":  "tokoname"
+  },
+  "mie": {
+    "津市":  "tsu",
+    "伊勢市": "ise",
+    "鳥羽市": "toba",
+    "志摩市": "shima"
+  },
+  "shiga": {
+    "大津市": "otsu",
+    "彦根市": "hikone",
+    "高島市": "takashima"
+  },
+  "kyoto": {
+    "京都市":          "kyoto",
+    "宇治市":          "uji",
+    "宮津市（天橋立）": "amanohashidate"
+  },
+  "osaka": {
+    "大阪市（中央区・北区・浪速区・天王寺区等）": "osaka",
+    "堺市":          "sakai",
+    "泉佐野市（関空周辺）":                 "izumisano",
+    "東大阪市":       "higashiosaka"
+  },
+  "hyogo": {
+    "神戸市":          "kobe",
+    "姫路市":          "himeji",
+    "豊岡市（城崎温泉）": "kinosaki",
+    "淡路市":          "awaji",
+    "西宮市":          "nishinomiya"
+  },
+  "nara": {
+    "奈良市": "nara",
+    "橿原市": "kashihara",
+    "吉野町": "yoshino"
+  },
+  "wakayama": {
+    "和歌山市":  "wakayama",
+    "白浜町":   "shirahama",
+    "那智勝浦町": "nachikatsuura"
+  },
+  "tottori": {
+    "鳥取市": "tottori",
+    "米子市": "yonago",
+    "境港市": "sakaiminato"
+  },
+  "shimane": {
+    "松江市": "matsue",
+    "出雲市": "izumo"
+  },
+  "okayama": {
+    "岡山市": "okayama",
+    "倉敷市": "kurashiki"
+  },
+  "hiroshima": {
+    "広島市":        "hiroshima",
+    "廿日市市（宮島）": "miyajima",
+    "尾道市":        "onomichi",
+    "福山市":        "fukuyama"
+  },
+  "yamaguchi": {
+    "山口市": "yamaguchi",
+    "下関市": "shimonoseki",
+    "萩市":  "hagi"
+  },
+  "tokushima": {
+    "徳島市": "tokushima",
+    "鳴門市": "naruto",
+    "三好市": "miyoshi"
+  },
+  "kagawa": {
+    "高松市":  "takamatsu",
+    "小豆島町": "shodoshima",
+    "丸亀市":  "marugame"
+  },
+  "ehime": {
+    "松山市": "matsuyama",
+    "今治市": "imabari"
+  },
+  "kochi": {
+    "高知市":  "kochi",
+    "四万十市": "shimanto"
+  },
+  "fukuoka": {
+    "福岡市":  "fukuoka",
+    "太宰府市": "dazaifu",
+    "北九州市": "kitakyushu",
+    "糸島市":  "itoshima"
+  },
+  "saga": {
+    "佐賀市": "saga",
+    "唐津市": "karatsu",
+    "嬉野市": "ureshino"
+  },
+  "nagasaki": {
+    "長崎市":  "nagasaki",
+    "佐世保市": "sasebo",
+    "五島市":  "goto"
+  },
+  "kumamoto": {
+    "熊本市": "kumamoto",
+    "阿蘇市": "aso",
+    "黒川温泉": "kurokawa"
+  },
+  "oita": {
+    "大分市":        "oita",
+    "別府市":        "beppu",
+    "由布市（湯布院）": "yufuin"
+  },
+  "miyazaki": {
+    "宮崎市":  "miyazaki",
+    "高千穂町": "takachiho"
+  },
+  "kagoshima": {
+    "鹿児島市": "kagoshima",
+    "霧島市":  "kirishima",
+    "屋久島町": "yakushima",
+    "指宿市":  "ibusuki"
+  },
+  "okinawa": {
+    "那覇市":  "naha",
+    "恩納村":  "onna",
+    "名護市":  "nago",
+    "本部町":  "motobu",
+    "今帰仁村": "nakijin",
+    "読谷村":  "yomitan",
+    "北谷町":  "chatan",
+    "石垣市":  "ishigaki",
+    "宮古島市": "miyakojima"
+  }
+}
