@@ -86,14 +86,10 @@ def placeholder_seo_description(city_short_name: str, pref_name: str) -> str:
         f"運営代行・清掃代行の特徴を120〜160字で記述。地域固有のキーワードを含めること。"
     )
 
-def placeholder_map_embed(city_name: str, pref_name: str) -> str:
-    # デフォルトのGoogleマップ埋め込みURL（都市名で検索）
-    query = f"{pref_name}{city_name}"
-    return (
-        f"https://www.google.com/maps/embed/v1/place"
-        f"?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY"
-        f"&q={query}&language=ja"
-    )
+def map_embed_url(city_name: str, pref_name: str) -> str:
+    # APIキー不要の Google マップ埋め込みURL
+    query = f"{pref_name}+{city_name}"
+    return f"https://maps.google.com/maps?q={query}&output=embed&hl=ja&z=13"
 
 
 # -------------------------------------------------------------------
@@ -172,8 +168,8 @@ def build():
                     "ログハウス・大型物件": 22000
                 }),
 
-                # ── 地図（都市中心）──
-                "mapEmbedUrl": placeholder_map_embed(city_name, pref_data["prefName"]),
+                # ── 地図 ──
+                "mapEmbedUrl": map_embed_url(city_name, pref_data["prefName"]),
 
                 # ── SEO ──
                 "seoTitle":       placeholder_seo_title(short),
