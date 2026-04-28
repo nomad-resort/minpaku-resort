@@ -746,6 +746,8 @@
     // ── OGP image（都市ヒーロー画像を流用） ─────────────────────────
     const ogImage = document.querySelector('meta[property="og:image"]');
     if (ogImage) ogImage.setAttribute('content', `${origin}/${d.heroImage}`);
+    const twImage = document.querySelector('meta[name="twitter:image"]');
+    if (twImage) twImage.setAttribute('content', `${origin}/${d.heroImage}`);
 
     // ── LocalBusiness JSON-LD ──────────────────────────────────────
     const existingLd = document.getElementById('ld-local-business');
