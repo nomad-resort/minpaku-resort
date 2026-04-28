@@ -78,9 +78,12 @@ function parseRSS(xml) {
     const pubDate = extractTag(item, 'pubDate');
     const category = extractTag(item, 'category') || 'ノウハウ';
 
-    // サムネイル: media:thumbnail → media:content → enclosure → fallback
+    // サムネイル: note.com は <media:thumbnail>URL</media:thumbnail> 形式で出力する
+    // extractTag でテキストコンテンツを取得し、属性形式はフォールバックとして残す
     const img =
+      extractTag(item, 'media:thumbnail') ||
       extractAttr(item, 'media:thumbnail', 'url') ||
+      extractTag(item, 'media:content') ||
       extractAttr(item, 'media:content',   'url') ||
       extractAttr(item, 'enclosure',        'url') ||
       '';
@@ -105,7 +108,7 @@ exports.handler = async function () {
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
         'Access-Control-Allow-Origin': '*',
-        'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+        'Cache-Control': 'public, max-age=900, s-maxage=900',
       },
       body: JSON.stringify(articles),
     };

@@ -95,29 +95,29 @@
     okinawa: { lat: 26.2124, lng: 127.6809 },
   };
 
-  // note 記事フィード — フォールバック用静的プレースホルダー
-  // 実際の記事が公開されると Netlify Function 経由の RSS が優先される
+  // note 記事フィード — フォールバック用静的データ（RSS 取得失敗時に表示）
+  // Netlify Function が正常に動作している場合は RSS から取得した実際の記事が優先される
   const NOTE_ARTICLES_FALLBACK = [
     {
-      title: '民泊清掃のプロが教える！ゲスト評価4.8以上を維持する5つのコツ',
-      date: '近日公開',
-      tag: '清掃・品質管理',
-      url: 'https://note.com/minpaku_resort',
-      img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+      title: '2026年版｜民泊新法・旅館業法 最新改正ポイントまとめ',
+      date: '2026年4月28日',
+      tag: 'ノウハウ',
+      url: 'https://note.com/minpaku_resort/n/n7aeda67c34a3',
+      img: 'https://assets.st-note.com/production/uploads/images/271118182/rectangle_large_type_2_fbcd6723cd7ac7c39682bc18ff8a7432.jpeg?width=800',
     },
     {
       title: 'ダイナミックプライシング入門｜稼働率85%超えを実現した価格戦略',
-      date: '近日公開',
-      tag: '収益最大化',
-      url: 'https://note.com/minpaku_resort',
-      img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80',
+      date: '2026年4月28日',
+      tag: 'ノウハウ',
+      url: 'https://note.com/minpaku_resort/n/n07ee9f7efd96',
+      img: 'https://assets.st-note.com/production/uploads/images/271104404/rectangle_large_type_2_c80daef54a68a38fadeb7a72cc3ad8f6.jpeg?width=800',
     },
     {
-      title: '2026年版｜民泊新法・旅館業法 最新改正ポイントまとめ',
-      date: '近日公開',
-      tag: '法務・許認可',
-      url: 'https://note.com/minpaku_resort',
-      img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80',
+      title: '民泊清掃のプロが教える！ゲスト評価4.8以上を維持する5つのコツ',
+      date: '2026年4月28日',
+      tag: 'ノウハウ',
+      url: 'https://note.com/minpaku_resort/n/n845a4bc829c5',
+      img: 'https://assets.st-note.com/production/uploads/images/270948970/rectangle_large_type_2_65ad7b74e352bc1b2500e9ec9dd4927f.png?width=800',
     },
   ];
 
