@@ -202,20 +202,20 @@
     const container = document.getElementById('local-rules-grid');
     if (!container) return;
 
-    setText('local-rules-title', `${d.cityShort}だからこそ、気をつけたいこと`);
+    setText('local-rules-title', `${d.cityShort}の注意ポイント`);
 
     container.innerHTML = d.localRules.map((r) => `
-      <div class="bg-white rounded-sm shadow-sm border border-gray-100 p-7 hover:shadow-md transition duration-300">
-        <div class="flex items-start mb-4">
-          <div class="w-12 h-12 bg-primary/5 border border-accent/30 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-            <i class="${r.icon} text-accent text-lg"></i>
+      <div class="bg-white rounded-sm shadow-sm border border-gray-100 p-3 sm:p-5 md:p-7 hover:shadow-md transition duration-300">
+        <div class="flex items-start mb-2 sm:mb-4">
+          <div class="w-8 h-8 sm:w-12 sm:h-12 bg-primary/5 border border-accent/30 rounded-full flex items-center justify-center mr-2 sm:mr-4 flex-shrink-0">
+            <i class="${r.icon} text-accent text-sm sm:text-lg"></i>
           </div>
           <div>
-            <span class="text-[10px] font-bold text-accent tracking-widest uppercase">${r.highlight}</span>
-            <h4 class="text-base font-bold text-primary leading-snug">${r.title}</h4>
+            <span class="text-[8px] sm:text-[10px] font-bold text-accent tracking-widest uppercase">${r.highlight}</span>
+            <h4 class="text-xs sm:text-base font-bold text-primary leading-snug">${r.title}</h4>
           </div>
         </div>
-        <p class="text-gray-600 text-sm leading-relaxed">${r.body}</p>
+        <p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">${r.body}</p>
       </div>
     `).join('');
   }
@@ -225,21 +225,22 @@
     if (!container) return;
 
     setText('staff-title', '現場を支えるチーム');
-    container.className = 'grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-4xl mx-auto';
+    // モバイルでも3列で横並び表示
+    container.className = 'grid grid-cols-3 gap-4 sm:gap-10 max-w-4xl mx-auto';
 
     container.innerHTML = FIXED_STAFF.map((s) => {
       const fallback =
         `https://ui-avatars.com/api/?name=${encodeURIComponent(s.name)}&background=1e293b&color=c5a059&size=112&bold=true`;
       return `
         <div class="text-center group">
-          <div class="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-4 border-accent/60 shadow-lg group-hover:border-accent transition duration-300">
+          <div class="w-16 h-16 sm:w-28 sm:h-28 mx-auto mb-2 sm:mb-4 rounded-full overflow-hidden border-4 border-accent/60 shadow-lg group-hover:border-accent transition duration-300">
             <img src="${s.avatar}" alt="${s.name}"
               class="w-full h-full object-cover"
               onerror="this.src='${fallback}'">
           </div>
-          <h4 class="font-bold text-white text-lg mb-1">${s.name}</h4>
-          <p class="text-[10px] text-accent font-bold mb-3 tracking-widest uppercase">${s.role}</p>
-          <p class="text-sm text-gray-300 leading-relaxed max-w-[200px] mx-auto">&ldquo;${s.message}&rdquo;</p>
+          <h4 class="font-bold text-white text-xs sm:text-lg mb-1">${s.name}</h4>
+          <p class="text-[8px] sm:text-[10px] text-accent font-bold mb-1 sm:mb-3 tracking-widest uppercase">${s.role}</p>
+          <p class="hidden sm:block text-sm text-gray-300 leading-relaxed max-w-[200px] mx-auto">&ldquo;${s.message}&rdquo;</p>
         </div>
       `;
     }).join('');
@@ -291,27 +292,27 @@
       const borderClass = isPrimary ? 'border-accent' : 'border-primary';
 
       const statsHtml = c.stats.map(s => `
-        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0">
-          <span class="text-gray-600 font-medium">${s.label}</span>
-          <span class="text-3xl font-bold text-primary">${s.value}<span class="text-lg ${s.unit.includes('%') ? '' : 'text-gray-500'}">${s.unit}</span></span>
+        <div class="flex flex-col gap-0.5">
+          <span class="text-gray-600 font-medium text-[10px] sm:text-sm">${s.label}</span>
+          <span class="text-lg sm:text-2xl md:text-3xl font-bold text-primary">${s.value}<span class="text-xs sm:text-lg ${s.unit.includes('%') ? '' : 'text-gray-500'}">${s.unit}</span></span>
         </div>
       `).join('');
 
       return `
-        <div class="bg-white rounded-sm overflow-hidden shadow-2xl flex flex-col">
-          <div class="h-64 overflow-hidden relative">
+        <div class="bg-white rounded-sm overflow-hidden shadow-lg md:shadow-2xl flex flex-col">
+          <div class="h-28 sm:h-48 md:h-64 overflow-hidden relative">
             <img src="${c.image}" alt="${c.name}" class="w-full h-full object-cover">
-            <div class="absolute top-4 right-4 bg-${accentClass} text-white px-3 py-1 font-bold rounded-sm text-sm">
+            <div class="absolute top-2 right-2 md:top-4 md:right-4 bg-${accentClass} text-white px-2 py-0.5 md:px-3 md:py-1 font-bold rounded-sm text-[10px] sm:text-sm">
               ${c.type}
             </div>
           </div>
-          <div class="p-8 flex-grow">
-            <h4 class="text-2xl font-serif font-bold text-primary mb-2">${c.name}</h4>
-            <p class="text-gray-500 text-sm mb-6 pb-4 border-b border-gray-100">${c.location}</p>
-            <div class="space-y-4">
+          <div class="p-3 sm:p-5 md:p-8 flex-grow">
+            <h4 class="text-sm sm:text-xl md:text-2xl font-serif font-bold text-primary mb-1 md:mb-2">${c.name}</h4>
+            <p class="text-gray-500 text-[10px] sm:text-sm mb-3 md:mb-6 pb-2 md:pb-4 border-b border-gray-100">${c.location}</p>
+            <div class="space-y-2 md:space-y-4">
               ${statsHtml}
             </div>
-            <p class="mt-6 text-sm text-gray-600 bg-gray-50 p-4 rounded border-l-2 ${borderClass}">
+            <p class="hidden sm:block mt-4 md:mt-6 text-[10px] sm:text-sm text-gray-600 bg-gray-50 p-2 md:p-4 rounded border-l-2 ${borderClass}">
               ${c.review}
             </p>
           </div>
@@ -325,20 +326,20 @@
     if (!container || !d.voices) return;
 
     container.innerHTML = d.voices.map(v => `
-      <div class="bg-white p-8 rounded-sm shadow relative">
-        <i class="fas fa-quote-left text-4xl text-gray-200 absolute top-6 left-6"></i>
-        <div class="relative z-10 pl-6 pt-4">
-          <div class="flex items-center mb-6">
-            <img src="${v.image}" alt="${v.name}" class="w-16 h-16 rounded-full object-cover border-2 border-accent">
-            <div class="ml-4">
-              <h4 class="font-bold text-primary text-lg">${v.name} / ${v.title}</h4>
-              <div class="text-accent text-sm">
+      <div class="bg-white p-3 sm:p-5 md:p-8 rounded-sm shadow relative">
+        <i class="fas fa-quote-left text-2xl sm:text-4xl text-gray-200 absolute top-3 left-3 sm:top-6 sm:left-6"></i>
+        <div class="relative z-10 pl-4 sm:pl-6 pt-2 sm:pt-4">
+          <div class="flex items-center mb-3 sm:mb-6">
+            <img src="${v.image}" alt="${v.name}" class="w-10 h-10 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-accent shrink-0">
+            <div class="ml-2 sm:ml-4">
+              <h4 class="font-bold text-primary text-xs sm:text-lg leading-snug">${v.name} / ${v.title}</h4>
+              <div class="text-accent text-xs sm:text-sm">
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
             </div>
           </div>
-          <h5 class="text-xl font-bold text-primary mb-3">${v.quote}</h5>
-          <p class="text-gray-600 text-sm leading-relaxed">${v.body}</p>
+          <h5 class="text-xs sm:text-xl font-bold text-primary mb-2 sm:mb-3">${v.quote}</h5>
+          <p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">${v.body}</p>
         </div>
       </div>
     `).join('');
@@ -678,13 +679,13 @@
       return `
         <a href="${a.url}" target="_blank" rel="noopener"
           class="bg-white rounded-sm shadow hover:shadow-md transition overflow-hidden group flex flex-col">
-          <div class="h-44 overflow-hidden">
+          <div class="h-32 sm:h-44 overflow-hidden">
             ${imgHtml}
           </div>
-          <div class="p-6 flex flex-col flex-grow">
-            <span class="text-xs font-bold text-accent tracking-wider mb-2">${a.tag}</span>
-            <h4 class="font-bold text-primary text-sm leading-snug flex-grow mb-4">${a.title}</h4>
-            <div class="flex justify-between items-center text-xs text-gray-400">
+          <div class="p-3 sm:p-6 flex flex-col flex-grow">
+            <span class="text-[10px] sm:text-xs font-bold text-accent tracking-wider mb-1 sm:mb-2">${a.tag}</span>
+            <h4 class="font-bold text-primary text-xs sm:text-sm leading-snug flex-grow mb-2 sm:mb-4">${a.title}</h4>
+            <div class="flex justify-between items-center text-[10px] sm:text-xs text-gray-400">
               <span>${a.date}</span>
               <span class="text-accent font-medium">続きを読む →</span>
             </div>
@@ -701,11 +702,11 @@
     // ローディングスケルトンを表示
     container.innerHTML = [1, 2, 3].map(() => `
       <div class="bg-white rounded-sm shadow overflow-hidden flex flex-col animate-pulse">
-        <div class="h-44 bg-gray-200"></div>
-        <div class="p-6 flex flex-col gap-3">
-          <div class="h-3 bg-gray-200 rounded w-1/3"></div>
-          <div class="h-4 bg-gray-200 rounded w-full"></div>
-          <div class="h-4 bg-gray-200 rounded w-4/5"></div>
+        <div class="h-32 sm:h-44 bg-gray-200"></div>
+        <div class="p-3 sm:p-6 flex flex-col gap-2 sm:gap-3">
+          <div class="h-2 sm:h-3 bg-gray-200 rounded w-1/3"></div>
+          <div class="h-3 sm:h-4 bg-gray-200 rounded w-full"></div>
+          <div class="h-3 sm:h-4 bg-gray-200 rounded w-4/5"></div>
         </div>
       </div>
     `).join('');
