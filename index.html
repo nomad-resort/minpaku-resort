@@ -16,9 +16,11 @@
     <meta property="og:image:height" content="1080">
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Minpaku Resort | 民泊 運営代行・清掃代行">
+    <meta name="twitter:description" content="エリアに精通したチームによる民泊 運営代行・清掃代行。リゾート・クオリティの清掃と収益最大化を実現するプロフェッショナル集団です。">
     <meta name="twitter:image" content="https://www.minpaku-resort.com/images/minpaku_resort_logo.png">
     <!-- canonical（regional.js で都市ごとに上書き） -->
-    <link rel="canonical" href="">
+    <link rel="canonical" href="https://www.minpaku-resort.com/">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/minpaku_resort_logo_favicon.png">
     <!-- Tailwind CSS -->
@@ -51,6 +53,28 @@
                 }
             }
         }
+    </script>
+    <!-- JSON-LD 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Minpaku Resort",
+      "description": "エリアに精通したチームによる民泊 運営代行・清掃代行。リゾート・クオリティの清掃と収益最大化を実現するプロフェッショナル集団です。",
+      "url": "https://www.minpaku-resort.com",
+      "logo": "https://www.minpaku-resort.com/images/minpaku_resort_logo.png",
+      "image": "https://www.minpaku-resort.com/images/minpaku_resort_logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JP"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Japan"
+      },
+      "serviceType": ["民泊運営代行", "民泊清掃代行", "Airbnb運営代行", "Booking.com運営代行"],
+      "sameAs": ["https://note.com/minpaku_resort"]
+    }
     </script>
     <style>
         /* ─── ブランドカラー変数（Tailwind テーマと同期） ─── */
@@ -206,6 +230,7 @@
         .line-button-floating:hover {
             transform: translateY(-5px);
         }
+
     </style>
 </head>
 
@@ -287,21 +312,21 @@
             <p id="hero-tagline" class="text-accent font-medium tracking-widest mb-4 text-sm sm:text-base">
                 地域に根ざした民泊運営・清掃</p>
             <h2 id="hero-copy"
-                class="text-4xl sm:text-5xl md:text-6xl font-serif text-white font-bold leading-tight mb-6">
+                class="text-3xl sm:text-5xl md:text-6xl font-serif text-white font-bold leading-tight mb-3 sm:mb-6">
                 民泊にも、安心と高品質を。
             </h2>
             <p id="hero-subcopy"
-                class="text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                class="text-sm sm:text-xl text-gray-200 mb-6 sm:mb-10 max-w-3xl mx-auto font-light leading-relaxed">
                 収益最大化を実現する運営代行と、ゲストを感動させるプロの清掃。<br class="hidden sm:block" />
                 個人レベルの代行ではなく、専門的なプロ集団があなたの物件をサポートします。
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                 <a href="#contact"
-                    class="bg-accent text-white px-8 py-4 rounded-sm font-bold text-lg hover:bg-accentHover transition duration-300 shadow-lg">
+                    class="bg-accent text-white px-6 py-3 sm:px-8 sm:py-4 rounded-sm font-bold text-base sm:text-lg hover:bg-accentHover transition duration-300 shadow-lg">
                     お問い合わせ・無料相談
                 </a>
                 <a href="#strengths"
-                    class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-sm font-medium text-lg hover:bg-white/20 transition duration-300">
+                    class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-sm font-medium text-base sm:text-lg hover:bg-white/20 transition duration-300">
                     サービス詳細を見る
                 </a>
             </div>
@@ -309,50 +334,50 @@
     </section>
 
     <!-- Problems / SEO Hook Section -->
-    <section id="problems" class="py-20 bg-white">
+    <section id="problems" class="py-12 md:py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl font-serif font-bold text-primary mb-4 section-title">民泊オーナー様、こんなお悩みはありませんか？</h3>
+            <div class="text-center mb-8 md:mb-12">
+                <h3 class="text-xl sm:text-3xl font-serif font-bold text-primary mb-4 section-title">民泊オーナー様、こんなお悩みはありませんか？</h3>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-2 gap-3 md:gap-8">
                 <!-- 悩み1 -->
-                <div class="bg-gray-50 p-8 rounded-sm border-l-4 border-accent">
-                    <div class="flex items-center mb-4 text-primary">
-                        <i class="fas fa-comment-slash text-2xl mr-3 text-red-500"></i>
-                        <h4 class="text-lg font-bold">清掃不備による低評価・クレーム</h4>
+                <div class="bg-gray-50 p-3 sm:p-5 md:p-8 rounded-sm border-l-4 border-accent">
+                    <div class="flex items-start mb-2 md:mb-4 text-primary">
+                        <i class="fas fa-comment-slash text-base sm:text-2xl mr-2 mt-0.5 text-red-500 shrink-0"></i>
+                        <h4 class="text-xs sm:text-lg font-bold leading-snug">清掃不備による低評価・クレーム</h4>
                     </div>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">
                         「髪の毛が落ちていた」「水回りが汚い」といったレビューは、今後の予約率に致命的な影響を与えます。安定した清掃クオリティを維持するのは個人の清掃スタッフでは限界があります。
                     </p>
                 </div>
                 <!-- 悩み2 -->
-                <div class="bg-gray-50 p-8 rounded-sm border-l-4 border-accent">
-                    <div class="flex items-center mb-4 text-primary">
-                        <i class="fas fa-volume-up text-2xl mr-3 text-red-500"></i>
-                        <h4 class="text-lg font-bold">近隣住民とのトラブル対策</h4>
+                <div class="bg-gray-50 p-3 sm:p-5 md:p-8 rounded-sm border-l-4 border-accent">
+                    <div class="flex items-start mb-2 md:mb-4 text-primary">
+                        <i class="fas fa-volume-up text-base sm:text-2xl mr-2 mt-0.5 text-red-500 shrink-0"></i>
+                        <h4 class="text-xs sm:text-lg font-bold leading-snug">近隣住民とのトラブル対策</h4>
                     </div>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">
                         騒音やゴミ出しのルール違反など、近隣からの苦情対応に疲弊していませんか？迅速かつ適切なゲストへの注意喚起と対応スキームが不可欠です。
                     </p>
                 </div>
                 <!-- 悩み3 -->
-                <div class="bg-gray-50 p-8 rounded-sm border-l-4 border-accent">
-                    <div class="flex items-center mb-4 text-primary">
-                        <i class="fas fa-chart-line text-2xl mr-3 text-red-500"></i>
-                        <h4 class="text-lg font-bold">稼働率・収益が思ったように伸びない</h4>
+                <div class="bg-gray-50 p-3 sm:p-5 md:p-8 rounded-sm border-l-4 border-accent">
+                    <div class="flex items-start mb-2 md:mb-4 text-primary">
+                        <i class="fas fa-chart-line text-base sm:text-2xl mr-2 mt-0.5 text-red-500 shrink-0"></i>
+                        <h4 class="text-xs sm:text-lg font-bold leading-snug">稼働率・収益が思ったように伸びない</h4>
                     </div>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">
                         競合が増える中、ただ掲載するだけでは予約は入りません。季節や周辺イベントに合わせたダイナミックプライシングや、魅力的なリスティング作成のノウハウが必要です。
                     </p>
                 </div>
                 <!-- 悩み4 -->
-                <div class="bg-gray-50 p-8 rounded-sm border-l-4 border-accent">
-                    <div class="flex items-center mb-4 text-primary">
-                        <i class="fas fa-clock text-2xl mr-3 text-red-500"></i>
-                        <h4 class="text-lg font-bold">ゲスト対応で休まらない</h4>
+                <div class="bg-gray-50 p-3 sm:p-5 md:p-8 rounded-sm border-l-4 border-accent">
+                    <div class="flex items-start mb-2 md:mb-4 text-primary">
+                        <i class="fas fa-clock text-base sm:text-2xl mr-2 mt-0.5 text-red-500 shrink-0"></i>
+                        <h4 class="text-xs sm:text-lg font-bold leading-snug">ゲスト対応で休まらない</h4>
                     </div>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    <p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">
                         深夜の問い合わせや緊急トラブルの対応で、オーナー様自身の時間が奪われていませんか？
                     </p>
                 </div>
@@ -368,7 +393,7 @@
     </section>
 
     <!-- Numbers (データで見る実績) -->
-    <section id="numbers" class="py-16 bg-primary text-white">
+    <section id="numbers" class="py-10 md:py-16 bg-primary text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center lg:divide-x divide-white/20">
                 <div class="px-2 sm:px-4">
@@ -400,53 +425,53 @@
     </section>
 
     <!-- Authority (Our 3 Strengths) -->
-    <section id="strengths" class="py-20 bg-light border-y border-gray-100">
+    <section id="strengths" class="py-12 md:py-20 bg-light border-y border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-10 md:mb-16">
                 <span class="text-accent font-bold tracking-widest text-sm">AUTHORITY</span>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">こだわりの3つの強み</h3>
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">こだわりの3つの強み</h3>
                 <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
                     私たちは単なる「個人の代行業者」ではありません。<br class="hidden sm:block" />組織的で徹底した管理体制を敷く、プロフェッショナル集団です。
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-10">
                 <!-- 強み1 -->
                 <div
-                    class="bg-white p-10 rounded-sm shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col items-center">
+                    class="bg-white p-4 sm:p-6 md:p-10 rounded-sm shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col items-center">
                     <div
-                        class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 text-white text-3xl shadow-lg">
+                        class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center mb-3 md:mb-6 text-white text-xl sm:text-2xl md:text-3xl shadow-lg">
                         <i class="fas fa-broom"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-primary mb-4">① 丁寧な清掃</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed text-left">
+                    <h4 class="text-xs sm:text-lg md:text-xl font-bold text-primary mb-2 md:mb-4">① 丁寧な清掃</h4>
+                    <p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed text-left">
                         圧倒的な清潔感こそがゲストの満足度に直結します。自社の厳格な衛生基準に基づくチェック項目を設け、常にホテルのような「リゾート・クオリティ」の美しい空間をご提供します。
                     </p>
                 </div>
 
                 <!-- 強み2 -->
                 <div
-                    class="bg-white p-10 rounded-sm shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col items-center relative transform md:-translate-y-4">
+                    class="bg-white p-4 sm:p-6 md:p-10 rounded-sm shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col items-center relative">
                     <div class="absolute top-0 left-0 w-full h-1 bg-accent"></div>
                     <div
-                        class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mb-6 text-white text-3xl shadow-lg">
+                        class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-accent rounded-full flex items-center justify-center mb-3 md:mb-6 text-white text-xl sm:text-2xl md:text-3xl shadow-lg">
                         <i class="fas fa-chart-pie"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-primary mb-4">② 収益最大化戦略</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed text-left">
+                    <h4 class="text-xs sm:text-lg md:text-xl font-bold text-primary mb-2 md:mb-4">② 収益最大化戦略</h4>
+                    <p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed text-left">
                         100棟以上の豊富な運営実績とデータに基づき、エリア需要に合わせた細かい価格調整を行います。Booking.com・Airbnbなどの主要OTAへの掲載最適化から集客ノウハウまで、利益を最大化する戦略を実行します。
                     </p>
                 </div>
 
                 <!-- 強み3 -->
                 <div
-                    class="bg-white p-10 rounded-sm shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col items-center">
+                    class="bg-white p-4 sm:p-6 md:p-10 rounded-sm shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col items-center">
                     <div
-                        class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 text-white text-3xl shadow-lg">
+                        class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center mb-3 md:mb-6 text-white text-xl sm:text-2xl md:text-3xl shadow-lg">
                         <i class="fas fa-handshake"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-primary mb-4">③ ワンストップ対応</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed text-left">
+                    <h4 class="text-xs sm:text-lg md:text-xl font-bold text-primary mb-2 md:mb-4">③ ワンストップ対応</h4>
+                    <p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed text-left">
                         多言語対応のゲストコミュニケーション、予約管理、清掃手配、さらには現地での急なトラブル駆けつけまで、すべて一貫してお任せいただけます。オーナー様は「何もしない」運用が可能です。
                     </p>
                 </div>
@@ -455,33 +480,33 @@
     </section>
 
     <!-- ② 地域特有の運営・清掃ルール (regional.js が都道府県データで注入) -->
-    <section id="local-rules" class="py-20 bg-white border-t border-gray-100">
+    <section id="local-rules" class="py-12 md:py-20 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
+            <div class="text-center mb-8 md:mb-12">
                 <span class="text-accent font-bold tracking-widest text-sm">AREA TIPS & RULES</span>
                 <h3 id="local-rules-title"
-                    class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">
+                    class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">
                     [都道府県名]の民泊で気をつけたいこと</h3>
                 <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
                     現場に精通した適切な運用が、トラブルを未然に防ぎ、安定した収益へと繋がります。
                 </p>
             </div>
             <!-- regional.js が動的生成 -->
-            <div id="local-rules-grid" class="grid md:grid-cols-3 gap-6">
+            <div id="local-rules-grid" class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
                 <!-- Loading placeholder -->
-                <div class="bg-gray-100 rounded-sm animate-pulse h-48"></div>
-                <div class="bg-gray-100 rounded-sm animate-pulse h-48"></div>
-                <div class="bg-gray-100 rounded-sm animate-pulse h-48"></div>
+                <div class="bg-gray-100 rounded-sm animate-pulse h-40 md:h-48"></div>
+                <div class="bg-gray-100 rounded-sm animate-pulse h-40 md:h-48"></div>
+                <div class="bg-gray-100 rounded-sm animate-pulse h-40 md:h-48"></div>
             </div>
         </div>
     </section>
 
     <!-- Services (サービス内容) -->
-    <section id="services" class="py-20 bg-white">
+    <section id="services" class="py-12 md:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-10 md:mb-16">
                 <span class="text-accent font-bold tracking-widest text-sm">OUR SERVICES</span>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">トータルサポートのサービス内容
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">トータルサポートのサービス内容
                 </h3>
                 <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
                     リスティングの作成から日々のゲスト対応、清掃管理まで、民泊運営に必要なすべての業務をワンストップで代行いたします。
@@ -580,12 +605,12 @@
     </section>
 
     <!-- Cleaning Focus (最も手厚くするセクション) -->
-    <section id="cleaning" class="py-24 bg-white">
+    <section id="cleaning" class="py-14 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
                 <div class="lg:w-1/2">
                     <span class="text-accent font-bold tracking-widest text-sm">CLEANING FOCUS</span>
-                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2">ゲストを感動させる<br>「リゾート・クオリティの清掃」
+                    <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2">ゲストを感動させる<br>「リゾート・クオリティの清掃」
                     </h3>
                     <div class="w-20 h-1 bg-accent mt-6 mb-8"></div>
 
@@ -594,46 +619,50 @@
                         私たちは、ホテル清掃と同等、あるいはそれ以上のクオリティをお約束します。業界最高水準のプロセスで、ゲストがドアを開けた瞬間に感動する空間を作り上げます。
                     </p>
 
-                    <div class="space-y-6">
-                        <div class="flex">
-                            <div class="mt-1 flex-shrink-0 text-accent">
-                                <i class="fas fa-check-circle text-xl"></i>
+                    <div class="grid grid-cols-2 gap-3 lg:grid-cols-1 lg:gap-0 lg:space-y-6">
+                        <!-- ポイント1 -->
+                        <div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
+                            <div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0">
+                                <i class="fas fa-check-circle text-base lg:text-xl"></i>
                             </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-bold text-primary">徹底した清掃チェックリストの運用</h4>
-                                <p class="text-sm text-gray-600 mt-1">
+                            <div class="lg:ml-4">
+                                <h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug">徹底した清掃チェックリストの運用</h4>
+                                <p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed">
                                     属人的なミスを防ぐため、100項目に及ぶ詳細な清掃チェックリストを活用。清掃完了後の写真報告を義務付け、本社スタッフがダブルチェックでクオリティを担保します。</p>
                             </div>
                         </div>
-                        <div class="flex">
-                            <div class="mt-1 flex-shrink-0 text-accent">
-                                <i class="fas fa-shield-virus text-xl"></i>
+                        <!-- ポイント2 -->
+                        <div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
+                            <div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0">
+                                <i class="fas fa-shield-virus text-base lg:text-xl"></i>
                             </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-bold text-primary">除菌清掃とプロ用洗剤の使用</h4>
-                                <p class="text-sm text-gray-600 mt-1">
+                            <div class="lg:ml-4">
+                                <h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug">除菌清掃とプロ用洗剤の使用</h4>
+                                <p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed">
                                     水垢やカビには市販品でなく、素材に合わせた業務用の専用洗剤を使用。ドアノブやリモコン類なども徹底してアルコール除菌を行い、衛生管理を極限まで高めています。</p>
                             </div>
                         </div>
-                        <div class="flex">
-                            <div class="mt-1 flex-shrink-0 text-accent">
-                                <i class="fas fa-bed text-xl"></i>
+                        <!-- ポイント3 -->
+                        <div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
+                            <div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0">
+                                <i class="fas fa-bed text-base lg:text-xl"></i>
                             </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-bold text-primary">ホテルのようなベッドメイキング</h4>
-                                <p class="text-sm text-gray-600 mt-1">
+                            <div class="lg:ml-4">
+                                <h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug">ホテルのようなベッドメイキング</h4>
+                                <p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed">
                                     シーツの張りやタオルの畳み方一つで、部屋の印象は大きく変わります。ピンと張られたシーツと完璧に整えられたアメニティで、リゾートホテルさながらの特別感を演出します。
                                 </p>
                             </div>
                         </div>
-                        <div class="flex">
-                            <div class="mt-1 flex-shrink-0 text-accent">
-                                <i class="fas fa-leaf text-xl"></i>
+                        <!-- ポイント4 -->
+                        <div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
+                            <div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0">
+                                <i class="fas fa-leaf text-base lg:text-xl"></i>
                             </div>
-                            <div class="ml-4">
-                                <h4 id="regional-cleaning-title" class="text-lg font-bold text-primary">
+                            <div class="lg:ml-4">
+                                <h4 id="regional-cleaning-title" class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug">
                                     地域特有の環境・トラブルにも完全対応</h4>
-                                <p id="regional-cleaning-body" class="text-sm text-gray-600 mt-1">
+                                <p id="regional-cleaning-body" class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed">
                                     ヴィラや戸建て特有の「虫の発生」に対する独自防虫プロセスや、台風前後の屋外家具などの撤去・復旧対応まで、現地の過酷な自然環境を知り尽くしたチームが迅速にケアいたします。
                                 </p>
                             </div>
@@ -645,7 +674,7 @@
                     <!-- TODO: [画像：ユニフォームを着たスタッフが真剣に清掃している様子] -->
                     <!-- 仮画像のプレースホルダー -->
                     <div class="relative rounded-sm overflow-hidden shadow-xl h-64 sm:h-80 group">
-                        <img src="images/thorough_cleaning.png" alt="専門的な清掃"
+                        <img src="images/thorough_cleaning.png" alt="専門的な清掃" loading="lazy"
                             class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700">
                         <div
                             class="absolute bottom-0 left-0 bg-primary/80 backdrop-blur text-white px-4 py-2 font-medium">
@@ -656,7 +685,7 @@
                     <div class="flex gap-6 h-48 sm:h-60">
                         <!-- TODO: [画像：水回りのBefore/After (または美しく仕上げられた水回りの写真)] -->
                         <div class="w-1/2 relative rounded-sm overflow-hidden shadow-lg group">
-                            <img src="images/sparkling_bathroom.png" alt="美しいバスルーム"
+                            <img src="images/sparkling_bathroom.png" alt="美しいバスルーム" loading="lazy"
                                 class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700">
                             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                                 <p class="text-white text-sm font-bold">水回りも輝く仕上がりに</p>
@@ -664,7 +693,7 @@
                         </div>
                         <!-- 代わりのイメージ -->
                         <div class="w-1/2 relative rounded-sm overflow-hidden shadow-lg group">
-                            <img src="images/resort_bedroom.png" alt="完璧なベッドメイキング"
+                            <img src="images/resort_bedroom.png" alt="完璧なベッドメイキング" loading="lazy"
                                 class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700">
                             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                                 <p class="text-white text-sm font-bold">リゾートクオリティの寝室</p>
@@ -676,16 +705,34 @@
         </div>
     </section>
 
-    <!-- Operations / 運営体制 -->
-    <section id="operations" class="py-24 bg-gray-50 border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
+    <!-- Operations / 運営体制 + スタッフ紹介（統合セクション） -->
+    <section id="operations" class="py-12 md:py-20 bg-primary text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 md:mb-16">
                 <span class="text-accent font-bold tracking-widest text-sm">PROFESSIONAL TEAM</span>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">プロフェッショナルな運営体制</h3>
-                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                <h3 id="staff-title" class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mt-2 section-title">プロフェッショナルな運営体制</h3>
+                <p class="mt-6 text-gray-300 max-w-2xl mx-auto">
                     専任担当者が物件管理から清掃・ゲスト対応まで一貫して担当し、<br class="hidden sm:block">
                     お問い合わせに365日迅速かつ丁寧に対応します。
                 </p>
+            </div>
+            <!-- regional.js が動的生成 -->
+            <div id="staff-grid" class="grid grid-cols-3 gap-4 sm:gap-10 max-w-4xl mx-auto">
+                <div class="text-center animate-pulse">
+                    <div class="w-16 h-16 sm:w-28 sm:h-28 mx-auto mb-2 sm:mb-4 rounded-full bg-white/20"></div>
+                    <div class="h-3 sm:h-4 bg-white/20 rounded w-12 sm:w-16 mx-auto mb-1 sm:mb-2"></div>
+                    <div class="h-2 sm:h-3 bg-white/10 rounded w-16 sm:w-24 mx-auto"></div>
+                </div>
+                <div class="text-center animate-pulse">
+                    <div class="w-16 h-16 sm:w-28 sm:h-28 mx-auto mb-2 sm:mb-4 rounded-full bg-white/20"></div>
+                    <div class="h-3 sm:h-4 bg-white/20 rounded w-12 sm:w-16 mx-auto mb-1 sm:mb-2"></div>
+                    <div class="h-2 sm:h-3 bg-white/10 rounded w-16 sm:w-24 mx-auto"></div>
+                </div>
+                <div class="text-center animate-pulse">
+                    <div class="w-16 h-16 sm:w-28 sm:h-28 mx-auto mb-2 sm:mb-4 rounded-full bg-white/20"></div>
+                    <div class="h-3 sm:h-4 bg-white/20 rounded w-12 sm:w-16 mx-auto mb-1 sm:mb-2"></div>
+                    <div class="h-2 sm:h-3 bg-white/10 rounded w-16 sm:w-24 mx-auto"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -693,81 +740,76 @@
 
 
     <!-- Social Proof (実績・ケーススタディ) -->
-    <section id="proofs" class="py-20 bg-primary text-white">
+    <section id="proofs" class="py-12 md:py-20 bg-gray-50 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-10 md:mb-16">
                 <span class="text-accent font-bold tracking-widest text-sm">SOCIAL PROOF</span>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold mt-2 section-title">実績・ケーススタディ</h3>
-                <p class="mt-6 text-gray-300 max-w-2xl mx-auto">
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">実績・ケーススタディ</h3>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
                     Booking.com・Airbnbをはじめとする主要OTAでも高評価を獲得する宿泊施設を多数運用しています。
                 </p>
             </div>
 
-            <div id="case-studies-grid" class="grid md:grid-cols-2 gap-12 text-gray-900">
+            <div id="case-studies-grid" class="grid grid-cols-2 gap-3 md:gap-12 text-gray-900">
                 <!-- 実績1: 某一棟貸ヴィラ -->
-                <div class="bg-white rounded-sm overflow-hidden shadow-2xl flex flex-col">
-                    <div class="h-64 overflow-hidden relative">
+                <div class="bg-white rounded-sm overflow-hidden shadow-lg md:shadow-2xl flex flex-col">
+                    <div class="h-28 sm:h-48 md:h-64 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="某一棟貸ヴィラ" class="w-full h-full object-cover">
+                            alt="某一棟貸ヴィラ" loading="lazy" class="w-full h-full object-cover">
                         <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 font-bold rounded-sm text-sm">
                             プレミアムヴィラ
                         </div>
                     </div>
-                    <div class="p-8 flex-grow">
-                        <h4 class="text-2xl font-serif font-bold text-primary mb-2">某一棟貸ヴィラ</h4>
-                        <p class="text-gray-500 text-sm mb-6 pb-4 border-b border-gray-100">沖縄県北部の高級貸別荘</p>
+                    <div class="p-3 sm:p-5 md:p-8 flex-grow">
+                        <h4 class="text-sm sm:text-xl md:text-2xl font-serif font-bold text-primary mb-1 md:mb-2">某一棟貸ヴィラ</h4>
+                        <p class="text-gray-500 text-[10px] sm:text-sm mb-3 md:mb-6 pb-2 md:pb-4 border-b border-gray-100">沖縄県北部の高級貸別荘</p>
 
-                        <div class="space-y-4">
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0">
-                                <span class="text-gray-600 font-medium">年間平均稼働率</span>
-                                <span class="text-3xl font-bold text-primary">85<span class="text-lg">%</span>達成</span>
+                        <div class="space-y-2 md:space-y-4">
+                            <div class="flex flex-col gap-0.5">
+                                <span class="text-gray-600 font-medium text-[10px] sm:text-sm">年間平均稼働率</span>
+                                <span class="text-lg sm:text-2xl md:text-3xl font-bold text-primary">85<span class="text-xs sm:text-lg">%</span>達成</span>
                             </div>
-                            <div
-                                class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0 mt-4 sm:mt-0">
-                                <span class="text-gray-600 font-medium">ゲスト評価 (OTA総合)</span>
-                                <div class="text-left sm:text-right">
-                                    <div class="text-accent text-lg">
-                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                            class="fas fa-star"></i>
+                            <div class="flex flex-col gap-0.5">
+                                <span class="text-gray-600 font-medium text-[10px] sm:text-sm">ゲスト評価 (OTA)</span>
+                                <div>
+                                    <div class="text-accent text-xs sm:text-lg">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                     </div>
-                                    <span class="text-3xl font-bold text-primary">4.9<span
-                                            class="text-lg text-gray-500"> / 5.0</span></span>
+                                    <span class="text-lg sm:text-2xl md:text-3xl font-bold text-primary">4.9<span class="text-xs sm:text-lg text-gray-500"> / 5.0</span></span>
                                 </div>
                             </div>
                         </div>
-                        <p class="mt-6 text-sm text-gray-600 bg-gray-50 p-4 rounded border-l-2 border-accent">
+                        <p class="hidden sm:block mt-4 md:mt-6 text-[10px] sm:text-sm text-gray-600 bg-gray-50 p-2 md:p-4 rounded border-l-2 border-accent">
                             「清掃が隅々まで行き届いており、最高の滞在になりました」という声が多数。卓越した清掃品質が直接高稼働に繋がっています。
                         </p>
                     </div>
                 </div>
 
                 <!-- 実績2: 某リゾートマンション -->
-                <div class="bg-white rounded-sm overflow-hidden shadow-2xl flex flex-col">
-                    <div class="h-64 overflow-hidden relative">
+                <div class="bg-white rounded-sm overflow-hidden shadow-lg md:shadow-2xl flex flex-col">
+                    <div class="h-28 sm:h-48 md:h-64 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="某リゾートマンション" class="w-full h-full object-cover">
+                            alt="某リゾートマンション" loading="lazy" class="w-full h-full object-cover">
                         <div
                             class="absolute top-4 right-4 bg-primary text-white px-3 py-1 font-bold rounded-sm text-sm">
                             リゾートコンドミニアム
                         </div>
                     </div>
-                    <div class="p-8 flex-grow">
-                        <h4 class="text-2xl font-serif font-bold text-primary mb-2">某リゾートマンション</h4>
-                        <p class="text-gray-500 text-sm mb-6 pb-4 border-b border-gray-100">Booking.com・Airbnbで高評価獲得</p>
+                    <div class="p-3 sm:p-5 md:p-8 flex-grow">
+                        <h4 class="text-sm sm:text-xl md:text-2xl font-serif font-bold text-primary mb-1 md:mb-2">某リゾートマンション</h4>
+                        <p class="text-gray-500 text-[10px] sm:text-sm mb-3 md:mb-6 pb-2 md:pb-4 border-b border-gray-100">Booking.com・Airbnb高評価</p>
 
-                        <div class="space-y-4">
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0">
-                                <span class="text-gray-600 font-medium">収益改善率 (前社比)</span>
-                                <span class="text-3xl font-bold text-accent">140<span class="text-lg">%</span>UP</span>
+                        <div class="space-y-2 md:space-y-4">
+                            <div class="flex flex-col gap-0.5">
+                                <span class="text-gray-600 font-medium text-[10px] sm:text-sm">収益改善率 (前社比)</span>
+                                <span class="text-lg sm:text-2xl md:text-3xl font-bold text-accent">140<span class="text-xs sm:text-lg">%</span>UP</span>
                             </div>
-                            <div
-                                class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0 mt-4 sm:mt-0">
-                                <span class="text-gray-600 font-medium">清掃クレーム発生率</span>
-                                <span class="text-3xl font-bold text-primary">0<span class="text-lg">件</span></span>
+                            <div class="flex flex-col gap-0.5">
+                                <span class="text-gray-600 font-medium text-[10px] sm:text-sm">清掃クレーム発生率</span>
+                                <span class="text-lg sm:text-2xl md:text-3xl font-bold text-primary">0<span class="text-xs sm:text-lg">件</span></span>
                             </div>
                         </div>
-                        <p class="mt-6 text-sm text-gray-600 bg-gray-50 p-4 rounded border-l-2 border-primary">
+                        <p class="hidden sm:block mt-4 md:mt-6 text-[10px] sm:text-sm text-gray-600 bg-gray-50 p-2 md:p-4 rounded border-l-2 border-primary">
                             競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、エリア屈指の売上を達成。
                         </p>
                     </div>
@@ -777,54 +819,24 @@
     </section>
 
     <!-- Customer Voices (お客様の声) -->
-    <section id="voices" class="py-20 bg-gray-50">
+    <section id="voices" class="py-12 md:py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-10 md:mb-16">
                 <span class="text-accent font-bold tracking-widest text-sm">VOICES</span>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">オーナー様からのお声</h3>
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">オーナー様からのお声</h3>
             </div>
 
-            <div id="voices-grid" class="grid md:grid-cols-2 gap-8">
+            <div id="voices-grid" class="grid grid-cols-2 gap-3 md:gap-8">
                 <!-- Data will be injected by regional.js -->
-                <div class="bg-gray-100 rounded-sm animate-pulse h-64"></div>
-                <div class="bg-gray-100 rounded-sm animate-pulse h-64"></div>
+                <div class="bg-gray-100 rounded-sm animate-pulse h-48 md:h-64"></div>
+                <div class="bg-gray-100 rounded-sm animate-pulse h-48 md:h-64"></div>
             </div>
         </div>
     </section>
 
-    <!-- ④ スタッフ紹介 (regional.js が都道府県スタッフデータを注入) -->
-    <section id="staff-team" class="py-20 bg-primary text-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-accent font-bold tracking-widest text-sm">OUR TEAM</span>
-                <h3 id="staff-title" class="text-3xl md:text-4xl font-serif font-bold mt-2 section-title">現場を支えるチーム</h3>
-                <p class="mt-6 text-gray-300 max-w-2xl mx-auto">
-                    各分野のプロフェッショナルが、日々の運用と品質維持を担います。
-                </p>
-            </div>
-            <!-- regional.js が動的生成 -->
-            <div id="staff-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-4xl mx-auto">
-                <div class="text-center animate-pulse">
-                    <div class="w-28 h-28 mx-auto mb-4 rounded-full bg-white/20"></div>
-                    <div class="h-4 bg-white/20 rounded w-16 mx-auto mb-2"></div>
-                    <div class="h-3 bg-white/10 rounded w-24 mx-auto"></div>
-                </div>
-                <div class="text-center animate-pulse">
-                    <div class="w-28 h-28 mx-auto mb-4 rounded-full bg-white/20"></div>
-                    <div class="h-4 bg-white/20 rounded w-16 mx-auto mb-2"></div>
-                    <div class="h-3 bg-white/10 rounded w-24 mx-auto"></div>
-                </div>
-                <div class="text-center animate-pulse">
-                    <div class="w-28 h-28 mx-auto mb-4 rounded-full bg-white/20"></div>
-                    <div class="h-4 bg-white/20 rounded w-16 mx-auto mb-2"></div>
-                    <div class="h-3 bg-white/10 rounded w-24 mx-auto"></div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Space Production Teaser -->
-    <section id="produce-teaser" class="py-24 bg-dark text-white relative overflow-hidden">
+    <section id="produce-teaser" class="py-14 md:py-24 bg-dark text-white relative overflow-hidden">
         <div class="absolute inset-0"
             style="background-image: linear-gradient(135deg, rgba(15,23,42,0.97) 0%, rgba(30,41,59,0.93) 100%), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
         </div>
@@ -834,7 +846,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center">
                 <span class="text-accent font-bold tracking-widest text-xs">SPACE PRODUCTION</span>
-                <h3 class="text-4xl md:text-5xl font-serif font-bold mt-4 mb-4 leading-tight">
+                <h3 class="text-2xl sm:text-4xl md:text-5xl font-serif font-bold mt-4 mb-4 leading-tight">
                     空間・体験プロデュース
                 </h3>
                 <p class="text-gray-400 text-lg md:text-xl mb-4 font-light tracking-wider">遊休資産を、感動の舞台へ。</p>
@@ -873,48 +885,48 @@
     </section>
 
     <!-- Transparency (料金プラン) -->
-    <section id="plans" class="py-20 bg-light">
+    <section id="plans" class="py-12 md:py-20 bg-light">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-10 md:mb-16">
                 <span class="text-accent font-bold tracking-widest text-sm">TRANSPARENCY</span>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">明朗会計な料金プラン</h3>
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">明朗会計な料金プラン</h3>
                 <p class="mt-6 text-gray-600">
                     隠れた費用はありません。プロの品質を適正価格でご提供します。<br>
                     物件規模やご要望に応じたカスタマイズも可能です。
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-3 gap-3 md:gap-8">
                 <!-- 初期セッティング費用 -->
                 <div
-                    class="bg-white border-2 border-gray-100 rounded-sm p-8 shadow hover:border-accent transition duration-300 flex flex-col items-center justify-center text-center">
-                    <h4 class="text-lg font-bold text-primary mb-6">初期セッティング費用</h4>
-                    <div class="my-2 text-gray-500 flex items-baseline">
-                        <span class="text-sm mr-2">¥</span>
-                        <span class="text-5xl font-bold text-primary">50,000</span>
-                        <span class="text-sm ml-2">/ 件</span>
+                    class="bg-white border-2 border-gray-100 rounded-sm p-3 sm:p-6 md:p-8 shadow hover:border-accent transition duration-300 flex flex-col items-center justify-center text-center">
+                    <h4 class="text-[10px] sm:text-base md:text-lg font-bold text-primary mb-2 sm:mb-4 md:mb-6 leading-tight">初期<br class="sm:hidden">セッティング</h4>
+                    <div class="text-gray-500 flex items-baseline flex-wrap justify-center">
+                        <span class="text-[9px] sm:text-sm mr-1">¥</span>
+                        <span class="text-xl sm:text-3xl md:text-5xl font-bold text-primary">50,000</span>
+                        <span class="text-[9px] sm:text-sm ml-1 w-full text-center">/ 件</span>
                     </div>
                 </div>
 
                 <!-- 運用代行費用 -->
                 <div
-                    class="bg-white border-2 border-primary rounded-sm p-8 shadow-lg relative flex flex-col items-center justify-center text-center transform md:-translate-y-2">
-                    <h4 class="text-lg font-bold text-primary mb-6">運用代行費用</h4>
-                    <div class="my-2 text-gray-500 flex items-baseline">
-                        <span class="text-sm mr-2">売上げの</span>
-                        <span class="text-5xl font-bold text-primary">15</span>
-                        <span class="text-sm ml-1">%</span>
+                    class="bg-white border-2 border-primary rounded-sm p-3 sm:p-6 md:p-8 shadow-lg relative flex flex-col items-center justify-center text-center">
+                    <h4 class="text-[10px] sm:text-base md:text-lg font-bold text-primary mb-2 sm:mb-4 md:mb-6 leading-tight">運用<br class="sm:hidden">代行費用</h4>
+                    <div class="text-gray-500 flex items-baseline flex-wrap justify-center">
+                        <span class="text-[9px] sm:text-sm mr-1 w-full text-center">売上げの</span>
+                        <span class="text-xl sm:text-3xl md:text-5xl font-bold text-primary">15</span>
+                        <span class="text-[9px] sm:text-sm ml-0.5">%</span>
                     </div>
                 </div>
 
                 <!-- 清掃基本料金 -->
                 <div
-                    class="bg-white border-2 border-gray-100 rounded-sm p-8 shadow hover:border-accent transition duration-300 flex flex-col items-center justify-center text-center">
-                    <h4 class="text-lg font-bold text-primary mb-6">清掃基本料金</h4>
-                    <div class="my-2 text-gray-500 flex items-baseline">
-                        <span class="text-sm mr-2">¥</span>
-                        <span id="base-price-display" class="text-5xl font-bold text-primary">5,000</span>
-                        <span class="text-sm ml-2">/ 泊〜</span>
+                    class="bg-white border-2 border-gray-100 rounded-sm p-3 sm:p-6 md:p-8 shadow hover:border-accent transition duration-300 flex flex-col items-center justify-center text-center">
+                    <h4 class="text-[10px] sm:text-base md:text-lg font-bold text-primary mb-2 sm:mb-4 md:mb-6 leading-tight">清掃<br class="sm:hidden">基本料金</h4>
+                    <div class="text-gray-500 flex items-baseline flex-wrap justify-center">
+                        <span class="text-[9px] sm:text-sm mr-1">¥</span>
+                        <span id="base-price-display" class="text-xl sm:text-3xl md:text-5xl font-bold text-primary">5,000</span>
+                        <span class="text-[9px] sm:text-sm ml-1 w-full text-center">/ 泊〜</span>
                     </div>
                 </div>
             </div>
@@ -926,11 +938,11 @@
     </section>
 
     <!-- ⑥ AIシミュレーター -->
-    <section id="simulation" class="py-20 bg-primary bg-opacity-5">
+    <section id="simulation" class="py-12 md:py-20 bg-primary bg-opacity-5">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-accent font-bold tracking-widest text-sm">SIMULATION</span>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">
                     清掃費用シミュレーター</h3>
                 <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
                     4項目を入力して「結果を見る」を押すだけ。<br>
@@ -1067,11 +1079,11 @@
     </div>
 
     <!-- Target Areas (対応エリア) -->
-    <section id="areas" class="py-20 bg-gray-50 border-t border-gray-200">
+    <section id="areas" class="py-12 md:py-20 bg-gray-50 border-t border-gray-200">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-accent font-bold tracking-widest text-sm">TARGET AREAS</span>
-                <h3 id="areas-title" class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">
+                <h3 id="areas-title" class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">
                     対応可能エリア</h3>
                 <p id="areas-description" class="mt-6 text-gray-600 max-w-2xl mx-auto">
                     都道府県内の主要エリアを中心にサービスを提供しております。掲載のない地域もお気軽にご相談ください。
@@ -1107,11 +1119,11 @@
     </section>
 
     <!-- FAQ (よくある質問) -->
-    <section id="faq" class="py-20 bg-white">
+    <section id="faq" class="py-12 md:py-20 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-10 md:mb-16">
                 <span class="text-accent font-bold tracking-widest text-sm">F A Q</span>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">よくある質問</h3>
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">よくある質問</h3>
             </div>
 
             <div class="space-y-4">
@@ -1222,14 +1234,14 @@
     </section>
 
     <!-- Conversion (お問い合わせ) -->
-    <section id="contact" class="py-24 bg-primary text-white relative">
+    <section id="contact" class="py-14 md:py-24 bg-primary text-white relative">
         <!-- Background Pattern -->
         <div class="absolute inset-0 opacity-10"
             style="background-image: radial-gradient(#d4af37 1px, transparent 1px); background-size: 30px 30px;"></div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl md:text-4xl font-serif font-bold mb-4">お問い合わせ・ご相談</h3>
+            <div class="text-center mb-8 md:mb-12">
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-4">お問い合わせ・ご相談</h3>
                 <p class="text-gray-300">
                     現在の収益シミュレーションや、清掃の品質改善についてのご相談など、<br class="hidden sm:block">
                     お気軽にお問い合わせください。担当者が迅速にご回答いたします。
@@ -1239,7 +1251,7 @@
             <div class="bg-white rounded-sm p-8 sm:p-12 shadow-2xl text-gray-800">
                 <div class="mb-10 text-center">
                     <p class="text-primary font-bold mb-4">＼ 最短レスポンス！お急ぎの方はこちら ／</p>
-                    <a href="https://lin.ee/RtLPqmQ" target="_blank" rel="noopener"
+                    <a href="https://lin.ee/RtLPqmQ" target="_blank" rel="noopener noreferrer"
                         class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-[#06C755] hover:bg-[#05b04b] text-white font-bold rounded shadow-lg transition duration-300 text-lg">
                         <i class="fab fa-line text-2xl mr-3"></i> LINEで気軽に相談する
                     </a>
@@ -1321,21 +1333,21 @@
     </section>
 
     <!-- ⑦ Note記事フィード (regional.js がプレースホルダー記事を注入) -->
-    <section id="note-feed" class="py-16 bg-gray-50 border-t border-gray-100">
+    <section id="note-feed" class="py-10 md:py-16 bg-gray-50 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
+            <div class="text-center mb-8 md:mb-10">
                 <span class="text-accent font-bold tracking-widest text-sm">KNOWLEDGE</span>
-                <h3 class="text-3xl font-serif font-bold text-primary mt-2 section-title">民泊運営ノウハウ</h3>
+                <h3 class="text-xl sm:text-3xl font-serif font-bold text-primary mt-2 section-title">民泊運営ノウハウ</h3>
                 <p class="mt-4 text-gray-600 text-sm">プロが語る、民泊運営の最新知識と実践テクニック</p>
             </div>
             <!-- regional.js が動的生成 -->
-            <div id="note-feed-grid" class="grid md:grid-cols-3 gap-6">
-                <div class="bg-gray-200 rounded-sm animate-pulse h-72"></div>
-                <div class="bg-gray-200 rounded-sm animate-pulse h-72"></div>
-                <div class="bg-gray-200 rounded-sm animate-pulse h-72"></div>
+            <div id="note-feed-grid" class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
+                <div class="bg-gray-200 rounded-sm animate-pulse h-56 md:h-72"></div>
+                <div class="bg-gray-200 rounded-sm animate-pulse h-56 md:h-72"></div>
+                <div class="bg-gray-200 rounded-sm animate-pulse h-56 md:h-72"></div>
             </div>
             <div class="text-center mt-8">
-                <a href="https://note.com/minpaku_resort" target="_blank" rel="noopener"
+                <a href="https://note.com/minpaku_resort" target="_blank" rel="noopener noreferrer"
                     class="text-accent hover:text-accentHover font-medium underline underline-offset-4">
                     すべての記事を見る <i class="fas fa-arrow-right ml-1"></i>
                 </a>
@@ -1361,7 +1373,7 @@
             <div
                 class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
                 <div class="flex space-x-4">
-                    <a href="https://nomadresort.jp" target="_blank" rel="noopener" class="hover:text-white transition">運営会社</a>
+                    <a href="https://nomadresort.jp" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">運営会社</a>
                     <a href="privacy-policy.html" class="hover:text-white transition">プライバシーポリシー</a>
                     <a href="terms.html" class="hover:text-white transition">利用規約</a>
                 </div>
@@ -1453,7 +1465,7 @@
     </script>
 
     <!-- Floating LINE Button -->
-    <a href="https://lin.ee/RtLPqmQ" target="_blank" rel="noopener"
+    <a href="https://lin.ee/RtLPqmQ" target="_blank" rel="noopener noreferrer"
         class="line-button-floating hidden sm:flex items-center justify-center bg-[#06C755] hover:bg-[#05b04b] text-white p-4 rounded-full shadow-2xl transition group w-16 h-16 hover:w-auto hover:px-6">
         <i class="fab fa-line text-3xl group-hover:mr-3 transition-all duration-300"></i>
         <span
