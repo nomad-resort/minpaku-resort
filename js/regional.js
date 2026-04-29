@@ -16,7 +16,7 @@
      定数
   ───────────────────────────────────────── */
 
-  const DEFAULT_CITY = 'naha';
+  const DEFAULT_CITY = 'japan';
 
   const LINE_URL = 'https://lin.ee/RtLPqmQ';
 
@@ -199,6 +199,13 @@
   }
 
   function applyLocalRules(d) {
+    const section = document.getElementById('local-rules');
+    if (d.cityKey === 'japan') {
+      if (section) section.style.display = 'none';
+      return;
+    }
+    if (section) section.style.display = '';
+
     const container = document.getElementById('local-rules-grid');
     if (!container) return;
 
@@ -247,10 +254,17 @@
   }
 
   function applyAreas(d) {
-    setText('areas-title', `${d.prefShort} 対応可能エリア`);
-    setText('areas-description',
-      `${d.cityShort}を含む${d.prefName}内の主要エリアを中心にサービスを提供しております。掲載のない地域もお気軽にご相談ください。`
-    );
+    if (d.cityKey === 'japan') {
+      setText('areas-title', '全国 対応可能エリア');
+      setText('areas-description',
+        '北海道から沖縄まで全国47都道府県のエリアに対応しています。掲載のない地域もお気軽にご相談ください。'
+      );
+    } else {
+      setText('areas-title', `${d.prefShort} 対応可能エリア`);
+      setText('areas-description',
+        `${d.cityShort}を含む${d.prefName}内の主要エリアを中心にサービスを提供しております。掲載のない地域もお気軽にご相談ください。`
+      );
+    }
 
     const listEl = document.getElementById('municipalities-list');
     if (listEl) {
@@ -754,21 +768,27 @@
     const existingLd = document.getElementById('ld-local-business');
     if (existingLd) existingLd.remove();
 
+    const areaServed = d.cityKey === 'japan'
+      ? { '@type': 'Country', 'name': '日本' }
+      : {
+          '@type': 'City',
+          'name': d.cityName,
+          'containedInPlace': {
+            '@type': 'AdministrativeArea',
+            'name': d.prefName
+          }
+        };
+
     const ld = {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
-      'name': `Minpaku Resort（民泊リゾート）${d.cityShort}`,
+      'name': d.cityKey === 'japan'
+        ? 'Minpaku Resort（民泊リゾート）全国対応'
+        : `Minpaku Resort（民泊リゾート）${d.cityShort}`,
       'description': d.seoDescription,
       'url': `${origin}/`,
       'image': `${origin}/${d.heroImage}`,
-      'areaServed': {
-        '@type': 'City',
-        'name': d.cityName,
-        'containedInPlace': {
-          '@type': 'AdministrativeArea',
-          'name': d.prefName
-        }
-      },
+      'areaServed': areaServed,
       'serviceType': ['民泊運営代行', '民泊清掃代行', '民泊コンサルティング'],
       'telephone': '',
       'sameAs': ['https://lin.ee/RtLPqmQ']
