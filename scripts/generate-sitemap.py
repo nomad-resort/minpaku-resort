@@ -30,10 +30,10 @@ def build():
         "changefreq": "weekly",
     })
 
-    # ── 各都市サブドメイン ────────────────────────────────────────
+    # ── 各都市サブフォルダ ────────────────────────────────────────
     for city_slug in cities.keys():
         urls.append({
-            "loc": f"https://{city_slug}.{BASE_DOMAIN}/",
+            "loc": f"https://www.{BASE_DOMAIN}/{city_slug}/",
             "priority": "0.8",
             "changefreq": "monthly",
         })

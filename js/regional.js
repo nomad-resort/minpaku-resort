@@ -2,7 +2,7 @@
  * regional.js — Minpaku Resort マスターテンプレート 地域データ注入モジュール
  *
  * 動作概要:
- *   1. window.location.hostname からサブドメインを検出
+ *   1. window.location.pathname からサブフォルダ（都市名）を検出
  *   2. /data/cities.json を fetch
  *   3. 該当都市のデータを DOM に注入
  *   4. AIシミュレーター を初期化
@@ -28,19 +28,19 @@
       name: 'Watanabe',
       role: 'REPRESENTATIVE',
       message: '代表として、最高品質のサービスとオーナー様の利益最大化をお約束します。',
-      avatar: 'images/staff_hitoki_watanabe.png',
+      avatar: '/images/staff_hitoki_watanabe.png',
     },
     {
       name: 'Kobuke',
       role: 'DIRECTOR',
       message: '運営戦略とクリエイティブの両面から、物件の魅力を最大限に引き出します。',
-      avatar: 'images/staff_tomohiro_kobuke.png',
+      avatar: '/images/staff_tomohiro_kobuke.png',
     },
     {
       name: 'Sakuma',
       role: 'MANAGER',
       message: 'きめ細やかな管理とホスピタリティで、ゲストに愛される物件運営をサポートします。',
-      avatar: 'images/staff_sakuma_tomoko.png',
+      avatar: '/images/staff_sakuma_tomoko.png',
     },
   ];
 
@@ -121,11 +121,21 @@
     },
   ];
 
+  // 全国ビュー用 地方区分マップ
+  const REGION_MAP = {
+    '北海道・東北': ['北海道', '青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県'],
+    '関東': ['茨城県', '栃木県', '群馬県', '埼玉県', '千葉県', '東京都', '神奈川県'],
+    '中部': ['新潟県', '富山県', '石川県', '福井県', '山梨県', '長野県', '岐阜県', '静岡県', '愛知県'],
+    '近畿': ['三重県', '滋賀県', '京都府', '大阪府', '兵庫県', '奈良県', '和歌山県'],
+    '中国・四国': ['鳥取県', '島根県', '岡山県', '広島県', '山口県', '徳島県', '香川県', '愛媛県', '高知県'],
+    '九州・沖縄': ['福岡県', '佐賀県', '長崎県', '熊本県', '大分県', '宮崎県', '鹿児島県', '沖縄県'],
+  };
+
   /* ─────────────────────────────────────────
      1. サブドメイン / クエリパラメータ検出
   ───────────────────────────────────────── */
 
-  function getSubdomain() {
+  function getCityFromPath() {
     // ?pref=xxx を優先（ローカル開発・デバッグ用）
     const prefParam = new URLSearchParams(window.location.search).get('pref');
     if (prefParam) {
@@ -133,20 +143,18 @@
       return prefParam;
     }
 
-    const hostname = window.location.hostname;
-    const parts = hostname.split('.');
+    const pathname = window.location.pathname;
+    const parts = pathname.split('/').filter(Boolean);
 
-    // localhost / IP アドレス / 単一ホスト → デフォルト
-    if (parts.length < 3 || /^\d+\.\d+\.\d+\.\d+$/.test(hostname)) {
-      console.log('[regional.js] Local/Direct access detected. Using default:', DEFAULT_CITY);
+    // root ("/" or "/index.html") へのアクセスならデフォルト
+    if (parts.length === 0 || parts[0] === 'index.html') {
+      console.log('[regional.js] Root path detected. Using default:', DEFAULT_CITY);
       return DEFAULT_CITY;
     }
 
-    const sub = parts[0];
-    if (sub === 'www') return DEFAULT_CITY;
-
-    console.log('[regional.js] Subdomain detected:', sub);
-    return sub;
+    const city = parts[0];
+    console.log('[regional.js] City detected from path:', city);
+    return city;
   }
 
   /* ─────────────────────────────────────────
@@ -156,6 +164,24 @@
   function setText(id, text) {
     const el = document.getElementById(id);
     if (el) el.textContent = text;
+  }
+
+  /** 相対パスを絶対パスに正規化する。http(s):// や / 始まりはそのまま返す */
+  function toAbsoluteUrl(path) {
+    return (path.startsWith('http') || path.startsWith('/')) ? path : '/' + path;
+  }
+
+  /** 都道府県名から地方名を返す。REGION_MAP に未登録の場合は 'その他' */
+  function getRegion(prefName) {
+    for (const [region, prefs] of Object.entries(REGION_MAP)) {
+      if (prefs.includes(prefName)) return region;
+    }
+    return 'その他';
+  }
+
+  /** OGP / JSON-LD 用に完全 URL を生成する。http(s):// 始まりはそのまま返す */
+  function toCanonicalUrl(path, origin) {
+    return path.startsWith('http') ? path : origin + toAbsoluteUrl(path);
   }
 
   /* ─────────────────────────────────────────
@@ -178,8 +204,9 @@
   function applyHero(d) {
     const heroSection = document.getElementById('hero-section');
     if (heroSection) {
+      const heroImageUrl = toAbsoluteUrl(d.heroImage);
       heroSection.style.backgroundImage =
-        `linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.4)), url('${d.heroImage}')`;
+        `linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.4)), url('${heroImageUrl}')`;
       heroSection.style.backgroundSize = 'cover';
       heroSection.style.backgroundPosition = 'center';
     }
@@ -238,10 +265,11 @@
     container.innerHTML = FIXED_STAFF.map((s) => {
       const fallback =
         `https://ui-avatars.com/api/?name=${encodeURIComponent(s.name)}&background=1e293b&color=c5a059&size=112&bold=true`;
+      const avatarUrl = toAbsoluteUrl(s.avatar);
       return `
         <div class="text-center group">
           <div class="w-16 h-16 sm:w-28 sm:h-28 mx-auto mb-2 sm:mb-4 rounded-full overflow-hidden border-4 border-accent/60 shadow-lg group-hover:border-accent transition duration-300">
-            <img src="${s.avatar}" alt="${s.name}"
+            <img src="${avatarUrl}" alt="${s.name}"
               class="w-full h-full object-cover"
               onerror="this.src='${fallback}'">
           </div>
@@ -253,26 +281,103 @@
     }).join('');
   }
 
-  function applyAreas(d) {
+  function applyAreas(d, allData) {
     if (d.cityKey === 'japan') {
       setText('areas-title', '全国 対応可能エリア');
       setText('areas-description',
         '北海道から沖縄まで全国47都道府県のエリアに対応しています。掲載のない地域もお気軽にご相談ください。'
       );
+
+      const listEl = document.getElementById('municipalities-list');
+      if (listEl && allData) {
+        // 地方ごとにグループ化
+        const groupedByRegion = {};
+        Object.keys(REGION_MAP).forEach(r => { groupedByRegion[r] = {}; });
+
+        Object.values(allData).forEach(city => {
+          if (city.cityKey === 'japan') return;
+          const region = getRegion(city.prefName);
+          if (!groupedByRegion[region]) groupedByRegion[region] = {};
+          if (!groupedByRegion[region][city.prefName]) groupedByRegion[region][city.prefName] = [];
+          groupedByRegion[region][city.prefName].push(city);
+        });
+
+        // className をリセットしてブロックにする
+        listEl.className = 'mt-4 text-gray-600 font-medium w-full';
+
+        let tabsHtml = `<div class="flex flex-wrap gap-1.5 mb-5 border-b border-gray-200 pb-2">`;
+        let contentHtml = `<div id="region-tab-content">`;
+
+        let isFirst = true;
+        Object.keys(groupedByRegion).forEach((region) => {
+          const prefs = groupedByRegion[region];
+          if (Object.keys(prefs).length === 0) return; // 該当都市がない地方はスキップ
+
+          const isActive = isFirst;
+          isFirst = false;
+
+          const activeClass = 'bg-primary text-white shadow';
+          const inactiveClass = 'bg-gray-100 text-gray-600 hover:bg-gray-200';
+          tabsHtml += `<button type="button" data-region="${region}" class="region-tab-btn px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-bold rounded transition-colors ${isActive ? activeClass : inactiveClass}">${region}</button>`;
+
+          contentHtml += `<div id="region-content-${region}" class="region-content ${isActive ? 'block' : 'hidden'}">
+            <div class="flex flex-wrap gap-2">`;
+
+          Object.values(prefs).forEach((cities) => {
+            contentHtml += cities.map(city =>
+              `<a href="/${city.cityKey}/" class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm">
+                <i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>${city.cityName}
+              </a>`
+            ).join('');
+          });
+
+          contentHtml += `</div></div>`;
+        });
+
+        tabsHtml += `</div>`;
+        contentHtml += `</div>`;
+
+        listEl.innerHTML = tabsHtml + contentHtml;
+
+        // タブ切り替えのイベントリスナー
+        const tabBtns = listEl.querySelectorAll('.region-tab-btn');
+        const tabContents = listEl.querySelectorAll('.region-content');
+
+        tabBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const targetRegion = btn.getAttribute('data-region');
+
+            tabBtns.forEach(b => {
+              b.classList.remove('bg-primary', 'text-white', 'shadow');
+              b.classList.add('bg-gray-100', 'text-gray-600', 'hover:bg-gray-200');
+            });
+            btn.classList.remove('bg-gray-100', 'text-gray-600', 'hover:bg-gray-200');
+            btn.classList.add('bg-primary', 'text-white', 'shadow');
+
+            tabContents.forEach(c => {
+              const isTarget = c.id === `region-content-${targetRegion}`;
+              c.classList.toggle('hidden', !isTarget);
+              c.classList.toggle('block', isTarget);
+            });
+          });
+        });
+      }
     } else {
       setText('areas-title', `${d.prefShort} 対応可能エリア`);
       setText('areas-description',
         `${d.cityShort}を含む${d.prefName}内の主要エリアを中心にサービスを提供しております。掲載のない地域もお気軽にご相談ください。`
       );
-    }
 
-    const listEl = document.getElementById('municipalities-list');
-    if (listEl) {
-      listEl.innerHTML = d.municipalities.map((m) =>
-        `<li class="flex items-center text-gray-700 font-medium text-sm">
-          <i class="fas fa-check text-accent text-xs mr-2 flex-shrink-0"></i>${m}
-        </li>`
-      ).join('');
+      const listEl = document.getElementById('municipalities-list');
+      if (listEl) {
+        // className を元のグリッドに戻す
+        listEl.className = "grid grid-cols-2 gap-y-2 mt-4 text-gray-600 font-medium";
+        listEl.innerHTML = d.municipalities.map((m) =>
+          `<div class="flex items-center text-gray-700 font-medium text-sm">
+            <i class="fas fa-check text-accent text-xs mr-2 flex-shrink-0"></i>${m}
+          </div>`
+        ).join('');
+      }
     }
 
     const mapEl = document.getElementById('area-map');
@@ -315,7 +420,7 @@
       return `
         <div class="bg-white rounded-sm overflow-hidden shadow-lg md:shadow-2xl flex flex-col">
           <div class="h-28 sm:h-48 md:h-64 overflow-hidden relative">
-            <img src="${c.image}" alt="${c.name}" class="w-full h-full object-cover">
+            <img src="${toAbsoluteUrl(c.image)}" alt="${c.name}" class="w-full h-full object-cover">
             <div class="absolute top-2 right-2 md:top-4 md:right-4 bg-${accentClass} text-white px-2 py-0.5 md:px-3 md:py-1 font-bold rounded-sm text-[10px] sm:text-sm">
               ${c.type}
             </div>
@@ -344,7 +449,7 @@
         <i class="fas fa-quote-left text-2xl sm:text-4xl text-gray-200 absolute top-3 left-3 sm:top-6 sm:left-6"></i>
         <div class="relative z-10 pl-4 sm:pl-6 pt-2 sm:pt-4">
           <div class="flex items-center mb-3 sm:mb-6">
-            <img src="${v.image}" alt="${v.name}" class="w-10 h-10 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-accent shrink-0">
+            <img src="${toAbsoluteUrl(v.image)}" alt="${v.name}" class="w-10 h-10 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-accent shrink-0">
             <div class="ml-2 sm:ml-4">
               <h4 class="font-bold text-primary text-xs sm:text-lg leading-snug">${v.name} / ${v.title}</h4>
               <div class="text-accent text-xs sm:text-sm">
@@ -756,13 +861,14 @@
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = `${origin}/`;
+    canonical.href = cityKey === 'japan' ? `${origin}/` : `${origin}/${cityKey}/`;
 
     // ── OGP image（都市ヒーロー画像を流用） ─────────────────────────
+    const heroImageUrl = toCanonicalUrl(d.heroImage, origin);
     const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) ogImage.setAttribute('content', `${origin}/${d.heroImage}`);
+    if (ogImage) ogImage.setAttribute('content', heroImageUrl);
     const twImage = document.querySelector('meta[name="twitter:image"]');
-    if (twImage) twImage.setAttribute('content', `${origin}/${d.heroImage}`);
+    if (twImage) twImage.setAttribute('content', heroImageUrl);
 
     // ── LocalBusiness JSON-LD ──────────────────────────────────────
     const existingLd = document.getElementById('ld-local-business');
@@ -786,8 +892,8 @@
         ? 'Minpaku Resort（民泊リゾート）全国対応'
         : `Minpaku Resort（民泊リゾート）${d.cityShort}`,
       'description': d.seoDescription,
-      'url': `${origin}/`,
-      'image': `${origin}/${d.heroImage}`,
+      'url': cityKey === 'japan' ? `${origin}/` : `${origin}/${cityKey}/`,
+      'image': toCanonicalUrl(d.heroImage, origin),
       'areaServed': areaServed,
       'serviceType': ['民泊運営代行', '民泊清掃代行', '民泊コンサルティング'],
       'telephone': '',
@@ -805,13 +911,13 @@
      10. 全データ一括適用
   ───────────────────────────────────────── */
 
-  function applyData(d, cityKey) {
+  function applyData(d, cityKey, allData) {
     applyMeta(d);
     applyHero(d);
     applyProblems(d);
     applyLocalRules(d);
     applyStaff();
-    applyAreas(d);
+    applyAreas(d, allData);
     applyCleaningFocus(d);
     applyCaseStudies(d);
     applyVoices(d);
@@ -864,21 +970,22 @@
      11. エントリーポイント
   ───────────────────────────────────────── */
 
-  const subdomain = getSubdomain();
+  const cityPath = getCityFromPath();
 
-  fetch('data/cities.json')
+  fetch('/data/cities.json')
     .then((res) => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return res.json();
     })
     .then((allData) => {
-      const cityKey = allData[subdomain] ? subdomain : DEFAULT_CITY;
+      const cityKey = allData[cityPath] ? cityPath : DEFAULT_CITY;
       const data = allData[cityKey];
       const run = () => {
         // ① ヒーロー画像のプリロードを開始（DOM 適用と並行して実行）
-        const heroReady = preloadHeroImage(data.heroImage);
+        const heroImageUrl = toAbsoluteUrl(data.heroImage);
+        const heroReady = preloadHeroImage(heroImageUrl);
         // ② データを DOM に適用（backgroundImage のセットも含む）
-        applyData(data, cityKey);
+        applyData(data, cityKey, allData);
         // ③ ヒーロー画像の読み込みが完了してからローダーを非表示にする
         heroReady.then(() => {
           clearTimeout(loaderTimeout);

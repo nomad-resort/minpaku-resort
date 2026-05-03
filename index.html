@@ -22,7 +22,7 @@
     <!-- canonical（regional.js で都市ごとに上書き） -->
     <link rel="canonical" href="https://www.minpaku-resort.com/">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/minpaku_resort_logo_favicon.png">
+    <link rel="icon" type="image/png" href="/images/minpaku_resort_logo_favicon.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
@@ -238,7 +238,7 @@
 
     <!-- ページローダー: regional.js がデータ注入完了後に is-hidden クラスを付与して非表示にする -->
     <div id="page-loader" aria-hidden="true">
-        <img src="images/minpaku_resort_logo.png" alt="Minpaku Resort" class="loader-logo">
+        <img src="/images/minpaku_resort_logo.png" alt="Minpaku Resort" class="loader-logo">
         <p class="loader-brand">Minpaku <span>Resort</span></p>
         <p class="loader-tagline">Loading data&thinsp;…</p>
         <div class="loader-bar-track">
@@ -674,7 +674,7 @@
                     <!-- TODO: [画像：ユニフォームを着たスタッフが真剣に清掃している様子] -->
                     <!-- 仮画像のプレースホルダー -->
                     <div class="relative rounded-sm overflow-hidden shadow-xl h-64 sm:h-80 group">
-                        <img src="images/thorough_cleaning.png" alt="専門的な清掃" loading="lazy"
+                        <img src="/images/thorough_cleaning.png" alt="専門的な清掃" loading="lazy"
                             class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700">
                         <div
                             class="absolute bottom-0 left-0 bg-primary/80 backdrop-blur text-white px-4 py-2 font-medium">
@@ -685,7 +685,7 @@
                     <div class="flex gap-6 h-48 sm:h-60">
                         <!-- TODO: [画像：水回りのBefore/After (または美しく仕上げられた水回りの写真)] -->
                         <div class="w-1/2 relative rounded-sm overflow-hidden shadow-lg group">
-                            <img src="images/sparkling_bathroom.png" alt="美しいバスルーム" loading="lazy"
+                            <img src="/images/sparkling_bathroom.png" alt="美しいバスルーム" loading="lazy"
                                 class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700">
                             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                                 <p class="text-white text-sm font-bold">水回りも輝く仕上がりに</p>
@@ -693,7 +693,7 @@
                         </div>
                         <!-- 代わりのイメージ -->
                         <div class="w-1/2 relative rounded-sm overflow-hidden shadow-lg group">
-                            <img src="images/resort_bedroom.png" alt="完璧なベッドメイキング" loading="lazy"
+                            <img src="/images/resort_bedroom.png" alt="完璧なベッドメイキング" loading="lazy"
                                 class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700">
                             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                                 <p class="text-white text-sm font-bold">リゾートクオリティの寝室</p>
@@ -1097,10 +1097,10 @@
                         <h4 class="text-lg font-bold text-primary mb-4 flex items-center border-b-2 border-accent pb-2">
                             <i class="fas fa-map-marker-alt text-accent mr-2"></i>対応市区町村
                         </h4>
-                        <ul id="municipalities-list" class="grid grid-cols-2 gap-y-2 mt-4 text-gray-600 font-medium">
+                        <div id="municipalities-list" class="grid grid-cols-2 gap-y-2 mt-4 text-gray-600 font-medium">
                             <!-- regional.js が動的生成 -->
-                            <li class="text-sm text-gray-400 animate-pulse">読み込み中...</li>
-                        </ul>
+                            <div class="text-sm text-gray-400 animate-pulse">読み込み中...</div>
+                        </div>
                     </div>
                     <p class="text-xs text-accent font-medium mt-4">
                         <i class="fas fa-info-circle mr-1"></i>上記以外のエリアもご相談ください。順次対応エリア拡大中。
@@ -1374,8 +1374,8 @@
                 class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
                 <div class="flex space-x-4">
                     <a href="https://nomadresort.jp" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">運営会社</a>
-                    <a href="privacy-policy.html" class="hover:text-white transition">プライバシーポリシー</a>
-                    <a href="terms.html" class="hover:text-white transition">利用規約</a>
+                    <a href="/privacy-policy.html" class="hover:text-white transition">プライバシーポリシー</a>
+                    <a href="/terms.html" class="hover:text-white transition">利用規約</a>
                 </div>
                 <p>&copy; 2026 Minpaku Resort. All rights reserved.</p>
             </div>
@@ -1383,7 +1383,7 @@
     </footer>
 
     <!-- regional.js: サブドメイン検知→都道府県データ注入・シミュレーター・スライダー初期化 -->
-    <script src="js/regional.js"></script>
+    <script src="/js/regional.js"></script>
 
     <!-- モバイルメニュー トグル -->
     <script>
