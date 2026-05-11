@@ -189,6 +189,7 @@
   ───────────────────────────────────────── */
 
   function applyMeta(d) {
+    if (document.body.dataset.ssg === 'true') return;
     document.title = d.seoTitle;
 
     const metaDesc = document.querySelector('meta[name="description"]');
@@ -202,6 +203,7 @@
   }
 
   function applyHero(d) {
+    if (document.body.dataset.ssg === 'true') return;
     const heroSection = document.getElementById('hero-section');
     if (heroSection) {
       const heroImageUrl = toAbsoluteUrl(d.heroImage);
@@ -217,6 +219,7 @@
   }
 
   function applyProblems(d) {
+    if (document.body.dataset.ssg === 'true') return;
     const el = document.getElementById('problems-conclusion');
     if (el) {
       el.innerHTML =
@@ -226,6 +229,7 @@
   }
 
   function applyLocalRules(d) {
+    if (document.body.dataset.ssg === 'true') return;
     const section = document.getElementById('local-rules');
     if (d.cityKey === 'japan') {
       if (section) section.style.display = 'none';
@@ -282,6 +286,35 @@
   }
 
   function applyAreas(d, allData) {
+    if (document.body.dataset.ssg === 'true') {
+      // 既に静的HTMLがある場合はイベントリスナー（タブ切り替え）のみ設定
+      if (d.cityKey === 'japan') {
+        const listEl = document.getElementById('municipalities-list');
+        if (listEl) {
+          const tabBtns = listEl.querySelectorAll('.region-tab-btn');
+          const tabContents = listEl.querySelectorAll('.region-content');
+          tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+              const targetRegion = btn.getAttribute('data-region');
+              tabBtns.forEach(b => {
+                b.classList.remove('bg-primary', 'text-white', 'shadow');
+                b.classList.add('bg-gray-100', 'text-gray-600', 'hover:bg-gray-200');
+              });
+              btn.classList.remove('bg-gray-100', 'text-gray-600', 'hover:bg-gray-200');
+              btn.classList.add('bg-primary', 'text-white', 'shadow');
+
+              tabContents.forEach(c => {
+                const isTarget = c.id === `region-content-${targetRegion}`;
+                c.classList.toggle('hidden', !isTarget);
+                c.classList.toggle('block', isTarget);
+              });
+            });
+          });
+        }
+      }
+      return;
+    }
+
     if (d.cityKey === 'japan') {
       setText('areas-title', '全国 対応可能エリア');
       setText('areas-description',
@@ -385,6 +418,7 @@
   }
 
   function applyCleaningFocus(d) {
+    if (document.body.dataset.ssg === 'true') return;
     const titleEl = document.getElementById('regional-cleaning-title');
     const bodyEl = document.getElementById('regional-cleaning-body');
     if (!titleEl || !bodyEl) return;

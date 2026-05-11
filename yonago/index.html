@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>米子の民泊 運営代行・清掃代行 | Minpaku Resort</title>
+<meta content="米子（鳥取県）の民泊オーナー様へ。アニメファン・山陰観光の旅行者が訪れる米子エリアで、運営代行・清掃代行をワンストップ提供。地域を熟知したチームが春・秋の需要を逃さない柔軟な運営で稼働率を最大化します。" name="description"/>
+<!-- OGP（regional.js で都市ごとに上書き） -->
+<meta content="website" property="og:type"/>
+<meta content="Minpaku Resort" property="og:site_name"/>
+<meta content="米子の民泊 運営代行・清掃代行 | Minpaku Resort" property="og:title"/>
+<meta content="米子（鳥取県）の民泊オーナー様へ。アニメファン・山陰観光の旅行者が訪れる米子エリアで、運営代行・清掃代行をワンストップ提供。地域を熟知したチームが春・秋の需要を逃さない柔軟な運営で稼働率を最大化します。" property="og:description"/>
+<meta content="https://www.minpaku-resort.com/images/minpaku_resort_logo.png" property="og:image"/>
+<meta content="1080" property="og:image:width"/>
+<meta content="1080" property="og:image:height"/>
+<!-- Twitter / X Card -->
+<meta content="summary" name="twitter:card"/>
+<meta content="Minpaku Resort | 民泊 運営代行・清掃代行" name="twitter:title"/>
+<meta content="エリアに精通したチームによる民泊 運営代行・清掃代行。リゾート・クオリティの清掃と収益最大化を実現するプロフェッショナル集団です。" name="twitter:description"/>
+<meta content="https://www.minpaku-resort.com/images/minpaku_resort_logo.png" name="twitter:image"/>
+<!-- canonical（regional.js で都市ごとに上書き） -->
+<link href="https://www.minpaku-resort.com/yonago/" rel="canonical"/>
+<!-- Favicon -->
+<link href="/images/minpaku_resort_logo_favicon.png" rel="icon" type="image/png"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config -->
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    colors: {
+                        primary: '#1e293b', /* Slate 800 - Navy/Dark Gray */
+                        secondary: '#334155', /* Slate 700 */
+                        accent: '#c5a059', /* Elegant Gold */
+                        accentHover: '#a38343', /* Darker Gold for hover */
+                        light: '#f8fafc',
+                        dark: '#0f172a'
+                    }
+                }
+            }
+        }
+    </script>
+<!-- JSON-LD 構造化データ -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Minpaku Resort",
+      "description": "エリアに精通したチームによる民泊 運営代行・清掃代行。リゾート・クオリティの清掃と収益最大化を実現するプロフェッショナル集団です。",
+      "url": "https://www.minpaku-resort.com",
+      "logo": "https://www.minpaku-resort.com/images/minpaku_resort_logo.png",
+      "image": "https://www.minpaku-resort.com/images/minpaku_resort_logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JP"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Japan"
+      },
+      "serviceType": ["民泊運営代行", "民泊清掃代行", "Airbnb運営代行", "Booking.com運営代行"],
+      "sameAs": ["https://note.com/minpaku_resort"]
+    }
+    </script>
+<style>
+        /* ─── ブランドカラー変数（Tailwind テーマと同期） ─── */
+        :root {
+            --color-dark: #0f172a;
+            --color-accent: #c5a059;
+            --color-accent-hover: #a38343;
+            --color-accent-light: #e2c47a;
+        }
+
+        /* ─── ページローダー ────────────────────────────────
+           display:none では CSS transition できないため、
+           Tailwind の .hidden ではなく独自の .is-hidden を使用している */
+        #page-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background-color: var(--color-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        #page-loader.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loader-logo {
+            width: 88px;
+            height: auto;
+            animation: loaderFloat 2.2s ease-in-out infinite;
+            filter: drop-shadow(0 0 18px rgba(197, 160, 89, 0.35));
+            /* var(--color-accent) @ 35% */
+        }
+
+        @keyframes loaderFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(-9px);
+                opacity: 0.8;
+            }
+        }
+
+        .loader-brand {
+            font-family: 'Noto Serif JP', serif;
+            color: #ffffff;
+            font-size: 1.375rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            margin-top: 1.25rem;
+        }
+
+        .loader-brand span {
+            color: var(--color-accent);
+        }
+
+        .loader-tagline {
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        .loader-bar-track {
+            width: 110px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 2px;
+            margin-top: 2rem;
+            overflow: hidden;
+        }
+
+        .loader-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--color-accent-hover), var(--color-accent), var(--color-accent-light));
+            border-radius: 2px;
+            animation: loaderBar 2s ease-out forwards;
+        }
+
+        @keyframes loaderBar {
+            0% {
+                width: 0%;
+            }
+
+            40% {
+                width: 55%;
+            }
+
+            80% {
+                width: 82%;
+            }
+
+            100% {
+                width: 95%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #page-loader {
+                transition: none;
+            }
+
+            .loader-logo {
+                animation: none;
+            }
+
+            .loader-bar {
+                animation: none;
+                width: 95%;
+            }
+        }
+
+        /* ─────────────────────────────────────────────────── */
+
+        .hero-bg {
+            /* <!-- TODO: 以下は仮の画像(Placeholder)です。後で「ホテルのように美しくメイキングされたベッドのアップ」等の画像に差し替えてください。 --> */
+            background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.4)), url('https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #c5a059;
+            /* accent color */
+            margin: 1rem auto 0;
+        }
+
+        .line-button-floating {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .line-button-floating:hover {
+            transform: translateY(-5px);
+        }
+
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen" data-ssg="true">
+<!-- ページローダー: regional.js がデータ注入完了後に is-hidden クラスを付与して非表示にする -->
+<div aria-hidden="true" id="page-loader">
+<img alt="Minpaku Resort" class="loader-logo" src="/images/minpaku_resort_logo.png"/>
+<p class="loader-brand">Minpaku <span>Resort</span></p>
+<p class="loader-tagline">Loading data …</p>
+<div class="loader-bar-track">
+<div class="loader-bar"></div>
+</div>
+</div>
+<!-- モバイルメニュー -->
+<div class="fixed top-20 left-0 w-full bg-white/95 backdrop-blur shadow-lg z-30 border-b border-gray-100 hidden md:hidden" id="mobile-menu">
+<nav class="max-w-7xl mx-auto px-4 py-6 flex flex-col space-y-1">
+<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#problems">お悩みの方へ</a>
+<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#services">サービス内容</a>
+<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#cleaning">清掃・強み</a>
+<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#voices">お客様の声</a>
+<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#simulation">シミュレーション</a>
+<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#faq">FAQ</a>
+<!-- <a href="produce.html" class="text-sm font-medium text-accent transition py-3 border-b border-gray-100">Space Production ↗</a> -->
+<a class="mt-3 bg-primary text-white px-6 py-3 rounded-sm font-medium hover:bg-secondary transition duration-300 text-center" href="#contact">無料相談はこちら</a>
+</nav>
+</div>
+<!-- SEO対策用非表示H1 (regional.js が都道府県名を注入) -->
+<h1 class="sr-only" id="seo-h1">米子の民泊 運営代行・清掃代行ならMinpaku Resort（民泊リゾート）</h1>
+<!-- Header -->
+<header class="fixed w-full top-0 z-40 bg-white/95 backdrop-blur shadow-sm transition-all border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center">
+<a class="font-serif text-2xl font-bold text-primary tracking-wide" href="#">
+                        Minpaku <span class="text-accent">Resort</span>
+</a>
+</div>
+<nav class="hidden md:flex space-x-4 lg:space-x-8">
+<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#problems">お悩みの方へ</a>
+<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#services">サービス内容</a>
+<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#cleaning">清掃・強み</a>
+<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#voices">お客様の声</a>
+<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#simulation">シミュレーション</a>
+<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#faq">FAQ</a>
+<!-- <a href="produce.html"
+                        class="text-xs lg:text-sm font-medium text-accent hover:text-accentHover transition border-l border-gray-200 pl-4 lg:pl-8">Space
+                        Production ↗</a> -->
+</nav>
+<div class="hidden md:flex items-center">
+<a class="bg-primary text-white px-6 py-2.5 rounded-sm font-medium hover:bg-secondary transition duration-300" href="#contact">
+                        無料相談はこちら
+                    </a>
+</div>
+<!-- Mobile menu button -->
+<div class="md:hidden flex items-center">
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="メニューを開く" class="text-gray-600 hover:text-primary focus:outline-none" id="mobile-menu-btn">
+<i class="fas fa-bars text-2xl" id="mobile-menu-icon"></i>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section (背景・テキストは regional.js が都道府県データで動的に切り替え) -->
+<section class="hero-bg h-screen min-h-[600px] flex items-center justify-center pt-20 relative" id="hero-section">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary/90 hidden sm:block"></div>
+<div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<p class="text-accent font-medium tracking-widest mb-4 text-sm sm:text-base" id="hero-tagline">大山と皆生温泉の米子で民泊運営・清掃をプロチームが担当</p>
+<h2 class="text-3xl sm:text-5xl md:text-6xl font-serif text-white font-bold leading-tight mb-3 sm:mb-6" id="hero-copy">米子の民泊に、安心と高品質を。</h2>
+<p class="text-sm sm:text-xl text-gray-200 mb-6 sm:mb-10 max-w-3xl mx-auto font-light leading-relaxed" id="hero-subcopy">米子はアニメファン・山陰観光の旅行者が多く訪れる鳥取県エリア。春・秋を中心に需要が安定しており、地域特性を熟知したチームが清掃・運営代行をワンストップ提供。オーナー様の負担を最小化しながら稼働率の最大化を支援します。</p>
+<div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+<a class="bg-accent text-white px-6 py-3 sm:px-8 sm:py-4 rounded-sm font-bold text-base sm:text-lg hover:bg-accentHover transition duration-300 shadow-lg" href="#contact">
+                    お問い合わせ・無料相談
+                </a>
+<a class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-sm font-medium text-base sm:text-lg hover:bg-white/20 transition duration-300" href="#strengths">
+                    サービス詳細を見る
+                </a>
+</div>
+</div>
+</section>
+<!-- Problems / SEO Hook Section -->
+<section class="py-12 md:py-20 bg-white" id="problems">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-8 md:mb-12">
+<h3 class="text-xl sm:text-3xl font-serif font-bold text-primary mb-4 section-title">民泊オーナー様、こんなお悩みはありませんか？</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 md:gap-8">
+<!-- 悩み1 -->
+<div class="bg-gray-50 p-3 sm:p-5 md:p-8 rounded-sm border-l-4 border-accent">
+<div class="flex items-start mb-2 md:mb-4 text-primary">
+<i class="fas fa-comment-slash text-base sm:text-2xl mr-2 mt-0.5 text-red-500 shrink-0"></i>
+<h4 class="text-xs sm:text-lg font-bold leading-snug">清掃不備による低評価・クレーム</h4>
+</div>
+<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">
+                        「髪の毛が落ちていた」「水回りが汚い」といったレビューは、今後の予約率に致命的な影響を与えます。安定した清掃クオリティを維持するのは個人の清掃スタッフでは限界があります。
+                    </p>
+</div>
+<!-- 悩み2 -->
+<div class="bg-gray-50 p-3 sm:p-5 md:p-8 rounded-sm border-l-4 border-accent">
+<div class="flex items-start mb-2 md:mb-4 text-primary">
+<i class="fas fa-volume-up text-base sm:text-2xl mr-2 mt-0.5 text-red-500 shrink-0"></i>
+<h4 class="text-xs sm:text-lg font-bold leading-snug">近隣住民とのトラブル対策</h4>
+</div>
+<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">
+                        騒音やゴミ出しのルール違反など、近隣からの苦情対応に疲弊していませんか？迅速かつ適切なゲストへの注意喚起と対応スキームが不可欠です。
+                    </p>
+</div>
+<!-- 悩み3 -->
+<div class="bg-gray-50 p-3 sm:p-5 md:p-8 rounded-sm border-l-4 border-accent">
+<div class="flex items-start mb-2 md:mb-4 text-primary">
+<i class="fas fa-chart-line text-base sm:text-2xl mr-2 mt-0.5 text-red-500 shrink-0"></i>
+<h4 class="text-xs sm:text-lg font-bold leading-snug">稼働率・収益が思ったように伸びない</h4>
+</div>
+<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">
+                        競合が増える中、ただ掲載するだけでは予約は入りません。季節や周辺イベントに合わせたダイナミックプライシングや、魅力的なリスティング作成のノウハウが必要です。
+                    </p>
+</div>
+<!-- 悩み4 -->
+<div class="bg-gray-50 p-3 sm:p-5 md:p-8 rounded-sm border-l-4 border-accent">
+<div class="flex items-start mb-2 md:mb-4 text-primary">
+<i class="fas fa-clock text-base sm:text-2xl mr-2 mt-0.5 text-red-500 shrink-0"></i>
+<h4 class="text-xs sm:text-lg font-bold leading-snug">ゲスト対応で休まらない</h4>
+</div>
+<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">
+                        深夜の問い合わせや緊急トラブルの対応で、オーナー様自身の時間が奪われていませんか？
+                    </p>
+</div>
+</div>
+<div class="mt-12 text-center">
+<p class="text-xl font-medium text-primary leading-relaxed" id="problems-conclusion">そのお悩み、<span class="text-accent font-bold">Minpaku Resort</span>にお任せください。<br/>米子エリアの地域特性を熟知した私たちが、すべて解決いたします。</p>
+</div>
+</div>
+</section>
+<!-- Numbers (データで見る実績) -->
+<section class="py-10 md:py-16 bg-primary text-white" id="numbers">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center lg:divide-x divide-white/20">
+<div class="px-2 sm:px-4">
+<p class="text-accent text-xs sm:text-sm font-bold mb-2 sm:mb-3 tracking-wider">総管理物件数</p>
+<div class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-1 sm:mb-2 text-white">150<span class="text-xl sm:text-2xl md:text-3xl text-accent ml-1">+</span></div>
+<p class="text-gray-300 text-[10px] sm:text-xs">全国規模</p>
+</div>
+<div class="px-2 sm:px-4">
+<p class="text-accent text-xs sm:text-sm font-bold mb-2 sm:mb-3 tracking-wider">月間清掃件数</p>
+<div class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-1 sm:mb-2 text-white">
+                        1,200<span class="text-xl sm:text-2xl md:text-3xl text-accent ml-1">+</span></div>
+<p class="text-gray-300 text-[10px] sm:text-xs">リゾートクオリティを維持</p>
+</div>
+<div class="px-2 sm:px-4">
+<p class="text-accent text-xs sm:text-sm font-bold mb-2 sm:mb-3 tracking-wider">年間ゲスト対応数</p>
+<div class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-1 sm:mb-2 text-white">
+                        50,000<span class="text-xl sm:text-2xl md:text-3xl text-accent ml-1">+</span></div>
+<p class="text-gray-300 text-[10px] sm:text-xs">多言語で24時間365日対応</p>
+</div>
+<div class="px-2 sm:px-4">
+<p class="text-accent text-xs sm:text-sm font-bold mb-2 sm:mb-3 tracking-wider">清掃クレーム発生率</p>
+<div class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-1 sm:mb-2 text-white">0.1<span class="text-xl sm:text-2xl md:text-3xl text-accent ml-1">%以下</span></div>
+<p class="text-gray-300 text-[10px] sm:text-xs">徹底した品質管理システム</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Authority (Our 3 Strengths) -->
+<section class="py-12 md:py-20 bg-light border-y border-gray-100" id="strengths">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-10 md:mb-16">
+<span class="text-accent font-bold tracking-widest text-sm">AUTHORITY</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">こだわりの3つの強み</h3>
+<p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    私たちは単なる「個人の代行業者」ではありません。<br class="hidden sm:block"/>組織的で徹底した管理体制を敷く、プロフェッショナル集団です。
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-10">
+<!-- 強み1 -->
+<div class="bg-white p-4 sm:p-6 md:p-10 rounded-sm shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col items-center">
+<div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center mb-3 md:mb-6 text-white text-xl sm:text-2xl md:text-3xl shadow-lg">
+<i class="fas fa-broom"></i>
+</div>
+<h4 class="text-xs sm:text-lg md:text-xl font-bold text-primary mb-2 md:mb-4">① 丁寧な清掃</h4>
+<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed text-left">
+                        圧倒的な清潔感こそがゲストの満足度に直結します。自社の厳格な衛生基準に基づくチェック項目を設け、常にホテルのような「リゾート・クオリティ」の美しい空間をご提供します。
+                    </p>
+</div>
+<!-- 強み2 -->
+<div class="bg-white p-4 sm:p-6 md:p-10 rounded-sm shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col items-center relative">
+<div class="absolute top-0 left-0 w-full h-1 bg-accent"></div>
+<div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-accent rounded-full flex items-center justify-center mb-3 md:mb-6 text-white text-xl sm:text-2xl md:text-3xl shadow-lg">
+<i class="fas fa-chart-pie"></i>
+</div>
+<h4 class="text-xs sm:text-lg md:text-xl font-bold text-primary mb-2 md:mb-4">② 収益最大化戦略</h4>
+<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed text-left">
+                        100棟以上の豊富な運営実績とデータに基づき、エリア需要に合わせた細かい価格調整を行います。Booking.com・Airbnbなどの主要OTAへの掲載最適化から集客ノウハウまで、利益を最大化する戦略を実行します。
+                    </p>
+</div>
+<!-- 強み3 -->
+<div class="bg-white p-4 sm:p-6 md:p-10 rounded-sm shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col items-center">
+<div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center mb-3 md:mb-6 text-white text-xl sm:text-2xl md:text-3xl shadow-lg">
+<i class="fas fa-handshake"></i>
+</div>
+<h4 class="text-xs sm:text-lg md:text-xl font-bold text-primary mb-2 md:mb-4">③ ワンストップ対応</h4>
+<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed text-left">
+                        多言語対応のゲストコミュニケーション、予約管理、清掃手配、さらには現地での急なトラブル駆けつけまで、すべて一貫してお任せいただけます。オーナー様は「何もしない」運用が可能です。
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ② 地域特有の運営・清掃ルール (regional.js が都道府県データで注入) -->
+<section class="py-12 md:py-20 bg-white border-t border-gray-100" id="local-rules">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-8 md:mb-12">
+<span class="text-accent font-bold tracking-widest text-sm">AREA TIPS &amp; RULES</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title" id="local-rules-title">米子の注意ポイント</h3>
+<p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    現場に精通した適切な運用が、トラブルを未然に防ぎ、安定した収益へと繋がります。
+                </p>
+</div>
+<!-- regional.js が動的生成 -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6" id="local-rules-grid"><div class="bg-white rounded-sm shadow-sm border border-gray-100 p-3 sm:p-5 md:p-7 hover:shadow-md transition duration-300"><div class="flex items-start mb-2 sm:mb-4"><div class="w-8 h-8 sm:w-12 sm:h-12 bg-primary/5 border border-accent/30 rounded-full flex items-center justify-center mr-2 sm:mr-4 flex-shrink-0"><i class="fas fa-map-marker-alt text-accent text-sm sm:text-lg"></i></div><div><span class="text-[8px] sm:text-[10px] font-bold text-accent tracking-widest uppercase">地域密着</span><h4 class="text-xs sm:text-base font-bold text-primary leading-snug">地域に根ざした清掃・設備管理</h4></div></div><p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">地元チームが地域の気候・物件特性を熟知した清掃フローを実行。年間を通じて物件を最適な状態に維持し、安定したゲスト評価を確保します。</p></div><div class="bg-white rounded-sm shadow-sm border border-gray-100 p-3 sm:p-5 md:p-7 hover:shadow-md transition duration-300"><div class="flex items-start mb-2 sm:mb-4"><div class="w-8 h-8 sm:w-12 sm:h-12 bg-primary/5 border border-accent/30 rounded-full flex items-center justify-center mr-2 sm:mr-4 flex-shrink-0"><i class="fas fa-user-check text-accent text-sm sm:text-lg"></i></div><div><span class="text-[8px] sm:text-[10px] font-bold text-accent tracking-widest uppercase">ゲスト対応</span><h4 class="text-xs sm:text-base font-bold text-primary leading-snug">ゲスト層に応じた丁寧な対応</h4></div></div><p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">訪れるゲスト層の目的・文化・滞在スタイルに合わせたハウスルール案内と室内設備の整備で、レビュー評価の向上と口コミリピーターの獲得を支援します。</p></div><div class="bg-white rounded-sm shadow-sm border border-gray-100 p-3 sm:p-5 md:p-7 hover:shadow-md transition duration-300"><div class="flex items-start mb-2 sm:mb-4"><div class="w-8 h-8 sm:w-12 sm:h-12 bg-primary/5 border border-accent/30 rounded-full flex items-center justify-center mr-2 sm:mr-4 flex-shrink-0"><i class="fas fa-balance-scale text-accent text-sm sm:text-lg"></i></div><div><span class="text-[8px] sm:text-[10px] font-bold text-accent tracking-widest uppercase">繁忙期対応</span><h4 class="text-xs sm:text-base font-bold text-primary leading-snug">春を中心とした繁忙期需要を確実に取り込む体制</h4></div></div><p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">春・秋を中心に需要が高まるシーズンには、清掃体制を強化して機会損失ゼロを実現。閑散期にはメンテナンス・プライシング調整で年間収益を安定化します。</p></div></div>
+</div>
+</section>
+<!-- Services (サービス内容) -->
+<section class="py-12 md:py-20 bg-white" id="services">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-10 md:mb-16">
+<span class="text-accent font-bold tracking-widest text-sm">OUR SERVICES</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">トータルサポートのサービス内容
+                </h3>
+<p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    リスティングの作成から日々のゲスト対応、清掃管理まで、民泊運営に必要なすべての業務をワンストップで代行いたします。
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 sm:gap-6">
+<!-- Service 1 -->
+<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
+<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
+<i class="fas fa-edit"></i>
+</div>
+<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">OTA掲載・作成</h4>
+<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">魅力的な写真選定や説明文作成で、予約率を高めるページを構築します。
+                    </p>
+</div>
+<!-- Service 2 -->
+<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
+<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
+<i class="fas fa-chart-line"></i>
+</div>
+<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">集客・価格調整</h4>
+<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">AIと市場データを用いたダイナミックプライシングで収益を最大化します。
+                    </p>
+</div>
+<!-- Service 3 -->
+<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
+<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
+<i class="fas fa-headset"></i>
+</div>
+<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">365日対応</h4>
+<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">英語・中国語等の多言語対応。深夜の問い合わせにも迅速に回答します。
+                    </p>
+</div>
+<!-- Service 4 -->
+<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
+<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
+<i class="fas fa-sparkles"></i>
+</div>
+<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">プロ清掃・管理</h4>
+<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">自社基準の徹底された清掃と、消耗品の補充、写真付きレポート報告。</p>
+</div>
+<!-- Service 5 -->
+<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
+<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
+<i class="fas fa-shield-alt"></i>
+</div>
+<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">トラブル等</h4>
+<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">近所からの苦情や備品の破損など、緊急時もすべて弊社が窓口となります。
+                    </p>
+</div>
+<!-- Service 6 -->
+<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
+<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
+<i class="fas fa-star"></i>
+</div>
+<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">レビュー管理</h4>
+<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">高評価の獲得施策と、低評価時の適切なフォローアップで施設の価値を維持。
+                    </p>
+</div>
+<!-- Service 7 -->
+<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
+<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
+<i class="fas fa-concierge-bell"></i>
+</div>
+<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">オプション</h4>
+<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">BBQ機材のレンタルやレンタカー案内など、体験を向上させる手配。</p>
+</div>
+<!-- Service 8 -->
+<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
+<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
+<i class="fas fa-calculator"></i>
+</div>
+<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">売上管理</h4>
+<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">毎月の収益と稼働実績をまとめたレポートを発行し、透明性を確保します。
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Cleaning Focus (最も手厚くするセクション) -->
+<section class="py-14 md:py-24 bg-white" id="cleaning">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+<div class="lg:w-1/2">
+<span class="text-accent font-bold tracking-widest text-sm">CLEANING FOCUS</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2">ゲストを感動させる<br/>「リゾート・クオリティの清掃」
+                    </h3>
+<div class="w-20 h-1 bg-accent mt-6 mb-8"></div>
+<p class="text-gray-700 leading-relaxed mb-8">
+                        民泊運営において、レビュー評価の基盤となるのは「清潔さ」です。<br/>
+                        私たちは、ホテル清掃と同等、あるいはそれ以上のクオリティをお約束します。業界最高水準のプロセスで、ゲストがドアを開けた瞬間に感動する空間を作り上げます。
+                    </p>
+<div class="grid grid-cols-2 gap-3 lg:grid-cols-1 lg:gap-0 lg:space-y-6">
+<!-- ポイント1 -->
+<div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
+<div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0">
+<i class="fas fa-check-circle text-base lg:text-xl"></i>
+</div>
+<div class="lg:ml-4">
+<h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug">徹底した清掃チェックリストの運用</h4>
+<p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed">
+                                    属人的なミスを防ぐため、100項目に及ぶ詳細な清掃チェックリストを活用。清掃完了後の写真報告を義務付け、本社スタッフがダブルチェックでクオリティを担保します。</p>
+</div>
+</div>
+<!-- ポイント2 -->
+<div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
+<div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0">
+<i class="fas fa-shield-virus text-base lg:text-xl"></i>
+</div>
+<div class="lg:ml-4">
+<h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug">除菌清掃とプロ用洗剤の使用</h4>
+<p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed">
+                                    水垢やカビには市販品でなく、素材に合わせた業務用の専用洗剤を使用。ドアノブやリモコン類なども徹底してアルコール除菌を行い、衛生管理を極限まで高めています。</p>
+</div>
+</div>
+<!-- ポイント3 -->
+<div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
+<div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0">
+<i class="fas fa-bed text-base lg:text-xl"></i>
+</div>
+<div class="lg:ml-4">
+<h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug">ホテルのようなベッドメイキング</h4>
+<p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed">
+                                    シーツの張りやタオルの畳み方一つで、部屋の印象は大きく変わります。ピンと張られたシーツと完璧に整えられたアメニティで、リゾートホテルさながらの特別感を演出します。
+                                </p>
+</div>
+</div>
+<!-- ポイント4 -->
+<div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
+<div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0">
+<i class="fas fa-leaf text-base lg:text-xl"></i>
+</div>
+<div class="lg:ml-4">
+<h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug" id="regional-cleaning-title">米子の地域特性に合わせた最適清掃</h4>
+<p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed" id="regional-cleaning-body">米子の環境・気候・ゲスト層に合わせた清掃フローを構築。地域の清掃プロフェッショナルと連携し、高いクオリティを安定的に提供いたします。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 space-y-6">
+<!-- TODO: [画像：ユニフォームを着たスタッフが真剣に清掃している様子] -->
+<!-- 仮画像のプレースホルダー -->
+<div class="relative rounded-sm overflow-hidden shadow-xl h-64 sm:h-80 group">
+<img alt="専門的な清掃" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="/images/thorough_cleaning.png"/>
+<div class="absolute bottom-0 left-0 bg-primary/80 backdrop-blur text-white px-4 py-2 font-medium">
+<i class="fas fa-spray-can mr-2 text-accent"></i>専門的な清掃
+                        </div>
+</div>
+<div class="flex gap-6 h-48 sm:h-60">
+<!-- TODO: [画像：水回りのBefore/After (または美しく仕上げられた水回りの写真)] -->
+<div class="w-1/2 relative rounded-sm overflow-hidden shadow-lg group">
+<img alt="美しいバスルーム" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="/images/sparkling_bathroom.png"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+<p class="text-white text-sm font-bold">水回りも輝く仕上がりに</p>
+</div>
+</div>
+<!-- 代わりのイメージ -->
+<div class="w-1/2 relative rounded-sm overflow-hidden shadow-lg group">
+<img alt="完璧なベッドメイキング" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="/images/resort_bedroom.png"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+<p class="text-white text-sm font-bold">リゾートクオリティの寝室</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Operations / 運営体制 + スタッフ紹介（統合セクション） -->
+<section class="py-12 md:py-20 bg-primary text-white" id="operations">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-10 md:mb-16">
+<span class="text-accent font-bold tracking-widest text-sm">PROFESSIONAL TEAM</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mt-2 section-title" id="staff-title">プロフェッショナルな運営体制</h3>
+<p class="mt-6 text-gray-300 max-w-2xl mx-auto">
+                    専任担当者が物件管理から清掃・ゲスト対応まで一貫して担当し、<br class="hidden sm:block"/>
+                    お問い合わせに365日迅速かつ丁寧に対応します。
+                </p>
+</div>
+<!-- regional.js が動的生成 -->
+<div class="grid grid-cols-3 gap-4 sm:gap-10 max-w-4xl mx-auto" id="staff-grid">
+<div class="text-center animate-pulse">
+<div class="w-16 h-16 sm:w-28 sm:h-28 mx-auto mb-2 sm:mb-4 rounded-full bg-white/20"></div>
+<div class="h-3 sm:h-4 bg-white/20 rounded w-12 sm:w-16 mx-auto mb-1 sm:mb-2"></div>
+<div class="h-2 sm:h-3 bg-white/10 rounded w-16 sm:w-24 mx-auto"></div>
+</div>
+<div class="text-center animate-pulse">
+<div class="w-16 h-16 sm:w-28 sm:h-28 mx-auto mb-2 sm:mb-4 rounded-full bg-white/20"></div>
+<div class="h-3 sm:h-4 bg-white/20 rounded w-12 sm:w-16 mx-auto mb-1 sm:mb-2"></div>
+<div class="h-2 sm:h-3 bg-white/10 rounded w-16 sm:w-24 mx-auto"></div>
+</div>
+<div class="text-center animate-pulse">
+<div class="w-16 h-16 sm:w-28 sm:h-28 mx-auto mb-2 sm:mb-4 rounded-full bg-white/20"></div>
+<div class="h-3 sm:h-4 bg-white/20 rounded w-12 sm:w-16 mx-auto mb-1 sm:mb-2"></div>
+<div class="h-2 sm:h-3 bg-white/10 rounded w-16 sm:w-24 mx-auto"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof (実績・ケーススタディ) -->
+<section class="py-12 md:py-20 bg-gray-50 border-t border-gray-100" id="proofs">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-10 md:mb-16">
+<span class="text-accent font-bold tracking-widest text-sm">SOCIAL PROOF</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">実績・ケーススタディ</h3>
+<p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    Booking.com・Airbnbをはじめとする主要OTAでも高評価を獲得する宿泊施設を多数運用しています。
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-3 md:gap-12 text-gray-900" id="case-studies-grid">
+<!-- 実績1: 某一棟貸ヴィラ -->
+<div class="bg-white rounded-sm overflow-hidden shadow-lg md:shadow-2xl flex flex-col">
+<div class="h-28 sm:h-48 md:h-64 overflow-hidden relative">
+<img alt="某一棟貸ヴィラ" class="w-full h-full object-cover" loading="lazy" src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+<div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 font-bold rounded-sm text-sm">
+                            プレミアムヴィラ
+                        </div>
+</div>
+<div class="p-3 sm:p-5 md:p-8 flex-grow">
+<h4 class="text-sm sm:text-xl md:text-2xl font-serif font-bold text-primary mb-1 md:mb-2">某一棟貸ヴィラ</h4>
+<p class="text-gray-500 text-[10px] sm:text-sm mb-3 md:mb-6 pb-2 md:pb-4 border-b border-gray-100">沖縄県北部の高級貸別荘</p>
+<div class="space-y-2 md:space-y-4">
+<div class="flex flex-col gap-0.5">
+<span class="text-gray-600 font-medium text-[10px] sm:text-sm">年間平均稼働率</span>
+<span class="text-lg sm:text-2xl md:text-3xl font-bold text-primary">85<span class="text-xs sm:text-lg">%</span>達成</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-gray-600 font-medium text-[10px] sm:text-sm">ゲスト評価 (OTA)</span>
+<div>
+<div class="text-accent text-xs sm:text-lg">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>
+<span class="text-lg sm:text-2xl md:text-3xl font-bold text-primary">4.9<span class="text-xs sm:text-lg text-gray-500"> / 5.0</span></span>
+</div>
+</div>
+</div>
+<p class="hidden sm:block mt-4 md:mt-6 text-[10px] sm:text-sm text-gray-600 bg-gray-50 p-2 md:p-4 rounded border-l-2 border-accent">
+                            「清掃が隅々まで行き届いており、最高の滞在になりました」という声が多数。卓越した清掃品質が直接高稼働に繋がっています。
+                        </p>
+</div>
+</div>
+<!-- 実績2: 某リゾートマンション -->
+<div class="bg-white rounded-sm overflow-hidden shadow-lg md:shadow-2xl flex flex-col">
+<div class="h-28 sm:h-48 md:h-64 overflow-hidden relative">
+<img alt="某リゾートマンション" class="w-full h-full object-cover" loading="lazy" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+<div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 font-bold rounded-sm text-sm">
+                            リゾートコンドミニアム
+                        </div>
+</div>
+<div class="p-3 sm:p-5 md:p-8 flex-grow">
+<h4 class="text-sm sm:text-xl md:text-2xl font-serif font-bold text-primary mb-1 md:mb-2">某リゾートマンション</h4>
+<p class="text-gray-500 text-[10px] sm:text-sm mb-3 md:mb-6 pb-2 md:pb-4 border-b border-gray-100">Booking.com・Airbnb高評価</p>
+<div class="space-y-2 md:space-y-4">
+<div class="flex flex-col gap-0.5">
+<span class="text-gray-600 font-medium text-[10px] sm:text-sm">収益改善率 (前社比)</span>
+<span class="text-lg sm:text-2xl md:text-3xl font-bold text-accent">140<span class="text-xs sm:text-lg">%</span>UP</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-gray-600 font-medium text-[10px] sm:text-sm">清掃クレーム発生率</span>
+<span class="text-lg sm:text-2xl md:text-3xl font-bold text-primary">0<span class="text-xs sm:text-lg">件</span></span>
+</div>
+</div>
+<p class="hidden sm:block mt-4 md:mt-6 text-[10px] sm:text-sm text-gray-600 bg-gray-50 p-2 md:p-4 rounded border-l-2 border-primary">
+                            競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、エリア屈指の売上を達成。
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Voices (お客様の声) -->
+<section class="py-12 md:py-20 bg-gray-50" id="voices">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-10 md:mb-16">
+<span class="text-accent font-bold tracking-widest text-sm">VOICES</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">オーナー様からのお声</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 md:gap-8" id="voices-grid">
+<!-- Data will be injected by regional.js -->
+<div class="bg-gray-100 rounded-sm animate-pulse h-48 md:h-64"></div>
+<div class="bg-gray-100 rounded-sm animate-pulse h-48 md:h-64"></div>
+</div>
+</div>
+</section>
+<!-- Space Production Teaser (非公開中) -->
+<!-- <section id="produce-teaser" class="py-14 md:py-24 bg-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0"
+            style="background-image: linear-gradient(135deg, rgba(15,23,42,0.97) 0%, rgba(30,41,59,0.93) 100%), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+        </div>
+        <div class="absolute inset-0 opacity-[0.03]"
+            style="background-image: radial-gradient(#c5a059 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <span class="text-accent font-bold tracking-widest text-xs">SPACE PRODUCTION</span>
+                <h3 class="text-2xl sm:text-4xl md:text-5xl font-serif font-bold mt-4 mb-4 leading-tight">
+                    空間・体験プロデュース
+                </h3>
+                <p class="text-gray-400 text-lg md:text-xl mb-4 font-light tracking-wider">遊休資産を、感動の舞台へ。</p>
+                <div class="w-16 h-px bg-accent mx-auto mb-8"></div>
+                <p class="text-gray-300 max-w-xl mx-auto mb-12 leading-relaxed text-sm sm:text-base">
+                    管理だけではなく、価値をつくるプロデュース。<br>
+                    体験設計と収益性の両立を、専門チームが担います。
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto mb-14">
+                    <div class="border border-white/10 bg-white/5 px-4 py-5 text-center backdrop-blur-sm">
+                        <p class="text-accent text-xs tracking-widest mb-2">01</p>
+                        <p class="text-white font-medium text-sm">コンセプト設計</p>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 px-4 py-5 text-center backdrop-blur-sm">
+                        <p class="text-accent text-xs tracking-widest mb-2">02</p>
+                        <p class="text-white font-medium text-sm">五感デザイン</p>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 px-4 py-5 text-center backdrop-blur-sm">
+                        <p class="text-accent text-xs tracking-widest mb-2">03</p>
+                        <p class="text-white font-medium text-sm">滞在導線設計</p>
+                    </div>
+                    <div class="border border-white/10 bg-white/5 px-4 py-5 text-center backdrop-blur-sm">
+                        <p class="text-accent text-xs tracking-widest mb-2">04</p>
+                        <p class="text-white font-medium text-sm">ナイト体験設計</p>
+                    </div>
+                </div>
+
+                <a href="produce.html"
+                    class="inline-flex items-center bg-accent hover:bg-accentHover text-white px-8 py-4 rounded-sm font-bold transition duration-300 shadow-lg text-base">
+                    プロデュースの詳細を見る
+                    <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section> -->
+<!-- Transparency (料金プラン) -->
+<section class="py-12 md:py-20 bg-light" id="plans">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-10 md:mb-16">
+<span class="text-accent font-bold tracking-widest text-sm">TRANSPARENCY</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">明朗会計な料金プラン</h3>
+<p class="mt-6 text-gray-600">
+                    隠れた費用はありません。プロの品質を適正価格でご提供します。<br/>
+                    物件規模やご要望に応じたカスタマイズも可能です。
+                </p>
+</div>
+<div class="grid grid-cols-3 gap-3 md:gap-8">
+<!-- 初期セッティング費用 -->
+<div class="bg-white border-2 border-gray-100 rounded-sm p-3 sm:p-6 md:p-8 shadow hover:border-accent transition duration-300 flex flex-col items-center justify-center text-center">
+<h4 class="text-[10px] sm:text-base md:text-lg font-bold text-primary mb-2 sm:mb-4 md:mb-6 leading-tight">初期<br class="sm:hidden"/>セッティング</h4>
+<div class="text-gray-500 flex items-baseline flex-wrap justify-center">
+<span class="text-[9px] sm:text-sm mr-1">¥</span>
+<span class="text-xl sm:text-3xl md:text-5xl font-bold text-primary">50,000</span>
+<span class="text-[9px] sm:text-sm ml-1 w-full text-center">/ 件</span>
+</div>
+</div>
+<!-- 運用代行費用 -->
+<div class="bg-white border-2 border-primary rounded-sm p-3 sm:p-6 md:p-8 shadow-lg relative flex flex-col items-center justify-center text-center">
+<h4 class="text-[10px] sm:text-base md:text-lg font-bold text-primary mb-2 sm:mb-4 md:mb-6 leading-tight">運用<br class="sm:hidden"/>代行費用</h4>
+<div class="text-gray-500 flex items-baseline flex-wrap justify-center">
+<span class="text-[9px] sm:text-sm mr-1 w-full text-center">売上げの</span>
+<span class="text-xl sm:text-3xl md:text-5xl font-bold text-primary">15</span>
+<span class="text-[9px] sm:text-sm ml-0.5">%</span>
+</div>
+</div>
+<!-- 清掃基本料金 -->
+<div class="bg-white border-2 border-gray-100 rounded-sm p-3 sm:p-6 md:p-8 shadow hover:border-accent transition duration-300 flex flex-col items-center justify-center text-center">
+<h4 class="text-[10px] sm:text-base md:text-lg font-bold text-primary mb-2 sm:mb-4 md:mb-6 leading-tight">清掃<br class="sm:hidden"/>基本料金</h4>
+<div class="text-gray-500 flex items-baseline flex-wrap justify-center">
+<span class="text-[9px] sm:text-sm mr-1">¥</span>
+<span class="text-xl sm:text-3xl md:text-5xl font-bold text-primary" id="base-price-display">5,000</span>
+<span class="text-[9px] sm:text-sm ml-1 w-full text-center">/ 泊〜</span>
+</div>
+</div>
+</div>
+<div class="mt-10 text-center text-sm text-gray-500">
+<p>※ ゴミ回収費用や初期セットアップ費用など、詳細なお見積りについてはお気軽にお問い合わせください。</p>
+</div>
+</div>
+</section>
+<!-- ⑥ AIシミュレーター -->
+<section class="py-12 md:py-20 bg-primary bg-opacity-5" id="simulation">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<span class="text-accent font-bold tracking-widest text-sm">SIMULATION</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">
+                    清掃費用シミュレーター</h3>
+<p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    4項目を入力して「結果を見る」を押すだけ。<br/>
+                    詳細な見積もりはLINEまたはフォームからご依頼いただけます。
+                </p>
+</div>
+<div class="bg-white rounded-sm shadow-lg overflow-hidden">
+<form class="p-8 sm:p-10" id="sim-form" novalidate="">
+<!-- 入力グリッド -->
+<div class="grid md:grid-cols-2 gap-5 mb-8">
+<!-- 面積 -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">
+<i class="fas fa-vector-square text-accent mr-1"></i>物件の面積
+                            </label>
+<select class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary outline-none transition bg-white text-sm" id="sim-area">
+<option data-label="〜50㎡" value="6000">〜 50㎡（例：1K・1LDK）</option>
+<option data-label="51〜100㎡" selected="" value="8000">51 〜 100㎡（例：2LDK）</option>
+<option data-label="101〜150㎡" value="10000">101 〜 150㎡（例：3LDK）</option>
+<option data-label="151〜200㎡" value="12000">151 〜 200㎡（例：4LDK）</option>
+<option data-label="201〜250㎡" value="14000">201 〜 250㎡（例：大型）</option>
+<option data-label="251〜300㎡" value="16000">251 〜 300㎡（例：ヴィラ）</option>
+<option data-label="301〜350㎡" value="18000">301 〜 350㎡（例：大型ヴィラ）</option>
+<option data-label="351〜400㎡" value="20000">351 〜 400㎡</option>
+<option data-label="401㎡以上" value="22000">401㎡以上（目安）</option>
+</select>
+</div>
+<!-- 宿泊人数 -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">
+<i class="fas fa-users text-accent mr-1"></i>宿泊可能人数
+                                <span class="text-xs text-gray-400 font-normal ml-1">（収容人数）</span>
+</label>
+<select class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary outline-none transition bg-white text-sm" id="sim-guests">
+<option value="1">1名</option>
+<option value="2">2名</option>
+<option value="3">3名</option>
+<option selected="" value="4">4名</option>
+<option value="5">5名</option>
+<option value="6">6名</option>
+<option value="7">7名</option>
+<option value="8">8名</option>
+<option value="9">9名</option>
+<option value="10">10名</option>
+<option value="12">12名</option>
+<option value="15">15名</option>
+<option value="20">20名</option>
+</select>
+</div>
+<!-- 郵便番号 -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">
+<i class="fas fa-map-marker-alt text-accent mr-1"></i>管理物件の郵便番号
+                                <span class="text-xs text-gray-400 font-normal ml-1">（ハイフンなしでもOK）</span>
+</label>
+<div class="relative">
+<input class="w-full px-4 py-3 pr-10 border border-gray-300 rounded focus:ring-2 focus:ring-primary outline-none transition bg-white text-sm" id="sim-zipcode" inputmode="numeric" maxlength="8" placeholder="例：123-4567" type="text"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" id="sim-zipcode-icon"></span>
+</div>
+<p class="text-xs mt-1.5 text-gray-400 min-h-[1.25rem]" id="sim-zipcode-status">
+                                郵便番号を入力すると交通費が自動で計算されます
+                            </p>
+</div>
+<!-- プラン -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">
+<i class="fas fa-star text-accent mr-1"></i>清掃プラン
+                            </label>
+<select class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary outline-none transition bg-white text-sm" id="sim-plan">
+<option value="1.3">クオリティ重視 — 高品質リネン・アメニティ充実</option>
+<option selected="" value="1.0">スタンダード — 標準清掃・リネン一式</option>
+<option value="0.7">バジェット重視 — 効率重視・コスト最小化</option>
+</select>
+</div>
+</div>
+<!-- ボタン -->
+<div class="text-center">
+<button class="bg-accent hover:bg-accentHover text-white px-12 py-4 rounded-sm font-bold text-lg transition duration-300 shadow-lg w-full sm:w-auto" type="submit">
+<i class="fas fa-file-alt mr-2"></i>結果を見る
+                        </button>
+</div>
+</form>
+</div>
+<p class="text-center text-xs text-gray-500 mt-6">
+                ※ 税率10%。水光熱費・消耗品などオーナー様負担のコストは含みません。詳細はお問い合わせください。
+            </p>
+</div>
+</section>
+<!-- シミュレーター結果モーダル -->
+<div aria-labelledby="sim-modal-title" aria-modal="true" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden" id="sim-modal" role="dialog">
+<!-- オーバーレイ -->
+<div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="sim-modal-overlay" onclick="window.closeSimModal()"></div>
+<!-- モーダル本体 -->
+<div class="relative bg-white rounded-sm shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
+<!-- ヘッダー -->
+<div class="bg-primary text-white px-7 py-5 flex items-center justify-between">
+<div>
+<p class="text-[10px] text-accent tracking-widest font-bold mb-0.5">SIMULATION RESULT</p>
+<h4 class="text-lg font-serif font-bold" id="sim-modal-title">30秒でわかる！清掃費用シミュレーション</h4>
+</div>
+<button aria-label="閉じる" class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-white/10 transition" onclick="window.closeSimModal()">
+<i class="fas fa-times text-lg"></i>
+</button>
+</div>
+<!-- コンテンツ（JS が注入） -->
+<div class="p-7" id="sim-modal-body"></div>
+</div>
+</div>
+<!-- Target Areas (対応エリア) -->
+<section class="py-12 md:py-20 bg-gray-50 border-t border-gray-200" id="areas">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<span class="text-accent font-bold tracking-widest text-sm">TARGET AREAS</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title" id="areas-title">鳥取 対応可能エリア</h3>
+<p class="mt-6 text-gray-600 max-w-2xl mx-auto" id="areas-description">米子を含む鳥取県内の主要エリアを中心にサービスを提供しております。掲載のない地域もお気軽にご相談ください。</p>
+</div>
+<div class="bg-white rounded-sm shadow-lg overflow-hidden flex flex-col md:flex-row">
+<!-- エリアリスト (regional.js が市区町村リストを注入) -->
+<div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-white z-10">
+<div class="mb-4">
+<h4 class="text-lg font-bold text-primary mb-4 flex items-center border-b-2 border-accent pb-2">
+<i class="fas fa-map-marker-alt text-accent mr-2"></i>対応市区町村
+                        </h4>
+<div class="grid grid-cols-2 gap-y-2 mt-4 text-gray-600 font-medium" id="municipalities-list"><div class="flex items-center text-gray-700 font-medium text-sm"><i class="fas fa-check text-accent text-xs mr-2 flex-shrink-0"></i>鳥取市</div><div class="flex items-center text-gray-700 font-medium text-sm"><i class="fas fa-check text-accent text-xs mr-2 flex-shrink-0"></i>米子市</div><div class="flex items-center text-gray-700 font-medium text-sm"><i class="fas fa-check text-accent text-xs mr-2 flex-shrink-0"></i>境港市</div></div>
+</div>
+<p class="text-xs text-accent font-medium mt-4">
+<i class="fas fa-info-circle mr-1"></i>上記以外のエリアもご相談ください。順次対応エリア拡大中。
+                    </p>
+</div>
+<!-- マップ（Google Map） -->
+<div class="w-full md:w-1/2 h-64 md:h-auto bg-gray-200 relative">
+<iframe allowfullscreen="" class="absolute inset-0" height="100%" id="area-map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="about:blank" style="border:0;" width="100%"></iframe>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ (よくある質問) -->
+<section class="py-12 md:py-20 bg-white" id="faq">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-10 md:mb-16">
+<span class="text-accent font-bold tracking-widest text-sm">F A Q</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">よくある質問</h3>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="border border-gray-200 rounded-sm">
+<details class="group" open="">
+<summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-primary hover:bg-gray-50 transition">
+<span class="font-bold flex items-center"><span class="text-accent text-2xl mr-3 font-serif">Q.</span>事前の相談や見積もりは無料ですか？</span>
+<span class="transition group-open:rotate-180">
+<i class="fas fa-chevron-down text-gray-400"></i>
+</span>
+</summary>
+<div class="text-gray-600 mt-0 border-t border-gray-100 p-5 bg-gray-50 text-sm leading-relaxed flex">
+<span class="text-primary text-2xl font-serif font-bold mr-3">A.</span>
+<p class="mt-1">はい、完全無料です。物件の立地や間取りなどの情報をもとに、収益シミュレーションを作成しご提案いたします。</p>
+</div>
+</details>
+</div>
+<!-- FAQ Item 2 -->
+<div class="border border-gray-200 rounded-sm">
+<details class="group">
+<summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-primary hover:bg-gray-50 transition">
+<span class="font-bold flex items-center"><span class="text-accent text-2xl mr-3 font-serif">Q.</span>現在、他の代行業者に依頼していますが乗り換えは可能ですか？</span>
+<span class="transition group-open:rotate-180">
+<i class="fas fa-chevron-down text-gray-400"></i>
+</span>
+</summary>
+<div class="text-gray-600 mt-0 border-t border-gray-100 p-5 bg-gray-50 text-sm leading-relaxed flex">
+<span class="text-primary text-2xl font-serif font-bold mr-3">A.</span>
+<p class="mt-1">
+                                はい、可能です。既存アカウントの引き継ぎや、新アカウントでの再構築など、スムーズな移行をサポートいたします。多くの方が、清掃への不満やレスポンスの遅さを理由に弊社へ乗り換えられています。
+                            </p>
+</div>
+</details>
+</div>
+<!-- FAQ Item 3 -->
+<div class="border border-gray-200 rounded-sm">
+<details class="group">
+<summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-primary hover:bg-gray-50 transition">
+<span class="font-bold flex items-center"><span class="text-accent text-2xl mr-3 font-serif">Q.</span>清掃のみ（清掃代行）の依頼もできますか？</span>
+<span class="transition group-open:rotate-180">
+<i class="fas fa-chevron-down text-gray-400"></i>
+</span>
+</summary>
+<div class="text-gray-600 mt-0 border-t border-gray-100 p-5 bg-gray-50 text-sm leading-relaxed flex">
+<span class="text-primary text-2xl font-serif font-bold mr-3">A.</span>
+<p class="mt-1">可能です。「リゾート・クオリティ」のプロ清掃スタッフを派遣いたします。※対応可能エリア内かどうかは、まずはお問い合わせください。
+                            </p>
+</div>
+</details>
+</div>
+<!-- FAQ Item 4 -->
+<div class="border border-gray-200 rounded-sm">
+<details class="group">
+<summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-primary hover:bg-gray-50 transition">
+<span class="font-bold flex items-center"><span class="text-accent text-2xl mr-3 font-serif">Q.</span>万が一、ゲストが備品を壊してしまった場合はどうなりますか？</span>
+<span class="transition group-open:rotate-180">
+<i class="fas fa-chevron-down text-gray-400"></i>
+</span>
+</summary>
+<div class="text-gray-600 mt-0 border-t border-gray-100 p-5 bg-gray-50 text-sm leading-relaxed flex">
+<span class="text-primary text-2xl font-serif font-bold mr-3">A.</span>
+<p class="mt-1">
+                                清掃スタッフが損害を発見した場合、速やかに写真付きレポートでご報告するとともに、Airbnb等のプラットフォームのホスト保証制度を利用した賠償請求の手続きを弊社が代行いたします。
+                            </p>
+</div>
+</details>
+</div>
+<!-- FAQ Item 5 -->
+<div class="border border-gray-200 rounded-sm">
+<details class="group">
+<summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-primary hover:bg-gray-50 transition">
+<span class="font-bold flex items-center"><span class="text-accent text-2xl mr-3 font-serif">Q.</span>民泊の許可申請や消防設備の手配などもお願いできますか？</span>
+<span class="transition group-open:rotate-180">
+<i class="fas fa-chevron-down text-gray-400"></i>
+</span>
+</summary>
+<div class="text-gray-600 mt-0 border-t border-gray-100 p-5 bg-gray-50 text-sm leading-relaxed flex">
+<span class="text-primary text-2xl font-serif font-bold mr-3">A.</span>
+<p class="mt-1">
+                                弊社提携の行政書士や専門業者をご紹介し、住宅宿泊事業法（民泊新法）や旅館業法の許可取得までトータルでサポートすることが可能です。立ち上げからのご相談もお気軽にお声掛けください。
+                            </p>
+</div>
+</details>
+</div>
+</div>
+<div class="mt-10 text-center">
+<a class="text-accent hover:text-accentHover font-medium underline underline-offset-4" href="#contact">その他のお問い合わせはこちら
+                    <i class="fas fa-arrow-right ml-1"></i></a>
+</div>
+</div>
+</section>
+<!-- Conversion (お問い合わせ) -->
+<section class="py-14 md:py-24 bg-primary text-white relative" id="contact">
+<!-- Background Pattern -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#d4af37 1px, transparent 1px); background-size: 30px 30px;"></div>
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-8 md:mb-12">
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-4">お問い合わせ・ご相談</h3>
+<p class="text-gray-300">
+                    現在の収益シミュレーションや、清掃の品質改善についてのご相談など、<br class="hidden sm:block"/>
+                    お気軽にお問い合わせください。担当者が迅速にご回答いたします。
+                </p>
+</div>
+<div class="bg-white rounded-sm p-8 sm:p-12 shadow-2xl text-gray-800">
+<div class="mb-10 text-center">
+<p class="text-primary font-bold mb-4">＼ 最短レスポンス！お急ぎの方はこちら ／</p>
+<a class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-[#06C755] hover:bg-[#05b04b] text-white font-bold rounded shadow-lg transition duration-300 text-lg" href="https://lin.ee/RtLPqmQ" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-line text-2xl mr-3"></i> LINEで気軽に相談する
+                    </a>
+</div>
+<div class="flex items-center my-8">
+<div class="flex-grow bg-gray-200 h-px"></div>
+<span class="px-4 text-gray-400 text-sm font-medium">または メールフォームより</span>
+<div class="flex-grow bg-gray-200 h-px"></div>
+</div>
+<form action="/thanks.html" class="space-y-6" data-netlify="true" id="contact-form" method="POST" name="contact">
+<input name="form-name" type="hidden" value="contact"/>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1" for="name">お名前・会社名 <span class="text-red-500">*</span></label>
+<input class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" id="name" name="name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1" for="email">メールアドレス <span class="text-red-500">*</span></label>
+<input class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" id="email" name="email" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1" for="inquiry_type">ご相談内容（複数選択可）</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-2">
+<label class="flex items-center space-x-2 p-3 border border-gray-200 rounded cursor-pointer hover:bg-gray-50 transition">
+<input class="text-primary focus:ring-primary rounded" name="inquiry_type" type="checkbox" value="運営代行について"/>
+<span class="text-sm">運営代行について</span>
+</label>
+<label class="flex items-center space-x-2 p-3 border border-gray-200 rounded cursor-pointer hover:bg-gray-50 transition">
+<input class="text-primary focus:ring-primary rounded" name="inquiry_type" type="checkbox" value="清掃代行について"/>
+<span class="text-sm">清掃代行について</span>
+</label>
+<label class="flex items-center space-x-2 p-3 border border-gray-200 rounded cursor-pointer hover:bg-gray-50 transition">
+<input class="text-primary focus:ring-primary rounded" name="inquiry_type" type="checkbox" value="収益シミュレーション希望"/>
+<span class="text-sm">収益シミュレーション希望</span>
+</label>
+<label class="flex items-center space-x-2 p-3 border border-gray-200 rounded cursor-pointer hover:bg-gray-50 transition">
+<input class="text-primary focus:ring-primary rounded" name="inquiry_type" type="checkbox" value="空間プロデュースについて"/>
+<span class="text-sm">空間プロデュースについて</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1" for="message">お問い合わせ詳細</label>
+<textarea class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" id="message" name="message" placeholder="物件のエリア（〇〇市など）や、現在のお悩みについて自由にご記入ください。" rows="5"></textarea>
+</div>
+<div class="text-center pt-4">
+<button class="w-full sm:w-auto px-12 py-4 bg-primary hover:bg-secondary text-white font-bold rounded-sm shadow-lg transition duration-300 text-lg" type="submit">
+                            送信する
+                        </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- ⑦ Note記事フィード (regional.js がプレースホルダー記事を注入) -->
+<section class="py-10 md:py-16 bg-gray-50 border-t border-gray-100" id="note-feed">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-8 md:mb-10">
+<span class="text-accent font-bold tracking-widest text-sm">KNOWLEDGE</span>
+<h3 class="text-xl sm:text-3xl font-serif font-bold text-primary mt-2 section-title">民泊運営ノウハウ</h3>
+<p class="mt-4 text-gray-600 text-sm">プロが語る、民泊運営の最新知識と実践テクニック</p>
+</div>
+<!-- regional.js が動的生成 -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6" id="note-feed-grid">
+<div class="bg-gray-200 rounded-sm animate-pulse h-56 md:h-72"></div>
+<div class="bg-gray-200 rounded-sm animate-pulse h-56 md:h-72"></div>
+<div class="bg-gray-200 rounded-sm animate-pulse h-56 md:h-72"></div>
+</div>
+<div class="text-center mt-8">
+<a class="text-accent hover:text-accentHover font-medium underline underline-offset-4" href="https://note.com/minpaku_resort" rel="noopener noreferrer" target="_blank">
+                    すべての記事を見る <i class="fas fa-arrow-right ml-1"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white py-12 border-t border-gray-700">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+<div class="text-center md:text-left">
+<a class="font-serif text-3xl font-bold tracking-wide text-white" href="#">
+                        Minpaku <span class="text-accent">Resort</span>
+</a>
+<p class="mt-4 text-gray-400 text-sm" id="footer-tagline">
+                        民泊を、リゾート・クオリティへ。
+                    </p>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+<div class="flex space-x-4">
+<a class="hover:text-white transition" href="https://nomadresort.jp" rel="noopener noreferrer" target="_blank">運営会社</a>
+<a class="hover:text-white transition" href="/privacy-policy.html">プライバシーポリシー</a>
+<a class="hover:text-white transition" href="/terms.html">利用規約</a>
+</div>
+<p>© 2026 Minpaku Resort. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- regional.js: サブドメイン検知→都道府県データ注入・シミュレーター・スライダー初期化 -->
+<script src="/js/regional.js"></script>
+<!-- モバイルメニュー トグル -->
+<script>
+        (function () {
+            var btn = document.getElementById('mobile-menu-btn');
+            var menu = document.getElementById('mobile-menu');
+            var icon = document.getElementById('mobile-menu-icon');
+            if (!btn || !menu || !icon) return;
+
+            function closeMobileMenu() {
+                menu.classList.add('hidden');
+                icon.className = 'fas fa-bars text-2xl';
+                btn.setAttribute('aria-expanded', 'false');
+            }
+
+            btn.addEventListener('click', function () {
+                var isOpen = !menu.classList.contains('hidden');
+                if (isOpen) {
+                    closeMobileMenu();
+                } else {
+                    menu.classList.remove('hidden');
+                    icon.className = 'fas fa-times text-2xl';
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            // リンククリックでメニューを閉じる
+            menu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // md以上のビューポートになったら自動的に閉じる
+            var mq = window.matchMedia('(min-width: 768px)');
+            mq.addEventListener('change', function (e) {
+                if (e.matches) closeMobileMenu();
+            });
+        })();
+    </script>
+<!-- Contact Form: Netlify Forms via fetch API -->
+<script>
+            (function () {
+                var form = document.getElementById('contact-form');
+                if (!form) return;
+
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    var btn = form.querySelector('button[type="submit"]');
+                    if (btn) {
+                        btn.disabled = true;
+                        btn.textContent = '送信中...';
+                    }
+
+                    var body = new URLSearchParams(new FormData(form)).toString();
+
+                    fetch('/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: body
+                    })
+                        .then(function (res) {
+                            if (res.ok) {
+                                window.location.href = '/thanks.html';
+                            } else {
+                                throw new Error('送信に失敗しました (status: ' + res.status + ')');
+                            }
+                        })
+                        .catch(function (err) {
+                            console.error(err);
+                            alert('送信中にエラーが発生しました。お手数ですが、LINEまたはメールにてお問い合わせください。');
+                            if (btn) {
+                                btn.disabled = false;
+                                btn.textContent = '送信する';
+                            }
+                        });
+                });
+            })();
+    </script>
+<!-- Floating LINE Button -->
+<a class="line-button-floating hidden sm:flex items-center justify-center bg-[#06C755] hover:bg-[#05b04b] text-white p-4 rounded-full shadow-2xl transition group w-16 h-16 hover:w-auto hover:px-6" href="https://lin.ee/RtLPqmQ" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-line text-3xl group-hover:mr-3 transition-all duration-300"></i>
+<span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out font-bold">
+            LINEで無料相談
+        </span>
+</a>
+</body>
+</html>
