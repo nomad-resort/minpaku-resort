@@ -231,7 +231,7 @@
 
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen" data-ssg="true">
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
 <!-- ページローダー: regional.js がデータ注入完了後に is-hidden クラスを付与して非表示にする -->
 <div aria-hidden="true" id="page-loader">
 <img alt="Minpaku Resort" class="loader-logo" src="/images/minpaku_resort_logo.png"/>
@@ -454,6 +454,8 @@
 </div>
 </div>
 </section>
+<!-- 市場トレンド解説 (regional.js が都市データで注入。japan ページでは非表示) -->
+<section class="py-12 md:py-20 bg-gray-50 border-t border-gray-100" id="market-analysis" style="display:none;"></section>
 <!-- Services (サービス内容) -->
 <section class="py-12 md:py-20 bg-white" id="services">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1070,6 +1072,7 @@
 </div>
 </details>
 </div>
+<div id="faq-local" class="space-y-4"></div>
 </div>
 <div class="mt-10 text-center">
 <a class="text-accent hover:text-accentHover font-medium underline underline-offset-4" href="#contact">その他のお問い合わせはこちら

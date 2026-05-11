@@ -22,7 +22,7 @@
 <!-- canonical（regional.js で都市ごとに上書き） -->
 <link href="https://www.minpaku-resort.com/miyazaki/" rel="canonical"/>
 <!-- Favicon -->
-<link href="/images/minpaku_resort_logo_favicon.png" rel="icon" type="image/png"/>
+<link href="../images/minpaku_resort_logo_favicon.png" rel="icon" type="image/png"/>
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- FontAwesome -->
@@ -231,10 +231,10 @@
 
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen" data-ssg="true">
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
 <!-- ページローダー: regional.js がデータ注入完了後に is-hidden クラスを付与して非表示にする -->
 <div aria-hidden="true" id="page-loader">
-<img alt="Minpaku Resort" class="loader-logo" src="/images/minpaku_resort_logo.png"/>
+<img alt="Minpaku Resort" class="loader-logo" src="../images/minpaku_resort_logo.png"/>
 <p class="loader-brand">Minpaku <span>Resort</span></p>
 <p class="loader-tagline">Loading data …</p>
 <div class="loader-bar-track">
@@ -291,7 +291,7 @@
 </div>
 </header>
 <!-- Hero Section (背景・テキストは regional.js が都道府県データで動的に切り替え) -->
-<section class="hero-bg h-screen min-h-[600px] flex items-center justify-center pt-20 relative" id="hero-section">
+<section class="h-screen min-h-[600px] flex items-center justify-center pt-20 relative" id="hero-section" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.4)), url('../images/pref-hero-images/miyazaki-hero_resized.jpg'); background-size: cover; background-position: center;">
 <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary/90 hidden sm:block"></div>
 <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 <p class="text-accent font-medium tracking-widest mb-4 text-sm sm:text-base" id="hero-tagline">宮崎の海辺リゾート民泊を、季節需要に対応した専門チームが担当</p>
@@ -435,7 +435,7 @@
 </div>
 </section>
 <!-- ② 地域特有の運営・清掃ルール (regional.js が都道府県データで注入) -->
-<section class="py-12 md:py-20 bg-white border-t border-gray-100" id="local-rules">
+<section class="py-12 md:py-20 bg-white border-t border-gray-100" id="local-rules" style="display: none;">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="text-center mb-8 md:mb-12">
 <span class="text-accent font-bold tracking-widest text-sm">AREA TIPS &amp; RULES</span>
@@ -447,7 +447,7 @@
 <!-- regional.js が動的生成 -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6" id="local-rules-grid"><div class="bg-white rounded-sm shadow-sm border border-gray-100 p-3 sm:p-5 md:p-7 hover:shadow-md transition duration-300"><div class="flex items-start mb-2 sm:mb-4"><div class="w-8 h-8 sm:w-12 sm:h-12 bg-primary/5 border border-accent/30 rounded-full flex items-center justify-center mr-2 sm:mr-4 flex-shrink-0"><i class="fas fa-umbrella-beach text-accent text-sm sm:text-lg"></i></div><div><span class="text-[8px] sm:text-[10px] font-bold text-accent tracking-widest uppercase">塩害・砂対策</span><h4 class="text-xs sm:text-base font-bold text-primary leading-snug">砂・塩分・紫外線による設備劣化対策</h4></div></div><p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">砂浜からの砂の持込・潮風による塩害・紫外線による色褪せを防ぐ定期的な専門清掃と消耗品交換で、海辺物件の美観と機能を長期維持します。</p></div><div class="bg-white rounded-sm shadow-sm border border-gray-100 p-3 sm:p-5 md:p-7 hover:shadow-md transition duration-300"><div class="flex items-start mb-2 sm:mb-4"><div class="w-8 h-8 sm:w-12 sm:h-12 bg-primary/5 border border-accent/30 rounded-full flex items-center justify-center mr-2 sm:mr-4 flex-shrink-0"><i class="fas fa-water text-accent text-sm sm:text-lg"></i></div><div><span class="text-[8px] sm:text-[10px] font-bold text-accent tracking-widest uppercase">海辺ゲスト対応</span><h4 class="text-xs sm:text-base font-bold text-primary leading-snug">海辺ゲストの多様な荷物・汚れへの対応</h4></div></div><p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">海水浴・ダイビング・シュノーケル・磯遊び等の後に持込む砂・水濡れ・器材汚れを想定した玄関養生と、シャワー設備の徹底清掃で海辺ゲストが快適に利用できる環境を整えます。</p></div><div class="bg-white rounded-sm shadow-sm border border-gray-100 p-3 sm:p-5 md:p-7 hover:shadow-md transition duration-300"><div class="flex items-start mb-2 sm:mb-4"><div class="w-8 h-8 sm:w-12 sm:h-12 bg-primary/5 border border-accent/30 rounded-full flex items-center justify-center mr-2 sm:mr-4 flex-shrink-0"><i class="fas fa-sun text-accent text-sm sm:text-lg"></i></div><div><span class="text-[8px] sm:text-[10px] font-bold text-accent tracking-widest uppercase">シーズン管理</span><h4 class="text-xs sm:text-base font-bold text-primary leading-snug">夏季集中とオフシーズンの二段階管理</h4></div></div><p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">夏は毎日高回転の清掃体制、オフシーズンは設備点検・防錆処理を重点実施。年間の稼働と物件価値を両立するメリハリのある管理を提供します。</p></div></div>
 </div>
-</section>
+</section><section class="py-12 md:py-20 bg-gray-50 border-t border-gray-100" id="market-analysis"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="bg-white p-6 sm:p-10 rounded-sm shadow-md border-l-4 border-accent"><div class="mb-4 border-b border-gray-100 pb-4"><span class="text-accent font-bold tracking-widest text-xs mb-1 block">MARKET TREND</span><h3 class="text-lg sm:text-2xl font-serif font-bold text-primary">宮崎民泊：スポーツと自然が拓く市場</h3></div><p class="text-gray-700 text-sm sm:text-base leading-relaxed">宮崎市は、太平洋に面した豊かな自然と温暖な気候が魅力の民泊市場です。特に、夏のサーフィン需要と春のプロ野球春季キャンプが稼働率を大きく押し上げます。青島や堀切峠周辺ではサーファーや家族連れが多く、プロ野球春季キャンプ地周辺ではスポーツ観戦目的のゲストで賑わいます。宮崎マンゴーや地元の新鮮な海の幸を求める観光客も多く、食をテーマにした宿泊体験も人気です。通年で温暖なため、冬季も比較的安定した需要が見込めますが、特に春と夏は早期予約が必須となるでしょう。多角的な集客戦略が成功の鍵です。</p></div></div></section>
 <!-- Services (サービス内容) -->
 <section class="py-12 md:py-20 bg-white" id="services">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -597,7 +597,7 @@
 <!-- TODO: [画像：ユニフォームを着たスタッフが真剣に清掃している様子] -->
 <!-- 仮画像のプレースホルダー -->
 <div class="relative rounded-sm overflow-hidden shadow-xl h-64 sm:h-80 group">
-<img alt="専門的な清掃" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="/images/thorough_cleaning.png"/>
+<img alt="専門的な清掃" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="../images/thorough_cleaning.png"/>
 <div class="absolute bottom-0 left-0 bg-primary/80 backdrop-blur text-white px-4 py-2 font-medium">
 <i class="fas fa-spray-can mr-2 text-accent"></i>専門的な清掃
                         </div>
@@ -605,14 +605,14 @@
 <div class="flex gap-6 h-48 sm:h-60">
 <!-- TODO: [画像：水回りのBefore/After (または美しく仕上げられた水回りの写真)] -->
 <div class="w-1/2 relative rounded-sm overflow-hidden shadow-lg group">
-<img alt="美しいバスルーム" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="/images/sparkling_bathroom.png"/>
+<img alt="美しいバスルーム" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="../images/sparkling_bathroom.png"/>
 <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
 <p class="text-white text-sm font-bold">水回りも輝く仕上がりに</p>
 </div>
 </div>
 <!-- 代わりのイメージ -->
 <div class="w-1/2 relative rounded-sm overflow-hidden shadow-lg group">
-<img alt="完璧なベッドメイキング" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="/images/resort_bedroom.png"/>
+<img alt="完璧なベッドメイキング" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="../images/resort_bedroom.png"/>
 <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
 <p class="text-white text-sm font-bold">リゾートクオリティの寝室</p>
 </div>
@@ -981,8 +981,7 @@
 <span class="text-accent font-bold tracking-widest text-sm">F A Q</span>
 <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">よくある質問</h3>
 </div>
-<div class="space-y-4">
-<!-- FAQ Item 1 -->
+<div class="space-y-4"><!-- FAQ Item 1 -->
 <div class="border border-gray-200 rounded-sm">
 <details class="group" open="">
 <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-primary hover:bg-gray-50 transition">
@@ -1064,6 +1063,7 @@
 </div>
 </details>
 </div>
+<div id="faq-local" class="space-y-4"></div>
 </div>
 <div class="mt-10 text-center">
 <a class="text-accent hover:text-accentHover font-medium underline underline-offset-4" href="#contact">その他のお問い合わせはこちら
@@ -1178,15 +1178,15 @@
 <div class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
 <div class="flex space-x-4">
 <a class="hover:text-white transition" href="https://nomadresort.jp" rel="noopener noreferrer" target="_blank">運営会社</a>
-<a class="hover:text-white transition" href="/privacy-policy.html">プライバシーポリシー</a>
-<a class="hover:text-white transition" href="/terms.html">利用規約</a>
+<a class="hover:text-white transition" href="../privacy-policy.html">プライバシーポリシー</a>
+<a class="hover:text-white transition" href="../terms.html">利用規約</a>
 </div>
 <p>© 2026 Minpaku Resort. All rights reserved.</p>
 </div>
 </div>
 </footer>
 <!-- regional.js: サブドメイン検知→都道府県データ注入・シミュレーター・スライダー初期化 -->
-<script src="/js/regional.js"></script>
+<script src="../js/regional.js"></script>
 <!-- モバイルメニュー トグル -->
 <script>
         (function () {

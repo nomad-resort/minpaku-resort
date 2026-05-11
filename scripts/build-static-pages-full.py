@@ -145,6 +145,34 @@ def build_full_static():
                 card.append(body)
                 lr_grid.append(card)
 
+        # marketAnalysis (市場トレンド解説) の挿入
+        # lr_section (id='local-rules') の直後に新しいセクションを追加する
+        if lr_section and 'marketAnalysis' in d and slug != 'japan':
+            ma = d['marketAnalysis']
+            ma_section = soup.new_tag('section', **{'class': 'py-12 md:py-20 bg-gray-50 border-t border-gray-100', 'id': 'market-analysis'})
+            
+            ma_container = soup.new_tag('div', **{'class': 'max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'})
+            ma_card = soup.new_tag('div', **{'class': 'bg-white p-6 sm:p-10 rounded-sm shadow-md border-l-4 border-accent'})
+            
+            ma_header_wrap = soup.new_tag('div', **{'class': 'mb-4 border-b border-gray-100 pb-4'})
+            ma_label = soup.new_tag('span', **{'class': 'text-accent font-bold tracking-widest text-xs mb-1 block'})
+            ma_label.string = "MARKET TREND"
+            ma_title = soup.new_tag('h3', **{'class': 'text-lg sm:text-2xl font-serif font-bold text-primary'})
+            ma_title.string = ma['title']
+            
+            ma_header_wrap.append(ma_label)
+            ma_header_wrap.append(ma_title)
+            
+            ma_body = soup.new_tag('p', **{'class': 'text-gray-700 text-sm sm:text-base leading-relaxed'})
+            ma_body.string = ma['body']
+            
+            ma_card.append(ma_header_wrap)
+            ma_card.append(ma_body)
+            ma_container.append(ma_card)
+            ma_section.append(ma_container)
+            
+            lr_section.insert_after(ma_section)
+
         # regional-cleaning-title / body
         rc_title = soup.find(id='regional-cleaning-title')
         rc_body = soup.find(id='regional-cleaning-body')
@@ -167,6 +195,48 @@ def build_full_static():
         else:
             if a_title: a_title.string = f"{d.get('prefShort', '')} 対応可能エリア"
             if a_desc: a_desc.string = f"{d['cityShort']}を含む{d.get('prefName', '')}内の主要エリアを中心にサービスを提供しております。掲載のない地域もお気軽にご相談ください。"
+
+        # localFaqs (ご当地FAQ) の挿入
+        faq_section = soup.find(id='faq')
+        if faq_section and 'localFaqs' in d and slug != 'japan':
+            # FAQアイテムを包む親divを探す (通常は .space-y-4)
+            faq_container = faq_section.find('div', class_='space-y-4')
+            if faq_container:
+                for faq in d['localFaqs']:
+                    # 新しいFAQアイテムを作成
+                    item_div = soup.new_tag('div', **{'class': 'border border-gray-200 rounded-sm'})
+                    details = soup.new_tag('details', **{'class': 'group'})
+                    
+                    summary = soup.new_tag('summary', **{'class': 'flex justify-between items-center font-medium cursor-pointer list-none p-5 text-primary hover:bg-gray-50 transition'})
+                    span_q = soup.new_tag('span', **{'class': 'font-bold flex items-center'})
+                    span_q_icon = soup.new_tag('span', **{'class': 'text-accent text-2xl mr-3 font-serif'})
+                    span_q_icon.string = "Q."
+                    span_q.append(span_q_icon)
+                    span_q.append(faq['q'])
+                    
+                    span_arrow = soup.new_tag('span', **{'class': 'transition group-open:rotate-180'})
+                    i_arrow = soup.new_tag('i', **{'class': 'fas fa-chevron-down text-gray-400'})
+                    span_arrow.append(i_arrow)
+                    
+                    summary.append(span_q)
+                    summary.append(span_arrow)
+                    
+                    ans_div = soup.new_tag('div', **{'class': 'text-gray-600 mt-0 border-t border-gray-100 p-5 bg-gray-50 text-sm leading-relaxed flex'})
+                    span_a_icon = soup.new_tag('span', **{'class': 'text-primary text-2xl font-serif font-bold mr-3'})
+                    span_a_icon.string = "A."
+                    
+                    p_ans = soup.new_tag('p', **{'class': 'mt-1'})
+                    p_ans.string = faq['a']
+                    
+                    ans_div.append(span_a_icon)
+                    ans_div.append(p_ans)
+                    
+                    details.append(summary)
+                    details.append(ans_div)
+                    item_div.append(details)
+                    
+                    # 既存のFAQの先頭に差し込む（地域特有の質問を目立たせるため）
+                    faq_container.insert(0, item_div)
 
         # municipalities-list
         mun_list = soup.find(id='municipalities-list')

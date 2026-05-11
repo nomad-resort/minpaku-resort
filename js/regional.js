@@ -18,6 +18,24 @@
 
   const DEFAULT_CITY = 'japan';
 
+  /**
+   * 都市サブページかどうかを判定してアセットベースパスを決定する。
+   * 都市ページでは <script src="../js/regional.js"> となるため
+   * src 属性の先頭が "../" かどうかで判別する。
+   * file:// プロトコルおよびサブフォルダ構成の両方に対応。
+   */
+  const CITY_ASSETS_BASE = (function () {
+    // http(s):// 環境ではルート絶対パス（'/'）を使うことでサブフォルダ深度に依存しない
+    if (window.location.protocol !== 'file:') return '/';
+    // file:// プロトコルのみ script src 属性で判定
+    try {
+      const src = document.currentScript ? document.currentScript.getAttribute('src') || '' : '';
+      return src.startsWith('../') ? '../' : '';
+    } catch (e) {
+      return '';
+    }
+  })();
+
   const LINE_URL = 'https://lin.ee/RtLPqmQ';
 
   // 全都道府県共通で表示する固定スタッフ
@@ -171,6 +189,17 @@
     return (path.startsWith('http') || path.startsWith('/')) ? path : '/' + path;
   }
 
+  /**
+   * アセット表示用: CITY_ASSETS_BASE に対応した URL を返す。
+   * file:// プロトコルおよびサブフォルダ構成でも正しく解決する。
+   * OGP / canonical など絶対 URL が必要な場合は toAbsoluteUrl を使うこと。
+   */
+  function toAssetUrl(path) {
+    if (!path || path.startsWith('http') || path.startsWith('data:')) return path;
+    const rel = path.startsWith('/') ? path.slice(1) : path;
+    return CITY_ASSETS_BASE + rel;
+  }
+
   /** 都道府県名から地方名を返す。REGION_MAP に未登録の場合は 'その他' */
   function getRegion(prefName) {
     for (const [region, prefs] of Object.entries(REGION_MAP)) {
@@ -206,7 +235,7 @@
     if (document.body.dataset.ssg === 'true') return;
     const heroSection = document.getElementById('hero-section');
     if (heroSection) {
-      const heroImageUrl = toAbsoluteUrl(d.heroImage);
+      const heroImageUrl = toAssetUrl(d.heroImage);
       heroSection.style.backgroundImage =
         `linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.4)), url('${heroImageUrl}')`;
       heroSection.style.backgroundSize = 'cover';
@@ -269,7 +298,7 @@
     container.innerHTML = FIXED_STAFF.map((s) => {
       const fallback =
         `https://ui-avatars.com/api/?name=${encodeURIComponent(s.name)}&background=1e293b&color=c5a059&size=112&bold=true`;
-      const avatarUrl = toAbsoluteUrl(s.avatar);
+      const avatarUrl = toAssetUrl(s.avatar);
       return `
         <div class="text-center group">
           <div class="w-16 h-16 sm:w-28 sm:h-28 mx-auto mb-2 sm:mb-4 rounded-full overflow-hidden border-4 border-accent/60 shadow-lg group-hover:border-accent transition duration-300">
@@ -287,8 +316,9 @@
 
   function applyAreas(d, allData) {
     if (document.body.dataset.ssg === 'true') {
-      // 既に静的HTMLがある場合はイベントリスナー（タブ切り替え）のみ設定
+      // 静的 HTML が既にレンダリング済みの場合の処理
       if (d.cityKey === 'japan') {
+        // トップページ: エリアタブのイベントリスナーのみ設定
         const listEl = document.getElementById('municipalities-list');
         if (listEl) {
           const tabBtns = listEl.querySelectorAll('.region-tab-btn');
@@ -311,6 +341,10 @@
             });
           });
         }
+      } else {
+        // 都市ページ: Google マップ URL だけは SSG でも動的に設定が必要
+        const mapEl = document.getElementById('area-map');
+        if (mapEl && d.mapEmbedUrl) mapEl.src = d.mapEmbedUrl;
       }
       return;
     }
@@ -454,7 +488,7 @@
       return `
         <div class="bg-white rounded-sm overflow-hidden shadow-lg md:shadow-2xl flex flex-col">
           <div class="h-28 sm:h-48 md:h-64 overflow-hidden relative">
-            <img src="${toAbsoluteUrl(c.image)}" alt="${c.name}" class="w-full h-full object-cover">
+            <img src="${toAssetUrl(c.image)}" alt="${c.name}" class="w-full h-full object-cover">
             <div class="absolute top-2 right-2 md:top-4 md:right-4 bg-${accentClass} text-white px-2 py-0.5 md:px-3 md:py-1 font-bold rounded-sm text-[10px] sm:text-sm">
               ${c.type}
             </div>
@@ -483,7 +517,7 @@
         <i class="fas fa-quote-left text-2xl sm:text-4xl text-gray-200 absolute top-3 left-3 sm:top-6 sm:left-6"></i>
         <div class="relative z-10 pl-4 sm:pl-6 pt-2 sm:pt-4">
           <div class="flex items-center mb-3 sm:mb-6">
-            <img src="${toAbsoluteUrl(v.image)}" alt="${v.name}" class="w-10 h-10 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-accent shrink-0">
+            <img src="${toAssetUrl(v.image)}" alt="${v.name}" class="w-10 h-10 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-accent shrink-0">
             <div class="ml-2 sm:ml-4">
               <h4 class="font-bold text-primary text-xs sm:text-lg leading-snug">${v.name} / ${v.title}</h4>
               <div class="text-accent text-xs sm:text-sm">
@@ -494,6 +528,57 @@
           <h5 class="text-xs sm:text-xl font-bold text-primary mb-2 sm:mb-3">${v.quote}</h5>
           <p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">${v.body}</p>
         </div>
+      </div>
+    `).join('');
+  }
+
+  function applyMarketAnalysis(d) {
+    const section = document.getElementById('market-analysis');
+    if (!section) return;
+
+    if (d.cityKey === 'japan' || !d.marketAnalysis) {
+      section.style.display = 'none';
+      return;
+    }
+
+    section.style.display = '';
+    section.innerHTML = `
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white p-6 sm:p-10 rounded-sm shadow-md border-l-4 border-accent">
+          <div class="mb-4 border-b border-gray-100 pb-4">
+            <span class="text-accent font-bold tracking-widest text-xs mb-1 block">MARKET TREND</span>
+            <h3 class="text-lg sm:text-2xl font-serif font-bold text-primary">${d.marketAnalysis.title}</h3>
+          </div>
+          <p class="text-gray-700 text-sm sm:text-base leading-relaxed">${d.marketAnalysis.body}</p>
+        </div>
+      </div>
+    `;
+  }
+
+  function applyLocalFaqs(d) {
+    if (d.cityKey === 'japan') return;
+    if (!d.localFaqs || !d.localFaqs.length) return;
+
+    // 既存 FAQ セクション内の faq-local コンテナに地域固有 FAQ を注入する
+    const container = document.getElementById('faq-local');
+    if (!container) return;
+
+    container.innerHTML = d.localFaqs.map(faq => `
+      <div class="border border-gray-200 rounded-sm">
+        <details class="group">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-primary hover:bg-gray-50 transition">
+            <span class="font-bold flex items-center">
+              <span class="text-accent text-2xl mr-3 font-serif">Q.</span>${faq.q}
+            </span>
+            <span class="transition group-open:rotate-180">
+              <i class="fas fa-chevron-down text-gray-400"></i>
+            </span>
+          </summary>
+          <div class="text-gray-600 mt-0 border-t border-gray-100 p-5 bg-gray-50 text-sm leading-relaxed flex">
+            <span class="text-primary text-2xl font-serif font-bold mr-3">A.</span>
+            <p class="mt-1">${faq.a}</p>
+          </div>
+        </details>
       </div>
     `).join('');
   }
@@ -955,6 +1040,8 @@
     applyCleaningFocus(d);
     applyCaseStudies(d);
     applyVoices(d);
+    applyMarketAnalysis(d);
+    applyLocalFaqs(d);
     initSimulator(d);
     renderNoteFeed();
     applyFooter(d);
@@ -1006,7 +1093,13 @@
 
   const cityPath = getCityFromPath();
 
-  fetch('/data/cities.json')
+  // file:// プロトコル: CITY_ASSETS_BASE による相対パス
+  // http(s)://: ルート絶対パスで確実に解決（CITY_ASSETS_BASE の検出に依存しない）
+  const citiesJsonUrl = window.location.protocol === 'file:'
+    ? (CITY_ASSETS_BASE + 'data/cities.json')
+    : '/data/cities.json';
+
+  fetch(citiesJsonUrl)
     .then((res) => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return res.json();
@@ -1016,7 +1109,7 @@
       const data = allData[cityKey];
       const run = () => {
         // ① ヒーロー画像のプリロードを開始（DOM 適用と並行して実行）
-        const heroImageUrl = toAbsoluteUrl(data.heroImage);
+        const heroImageUrl = toAssetUrl(data.heroImage);
         const heroReady = preloadHeroImage(heroImageUrl);
         // ② データを DOM に適用（backgroundImage のセットも含む）
         applyData(data, cityKey, allData);
