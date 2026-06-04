@@ -10,8 +10,6 @@
 const https = require('https');
 
 const RSS_URL = 'https://note.com/minpaku_resort/rss/';
-const MAX_ARTICLES = 3;
-
 // ─── HTTP fetch ───────────────────────────────────────────────────────────────
 
 function fetchUrl(url) {
@@ -70,7 +68,7 @@ function parseRSS(xml) {
   const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
   let match;
 
-  while ((match = itemRegex.exec(xml)) !== null && articles.length < MAX_ARTICLES) {
+  while ((match = itemRegex.exec(xml)) !== null) {
     const item = match[1];
 
     const title = extractTag(item, 'title');
@@ -108,7 +106,7 @@ exports.handler = async function () {
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
         'Access-Control-Allow-Origin': '*',
-        'Cache-Control': 'public, max-age=900, s-maxage=900',
+        'Cache-Control': 'public, max-age=300, s-maxage=300',
       },
       body: JSON.stringify(articles),
     };

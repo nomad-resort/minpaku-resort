@@ -117,6 +117,20 @@
   // Netlify Function が正常に動作している場合は RSS から取得した実際の記事が優先される
   const NOTE_ARTICLES_FALLBACK = [
     {
+      title: '稼ぐ民泊オーナーは「フルパッケージ代行」を選ぶ。「手数料が安い」で選ぶと大失敗する？',
+      date: '2026年5月6日',
+      tag: 'ノウハウ',
+      url: 'https://note.com/minpaku_resort/n/n2f21c579a9c0',
+      img: 'https://assets.st-note.com/production/uploads/images/273513066/rectangle_large_type_2_31478694f24bf1f6af57c41cdf33b194.jpeg?width=800',
+    },
+    {
+      title: 'ボロ家を人気民泊へ！古民家を人気民泊に変えた実例と5つの鉄則',
+      date: '2026年5月4日',
+      tag: 'ノウハウ',
+      url: 'https://note.com/minpaku_resort/n/n87ba6d67aeba',
+      img: 'https://assets.st-note.com/production/uploads/images/272687765/rectangle_large_type_2_bfb78585eb0b2def4c1a97c445ab7463.jpeg?width=800',
+    },
+    {
       title: '2026年版｜民泊新法・旅館業法 最新改正ポイントまとめ',
       date: '2026年4月28日',
       tag: 'ノウハウ',
@@ -906,59 +920,53 @@
      8. note 記事フィード
   ───────────────────────────────────────── */
 
-  function renderArticleCards(container, articles) {
-    container.innerHTML = articles.map((a) => {
-      const imgHtml = a.img
-        ? `<img src="${a.img}" alt="${a.title}"
-              class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">`
-        : `<div class="w-full h-full bg-gray-200 flex items-center justify-center">
-              <i class="fas fa-pen-nib text-4xl text-gray-400"></i>
-           </div>`;
-      return `
-        <a href="${a.url}" target="_blank" rel="noopener"
-          class="bg-white rounded-sm shadow hover:shadow-md transition overflow-hidden group flex flex-col">
-          <div class="h-32 sm:h-44 overflow-hidden">
-            ${imgHtml}
-          </div>
-          <div class="p-3 sm:p-6 flex flex-col flex-grow">
-            <span class="text-[10px] sm:text-xs font-bold text-accent tracking-wider mb-1 sm:mb-2">${a.tag}</span>
-            <h4 class="font-bold text-primary text-xs sm:text-sm leading-snug flex-grow mb-2 sm:mb-4">${a.title}</h4>
-            <div class="flex justify-between items-center text-[10px] sm:text-xs text-gray-400">
-              <span>${a.date}</span>
-              <span class="text-accent font-medium">続きを読む →</span>
-            </div>
-          </div>
-        </a>
-      `;
-    }).join('');
+  const NOTE_INITIAL_COUNT = 6;
+  const NOTE_LOAD_MORE_COUNT = 3;
+
+  function buildArticleCard(a) {
+    const imgHtml = a.img
+      ? `<img src="${a.img}" alt="${a.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">`
+      : `<div class="w-full h-full bg-gray-200 flex items-center justify-center"><i class="fas fa-pen-nib text-4xl text-gray-400"></i></div>`;
+    return `<a href="${a.url}" target="_blank" rel="noopener" class="bg-white rounded-sm shadow hover:shadow-md transition overflow-hidden group flex flex-col"><div class="h-32 sm:h-44 overflow-hidden">${imgHtml}</div><div class="p-3 sm:p-6 flex flex-col flex-grow"><span class="text-[10px] sm:text-xs font-bold text-accent tracking-wider mb-1 sm:mb-2">${a.tag}</span><h4 class="font-bold text-primary text-xs sm:text-sm leading-snug flex-grow mb-2 sm:mb-4">${a.title}</h4><div class="flex justify-between items-center text-[10px] sm:text-xs text-gray-400"><span>${a.date}</span><span class="text-accent font-medium">続きを読む →</span></div></div></a>`;
   }
 
   async function renderNoteFeed() {
     const container = document.getElementById('note-feed-grid');
+    const loadMoreBtn = document.getElementById('note-load-more');
     if (!container) return;
 
-    // ローディングスケルトンを表示
-    container.innerHTML = [1, 2, 3].map(() => `
-      <div class="bg-white rounded-sm shadow overflow-hidden flex flex-col animate-pulse">
-        <div class="h-32 sm:h-44 bg-gray-200"></div>
-        <div class="p-3 sm:p-6 flex flex-col gap-2 sm:gap-3">
-          <div class="h-2 sm:h-3 bg-gray-200 rounded w-1/3"></div>
-          <div class="h-3 sm:h-4 bg-gray-200 rounded w-full"></div>
-          <div class="h-3 sm:h-4 bg-gray-200 rounded w-4/5"></div>
-        </div>
-      </div>
-    `).join('');
+    // ローディングスケルトンを6個表示
+    const skeletonItem = '<div class="bg-white rounded-sm shadow overflow-hidden flex flex-col animate-pulse"><div class="h-32 sm:h-44 bg-gray-200"></div><div class="p-3 sm:p-6 flex flex-col gap-2 sm:gap-3"><div class="h-2 sm:h-3 bg-gray-200 rounded w-1/3"></div><div class="h-3 sm:h-4 bg-gray-200 rounded w-full"></div><div class="h-3 sm:h-4 bg-gray-200 rounded w-4/5"></div></div></div>';
+    container.innerHTML = skeletonItem.repeat(6);
 
+    let allArticles = [];
     try {
       const res = await fetch('/.netlify/functions/note-feed');
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const articles = await res.json();
-
-      // 記事が取得できた場合はそれを表示、空なら静的フォールバック
-      renderArticleCards(container, articles.length > 0 ? articles : NOTE_ARTICLES_FALLBACK);
+      const data = await res.json();
+      allArticles = data.length > 0 ? data : NOTE_ARTICLES_FALLBACK;
     } catch (_) {
-      // ネットワークエラー or ローカル開発環境 → フォールバック
-      renderArticleCards(container, NOTE_ARTICLES_FALLBACK);
+      allArticles = NOTE_ARTICLES_FALLBACK;
+    }
+
+    let displayedCount = Math.min(NOTE_INITIAL_COUNT, allArticles.length);
+    container.innerHTML = allArticles.slice(0, displayedCount).map(buildArticleCard).join('');
+
+    if (loadMoreBtn) {
+      if (allArticles.length > NOTE_INITIAL_COUNT) {
+        loadMoreBtn.classList.remove('hidden');
+        loadMoreBtn.addEventListener('click', function onLoadMore() {
+          const next = allArticles.slice(displayedCount, displayedCount + NOTE_LOAD_MORE_COUNT);
+          next.forEach((a) => container.insertAdjacentHTML('beforeend', buildArticleCard(a)));
+          displayedCount += next.length;
+          if (displayedCount >= allArticles.length) {
+            loadMoreBtn.removeEventListener('click', onLoadMore);
+            loadMoreBtn.classList.add('hidden');
+          }
+        });
+      } else {
+        loadMoreBtn.classList.add('hidden');
+      }
     }
   }
 
