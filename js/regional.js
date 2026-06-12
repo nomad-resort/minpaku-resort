@@ -556,6 +556,52 @@
     }
 
     const mp = d.marketPricing;
+    const cal = d.seasonalCalendar || [];
+    const body = d.marketAnalysis.body || '';
+
+    // ── 3ハイライト ──────────────────────────────────────
+    const firstSentence = body.split('。')[0] + '。';
+
+    const hotMonths = cal
+      .filter(m => m.demandLevel >= 4)
+      .map(m => m.month)
+      .join('・');
+
+    let estRevenue = '';
+    if (mp) {
+      const avgPrice = (mp.lowSeason.avgNightly + mp.highSeason.avgNightly) / 2;
+      const avgOcc   = (mp.lowSeason.occupancyPct + mp.highSeason.occupancyPct) / 2;
+      const est = Math.round(avgPrice * (avgOcc / 100) * 365 / 10000) * 10000;
+      estRevenue = est.toLocaleString('ja-JP');
+    }
+
+    const highlightsHtml = `
+      <ul class="space-y-3 text-sm text-gray-700">
+        <li class="flex gap-3 items-start">
+          <span class="text-accent shrink-0 mt-0.5"><i class="fas fa-map-marker-alt w-4 text-center"></i></span>
+          <span>${firstSentence}</span>
+        </li>
+        ${hotMonths ? `<li class="flex gap-3 items-start">
+          <span class="text-accent shrink-0 mt-0.5"><i class="fas fa-fire w-4 text-center"></i></span>
+          <span>繁忙月：<strong>${hotMonths}</strong>（ハイシーズン稼働率${mp ? mp.highSeason.occupancyPct : ''}%超見込み）</span>
+        </li>` : ''}
+        ${estRevenue ? `<li class="flex gap-3 items-start">
+          <span class="text-accent shrink-0 mt-0.5"><i class="fas fa-chart-line w-4 text-center"></i></span>
+          <span>1LDK 年間収益目安：<strong>¥${estRevenue}前後</strong></span>
+        </li>` : ''}
+      </ul>`;
+
+    // ── アコーディオン（全文） ────────────────────────────
+    const accordionHtml = `
+      <details class="mt-5 border-t border-gray-100 pt-4">
+        <summary class="cursor-pointer text-xs font-bold text-accent tracking-wider flex items-center gap-1.5 select-none list-none marker:hidden">
+          <i class="fas fa-chevron-right text-[9px] transition-transform duration-200 details-chevron"></i>
+          市場レポート全文を読む
+        </summary>
+        <p class="mt-3 text-gray-600 text-sm leading-relaxed">${body}</p>
+      </details>`;
+
+    // ── 価格カード ───────────────────────────────────────
     const pricingHtml = mp ? `
       <div class="mt-6 grid grid-cols-2 gap-3 sm:gap-6 border-t border-gray-100 pt-6">
         <div class="bg-gray-50 rounded-sm p-4">
@@ -578,15 +624,25 @@
     section.innerHTML = `
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white p-6 sm:p-10 rounded-sm shadow-md border-l-4 border-accent">
-          <div class="mb-4 border-b border-gray-100 pb-4">
+          <div class="mb-5 border-b border-gray-100 pb-4">
             <span class="text-accent font-bold tracking-widest text-xs mb-1 block">MARKET TREND &amp; PRICING</span>
             <h3 class="text-lg sm:text-2xl font-serif font-bold text-primary">${d.marketAnalysis.title}</h3>
           </div>
-          <p class="text-gray-700 text-sm sm:text-base leading-relaxed">${d.marketAnalysis.body}</p>
+          ${highlightsHtml}
+          ${accordionHtml}
           ${pricingHtml}
         </div>
       </div>
     `;
+
+    // details open/close でシェブロン回転
+    const det = section.querySelector('details');
+    if (det) {
+      det.addEventListener('toggle', () => {
+        const chevron = det.querySelector('.details-chevron');
+        if (chevron) chevron.style.transform = det.open ? 'rotate(90deg)' : '';
+      });
+    }
   }
 
   function applySeasonalCalendar(d) {
