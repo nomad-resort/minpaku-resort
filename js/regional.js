@@ -668,6 +668,25 @@
     `;
   }
 
+  function applyServicesCity(d) {
+    if (d.cityKey === 'japan') return;
+
+    const title = document.getElementById('services-city-title');
+    if (title) title.textContent = `${d.cityShort}のワンストップ民泊運営代行`;
+
+    const desc1 = document.getElementById('services-city-desc-1');
+    if (desc1) desc1.textContent =
+      `多言語対応・深夜対応含め、${d.cityShort}を訪れるゲストのすべての問い合わせを代行します。`;
+
+    const desc2 = document.getElementById('services-city-desc-2');
+    if (desc2) desc2.textContent =
+      `${d.cityShort}の需要データとAIを活用したダイナミックプライシングで稼働率と単価を最適化。`;
+
+    const desc3 = document.getElementById('services-city-desc-3');
+    if (desc3) desc3.textContent =
+      `${d.cityShort}エリアの近隣苦情・設備不具合・緊急トラブルまで、すべて弊社が窓口となります。`;
+  }
+
   function applyLocalFaqs(d) {
     if (d.cityKey === 'japan') return;
     if (!d.localFaqs || !d.localFaqs.length) return;
@@ -1150,6 +1169,7 @@
     applyMarketAnalysis(d);
     applySeasonalCalendar(d);
     applyLocalRegulations(d);
+    applyServicesCity(d);
     applyLocalFaqs(d);
     initSimulator(d);
     renderNoteFeed();
