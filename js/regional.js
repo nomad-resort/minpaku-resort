@@ -665,7 +665,7 @@
         <div class="flex flex-col items-center gap-1">
           <span class="text-[8px] sm:text-[10px] text-gray-500 text-center leading-tight max-w-[40px]">${m.note || ''}</span>
           <div class="w-6 sm:w-8 ${heightMap[lvl]} ${levelColors[lvl]} rounded-t-sm" title="${levelLabels[lvl]}"></div>
-          <span class="text-[9px] sm:text-xs text-gray-500 font-medium">${monthNames[m.month - 1]}</span>
+          <span class="text-[9px] sm:text-xs text-gray-500 font-medium">${typeof m.month === 'number' ? monthNames[m.month - 1] : m.month}</span>
         </div>`;
     }).join('');
 
