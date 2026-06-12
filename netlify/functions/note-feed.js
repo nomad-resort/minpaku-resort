@@ -15,9 +15,15 @@ const RSS_URL = 'https://note.com/minpaku_resort/rss/';
 function fetchUrl(url) {
   return new Promise((resolve, reject) => {
     https.get(url, { headers: { 'User-Agent': 'MinpakuResort/1.0' } }, (res) => {
-      // note.com が 301/302 リダイレクトを返す場合に追従
+      // note.com が 301/302 リダイレクトを返す場合に追従（相対URLを絶対URLに解決）
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        return fetchUrl(res.headers.location).then(resolve).catch(reject);
+        let redirectUrl;
+        try {
+          redirectUrl = new URL(res.headers.location, url).href;
+        } catch (_) {
+          return reject(new Error(`Invalid redirect URL: ${res.headers.location}`));
+        }
+        return fetchUrl(redirectUrl).then(resolve).catch(reject);
       }
       if (res.statusCode !== 200) {
         return reject(new Error(`HTTP ${res.statusCode}`));
