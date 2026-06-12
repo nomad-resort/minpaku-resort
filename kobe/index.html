@@ -245,11 +245,11 @@
 <!-- モバイルメニュー -->
 <div class="fixed top-20 left-0 w-full bg-white/95 backdrop-blur shadow-lg z-30 border-b border-gray-100 hidden md:hidden" id="mobile-menu">
 <nav class="max-w-7xl mx-auto px-4 py-6 flex flex-col space-y-1">
-<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#problems">お悩みの方へ</a>
-<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#services">サービス内容</a>
-<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#cleaning">清掃・強み</a>
-<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#voices">お客様の声</a>
+<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#services-city">サービス内容</a>
+<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#plans">料金プラン</a>
 <a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#simulation">シミュレーション</a>
+<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#cleaning">清掃・強み</a>
+<a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#areas">対応エリア</a>
 <a class="text-sm font-medium text-gray-700 hover:text-accent transition py-3 border-b border-gray-100" href="#faq">FAQ</a>
 <!-- <a href="produce.html" class="text-sm font-medium text-accent transition py-3 border-b border-gray-100">Space Production ↗</a> -->
 <a class="mt-3 bg-primary text-white px-6 py-3 rounded-sm font-medium hover:bg-secondary transition duration-300 text-center" href="#contact">無料相談はこちら</a>
@@ -267,11 +267,11 @@
 </a>
 </div>
 <nav class="hidden md:flex space-x-4 lg:space-x-8">
-<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#problems">お悩みの方へ</a>
-<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#services">サービス内容</a>
-<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#cleaning">清掃・強み</a>
-<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#voices">お客様の声</a>
+<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#services-city">サービス内容</a>
+<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#plans">料金プラン</a>
 <a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#simulation">シミュレーション</a>
+<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#cleaning">清掃・強み</a>
+<a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#areas">対応エリア</a>
 <a class="text-xs lg:text-sm font-medium text-gray-600 hover:text-accent transition" href="#faq">FAQ</a>
 <!-- <a href="produce.html"
                         class="text-xs lg:text-sm font-medium text-accent hover:text-accentHover transition border-l border-gray-200 pl-4 lg:pl-8">Space
@@ -302,448 +302,38 @@
 <a class="bg-accent text-white px-6 py-3 sm:px-8 sm:py-4 rounded-sm font-bold text-base sm:text-lg hover:bg-accentHover transition duration-300 shadow-lg" href="#contact">
                     お問い合わせ・無料相談
                 </a>
-<a class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-sm font-medium text-base sm:text-lg hover:bg-white/20 transition duration-300" href="#strengths">
+<a class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-sm font-medium text-base sm:text-lg hover:bg-white/20 transition duration-300" href="/">
                     サービス詳細を見る
                 </a>
 </div>
 </div>
 </section>
-<!-- Problems / SEO Hook Section -->
-<section class="py-12 md:py-20 bg-white" id="problems">
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- ⑦ サービス（簡略版）詳細はトップへ -->
+<section class="py-12 md:py-20 bg-white border-t border-gray-100" id="services-city">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="text-center mb-8 md:mb-12">
-<h3 class="text-xl sm:text-3xl font-serif font-bold text-primary mb-4 section-title">民泊オーナー様、こんなお悩みはありませんか？</h3>
-</div>
-<div class="grid grid-cols-2 gap-3 md:gap-8">
-<!-- 悩み1 -->
-<div class="bg-gray-50 p-3 sm:p-5 md:p-8 rounded-sm border-l-4 border-accent">
-<div class="flex items-start mb-2 md:mb-4 text-primary">
-<i class="fas fa-comment-slash text-base sm:text-2xl mr-2 mt-0.5 text-red-500 shrink-0"></i>
-<h4 class="text-xs sm:text-lg font-bold leading-snug">清掃不備による低評価・クレーム</h4>
-</div>
-<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">
-                        「髪の毛が落ちていた」「水回りが汚い」といったレビューは、今後の予約率に致命的な影響を与えます。安定した清掃クオリティを維持するのは個人の清掃スタッフでは限界があります。
-                    </p>
-</div>
-<!-- 悩み2 -->
-<div class="bg-gray-50 p-3 sm:p-5 md:p-8 rounded-sm border-l-4 border-accent">
-<div class="flex items-start mb-2 md:mb-4 text-primary">
-<i class="fas fa-volume-up text-base sm:text-2xl mr-2 mt-0.5 text-red-500 shrink-0"></i>
-<h4 class="text-xs sm:text-lg font-bold leading-snug">近隣住民とのトラブル対策</h4>
-</div>
-<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">
-                        騒音やゴミ出しのルール違反など、近隣からの苦情対応に疲弊していませんか？迅速かつ適切なゲストへの注意喚起と対応スキームが不可欠です。
-                    </p>
-</div>
-<!-- 悩み3 -->
-<div class="bg-gray-50 p-3 sm:p-5 md:p-8 rounded-sm border-l-4 border-accent">
-<div class="flex items-start mb-2 md:mb-4 text-primary">
-<i class="fas fa-chart-line text-base sm:text-2xl mr-2 mt-0.5 text-red-500 shrink-0"></i>
-<h4 class="text-xs sm:text-lg font-bold leading-snug">稼働率・収益が思ったように伸びない</h4>
-</div>
-<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">
-                        競合が増える中、ただ掲載するだけでは予約は入りません。季節や周辺イベントに合わせたダイナミックプライシングや、魅力的なリスティング作成のノウハウが必要です。
-                    </p>
-</div>
-<!-- 悩み4 -->
-<div class="bg-gray-50 p-3 sm:p-5 md:p-8 rounded-sm border-l-4 border-accent">
-<div class="flex items-start mb-2 md:mb-4 text-primary">
-<i class="fas fa-clock text-base sm:text-2xl mr-2 mt-0.5 text-red-500 shrink-0"></i>
-<h4 class="text-xs sm:text-lg font-bold leading-snug">ゲスト対応で休まらない</h4>
-</div>
-<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed">
-                        深夜の問い合わせや緊急トラブルの対応で、オーナー様自身の時間が奪われていませんか？
-                    </p>
-</div>
-</div>
-<div class="mt-12 text-center">
-<p class="text-xl font-medium text-primary leading-relaxed" id="problems-conclusion">そのお悩み、<span class="text-accent font-bold">Minpaku Resort</span>にお任せください。<br/>全国の地域特性を熟知した私たちが、すべて解決いたします。</p>
-</div>
-</div>
-</section>
-<!-- Numbers (データで見る実績) -->
-<section class="py-10 md:py-16 bg-primary text-white" id="numbers">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center lg:divide-x divide-white/20">
-<div class="px-2 sm:px-4">
-<p class="text-accent text-xs sm:text-sm font-bold mb-2 sm:mb-3 tracking-wider">総管理物件数</p>
-<div class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-1 sm:mb-2 text-white">150<span class="text-xl sm:text-2xl md:text-3xl text-accent ml-1">+</span></div>
-<p class="text-gray-300 text-[10px] sm:text-xs">全国規模</p>
-</div>
-<div class="px-2 sm:px-4">
-<p class="text-accent text-xs sm:text-sm font-bold mb-2 sm:mb-3 tracking-wider">月間清掃件数</p>
-<div class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-1 sm:mb-2 text-white">
-                        1,200<span class="text-xl sm:text-2xl md:text-3xl text-accent ml-1">+</span></div>
-<p class="text-gray-300 text-[10px] sm:text-xs">リゾートクオリティを維持</p>
-</div>
-<div class="px-2 sm:px-4">
-<p class="text-accent text-xs sm:text-sm font-bold mb-2 sm:mb-3 tracking-wider">年間ゲスト対応数</p>
-<div class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-1 sm:mb-2 text-white">
-                        50,000<span class="text-xl sm:text-2xl md:text-3xl text-accent ml-1">+</span></div>
-<p class="text-gray-300 text-[10px] sm:text-xs">多言語で24時間365日対応</p>
-</div>
-<div class="px-2 sm:px-4">
-<p class="text-accent text-xs sm:text-sm font-bold mb-2 sm:mb-3 tracking-wider">清掃クレーム発生率</p>
-<div class="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-1 sm:mb-2 text-white">0.1<span class="text-xl sm:text-2xl md:text-3xl text-accent ml-1">%以下</span></div>
-<p class="text-gray-300 text-[10px] sm:text-xs">徹底した品質管理システム</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Authority (Our 3 Strengths) -->
-<section class="py-12 md:py-20 bg-light border-y border-gray-100" id="strengths">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-10 md:mb-16">
-<span class="text-accent font-bold tracking-widest text-sm">AUTHORITY</span>
-<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">こだわりの3つの強み</h3>
-<p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-                    私たちは単なる「個人の代行業者」ではありません。<br class="hidden sm:block"/>組織的で徹底した管理体制を敷く、プロフェッショナル集団です。
-                </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-10">
-<!-- 強み1 -->
-<div class="bg-white p-4 sm:p-6 md:p-10 rounded-sm shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col items-center">
-<div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center mb-3 md:mb-6 text-white text-xl sm:text-2xl md:text-3xl shadow-lg">
-<i class="fas fa-broom"></i>
-</div>
-<h4 class="text-xs sm:text-lg md:text-xl font-bold text-primary mb-2 md:mb-4">① 丁寧な清掃</h4>
-<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed text-left">
-                        圧倒的な清潔感こそがゲストの満足度に直結します。自社の厳格な衛生基準に基づくチェック項目を設け、常にホテルのような「リゾート・クオリティ」の美しい空間をご提供します。
-                    </p>
-</div>
-<!-- 強み2 -->
-<div class="bg-white p-4 sm:p-6 md:p-10 rounded-sm shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col items-center relative">
-<div class="absolute top-0 left-0 w-full h-1 bg-accent"></div>
-<div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-accent rounded-full flex items-center justify-center mb-3 md:mb-6 text-white text-xl sm:text-2xl md:text-3xl shadow-lg">
-<i class="fas fa-chart-pie"></i>
-</div>
-<h4 class="text-xs sm:text-lg md:text-xl font-bold text-primary mb-2 md:mb-4">② 収益最大化戦略</h4>
-<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed text-left">
-                        100棟以上の豊富な運営実績とデータに基づき、エリア需要に合わせた細かい価格調整を行います。Booking.com・Airbnbなどの主要OTAへの掲載最適化から集客ノウハウまで、利益を最大化する戦略を実行します。
-                    </p>
-</div>
-<!-- 強み3 -->
-<div class="bg-white p-4 sm:p-6 md:p-10 rounded-sm shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col items-center">
-<div class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center mb-3 md:mb-6 text-white text-xl sm:text-2xl md:text-3xl shadow-lg">
-<i class="fas fa-handshake"></i>
-</div>
-<h4 class="text-xs sm:text-lg md:text-xl font-bold text-primary mb-2 md:mb-4">③ ワンストップ対応</h4>
-<p class="text-gray-600 text-[10px] sm:text-sm leading-relaxed text-left">
-                        多言語対応のゲストコミュニケーション、予約管理、清掃手配、さらには現地での急なトラブル駆けつけまで、すべて一貫してお任せいただけます。オーナー様は「何もしない」運用が可能です。
-                    </p>
-</div>
-</div>
-</div>
-</section>
-<!-- ② 地域特有の運営・清掃ルール (regional.js が都道府県データで注入) -->
-<section class="py-12 md:py-20 bg-white border-t border-gray-100" id="local-rules" style="display: none;">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-8 md:mb-12">
-<span class="text-accent font-bold tracking-widest text-sm">AREA TIPS &amp; RULES</span>
-<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title" id="local-rules-title">
-                    [都道府県名]の民泊で気をつけたいこと</h3>
-<p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-                    現場に精通した適切な運用が、トラブルを未然に防ぎ、安定した収益へと繋がります。
-                </p>
-</div>
-<!-- regional.js が動的生成 -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6" id="local-rules-grid">
-<!-- Loading placeholder -->
-<div class="bg-gray-100 rounded-sm animate-pulse h-40 md:h-48"></div>
-<div class="bg-gray-100 rounded-sm animate-pulse h-40 md:h-48"></div>
-<div class="bg-gray-100 rounded-sm animate-pulse h-40 md:h-48"></div>
-</div>
-</div>
-</section>
-<!-- 市場トレンド解説 (regional.js が都市データで注入。japan ページでは非表示) -->
-<section class="py-12 md:py-20 bg-gray-50 border-t border-gray-100" id="market-analysis" style="display:none;"></section>
-<!-- Services (サービス内容) -->
-<section class="py-12 md:py-20 bg-white" id="services">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-10 md:mb-16">
 <span class="text-accent font-bold tracking-widest text-sm">OUR SERVICES</span>
-<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">トータルサポートのサービス内容
-                </h3>
-<p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-                    リスティングの作成から日々のゲスト対応、清掃管理まで、民泊運営に必要なすべての業務をワンストップで代行いたします。
-                </p>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">ワンストップの運営代行サービス</h3>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 sm:gap-6">
-<!-- Service 1 -->
+<div class="grid grid-cols-3 gap-3 sm:gap-6 mb-8">
 <div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
-<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
-<i class="fas fa-edit"></i>
+<div class="text-2xl sm:text-3xl text-accent mb-3 transform group-hover:scale-110 transition"><i class="fas fa-headset"></i></div>
+<h4 class="font-bold text-primary text-sm sm:text-base mb-2">365日ゲスト対応</h4>
+<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">多言語対応・深夜対応含め、ゲストのすべての問い合わせを代行します。</p>
 </div>
-<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">OTA掲載・作成</h4>
-<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">魅力的な写真選定や説明文作成で、予約率を高めるページを構築します。
-                    </p>
-</div>
-<!-- Service 2 -->
 <div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
-<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
-<i class="fas fa-chart-line"></i>
+<div class="text-2xl sm:text-3xl text-accent mb-3 transform group-hover:scale-110 transition"><i class="fas fa-chart-line"></i></div>
+<h4 class="font-bold text-primary text-sm sm:text-base mb-2">収益最大化</h4>
+<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">AIと市場データを活用したダイナミックプライシングで稼働率と単価を最適化。</p>
 </div>
-<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">集客・価格調整</h4>
-<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">AIと市場データを用いたダイナミックプライシングで収益を最大化します。
-                    </p>
-</div>
-<!-- Service 3 -->
 <div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
-<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
-<i class="fas fa-headset"></i>
-</div>
-<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">365日対応</h4>
-<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">英語・中国語等の多言語対応。深夜の問い合わせにも迅速に回答します。
-                    </p>
-</div>
-<!-- Service 4 -->
-<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
-<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
-<i class="fas fa-sparkles"></i>
-</div>
-<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">プロ清掃・管理</h4>
-<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">自社基準の徹底された清掃と、消耗品の補充、写真付きレポート報告。</p>
-</div>
-<!-- Service 5 -->
-<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
-<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
-<i class="fas fa-shield-alt"></i>
-</div>
-<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">トラブル等</h4>
-<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">近所からの苦情や備品の破損など、緊急時もすべて弊社が窓口となります。
-                    </p>
-</div>
-<!-- Service 6 -->
-<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
-<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
-<i class="fas fa-star"></i>
-</div>
-<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">レビュー管理</h4>
-<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">高評価の獲得施策と、低評価時の適切なフォローアップで施設の価値を維持。
-                    </p>
-</div>
-<!-- Service 7 -->
-<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
-<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
-<i class="fas fa-concierge-bell"></i>
-</div>
-<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">オプション</h4>
-<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">BBQ機材のレンタルやレンタカー案内など、体験を向上させる手配。</p>
-</div>
-<!-- Service 8 -->
-<div class="bg-gray-50 p-4 sm:p-6 rounded-sm text-center border-t-4 border-primary hover:border-accent transition group">
-<div class="text-2xl sm:text-3xl text-accent mb-3 sm:mb-4 transform group-hover:scale-110 transition">
-<i class="fas fa-calculator"></i>
-</div>
-<h4 class="font-bold text-primary text-sm sm:text-lg mb-2">売上管理</h4>
-<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">毎月の収益と稼働実績をまとめたレポートを発行し、透明性を確保します。
-                    </p>
+<div class="text-2xl sm:text-3xl text-accent mb-3 transform group-hover:scale-110 transition"><i class="fas fa-shield-alt"></i></div>
+<h4 class="font-bold text-primary text-sm sm:text-base mb-2">トラブル対応</h4>
+<p class="text-gray-600 text-[10px] sm:text-xs leading-relaxed">近隣苦情・設備不具合・緊急対応まで、すべて弊社が窓口となります。</p>
 </div>
 </div>
-</div>
-</section>
-<!-- Cleaning Focus (最も手厚くするセクション) -->
-<section class="py-14 md:py-24 bg-white" id="cleaning">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
-<div class="lg:w-1/2">
-<span class="text-accent font-bold tracking-widest text-sm">CLEANING FOCUS</span>
-<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2">ゲストを感動させる<br/>「リゾート・クオリティの清掃」
-                    </h3>
-<div class="w-20 h-1 bg-accent mt-6 mb-8"></div>
-<p class="text-gray-700 leading-relaxed mb-8">
-                        民泊運営において、レビュー評価の基盤となるのは「清潔さ」です。<br/>
-                        私たちは、ホテル清掃と同等、あるいはそれ以上のクオリティをお約束します。業界最高水準のプロセスで、ゲストがドアを開けた瞬間に感動する空間を作り上げます。
-                    </p>
-<div class="grid grid-cols-2 gap-3 lg:grid-cols-1 lg:gap-0 lg:space-y-6">
-<!-- ポイント1 -->
-<div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
-<div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0">
-<i class="fas fa-check-circle text-base lg:text-xl"></i>
-</div>
-<div class="lg:ml-4">
-<h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug">徹底した清掃チェックリストの運用</h4>
-<p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed">
-                                    属人的なミスを防ぐため、100項目に及ぶ詳細な清掃チェックリストを活用。清掃完了後の写真報告を義務付け、本社スタッフがダブルチェックでクオリティを担保します。</p>
-</div>
-</div>
-<!-- ポイント2 -->
-<div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
-<div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0">
-<i class="fas fa-shield-virus text-base lg:text-xl"></i>
-</div>
-<div class="lg:ml-4">
-<h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug">除菌清掃とプロ用洗剤の使用</h4>
-<p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed">
-                                    水垢やカビには市販品でなく、素材に合わせた業務用の専用洗剤を使用。ドアノブやリモコン類なども徹底してアルコール除菌を行い、衛生管理を極限まで高めています。</p>
-</div>
-</div>
-<!-- ポイント3 -->
-<div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
-<div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0">
-<i class="fas fa-bed text-base lg:text-xl"></i>
-</div>
-<div class="lg:ml-4">
-<h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug">ホテルのようなベッドメイキング</h4>
-<p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed">
-                                    シーツの張りやタオルの畳み方一つで、部屋の印象は大きく変わります。ピンと張られたシーツと完璧に整えられたアメニティで、リゾートホテルさながらの特別感を演出します。
-                                </p>
-</div>
-</div>
-<!-- ポイント4 -->
-<div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
-<div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0">
-<i class="fas fa-leaf text-base lg:text-xl"></i>
-</div>
-<div class="lg:ml-4">
-<h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug" id="regional-cleaning-title">全国の地域特性に合わせた最適清掃</h4>
-<p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed" id="regional-cleaning-body">全国各地の環境・気候・ゲスト層に合わせた清掃フローを構築。地域の清掃プロフェッショナルと連携し、高いクオリティを安定的に提供いたします。</p>
-</div>
-</div>
-</div>
-</div>
-<div class="lg:w-1/2 space-y-6">
-<!-- TODO: [画像：ユニフォームを着たスタッフが真剣に清掃している様子] -->
-<!-- 仮画像のプレースホルダー -->
-<div class="relative rounded-sm overflow-hidden shadow-xl h-64 sm:h-80 group">
-<img alt="専門的な清掃" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="/images/thorough_cleaning.png"/>
-<div class="absolute bottom-0 left-0 bg-primary/80 backdrop-blur text-white px-4 py-2 font-medium">
-<i class="fas fa-spray-can mr-2 text-accent"></i>専門的な清掃
-                        </div>
-</div>
-<div class="flex gap-6 h-48 sm:h-60">
-<!-- TODO: [画像：水回りのBefore/After (または美しく仕上げられた水回りの写真)] -->
-<div class="w-1/2 relative rounded-sm overflow-hidden shadow-lg group">
-<img alt="美しいバスルーム" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="/images/sparkling_bathroom.png"/>
-<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-<p class="text-white text-sm font-bold">水回りも輝く仕上がりに</p>
-</div>
-</div>
-<!-- 代わりのイメージ -->
-<div class="w-1/2 relative rounded-sm overflow-hidden shadow-lg group">
-<img alt="完璧なベッドメイキング" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="/images/resort_bedroom.png"/>
-<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-<p class="text-white text-sm font-bold">リゾートクオリティの寝室</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Operations / 運営体制 + スタッフ紹介（統合セクション） -->
-<section class="py-12 md:py-20 bg-primary text-white" id="operations">
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-10 md:mb-16">
-<span class="text-accent font-bold tracking-widest text-sm">PROFESSIONAL TEAM</span>
-<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mt-2 section-title" id="staff-title">プロフェッショナルな運営体制</h3>
-<p class="mt-6 text-gray-300 max-w-2xl mx-auto">
-                    専任担当者が物件管理から清掃・ゲスト対応まで一貫して担当し、<br class="hidden sm:block"/>
-                    お問い合わせに365日迅速かつ丁寧に対応します。
-                </p>
-</div>
-<!-- regional.js が動的生成 -->
-<div class="grid grid-cols-3 gap-4 sm:gap-10 max-w-4xl mx-auto" id="staff-grid">
-<div class="text-center animate-pulse">
-<div class="w-16 h-16 sm:w-28 sm:h-28 mx-auto mb-2 sm:mb-4 rounded-full bg-white/20"></div>
-<div class="h-3 sm:h-4 bg-white/20 rounded w-12 sm:w-16 mx-auto mb-1 sm:mb-2"></div>
-<div class="h-2 sm:h-3 bg-white/10 rounded w-16 sm:w-24 mx-auto"></div>
-</div>
-<div class="text-center animate-pulse">
-<div class="w-16 h-16 sm:w-28 sm:h-28 mx-auto mb-2 sm:mb-4 rounded-full bg-white/20"></div>
-<div class="h-3 sm:h-4 bg-white/20 rounded w-12 sm:w-16 mx-auto mb-1 sm:mb-2"></div>
-<div class="h-2 sm:h-3 bg-white/10 rounded w-16 sm:w-24 mx-auto"></div>
-</div>
-<div class="text-center animate-pulse">
-<div class="w-16 h-16 sm:w-28 sm:h-28 mx-auto mb-2 sm:mb-4 rounded-full bg-white/20"></div>
-<div class="h-3 sm:h-4 bg-white/20 rounded w-12 sm:w-16 mx-auto mb-1 sm:mb-2"></div>
-<div class="h-2 sm:h-3 bg-white/10 rounded w-16 sm:w-24 mx-auto"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- Social Proof (実績・ケーススタディ) -->
-<section class="py-12 md:py-20 bg-gray-50 border-t border-gray-100" id="proofs">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-10 md:mb-16">
-<span class="text-accent font-bold tracking-widest text-sm">SOCIAL PROOF</span>
-<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">実績・ケーススタディ</h3>
-<p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-                    Booking.com・Airbnbをはじめとする主要OTAでも高評価を獲得する宿泊施設を多数運用しています。
-                </p>
-</div>
-<div class="grid grid-cols-2 gap-3 md:gap-12 text-gray-900" id="case-studies-grid">
-<!-- 実績1: 某一棟貸ヴィラ -->
-<div class="bg-white rounded-sm overflow-hidden shadow-lg md:shadow-2xl flex flex-col">
-<div class="h-28 sm:h-48 md:h-64 overflow-hidden relative">
-<img alt="某一棟貸ヴィラ" class="w-full h-full object-cover" loading="lazy" src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-<div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 font-bold rounded-sm text-sm">
-                            プレミアムヴィラ
-                        </div>
-</div>
-<div class="p-3 sm:p-5 md:p-8 flex-grow">
-<h4 class="text-sm sm:text-xl md:text-2xl font-serif font-bold text-primary mb-1 md:mb-2">某一棟貸ヴィラ</h4>
-<p class="text-gray-500 text-[10px] sm:text-sm mb-3 md:mb-6 pb-2 md:pb-4 border-b border-gray-100">沖縄県北部の高級貸別荘</p>
-<div class="space-y-2 md:space-y-4">
-<div class="flex flex-col gap-0.5">
-<span class="text-gray-600 font-medium text-[10px] sm:text-sm">年間平均稼働率</span>
-<span class="text-lg sm:text-2xl md:text-3xl font-bold text-primary">85<span class="text-xs sm:text-lg">%</span>達成</span>
-</div>
-<div class="flex flex-col gap-0.5">
-<span class="text-gray-600 font-medium text-[10px] sm:text-sm">ゲスト評価 (OTA)</span>
-<div>
-<div class="text-accent text-xs sm:text-lg">
-<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-</div>
-<span class="text-lg sm:text-2xl md:text-3xl font-bold text-primary">4.9<span class="text-xs sm:text-lg text-gray-500"> / 5.0</span></span>
-</div>
-</div>
-</div>
-<p class="hidden sm:block mt-4 md:mt-6 text-[10px] sm:text-sm text-gray-600 bg-gray-50 p-2 md:p-4 rounded border-l-2 border-accent">
-                            「清掃が隅々まで行き届いており、最高の滞在になりました」という声が多数。卓越した清掃品質が直接高稼働に繋がっています。
-                        </p>
-</div>
-</div>
-<!-- 実績2: 某リゾートマンション -->
-<div class="bg-white rounded-sm overflow-hidden shadow-lg md:shadow-2xl flex flex-col">
-<div class="h-28 sm:h-48 md:h-64 overflow-hidden relative">
-<img alt="某リゾートマンション" class="w-full h-full object-cover" loading="lazy" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-<div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 font-bold rounded-sm text-sm">
-                            リゾートコンドミニアム
-                        </div>
-</div>
-<div class="p-3 sm:p-5 md:p-8 flex-grow">
-<h4 class="text-sm sm:text-xl md:text-2xl font-serif font-bold text-primary mb-1 md:mb-2">某リゾートマンション</h4>
-<p class="text-gray-500 text-[10px] sm:text-sm mb-3 md:mb-6 pb-2 md:pb-4 border-b border-gray-100">Booking.com・Airbnb高評価</p>
-<div class="space-y-2 md:space-y-4">
-<div class="flex flex-col gap-0.5">
-<span class="text-gray-600 font-medium text-[10px] sm:text-sm">収益改善率 (前社比)</span>
-<span class="text-lg sm:text-2xl md:text-3xl font-bold text-accent">140<span class="text-xs sm:text-lg">%</span>UP</span>
-</div>
-<div class="flex flex-col gap-0.5">
-<span class="text-gray-600 font-medium text-[10px] sm:text-sm">清掃クレーム発生率</span>
-<span class="text-lg sm:text-2xl md:text-3xl font-bold text-primary">0<span class="text-xs sm:text-lg">件</span></span>
-</div>
-</div>
-<p class="hidden sm:block mt-4 md:mt-6 text-[10px] sm:text-sm text-gray-600 bg-gray-50 p-2 md:p-4 rounded border-l-2 border-primary">
-                            競合と差別化するダイナミックプライシングと、プロフェッショナルな清掃・管理体制により、エリア屈指の売上を達成。
-                        </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Customer Voices (お客様の声) -->
-<section class="py-12 md:py-20 bg-gray-50" id="voices">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-10 md:mb-16">
-<span class="text-accent font-bold tracking-widest text-sm">VOICES</span>
-<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title">オーナー様からのお声</h3>
-</div>
-<div class="grid grid-cols-2 gap-3 md:gap-8" id="voices-grid">
-<!-- Data will be injected by regional.js -->
-<div class="bg-gray-100 rounded-sm animate-pulse h-48 md:h-64"></div>
-<div class="bg-gray-100 rounded-sm animate-pulse h-48 md:h-64"></div>
+<div class="text-center">
+<a href="/#services" class="inline-flex items-center text-accent font-bold hover:underline text-sm">サービス詳細・実績・スタッフ紹介はこちら <i class="fas fa-arrow-right ml-2"></i></a>
 </div>
 </div>
 </section>
@@ -954,6 +544,79 @@
 <div class="p-7" id="sim-modal-body"></div>
 </div>
 </div>
+<!-- ② 市場概況 + 相場データ (regional.js が都市データで注入) -->
+<section class="py-12 md:py-20 bg-gray-50 border-t border-gray-100" id="market-analysis" style="display:none;"></section>
+<!-- ③ 繁忙期カレンダー (regional.js が都市データで注入) -->
+<section class="py-10 md:py-16 bg-white border-t border-gray-100" id="seasonal-calendar" style="display:none;"></section>
+<!-- ④ 地域特有の運営ルール (regional.js が都市データで注入) -->
+<section class="py-12 md:py-20 bg-white border-t border-gray-100" id="local-rules" style="display: none;">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-8 md:mb-12">
+<span class="text-accent font-bold tracking-widest text-sm">AREA TIPS &amp; RULES</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2 section-title" id="local-rules-title">[都市名]の注意ポイント</h3>
+<p class="mt-6 text-gray-600 max-w-2xl mx-auto">現場に精通した適切な運用が、トラブルを未然に防ぎ、安定した収益へと繋がります。</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6" id="local-rules-grid">
+<div class="bg-gray-100 rounded-sm animate-pulse h-40 md:h-48"></div>
+<div class="bg-gray-100 rounded-sm animate-pulse h-40 md:h-48"></div>
+<div class="bg-gray-100 rounded-sm animate-pulse h-40 md:h-48"></div>
+</div>
+</div>
+</section>
+<!-- ⑤ 清掃フォーカス -->
+<section class="py-14 md:py-24 bg-white" id="cleaning">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+<div class="lg:w-1/2">
+<span class="text-accent font-bold tracking-widest text-sm">CLEANING FOCUS</span>
+<h3 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary mt-2">ゲストを感動させる<br/>「リゾート・クオリティの清掃」</h3>
+<div class="w-20 h-1 bg-accent mt-6 mb-8"></div>
+<p class="text-gray-700 leading-relaxed mb-8">民泊運営において、レビュー評価の基盤となるのは「清潔さ」です。<br/>私たちは、ホテル清掃と同等、あるいはそれ以上のクオリティをお約束します。業界最高水準のプロセスで、ゲストがドアを開けた瞬間に感動する空間を作り上げます。</p>
+<div class="grid grid-cols-2 gap-3 lg:grid-cols-1 lg:gap-0 lg:space-y-6">
+<div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
+<div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0"><i class="fas fa-check-circle text-base lg:text-xl"></i></div>
+<div class="lg:ml-4">
+<h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug">徹底した清掃チェックリストの運用</h4>
+<p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed">属人的なミスを防ぐため、100項目に及ぶ詳細な清掃チェックリストを活用。清掃完了後の写真報告を義務付け、本社スタッフがダブルチェックでクオリティを担保します。</p>
+</div>
+</div>
+<div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
+<div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0"><i class="fas fa-shield-virus text-base lg:text-xl"></i></div>
+<div class="lg:ml-4">
+<h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug">除菌清掃とプロ用洗剤の使用</h4>
+<p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed">水垢やカビには市販品でなく、素材に合わせた業務用の専用洗剤を使用。ドアノブやリモコン類なども徹底してアルコール除菌を行い、衛生管理を極限まで高めています。</p>
+</div>
+</div>
+<div class="bg-gray-50 p-3 rounded-sm border-t-2 border-accent lg:bg-transparent lg:p-0 lg:rounded-none lg:border-t-0 lg:flex">
+<div class="text-accent mb-2 lg:mb-0 lg:mt-1 lg:flex-shrink-0"><i class="fas fa-leaf text-base lg:text-xl"></i></div>
+<div class="lg:ml-4">
+<h4 class="text-xs sm:text-base lg:text-lg font-bold text-primary leading-snug" id="regional-cleaning-title">この地域の特性に合わせた最適清掃</h4>
+<p class="text-[10px] sm:text-sm text-gray-600 mt-1 leading-relaxed" id="regional-cleaning-body">エリアの環境・気候・ゲスト層に合わせた清掃フローを構築。地域の清掃プロフェッショナルと連携し、高いクオリティを安定的に提供します。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 space-y-6">
+<div class="relative rounded-sm overflow-hidden shadow-xl h-64 sm:h-80 group">
+<img alt="専門的な清掃" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="/images/thorough_cleaning.png"/>
+<div class="absolute bottom-0 left-0 bg-primary/80 backdrop-blur text-white px-4 py-2 font-medium"><i class="fas fa-spray-can mr-2 text-accent"></i>専門的な清掃</div>
+</div>
+<div class="flex gap-6 h-48 sm:h-60">
+<div class="w-1/2 relative rounded-sm overflow-hidden shadow-lg group">
+<img alt="美しいバスルーム" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="/images/sparkling_bathroom.png"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4"><p class="text-white text-sm font-bold">水回りも輝く仕上がりに</p></div>
+</div>
+<div class="w-1/2 relative rounded-sm overflow-hidden shadow-lg group">
+<img alt="完璧なベッドメイキング" class="object-cover w-full h-full transform group-hover:scale-105 transition duration-700" loading="lazy" src="/images/resort_bedroom.png"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4"><p class="text-white text-sm font-bold">リゾートクオリティの寝室</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ⑥ 条例・法規情報 (regional.js が都市データで注入) -->
+<section class="py-12 md:py-20 bg-gray-50 border-t border-gray-100" id="local-regulations" style="display:none;"></section>
 <!-- Target Areas (対応エリア) -->
 <section class="py-12 md:py-20 bg-gray-50 border-t border-gray-200" id="areas">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -969,17 +632,17 @@
 <h4 class="text-lg font-bold text-primary mb-4 flex items-center border-b-2 border-accent pb-2">
 <i class="fas fa-map-marker-alt text-accent mr-2"></i>対応市区町村
                         </h4>
-<div class="mt-4 text-gray-600 font-medium w-full" id="municipalities-list"><div class="flex flex-wrap gap-1.5 mb-5 border-b border-gray-200 pb-2"><button class="region-tab-btn px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-bold rounded transition-colors bg-primary text-white shadow" data-region="北海道・東北" type="button">北海道・東北</button><button class="region-tab-btn px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-bold rounded transition-colors bg-gray-100 text-gray-600 hover:bg-gray-200" data-region="関東" type="button">関東</button><button class="region-tab-btn px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-bold rounded transition-colors bg-gray-100 text-gray-600 hover:bg-gray-200" data-region="中部" type="button">中部</button><button class="region-tab-btn px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-bold rounded transition-colors bg-gray-100 text-gray-600 hover:bg-gray-200" data-region="近畿" type="button">近畿</button><button class="region-tab-btn px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-bold rounded transition-colors bg-gray-100 text-gray-600 hover:bg-gray-200" data-region="中国・四国" type="button">中国・四国</button><button class="region-tab-btn px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-bold rounded transition-colors bg-gray-100 text-gray-600 hover:bg-gray-200" data-region="九州・沖縄" type="button">九州・沖縄</button></div><div id="region-tab-content"><div class="region-content block" id="region-content-北海道・東北"><div class="flex flex-wrap gap-2"><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/sapporo/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>札幌市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/hakodate/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>函館市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/otaru/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>小樽市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/niseko/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>ニセコ町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kutchan/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>倶知安町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/furano/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>富良野市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/biei/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>美瑛町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/toya/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>洞爺湖町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/noboribetsu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>登別市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/aomori/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>青森市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/hirosaki/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>弘前市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/towada/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>十和田市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/morioka/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>盛岡市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/hiraizumi/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>平泉町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/sendai/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>仙台市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/matsushima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>松島町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/akita/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>秋田市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kakunodate/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>仙北市（角館）</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/yamagata/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>山形市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/ginzan/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>尾花沢市（銀山温泉）</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/yonezawa/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>米沢市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/fukushima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>福島市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/koriyama/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>郡山市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/aizu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>会津若松市</a></div></div><div class="region-content hidden" id="region-content-関東"><div class="flex flex-wrap gap-2"><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/mito/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>水戸市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/tsukuba/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>つくば市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/hitachinaka/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>ひたちなか市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/utsunomiya/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>宇都宮市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/nikko/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>日光市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/nasu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>那須町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/maebashi/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>前橋市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/takasaki/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>高崎市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kusatsu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>草津町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/ikaho/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>渋川市（伊香保）</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/saitama/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>さいたま市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kawagoe/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>川越市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/chichibu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>秩父市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/chiba/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>千葉市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/urayasu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>浦安市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/narita/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>成田市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kisarazu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>木更津市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/katsuura/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>勝浦市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/shinjuku/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>新宿区</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/shibuya/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>渋谷区</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/minato/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>港区</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/taito/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>台東区</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/sumida/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>墨田区</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/chuo/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>中央区</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/toshima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>豊島区</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/chiyoda/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>千代田区</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/koto/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>江東区</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/yokohama/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>横浜市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kamakura/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>鎌倉市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/hakone/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>箱根町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/enoshima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>藤沢市（江の島）</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kawasaki/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>川崎市</a></div></div><div class="region-content hidden" id="region-content-中部"><div class="flex flex-wrap gap-2"><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/niigata/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>新潟市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/yuzawa/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>湯沢町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/myoko/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>妙高市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/nagaoka/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>長岡市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/toyama/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>富山市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/takaoka/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>高岡市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/tateyama/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>立山町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kanazawa/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>金沢市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/wakura/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>七尾市（和倉温泉）</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kaga/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>加賀市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/fukui/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>福井市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/tsuruga/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>敦賀市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/katsuyama/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>勝山市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kofu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>甲府市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/fujiyoshida/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>富士吉田市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kawaguchiko/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>河口湖町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/yamanakako/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>山中湖村</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/nagano/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>長野市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/matsumoto/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>松本市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/karuizawa/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>軽井沢町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/hakuba/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>白馬村</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/nozawa/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>野沢温泉村</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/gifu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>岐阜市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/takayama/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>高山市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/shirakawa/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>白川村</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/gero/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>下呂市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/shizuoka/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>静岡市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/hamamatsu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>浜松市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/atami/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>熱海市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/ito/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>伊東市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/shimoda/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>下田市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/fujinomiya/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>富士宮市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/nagoya/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>名古屋市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/toyota/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>豊田市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/tokoname/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>常滑市</a></div></div><div class="region-content hidden" id="region-content-近畿"><div class="flex flex-wrap gap-2"><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/tsu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>津市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/ise/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>伊勢市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/toba/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>鳥羽市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/shima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>志摩市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/otsu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>大津市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/hikone/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>彦根市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/takashima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>高島市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kyoto/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>京都市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/uji/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>宇治市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/amanohashidate/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>宮津市（天橋立）</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/osaka/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>大阪市（中央区・北区・浪速区・天王寺区等）</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/sakai/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>堺市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/izumisano/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>泉佐野市（関空周辺）</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/higashiosaka/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>東大阪市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kobe/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>神戸市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/himeji/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>姫路市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kinosaki/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>豊岡市（城崎温泉）</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/awaji/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>淡路市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/nishinomiya/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>西宮市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/nara/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>奈良市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kashihara/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>橿原市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/yoshino/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>吉野町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/wakayama/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>和歌山市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/shirahama/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>白浜町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/nachikatsuura/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>那智勝浦町</a></div></div><div class="region-content hidden" id="region-content-中国・四国"><div class="flex flex-wrap gap-2"><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/tottori/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>鳥取市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/yonago/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>米子市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/sakaiminato/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>境港市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/matsue/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>松江市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/izumo/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>出雲市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/okayama/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>岡山市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kurashiki/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>倉敷市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/hiroshima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>広島市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/miyajima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>廿日市市（宮島）</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/onomichi/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>尾道市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/fukuyama/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>福山市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/yamaguchi/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>山口市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/shimonoseki/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>下関市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/hagi/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>萩市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/tokushima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>徳島市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/naruto/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>鳴門市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/miyoshi/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>三好市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/takamatsu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>高松市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/shodoshima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>小豆島町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/marugame/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>丸亀市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/matsuyama/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>松山市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/imabari/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>今治市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kochi/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>高知市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/shimanto/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>四万十市</a></div></div><div class="region-content hidden" id="region-content-九州・沖縄"><div class="flex flex-wrap gap-2"><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/fukuoka/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>福岡市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/dazaifu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>太宰府市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kitakyushu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>北九州市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/itoshima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>糸島市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/saga/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>佐賀市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/karatsu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>唐津市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/ureshino/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>嬉野市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/nagasaki/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>長崎市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/sasebo/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>佐世保市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/goto/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>五島市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kumamoto/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>熊本市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/aso/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>阿蘇市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kurokawa/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>黒川温泉</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/oita/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>大分市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/beppu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>別府市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/yufuin/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>由布市（湯布院）</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/miyazaki/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>宮崎市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/takachiho/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>高千穂町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kagoshima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>鹿児島市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/kirishima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>霧島市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/yakushima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>屋久島町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/ibusuki/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>指宿市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/naha/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>那覇市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/onna/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>恩納村</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/nago/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>名護市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/motobu/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>本部町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/nakijin/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>今帰仁村</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/yomitan/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>読谷村</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/chatan/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>北谷町</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/ishigaki/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>石垣市</a><a class="group inline-flex items-center px-3 py-1.5 bg-white hover:bg-accent hover:text-white border border-gray-200 rounded-full text-xs transition duration-300 shadow-sm" href="/miyakojima/"><i class="fas fa-map-marker-alt text-accent group-hover:text-white mr-1.5 opacity-70"></i>宮古島市</a></div></div></div></div>
+<div class="mt-4 text-gray-600 font-medium w-full" id="municipalities-list"><div class="animate-pulse h-10 bg-gray-100 rounded"></div>
 </div>
 <p class="text-xs text-accent font-medium mt-4">
 <i class="fas fa-info-circle mr-1"></i>上記以外のエリアもご相談ください。順次対応エリア拡大中。
                     </p>
 </div>
+</div>
 <!-- マップ（Google Map） -->
-<div class="w-full md:w-1/2 h-64 md:h-auto bg-gray-200 relative">
+<div class="w-full md:w-1/2 h-64 md:h-96 bg-gray-200 relative">
 <iframe allowfullscreen="" class="absolute inset-0" height="100%" id="area-map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="about:blank" style="border:0;" width="100%"></iframe>
 <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
-</div>
 </div>
 </div>
 </section>

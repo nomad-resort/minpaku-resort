@@ -4,7 +4,7 @@ import re
 
 def build_static_pages():
     base_dir = '/Users/kobuketomohiro/Documents/Minpaku-Resort'
-    index_path = os.path.join(base_dir, 'index.html')
+    index_path = os.path.join(base_dir, 'city-template.html')
     data_path = os.path.join(base_dir, 'data', 'cities.json')
 
     # index.html (テンプレート) を読み込む

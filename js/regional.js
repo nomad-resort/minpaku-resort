@@ -555,15 +555,114 @@
       return;
     }
 
+    const mp = d.marketPricing;
+    const pricingHtml = mp ? `
+      <div class="mt-6 grid grid-cols-2 gap-3 sm:gap-6 border-t border-gray-100 pt-6">
+        <div class="bg-gray-50 rounded-sm p-4">
+          <p class="text-accent font-bold tracking-widest text-[10px] mb-1">閑散期</p>
+          <p class="text-lg sm:text-2xl font-bold text-primary">¥${Number(mp.lowSeason.avgNightly).toLocaleString('ja-JP')}</p>
+          <p class="text-xs text-gray-500 mt-1">稼働率目安 <span class="font-bold text-primary">${mp.lowSeason.occupancyPct}%</span></p>
+        </div>
+        <div class="bg-accent/10 rounded-sm p-4">
+          <p class="text-accent font-bold tracking-widest text-[10px] mb-1">ハイシーズン</p>
+          <p class="text-lg sm:text-2xl font-bold text-primary">¥${Number(mp.highSeason.avgNightly).toLocaleString('ja-JP')}</p>
+          <p class="text-xs text-gray-500 mt-1">稼働率目安 <span class="font-bold text-primary">${mp.highSeason.occupancyPct}%</span></p>
+        </div>
+        <div class="col-span-2 flex flex-wrap gap-4 text-xs text-gray-600">
+          <span><i class="fas fa-users text-accent mr-1"></i>${mp.guestProfile}</span>
+          <span><i class="fas fa-calendar-alt text-accent mr-1"></i>ピーク：${mp.peakPeriod}</span>
+        </div>
+      </div>` : '';
+
     section.style.display = '';
     section.innerHTML = `
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white p-6 sm:p-10 rounded-sm shadow-md border-l-4 border-accent">
           <div class="mb-4 border-b border-gray-100 pb-4">
-            <span class="text-accent font-bold tracking-widest text-xs mb-1 block">MARKET TREND</span>
+            <span class="text-accent font-bold tracking-widest text-xs mb-1 block">MARKET TREND &amp; PRICING</span>
             <h3 class="text-lg sm:text-2xl font-serif font-bold text-primary">${d.marketAnalysis.title}</h3>
           </div>
           <p class="text-gray-700 text-sm sm:text-base leading-relaxed">${d.marketAnalysis.body}</p>
+          ${pricingHtml}
+        </div>
+      </div>
+    `;
+  }
+
+  function applySeasonalCalendar(d) {
+    const section = document.getElementById('seasonal-calendar');
+    if (!section) return;
+
+    if (d.cityKey === 'japan' || !d.seasonalCalendar || !d.seasonalCalendar.length) {
+      section.style.display = 'none';
+      return;
+    }
+
+    const levelColors = ['bg-gray-100', 'bg-blue-100', 'bg-yellow-100', 'bg-orange-300', 'bg-red-400'];
+    const levelLabels = ['閃散', '低', '普通', '高', '超繁忙'];
+    const monthNames = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+
+    const barsHtml = d.seasonalCalendar.map((m) => {
+      const lvl = Math.min(Math.max(m.demandLevel - 1, 0), 4);
+      const heightMap = ['h-4','h-8','h-14','h-20','h-28'];
+      return `
+        <div class="flex flex-col items-center gap-1">
+          <span class="text-[8px] sm:text-[10px] text-gray-500 text-center leading-tight max-w-[40px]">${m.note || ''}</span>
+          <div class="w-6 sm:w-8 ${heightMap[lvl]} ${levelColors[lvl]} rounded-t-sm" title="${levelLabels[lvl]}"></div>
+          <span class="text-[9px] sm:text-xs text-gray-500 font-medium">${monthNames[m.month - 1]}</span>
+        </div>`;
+    }).join('');
+
+    section.style.display = '';
+    section.innerHTML = `
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-6">
+          <span class="text-accent font-bold tracking-widest text-xs">SEASONAL DEMAND</span>
+          <h3 class="text-lg sm:text-2xl font-serif font-bold text-primary mt-1">${d.cityShort}の繁忙期カレンダー</h3>
+        </div>
+        <div class="bg-white rounded-sm shadow-md p-4 sm:p-8">
+          <div class="flex items-end justify-between gap-1">${barsHtml}</div>
+          <div class="flex flex-wrap gap-3 mt-4 pt-3 border-t border-gray-100 justify-center">
+            ${levelColors.map((c, i) => `<span class="flex items-center gap-1 text-[10px] text-gray-500"><span class="inline-block w-3 h-3 rounded-sm ${c} border border-gray-200"></span>${levelLabels[i]}</span>`).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function applyLocalRegulations(d) {
+    const section = document.getElementById('local-regulations');
+    if (!section) return;
+
+    if (d.cityKey === 'japan' || !d.localRegulations) {
+      section.style.display = 'none';
+      return;
+    }
+
+    const r = d.localRegulations;
+    section.style.display = '';
+    section.innerHTML = `
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-6">
+          <span class="text-accent font-bold tracking-widest text-xs">REGULATIONS</span>
+          <h3 class="text-lg sm:text-2xl font-serif font-bold text-primary mt-1">${d.cityShort}の民泊条例・法規情報</h3>
+        </div>
+        <div class="bg-white rounded-sm shadow-md border-l-4 border-accent overflow-hidden">
+          <div class="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
+            <div class="p-5 sm:p-7">
+              <dl class="space-y-3 text-sm">
+                <div class="flex gap-3"><dt class="text-accent font-bold w-24 shrink-0">届出種別</dt><dd class="text-gray-700">${r.registrationType}</dd></div>
+                <div class="flex gap-3"><dt class="text-accent font-bold w-24 shrink-0">年間上限日数</dt><dd class="text-gray-700">${r.maxAnnualDays}日</dd></div>
+                <div class="flex gap-3"><dt class="text-accent font-bold w-24 shrink-0">市独自の制限</dt><dd class="text-gray-700">${r.cityRestrictions}</dd></div>
+              </dl>
+            </div>
+            <div class="p-5 sm:p-7">
+              <dl class="space-y-3 text-sm">
+                <div class="flex gap-3"><dt class="text-accent font-bold w-24 shrink-0">届出先</dt><dd class="text-gray-700">${r.authority}</dd></div>
+                <div class="flex gap-3"><dt class="text-accent font-bold w-24 shrink-0">注意事項</dt><dd class="text-gray-700">${r.keyNotes}</dd></div>
+              </dl>
+            </div>
+          </div>
         </div>
       </div>
     `;
@@ -1049,6 +1148,8 @@
     applyCaseStudies(d);
     applyVoices(d);
     applyMarketAnalysis(d);
+    applySeasonalCalendar(d);
+    applyLocalRegulations(d);
     applyLocalFaqs(d);
     initSimulator(d);
     renderNoteFeed();
@@ -1074,10 +1175,19 @@
     // prefers-reduced-motion 時はブラウザが transition をスキップするため
     // transitionend が発火しない → 計算済み duration を確認して即時削除にフォールバック
     const duration = parseFloat(getComputedStyle(loader).transitionDuration) * 1000 || 0;
+    const scrollToHash = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const target = document.querySelector(hash);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+
     if (duration > 0) {
-      loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+      loader.addEventListener('transitionend', () => { loader.remove(); scrollToHash(); }, { once: true });
     } else {
       loader.remove();
+      scrollToHash();
     }
   }
 
