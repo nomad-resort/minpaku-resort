@@ -4,3 +4,46 @@
 
 # 存在しないパスは 404 を返す（静的サイト構成）
 # ※ SPA用の /* /index.html 200 は削除済み（都市ページが静的HTMLのため不要）
+
+# City subdomains: consolidate duplicate crawl paths to canonical /city/ URLs
+https://sapporo.minpaku-resort.com/* https://www.minpaku-resort.com/sapporo/:splat 301!
+https://otaru.minpaku-resort.com/* https://www.minpaku-resort.com/otaru/:splat 301!
+https://niseko.minpaku-resort.com/* https://www.minpaku-resort.com/niseko/:splat 301!
+https://furano.minpaku-resort.com/* https://www.minpaku-resort.com/furano/:splat 301!
+https://biei.minpaku-resort.com/* https://www.minpaku-resort.com/biei/:splat 301!
+https://sendai.minpaku-resort.com/* https://www.minpaku-resort.com/sendai/:splat 301!
+https://matsushima.minpaku-resort.com/* https://www.minpaku-resort.com/matsushima/:splat 301!
+https://yamagata.minpaku-resort.com/* https://www.minpaku-resort.com/yamagata/:splat 301!
+https://nikko.minpaku-resort.com/* https://www.minpaku-resort.com/nikko/:splat 301!
+https://nasu.minpaku-resort.com/* https://www.minpaku-resort.com/nasu/:splat 301!
+https://yokohama.minpaku-resort.com/* https://www.minpaku-resort.com/yokohama/:splat 301!
+https://kamakura.minpaku-resort.com/* https://www.minpaku-resort.com/kamakura/:splat 301!
+https://hakone.minpaku-resort.com/* https://www.minpaku-resort.com/hakone/:splat 301!
+https://kanazawa.minpaku-resort.com/* https://www.minpaku-resort.com/kanazawa/:splat 301!
+https://fujiyoshida.minpaku-resort.com/* https://www.minpaku-resort.com/fujiyoshida/:splat 301!
+https://kawaguchiko.minpaku-resort.com/* https://www.minpaku-resort.com/kawaguchiko/:splat 301!
+https://karuizawa.minpaku-resort.com/* https://www.minpaku-resort.com/karuizawa/:splat 301!
+https://takayama.minpaku-resort.com/* https://www.minpaku-resort.com/takayama/:splat 301!
+https://atami.minpaku-resort.com/* https://www.minpaku-resort.com/atami/:splat 301!
+https://nagoya.minpaku-resort.com/* https://www.minpaku-resort.com/nagoya/:splat 301!
+https://kyoto.minpaku-resort.com/* https://www.minpaku-resort.com/kyoto/:splat 301!
+https://osaka.minpaku-resort.com/* https://www.minpaku-resort.com/osaka/:splat 301!
+https://kobe.minpaku-resort.com/* https://www.minpaku-resort.com/kobe/:splat 301!
+https://nara.minpaku-resort.com/* https://www.minpaku-resort.com/nara/:splat 301!
+https://wakayama.minpaku-resort.com/* https://www.minpaku-resort.com/wakayama/:splat 301!
+https://kurashiki.minpaku-resort.com/* https://www.minpaku-resort.com/kurashiki/:splat 301!
+https://onomichi.minpaku-resort.com/* https://www.minpaku-resort.com/onomichi/:splat 301!
+https://takamatsu.minpaku-resort.com/* https://www.minpaku-resort.com/takamatsu/:splat 301!
+https://matsuyama.minpaku-resort.com/* https://www.minpaku-resort.com/matsuyama/:splat 301!
+https://fukuoka.minpaku-resort.com/* https://www.minpaku-resort.com/fukuoka/:splat 301!
+https://nagasaki.minpaku-resort.com/* https://www.minpaku-resort.com/nagasaki/:splat 301!
+https://aso.minpaku-resort.com/* https://www.minpaku-resort.com/aso/:splat 301!
+https://beppu.minpaku-resort.com/* https://www.minpaku-resort.com/beppu/:splat 301!
+https://yufuin.minpaku-resort.com/* https://www.minpaku-resort.com/yufuin/:splat 301!
+https://kagoshima.minpaku-resort.com/* https://www.minpaku-resort.com/kagoshima/:splat 301!
+https://naha.minpaku-resort.com/* https://www.minpaku-resort.com/naha/:splat 301!
+https://onna.minpaku-resort.com/* https://www.minpaku-resort.com/onna/:splat 301!
+https://ishigaki.minpaku-resort.com/* https://www.minpaku-resort.com/ishigaki/:splat 301!
+https://miyakojima.minpaku-resort.com/* https://www.minpaku-resort.com/miyakojima/:splat 301!
+https://hokuto.minpaku-resort.com/* https://www.minpaku-resort.com/hokuto/:splat 301!
+https://murakami.minpaku-resort.com/* https://www.minpaku-resort.com/murakami/:splat 301!
