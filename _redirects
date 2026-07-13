@@ -5,6 +5,11 @@
 # 存在しないパスは 404 を返す（静的サイト構成）
 # ※ SPA用の /* /index.html 200 は削除済み（都市ページが静的HTMLのため不要）
 
+# Retired city paths from earlier coverage exports.
+# /chuo/ has no equivalent Tokyo page yet, so keep it 404 to avoid a weak soft-404 redirect.
+/ise/ https://www.minpaku-resort.com/nagoya/ 301!
+/nago/ https://www.minpaku-resort.com/onna/ 301!
+
 # City subdomains: consolidate duplicate crawl paths to canonical /city/ URLs
 https://sapporo.minpaku-resort.com/* https://www.minpaku-resort.com/sapporo/:splat 301!
 https://otaru.minpaku-resort.com/* https://www.minpaku-resort.com/otaru/:splat 301!
