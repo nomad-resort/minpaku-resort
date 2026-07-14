@@ -7,8 +7,8 @@
 
 # Retired city paths from earlier coverage exports.
 # /chuo/ has no equivalent Tokyo page yet, so keep it 404 to avoid a weak soft-404 redirect.
-/ise/ https://www.minpaku-resort.com/nagoya/ 301!
-/nago/ https://www.minpaku-resort.com/onna/ 301!
+# /ise/ and /nago/ previously 301'd to unrelated cities (Nagoya / Onna) as a stopgap;
+# both now have their own dedicated city pages, so no redirect is needed.
 
 # City subdomains: consolidate duplicate crawl paths to canonical /city/ URLs
 https://sapporo.minpaku-resort.com/* https://www.minpaku-resort.com/sapporo/:splat 301!
@@ -31,6 +31,7 @@ https://karuizawa.minpaku-resort.com/* https://www.minpaku-resort.com/karuizawa/
 https://takayama.minpaku-resort.com/* https://www.minpaku-resort.com/takayama/:splat 301!
 https://atami.minpaku-resort.com/* https://www.minpaku-resort.com/atami/:splat 301!
 https://nagoya.minpaku-resort.com/* https://www.minpaku-resort.com/nagoya/:splat 301!
+https://ise.minpaku-resort.com/* https://www.minpaku-resort.com/ise/:splat 301!
 https://kyoto.minpaku-resort.com/* https://www.minpaku-resort.com/kyoto/:splat 301!
 https://osaka.minpaku-resort.com/* https://www.minpaku-resort.com/osaka/:splat 301!
 https://kobe.minpaku-resort.com/* https://www.minpaku-resort.com/kobe/:splat 301!
@@ -48,6 +49,7 @@ https://yufuin.minpaku-resort.com/* https://www.minpaku-resort.com/yufuin/:splat
 https://kagoshima.minpaku-resort.com/* https://www.minpaku-resort.com/kagoshima/:splat 301!
 https://naha.minpaku-resort.com/* https://www.minpaku-resort.com/naha/:splat 301!
 https://onna.minpaku-resort.com/* https://www.minpaku-resort.com/onna/:splat 301!
+https://nago.minpaku-resort.com/* https://www.minpaku-resort.com/nago/:splat 301!
 https://ishigaki.minpaku-resort.com/* https://www.minpaku-resort.com/ishigaki/:splat 301!
 https://miyakojima.minpaku-resort.com/* https://www.minpaku-resort.com/miyakojima/:splat 301!
 https://hokuto.minpaku-resort.com/* https://www.minpaku-resort.com/hokuto/:splat 301!
