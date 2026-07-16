@@ -822,7 +822,9 @@
      6. AIシミュレーター
   ───────────────────────────────────────── */
 
-  function initSimulator(d) {
+  // d: 都市データ。全国トップページでは該当する都市がないため null が渡される。
+  // 全国モードでは郵便番号から都道府県を特定し、その県の拠点都市だけを交通費の候補にする。
+  function initSimulator(d, allData) {
     const form = document.getElementById('sim-form');
     if (!form) return;
 
@@ -861,24 +863,51 @@
       };
     }
 
+    // ── 拠点一覧 ──────────────────────────────────────────────
+    // 都市ページは自都市のみ、全国ページは全都市を候補に持つ。
+    const isNational = !d;
+    const bases = (isNational ? Object.values(allData) : [d]).map((c) => ({
+      prefName: c.prefName,
+      municipalities: c.municipalities || [],
+    }));
+    const scopeLabel = isNational ? '全国' : d.cityShort;
+
+    /**
+     * 郵便番号の都道府県に一致する拠点の市区町村を [{prefName, mun}] で返す。
+     * 同一県の都市は同じ市区町村を重複して持つため（例: 北海道の5都市は同一の9市区町村）、
+     * ジオコーディング回数を抑えるよう重複を除去する。
+     */
+    function candidatesInPref(prefName) {
+      const seen = new Set();
+      return bases
+        .filter((b) => b.prefName === prefName)
+        .flatMap((b) => b.municipalities.map((mun) => ({ prefName: b.prefName, mun })))
+        .filter((c) => !seen.has(c.mun) && seen.add(c.mun));
+    }
+
     // ── 市区町村座標を取得（キャッシュ付き） ──────────────────────
     // 「都道府県名 + 市区町村名 + 1丁目1番地」で GSI ジオコーディング
-    async function getMunicipalityCoords(municipality) {
-      const key = `${d.prefName}${municipality}`;
+    async function getMunicipalityCoords(prefName, municipality) {
+      const key = `${prefName}${municipality}`;
       if (_municipalityCache[key]) return _municipalityCache[key];
 
       // まず「1丁目1番地」で試み、取れなければ市区町村名だけにフォールバック
       const coords =
-        (await geocodeAddress(`${d.prefName}${municipality}1丁目1番地`)) ||
-        (await geocodeAddress(`${d.prefName}${municipality}`));
+        (await geocodeAddress(`${prefName}${municipality}1丁目1番地`)) ||
+        (await geocodeAddress(`${prefName}${municipality}`));
 
       if (coords) _municipalityCache[key] = coords;
       return coords;
     }
 
-    // ページ読み込み時に全市区町村の座標をバックグラウンドで先取りしておく
+    // 都市ページのみ、自都市の市区町村座標をバックグラウンドで先取りしておく
     // → ユーザーが郵便番号を入力し終える頃にはキャッシュ済みになる
-    Promise.all(d.municipalities.map(getMunicipalityCoords)).catch(() => { });
+    // 全国ページは対象が43都市分と多すぎるため、入力後に該当県のぶんだけ取得する
+    if (!isNational) {
+      Promise.all(
+        bases[0].municipalities.map((m) => getMunicipalityCoords(bases[0].prefName, m))
+      ).catch(() => { });
+    }
 
     // ── 郵便番号 → 物件座標取得 → 最近傍市区町村を算出 ──────────
     async function lookupZipcode(digits7) {
@@ -906,9 +935,10 @@
         resolvedAddress = r.address1 + r.address2 + r.address3;
 
         // ② 対応エリア判定
-        // 都道府県が一致し、かつ市区町村が対応リストに含まれているか
-        const isPrefMatch = r.address1 === d.prefName;
-        const isMunMatch = d.municipalities.some((m) => r.address2.includes(m) || m.includes(r.address2));
+        // 都道府県に拠点があり、かつ市区町村が対応リストに含まれているか
+        const candidates = candidatesInPref(r.address1);
+        const isPrefMatch = candidates.length > 0;
+        const isMunMatch = candidates.some((c) => r.address2.includes(c.mun) || c.mun.includes(r.address2));
         const isCovered = isPrefMatch && isMunMatch;
 
         if (!isCovered) {
@@ -939,17 +969,19 @@
           return;
         }
 
-        // ③ 全市区町村の「1丁目1番地」座標を取得（キャッシュ済みなら即返却）
-        const munCoords = await Promise.all(d.municipalities.map(getMunicipalityCoords));
+        // ③ 該当県の拠点市区町村の「1丁目1番地」座標を取得（キャッシュ済みなら即返却）
+        const munCoords = await Promise.all(
+          candidates.map((c) => getMunicipalityCoords(c.prefName, c.mun))
+        );
 
         // ④ 最も近い市区町村を特定
         let minKm = Infinity;
         let nearestMun = null;
 
-        d.municipalities.forEach((mun, i) => {
+        candidates.forEach((c, i) => {
           if (!munCoords[i]) return;
           const km = haversineKm(munCoords[i].lat, munCoords[i].lng, propCoords.lat, propCoords.lng);
-          if (km < minKm) { minKm = km; nearestMun = mun; }
+          if (km < minKm) { minKm = km; nearestMun = c.mun; }
         });
 
         if (nearestMun === null) {
@@ -1017,7 +1049,7 @@
       body.innerHTML = `
         <!-- 選択条件サマリー -->
         <div class="text-xs text-gray-500 text-center mb-6 space-y-0.5">
-          <p>${d.cityShort}エリア ／ ${b.areaLabel} ／ 宿泊${b.guests}名 ／ ${b.planLabel}</p>
+          <p>${scopeLabel}エリア ／ ${b.areaLabel} ／ 宿泊${b.guests}名 ／ ${b.planLabel}</p>
           ${b.resolvedAddress ? `<p class="text-gray-400">${b.resolvedAddress}</p>` : ''}
         </div>
 
@@ -1229,7 +1261,7 @@
     applyLocalRegulations(d);
     applyServicesCity(d);
     applyLocalFaqs(d);
-    initSimulator(d);
+    initSimulator(d, allData);
     renderNoteFeed();
     applyFooter(d);
     applySeoTags(d, cityKey);
@@ -1301,20 +1333,28 @@
       return res.json();
     })
     .then((allData) => {
-      const cityKey = allData[cityPath] ? cityPath : DEFAULT_CITY;
-      const data = allData[cityKey];
-      const run = () => {
-        // ① ヒーロー画像のプリロードを開始（DOM 適用と並行して実行）
-        const heroImageUrl = toAssetUrl(data.heroImage);
-        const heroReady = preloadHeroImage(heroImageUrl);
-        // ② データを DOM に適用（backgroundImage のセットも含む）
-        applyData(data, cityKey, allData);
-        // ③ ヒーロー画像の読み込みが完了してからローダーを非表示にする
-        heroReady.then(() => {
+      const data = allData[cityPath];
+
+      // 全国トップページ（cityPath が DEFAULT_CITY）や未知のパスには対応する都市データがない。
+      // ページ内容は静的 HTML のままとし、シミュレーターだけ全国モードで初期化する。
+      const run = !data
+        ? () => {
+          initSimulator(null, allData);
           clearTimeout(loaderTimeout);
           hideLoader();
-        });
-      };
+        }
+        : () => {
+          // ① ヒーロー画像のプリロードを開始（DOM 適用と並行して実行）
+          const heroImageUrl = toAssetUrl(data.heroImage);
+          const heroReady = preloadHeroImage(heroImageUrl);
+          // ② データを DOM に適用（backgroundImage のセットも含む）
+          applyData(data, cityPath, allData);
+          // ③ ヒーロー画像の読み込みが完了してからローダーを非表示にする
+          heroReady.then(() => {
+            clearTimeout(loaderTimeout);
+            hideLoader();
+          });
+        };
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', run);
       } else {
