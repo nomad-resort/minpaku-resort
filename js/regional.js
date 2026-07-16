@@ -842,12 +842,14 @@
     let zipcodeTimer = null;
 
     // ── 計算ヘルパー ──────────────────────────────────────────
+    // プラン係数は基本清掃料と人数オプションにのみ掛ける。交通費は実費のため対象外。
+    // 各項目を丸めてから合算することで、モーダルの内訳と合計が必ず一致する。
     function calcBreakdown() {
-      const basePrice = parseInt(areaSelect.value, 10);
       const guests = parseInt(guestSelect.value, 10);
       const qualityCoeff = parseFloat(planSelect.value);
-      const guestSurcharge = Math.max(0, guests - 2) * 500;
-      const totalExTax = Math.round((basePrice + guestSurcharge + transportFee) * qualityCoeff);
+      const basePrice = Math.round(parseInt(areaSelect.value, 10) * qualityCoeff);
+      const guestSurcharge = Math.round(Math.max(0, guests - 2) * 500 * qualityCoeff);
+      const totalExTax = basePrice + guestSurcharge + transportFee;
       const totalInTax = Math.round(totalExTax * 1.1);
 
       return {
@@ -1029,7 +1031,7 @@
         <!-- 簡易内訳（計算式は非表示） -->
         <div class="text-sm text-gray-500 mb-6 space-y-2 px-1">
           <div class="flex justify-between">
-            <span>基本清掃料</span>
+            <span>基本清掃料<span class="block text-xs text-gray-400">リネンクリーニング費を含む</span></span>
             <span class="text-gray-700">¥${b.basePrice.toLocaleString()}</span>
           </div>
           ${b.guestSurcharge > 0 ? `
