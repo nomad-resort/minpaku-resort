@@ -73,4 +73,11 @@ def build_static_pages():
         print(f"Generated: {output_path}")
 
 if __name__ == '__main__':
-    build_static_pages()
+    import sys
+    sys.exit(
+        "⚠ このスクリプトは非推奨です（メタタグのみ差し替え）。\n"
+        "  本文が全都市同一の重複ページを生成し、Google のインデックス未登録の原因になります。\n"
+        "  都市ページの生成は本文まで焼き込む次のプリレンダを使用してください:\n"
+        "      node scripts/prerender.mjs\n"
+        "  どうしても実行する場合は build_static_pages() を直接呼び出してください。"
+    )

@@ -288,6 +288,54 @@ http://localhost:3000/                → 沖縄（デフォルト）
 
 ---
 
+## 7.5 都市ページの静的生成（プリレンダ）★SEO必須
+
+### なぜ必要か
+
+都市ページ（`aso/index.html` など）の本文は `regional.js` がブラウザ側で注入しています。
+そのため **プリレンダしていない状態では、Googlebot が最初に受け取る生 HTML が全都市ほぼ同一**
+（差分は `<title>` などメタタグのみ）になり、Google に重複・低品質ページとみなされて
+**「検出 - インデックス未登録」**が多発します（2026-07 に発生した実際の問題）。
+
+`scripts/prerender.mjs` はヘッドレス Chrome で `regional.js` を実際に実行し、
+注入後の DOM を各 `{slug}/index.html` に焼き込みます。これにより生 HTML に都市固有の
+本文（H1・市場分析・繁忙期カレンダー・条例・FAQ・市区町村リスト等）が含まれ、重複判定を解消します。
+
+> `regional.js` の注入関数はすべて冪等（`innerHTML=` / 置換 / remove→append）なので、
+> `data-ssg` フラグは付けません。本番でも `regional.js` は従来どおり一度だけ実行され、
+> 同一 DOM を冪等に再生成します（挙動・UX は不変）。
+
+### 実行方法
+
+```bash
+# 依存（初回のみ）: system Chrome を利用するため puppeteer-core を使用
+npm install
+
+# 全43都市を再生成
+npm run prerender          # = node scripts/prerender.mjs
+
+# 特定都市のみ（検証用）
+node scripts/prerender.mjs aso beppu
+
+# Chrome のパスが異なる場合
+CHROME_PATH="/path/to/chrome" node scripts/prerender.mjs
+```
+
+### いつ実行するか
+
+- `city-template.html` を編集したとき
+- `data/cities.json` の都市データを編集したとき
+- `js/regional.js` の注入ロジックを変更したとき
+
+上記のいずれかを変更したら **必ず `npm run prerender` を実行して都市ページを再生成**し、
+`node scripts/prerender.mjs` の出力で全都市が `✓`（失敗0）になることを確認してからコミットします。
+生成後は `python3 scripts/generate-sitemap.py` 相当で sitemap の `lastmod` も更新すると再クロールが早まります。
+
+> ⚠ `scripts/build-static-pages.py`（メタのみ）と `scripts/build-static-pages-full.py`（不完全SSG）は
+> **非推奨**です。本文が焼き込まれず重複ページを再発させるため、実行するとエラーで停止します。
+
+---
+
 ## 8. Netlify へのデプロイ
 
 ### 通常デプロイ（単一ドメイン）

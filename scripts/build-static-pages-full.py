@@ -314,4 +314,11 @@ def build_full_static():
         print(f"Generated FULL static: {output_path}")
 
 if __name__ == '__main__':
-    build_full_static()
+    import sys
+    sys.exit(
+        "⚠ このスクリプトは非推奨です（regional.js の一部セクションしか焼き込まない不完全な SSG）。\n"
+        "  data-ssg=true を付与するため、未対応セクション（事例・繁忙期・条例など）が空になります。\n"
+        "  都市ページの生成は regional.js を実際に実行して全セクションを焼き込む次を使用してください:\n"
+        "      node scripts/prerender.mjs\n"
+        "  どうしても実行する場合は build_full_static() を直接呼び出してください。"
+    )

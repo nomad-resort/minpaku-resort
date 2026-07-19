@@ -1,0 +1,13 @@
+{
+  "name": "minpaku-resort-build",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Build tooling (prerender city pages) — not deployed",
+  "scripts": {
+    "prerender": "node scripts/prerender.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "^23.11.1"
+  }
+}

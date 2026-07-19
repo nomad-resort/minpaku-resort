@@ -1,2 +1,10 @@
 # Local Netlify folder
 .netlify
+
+# Generated estimate artifacts
+output/
+tmp/
+
+# Node tooling for prerender build (not deployed)
+node_modules/
+package-lock.json
