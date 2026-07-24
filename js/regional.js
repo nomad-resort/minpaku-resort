@@ -1348,6 +1348,7 @@
         ? () => {
           applyAreas({ cityKey: DEFAULT_CITY }, allData);
           initSimulator(null, allData);
+          renderNoteFeed();
           clearTimeout(loaderTimeout);
           hideLoader();
         }
