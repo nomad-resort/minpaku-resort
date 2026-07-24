@@ -37,6 +37,7 @@
   })();
 
   const LINE_URL = 'https://lin.ee/RtLPqmQ';
+  const NATIONAL_MAP_EMBED_URL = 'https://maps.google.com/maps?q=Japan&output=embed&hl=ja&z=5';
 
   // 全都道府県共通で表示する固定スタッフ
   // ※ 地域スタッフを追加する場合は prefectures.json の staff[] を使用し
@@ -332,6 +333,9 @@
     if (document.body.dataset.ssg === 'true') {
       // 静的 HTML が既にレンダリング済みの場合の処理
       if (d.cityKey === 'japan') {
+        const mapEl = document.getElementById('area-map');
+        if (mapEl) mapEl.src = NATIONAL_MAP_EMBED_URL;
+
         // トップページ: エリアタブのイベントリスナーのみ設定
         const listEl = document.getElementById('municipalities-list');
         if (listEl) {
@@ -462,7 +466,10 @@
     }
 
     const mapEl = document.getElementById('area-map');
-    if (mapEl && d.mapEmbedUrl) mapEl.src = d.mapEmbedUrl;
+    if (mapEl) {
+      if (d.cityKey === 'japan') mapEl.src = NATIONAL_MAP_EMBED_URL;
+      else if (d.mapEmbedUrl) mapEl.src = d.mapEmbedUrl;
+    }
   }
 
   function applyCleaningFocus(d) {
@@ -1339,6 +1346,7 @@
       // ページ内容は静的 HTML のままとし、シミュレーターだけ全国モードで初期化する。
       const run = !data
         ? () => {
+          applyAreas({ cityKey: DEFAULT_CITY }, allData);
           initSimulator(null, allData);
           clearTimeout(loaderTimeout);
           hideLoader();
