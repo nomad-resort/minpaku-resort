@@ -5,6 +5,9 @@
   "type": "module",
   "description": "Build tooling (prerender city pages) — not deployed",
   "scripts": {
+    "check": "npm run check:seo && npm run check:analytics",
+    "check:analytics": "node scripts/check-analytics.mjs && node --check js/analytics.js",
+    "check:seo": "node scripts/check-static-seo.mjs",
     "prerender": "node scripts/prerender.mjs"
   },
   "dependencies": {
