@@ -15,16 +15,23 @@ const requiredPlaceholder = '対応可否の確認やお見積もり依頼など
 const requiredValues = ['対応可否の確認', 'お見積もり依頼'];
 const forbiddenText = '可能です。「リゾート・クオリティ」のプロ清掃スタッフを派遣いたします。';
 
+const contactFiles = htmlFiles.filter((relativePath) =>
+  fs.readFileSync(path.join(root, relativePath), 'utf8').includes('id="contact-form"'),
+);
 const failures = [];
-for (const relativePath of htmlFiles) {
+for (const relativePath of contactFiles) {
   const html = fs.readFileSync(path.join(root, relativePath), 'utf8');
-  if (!html.includes('id="contact-form"')) continue;
   if (!html.includes(requiredText)) failures.push(`${relativePath}: notice missing`);
   if (!html.includes(`placeholder="${requiredPlaceholder}"`)) failures.push(`${relativePath}: concise placeholder missing`);
   for (const value of requiredValues) {
     if (!html.includes(`value="${value}"`)) failures.push(`${relativePath}: inquiry option missing (${value})`);
   }
-  if (!html.includes('type="radio"')) failures.push(`${relativePath}: inquiry options are not radio buttons`);
+  const radioValues = [...html.matchAll(/name="inquiry_type"[^>]*type="radio"[^>]*value="([^"]+)"/g)]
+    .map(([, value]) => value);
+  if (radioValues.length !== requiredValues.length ||
+      radioValues.some((value) => !requiredValues.includes(value))) {
+    failures.push(`${relativePath}: inquiry options must be exactly the two approved radio buttons`);
+  }
   if (html.includes(forbiddenText)) failures.push(`${relativePath}: outdated cleaning-only FAQ remains`);
 }
 
@@ -33,4 +40,4 @@ if (failures.length > 0) {
   process.exit(1);
 }
 
-console.log(`Contact policy verified in ${htmlFiles.length} HTML files.`);
+console.log(`Contact policy verified in ${contactFiles.length} contact forms.`);
