@@ -10,16 +10,28 @@ const htmlFiles = fs.readdirSync(root, { withFileTypes: true })
     return fs.existsSync(path.join(root, indexPath)) ? [indexPath] : [];
   });
 
-const requiredText = '現在、お問い合わせの増加に伴い、清掃代行のみのご依頼は受け付けておりません。';
-const requiredValue = '運営代行＋清掃代行について';
+const requiredText = '対応可否の確認やお見積もり依頼など、ご相談内容を確認のうえ、詳しい内容をお伺いするヒアリングフォームをご案内いたします。';
+const requiredPlaceholder = '対応可否の確認やお見積もり依頼など、ご相談の概要をご記入ください。';
+const requiredValues = ['対応可否の確認', 'お見積もり依頼'];
 const forbiddenText = '可能です。「リゾート・クオリティ」のプロ清掃スタッフを派遣いたします。';
 
+const contactFiles = htmlFiles.filter((relativePath) =>
+  fs.readFileSync(path.join(root, relativePath), 'utf8').includes('id="contact-form"'),
+);
 const failures = [];
-for (const relativePath of htmlFiles) {
+for (const relativePath of contactFiles) {
   const html = fs.readFileSync(path.join(root, relativePath), 'utf8');
-  if (!html.includes('id="contact-form"')) continue;
   if (!html.includes(requiredText)) failures.push(`${relativePath}: notice missing`);
-  if (!html.includes(requiredValue)) failures.push(`${relativePath}: combined inquiry option missing`);
+  if (!html.includes(`placeholder="${requiredPlaceholder}"`)) failures.push(`${relativePath}: concise placeholder missing`);
+  for (const value of requiredValues) {
+    if (!html.includes(`value="${value}"`)) failures.push(`${relativePath}: inquiry option missing (${value})`);
+  }
+  const radioValues = [...html.matchAll(/name="inquiry_type"[^>]*type="radio"[^>]*value="([^"]+)"/g)]
+    .map(([, value]) => value);
+  if (radioValues.length !== requiredValues.length ||
+      radioValues.some((value) => !requiredValues.includes(value))) {
+    failures.push(`${relativePath}: inquiry options must be exactly the two approved radio buttons`);
+  }
   if (html.includes(forbiddenText)) failures.push(`${relativePath}: outdated cleaning-only FAQ remains`);
 }
 
@@ -28,4 +40,4 @@ if (failures.length > 0) {
   process.exit(1);
 }
 
-console.log(`Contact policy verified in ${htmlFiles.length} HTML files.`);
+console.log(`Contact policy verified in ${contactFiles.length} contact forms.`);
